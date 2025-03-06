@@ -1,0 +1,1 @@
+I modified the code in TestLeNet.cpp, including changes to the structure and functions such as init_layer, release_layer, convn_valid, max_pooling_fprop, and fully_connected_fprop. The original version is stored in TestLeNet_origin.cpp. Additionally, some functions used for FPGA are now located in the cnn_seperate folder.
