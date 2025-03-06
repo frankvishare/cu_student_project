@@ -1,0 +1,3 @@
+/mnt/workspace/TestLeNet/build/riscv-sim/CMakeFiles/example.elf.dir
+/mnt/workspace/TestLeNet/build/riscv-sim/CMakeFiles/edit_cache.dir
+/mnt/workspace/TestLeNet/build/riscv-sim/CMakeFiles/rebuild_cache.dir

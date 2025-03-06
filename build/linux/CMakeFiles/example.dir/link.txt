@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/example.dir/mt19937ar.cpp.o CMakeFiles/example.dir/stb_image_impl.cpp.o CMakeFiles/example.dir/stdafx.cpp.o CMakeFiles/example.dir/TestLeNet.cpp.o  -o example  -lm 

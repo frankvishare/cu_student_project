@@ -1,0 +1,3 @@
+/home/bsy/workspace/TestLeNet/build/linux/CMakeFiles/rebuild_cache.dir
+/home/bsy/workspace/TestLeNet/build/linux/CMakeFiles/edit_cache.dir
+/home/bsy/workspace/TestLeNet/build/linux/CMakeFiles/example.dir
