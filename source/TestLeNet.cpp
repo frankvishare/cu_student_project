@@ -10,63 +10,19 @@
 #include <string.h> 
 //#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
-#ifndef MIN
-#define MIN(A,B)	(((A) <= (B)) ? (A) : (B))
-#endif
-
-#ifndef MAX
-#define MAX(A,B)	(((A) >= (B)) ? (A) : (B))
-#endif
-
-#define uchar unsigned char
+#include "hls_cnn.h"
 
 
+/*
 #define MAX_MAP_SIZE 1024     // 最大特征图大小 (32x32)
 #define MAX_MAP_COUNT 120     // 每层最大特征图数量
 #define MAX_KERNEL_SIZE 25    // 最大卷积核大小 (5x5)
 #define MAX_KERNEL_COUNT 1920 // 最大卷积核数量 (16*120)
 #define MAX_SAMPLE_SIZE 1024  // 最大样本大小 (32x32)
 #define MAX_LABEL_SIZE 10     // 最大标签大小 (10类)
-
+*/
 // 基本参数----------------------------------------------------------------------------------------------/
-typedef struct _Sample
-{
-	double data[MAX_SAMPLE_SIZE];
-	double label[MAX_LABEL_SIZE];
 
-	int sample_w;
-	int sample_h;
-	int sample_count;
-} Sample;
-
-typedef struct _Kernel
-{
-	double W[MAX_KERNEL_SIZE];
-	double dW[MAX_KERNEL_SIZE];
-} Kernel;
-
-typedef struct _Map
-{
-	double data[MAX_MAP_SIZE];
-	double error[MAX_MAP_SIZE];
-	double b;
-	double db;
-} Map;
-
-typedef struct _Layer
-{
-	int map_w;
-	int map_h;
-	int map_count;
-	Map map[MAX_MAP_COUNT];
-
-	int kernel_w;
-	int kernel_h;
-	int kernel_count;
-	Kernel kernel[MAX_KERNEL_COUNT];
-
-	double map_common[MAX_MAP_SIZE];
-} Layer;
 
 const int batch_size = 10;
 const int classes_count = 10;
@@ -202,7 +158,7 @@ void release_layer(Layer *layer)//释放内存
 
 
 
-
+#if 0
 //加速部分
 
 // 激活函数----------------------------------------------------------------------------------------------/
@@ -386,7 +342,7 @@ void fully_connected_fprop(Layer *prev_layer, Layer *layer)
 	}
 }
 
-
+#endif
 //到此为止
 
 void forward_propagation()
@@ -675,3 +631,4 @@ int main(int argc, char* argv[])
     system("pause");
     return 0;
 }
+
