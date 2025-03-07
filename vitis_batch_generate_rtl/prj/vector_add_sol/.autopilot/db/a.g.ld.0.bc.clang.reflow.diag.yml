@@ -1,0 +1,45 @@
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 34, 
+                   Column: 0 }
+Function:        vector_add
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            vec_s1
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 34, 
+                   Column: 0 }
+Function:        vector_add
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            vec_s2
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 34, 
+                   Column: 0 }
+Function:        vector_add
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            vec_d1
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_vector_add_ir
+Args:            
+  - Callee:          vector_add
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 34, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_vector_add_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...

@@ -1,0 +1,12 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_fill_value_ir
+Args:            
+  - Callee:          fill_value
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 44, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_fill_value_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...

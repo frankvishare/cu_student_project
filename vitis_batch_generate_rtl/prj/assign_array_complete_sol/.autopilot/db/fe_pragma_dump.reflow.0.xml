@@ -1,0 +1,4 @@
+<pragmas>
+<pragma file="../tutorial_example/source/hls.cpp" line="19" pragmaType="pipeline" parentfunction="assign_array_complete" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../tutorial_example/source/hls.cpp" line="17" pragmaType="array_partition" parentfunction="assign_array_complete" dim="1" factor="0" mode="complete" dynamic="0" variable="arr_complete"/>
+</pragmas>

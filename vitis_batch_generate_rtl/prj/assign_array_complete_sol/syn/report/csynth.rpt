@@ -1,0 +1,133 @@
+
+
+================================================================
+== Synthesis Summary Report of 'assign_array_complete'
+================================================================
++ General Information: 
+    * Date:           Thu Feb 27 14:52:03 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        prj
+    * Solution:       assign_array_complete_sol (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu19p-fsvb3824-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+---------+----------+-----+
+    |         Modules         | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |         |          |     |
+    |         & Loops         | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF   |    LUT   | URAM|
+    +-------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+---------+----------+-----+
+    |+ assign_array_complete  |    II|  1.06|        6|  19.800|         -|        5|     -|    rewind|     -|   -|  5 (~0%)|  90 (~0%)|    -|
+    | o VITIS_LOOP_18_1       |     -|  2.41|        4|  13.200|         1|        1|     5|       yes|     -|   -|        -|         -|    -|
+    +-------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+---------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++----------------+---------+-----------+----------+
+| Port           | Mode    | Direction | Bitwidth |
++----------------+---------+-----------+----------+
+| ap_core        | ap_none | in        | 8        |
+| ap_parent      | ap_none | in        | 8        |
+| ap_part        | ap_none | in        | 8        |
+| arr_complete_0 | ap_vld  | out       | 32       |
+| arr_complete_1 | ap_vld  | out       | 32       |
+| arr_complete_2 | ap_vld  | out       | 32       |
+| arr_complete_3 | ap_vld  | out       | 32       |
+| arr_complete_4 | ap_vld  | out       | 32       |
+| base_r         | ap_none | in        | 32       |
++----------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+-------------+-----------------------------------+
+| Interface | Type        | Ports                             |
++-----------+-------------+-----------------------------------+
+| ap_ce     | clockenable | ap_ce                             |
+| ap_clk    | clock       | ap_clk                            |
+| ap_rst    | reset       | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs  | ap_done ap_idle ap_ready ap_start |
++-----------+-------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------+-----------+---------------+
+| Argument     | Direction | Datatype      |
++--------------+-----------+---------------+
+| ap_core      | in        | unsigned char |
+| ap_part      | in        | unsigned char |
+| ap_parent    | in        | unsigned char |
+| arr_complete | out       | int*          |
+| base         | in        | int           |
++--------------+-----------+---------------+
+
+* SW-to-HW Mapping
++--------------+-----------------------+---------+
+| Argument     | HW Interface          | HW Type |
++--------------+-----------------------+---------+
+| ap_core      | ap_core               | port    |
+| ap_part      | ap_part               | port    |
+| ap_parent    | ap_parent             | port    |
+| arr_complete | arr_complete_0        | port    |
+| arr_complete | arr_complete_0_ap_vld | port    |
+| arr_complete | arr_complete_1        | port    |
+| arr_complete | arr_complete_1_ap_vld | port    |
+| arr_complete | arr_complete_2        | port    |
+| arr_complete | arr_complete_2_ap_vld | port    |
+| arr_complete | arr_complete_3        | port    |
+| arr_complete | arr_complete_3_ap_vld | port    |
+| arr_complete | arr_complete_4        | port    |
+| arr_complete | arr_complete_4_ap_vld | port    |
+| base         | base_r                | port    |
++--------------+-----------------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------+-----+--------+-----------+-------+--------+---------+
+| Name                    | DSP | Pragma | Variable  | Op    | Impl   | Latency |
++-------------------------+-----+--------+-----------+-------+--------+---------+
+| + assign_array_complete | 0   |        |           |       |        |         |
+|   add_ln20_fu_117_p2    |     |        | add_ln20  | add   | fabric | 0       |
+|   i_fu_128_p2           |     |        | i         | add   | fabric | 0       |
+|   icmp_ln18_fu_134_p2   |     |        | icmp_ln18 | seteq | auto   | 0       |
++-------------------------+-----+--------+-----------+-------+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+| Type            | Options                                  | Location                                                                            |
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+| inline          |                                          | ../tutorial_example/source/cnn.h:100 in shiftup                                     |
+| inline          |                                          | ../tutorial_example/source/cnn.h:114 in shiftleft                                   |
+| inline          |                                          | ../tutorial_example/source/cnn.h:138 in shiftdown                                   |
+| array_partition | variable=arr_complete type=complete      | ../tutorial_example/source/hls.cpp:17 in assign_array_complete, arr_complete        |
+| pipeline        |                                          | ../tutorial_example/source/hls.cpp:19 in assign_array_complete                      |
+| disaggregate    | variable=vec_s1                          | ../tutorial_example/source/hls.cpp:36 in vector_add, vec_s1                         |
+| disaggregate    | variable=vec_s2                          | ../tutorial_example/source/hls.cpp:37 in vector_add, vec_s2                         |
+| disaggregate    | variable=vec_d1                          | ../tutorial_example/source/hls.cpp:38 in vector_add, vec_d1                         |
+| pipeline        | OFF                                      | ../tutorial_example/source/hls.cpp:47 in fill_value                                 |
+| array_partition | variable=tc_arr type=complete            | ../tutorial_example/source/hls.cpp:67 in hevc_loop_filter_chroma_8bit_hls, tc_arr   |
+| array_partition | variable=no_p_arr type=complete          | ../tutorial_example/source/hls.cpp:68 in hevc_loop_filter_chroma_8bit_hls, no_p_arr |
+| array_partition | variable=no_q_arr type=complete          | ../tutorial_example/source/hls.cpp:69 in hevc_loop_filter_chroma_8bit_hls, no_q_arr |
+| unroll          | OFF = TRUE                               | ../tutorial_example/source/hls.cpp:79 in hevc_loop_filter_chroma_8bit_hls           |
+| pipeline        |                                          | ../tutorial_example/source/hls.cpp:89 in hevc_loop_filter_chroma_8bit_hls           |
+| interface       | ap_memory port=pixel storage_type=RAM_2P | ../tutorial_example/source/hls.cpp:119 in cnn_hls, pixel                            |
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+
+

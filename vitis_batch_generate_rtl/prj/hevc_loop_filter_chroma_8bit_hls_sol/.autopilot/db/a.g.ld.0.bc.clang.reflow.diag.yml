@@ -1,0 +1,69 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_hevc_loop_filter_chroma_8bit_hls_ir
+Args:            
+  - Callee:          hevc_loop_filter_chroma_8bit_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 65, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_hevc_loop_filter_chroma_8bit_hls_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 65, 
+                   Column: 0 }
+Function:        hevc_loop_filter_chroma_8bit_hls
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          tc_arr
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 65, 
+                   Column: 0 }
+Function:        hevc_loop_filter_chroma_8bit_hls
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          no_p_arr
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 65, 
+                   Column: 0 }
+Function:        hevc_loop_filter_chroma_8bit_hls
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          no_q_arr
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

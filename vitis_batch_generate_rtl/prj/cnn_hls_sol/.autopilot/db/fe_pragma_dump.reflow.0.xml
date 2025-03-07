@@ -1,0 +1,6 @@
+<pragmas>
+<pragma file="../tutorial_example/source/hls.cpp" line="118" pragmaType="interface" parentfunction="cnn_hls" mode="ap_memory" port="pixel" storage_type="666" impl="208" latency="-1" name="" depth="-1"/>
+<pragma file="../tutorial_example/source/cnn.h" line="114" pragmaType="inline" parentfunction="shiftLeft" off="0" region="0" recursive="0"/>
+<pragma file="../tutorial_example/source/cnn.h" line="100" pragmaType="inline" parentfunction="shiftUp" off="0" region="0" recursive="0"/>
+<pragma file="../tutorial_example/source/cnn.h" line="138" pragmaType="inline" parentfunction="shiftDown" off="0" region="0" recursive="0"/>
+</pragmas>

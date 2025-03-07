@@ -1,0 +1,229 @@
+
+
+================================================================
+== Synthesis Summary Report of 'cnn_hls'
+================================================================
++ General Information: 
+    * Date:           Thu Feb 27 14:44:00 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        prj
+    * Solution:       cnn_hls_sol (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu19p-fsvb3824-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----------+------------+------------+-----+
+    |                 Modules                | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |          |            |            |     |
+    |                 & Loops                | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |     FF     |     LUT    | URAM|
+    +----------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----------+------------+------------+-----+
+    |+ cnn_hls                               |     -|  0.02|        -|       -|         -|        -|     -|        no|     -|  13 (~0%)|  6392 (~0%)|  5712 (~0%)|    -|
+    | o VITIS_LOOP_139_1                     |     -|  2.41|        -|       -|         -|        -|     -|        no|     -|         -|           -|           -|    -|
+    |  + cnn_hls_Pipeline_VITIS_LOOP_165_1   |     -|  0.12|        -|       -|         -|        -|     -|        no|     -|   2 (~0%)|  4777 (~0%)|  3646 (~0%)|    -|
+    |   o VITIS_LOOP_165_1                   |    II|  2.41|        -|       -|        26|        2|     -|       yes|     -|         -|           -|           -|    -|
+    |  o VITIS_LOOP_123_1                    |     -|  2.41|        -|       -|         -|        -|     -|        no|     -|         -|           -|           -|    -|
+    |   + cnn_hls_Pipeline_VITIS_LOOP_125_2  |     -|  0.02|        -|       -|         -|        -|     -|        no|     -|         -|    70 (~0%)|   157 (~0%)|    -|
+    |    o VITIS_LOOP_125_2                  |     -|  2.41|        -|       -|         3|        1|     -|       yes|     -|         -|           -|           -|    -|
+    |  o VITIS_LOOP_103_1                    |     -|  2.41|        -|       -|         -|        -|     -|        no|     -|         -|           -|           -|    -|
+    |   + cnn_hls_Pipeline_VITIS_LOOP_105_2  |     -|  0.41|        -|       -|         -|        -|     -|        no|     -|   1 (~0%)|   255 (~0%)|   302 (~0%)|    -|
+    |    o VITIS_LOOP_105_2                  |    II|  2.41|        -|       -|         4|        2|     -|       yes|     -|         -|           -|           -|    -|
+    |  o VITIS_LOOP_151_1                    |     -|  2.41|        -|       -|         -|        -|     -|        no|     -|         -|           -|           -|    -|
+    |   + cnn_hls_Pipeline_VITIS_LOOP_153_2  |     -|  0.15|        -|       -|         -|        -|     -|        no|     -|   1 (~0%)|   145 (~0%)|   290 (~0%)|    -|
+    |    o VITIS_LOOP_153_2                  |    II|  2.41|        -|       -|         6|        2|     -|       yes|     -|         -|           -|           -|    -|
+    +----------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++---------------------+-----------+----------+
+| Port                | Direction | Bitwidth |
++---------------------+-----------+----------+
+| filter_map_address0 | out       | 6        |
+| filter_map_q0       | in        | 8        |
+| pixel_address0      | out       | 13       |
+| pixel_address1      | out       | 13       |
+| pixel_d1            | out       | 8        |
+| pixel_q0            | in        | 8        |
+| sum_address0        | out       | 12       |
+| sum_address1        | out       | 12       |
+| sum_d0              | out       | 32       |
+| sum_d1              | out       | 32       |
+| sum_q0              | in        | 32       |
++---------------------+-----------+----------+
+
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| ap_core   | ap_none | in        | 8        |
+| ap_parent | ap_none | in        | 8        |
+| ap_part   | ap_none | in        | 8        |
+| filter    | ap_none | in        | 32       |
+| height    | ap_none | in        | 32       |
+| width     | ap_none | in        | 32       |
++-----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+-------------+-----------------------------------+
+| Interface | Type        | Ports                             |
++-----------+-------------+-----------------------------------+
+| ap_ce     | clockenable | ap_ce                             |
+| ap_clk    | clock       | ap_clk                            |
+| ap_rst    | reset       | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs  | ap_done ap_idle ap_ready ap_start |
++-----------+-------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+---------------+
+| Argument   | Direction | Datatype      |
++------------+-----------+---------------+
+| ap_core    | in        | unsigned char |
+| ap_part    | in        | unsigned char |
+| ap_parent  | in        | unsigned char |
+| width      | in        | int           |
+| height     | in        | int           |
+| filter     | in        | int           |
+| pixel      | inout     | char*         |
+| filter_map | in        | char*         |
+| sum        | inout     | int*          |
++------------+-----------+---------------+
+
+* SW-to-HW Mapping
++------------+---------------------+---------+----------+
+| Argument   | HW Interface        | HW Type | HW Usage |
++------------+---------------------+---------+----------+
+| ap_core    | ap_core             | port    |          |
+| ap_part    | ap_part             | port    |          |
+| ap_parent  | ap_parent           | port    |          |
+| width      | width               | port    |          |
+| height     | height              | port    |          |
+| filter     | filter              | port    |          |
+| pixel      | pixel_address0      | port    | offset   |
+| pixel      | pixel_ce0           | port    |          |
+| pixel      | pixel_q0            | port    |          |
+| pixel      | pixel_address1      | port    | offset   |
+| pixel      | pixel_ce1           | port    |          |
+| pixel      | pixel_we1           | port    |          |
+| pixel      | pixel_d1            | port    |          |
+| filter_map | filter_map_address0 | port    | offset   |
+| filter_map | filter_map_ce0      | port    |          |
+| filter_map | filter_map_q0       | port    |          |
+| sum        | sum_address0        | port    | offset   |
+| sum        | sum_ce0             | port    |          |
+| sum        | sum_we0             | port    |          |
+| sum        | sum_d0              | port    |          |
+| sum        | sum_q0              | port    |          |
+| sum        | sum_address1        | port    | offset   |
+| sum        | sum_ce1             | port    |          |
+| sum        | sum_we1             | port    |          |
+| sum        | sum_d1              | port    |          |
++------------+---------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------+-----+--------+--------------+--------+-----------+---------+
+| Name                                  | DSP | Pragma | Variable     | Op     | Impl      | Latency |
++---------------------------------------+-----+--------+--------------+--------+-----------+---------+
+| + cnn_hls                             | 13  |        |              |        |           |         |
+|   target_fu_304_p2                    |     |        | target       | add    | fabric    | 0       |
+|   core_rwidth_fu_310_p2               |     |        | core_rwidth  | add    | fabric    | 0       |
+|   add_ln75_fu_320_p2                  |     |        | add_ln75     | add    | fabric    | 0       |
+|   core_rheight_fu_356_p2              |     |        | core_rheight | add    | fabric    | 0       |
+|   mul_32s_32s_32_2_1_U30              | 3   |        | mul          | mul    | auto      | 1       |
+|   mul_32s_32s_32_2_1_U31              | 3   |        | mul_i        | mul    | auto      | 1       |
+|   sub_i11_fu_326_p2                   |     |        | sub_i11      | add    | fabric    | 0       |
+|   y_1_fu_361_p2                       |     |        | y_1          | add    | fabric    | 0       |
+|   mul_13s_13s_13_1_1_U32              | 1   |        | mul_ln139    | mul    | auto      | 0       |
+|   add_ln128_fu_370_p2                 |     |        | add_ln128    | add    | fabric    | 0       |
+|   icmp_ln139_fu_385_p2                |     |        | icmp_ln139   | setlt  | auto      | 0       |
+|   add_ln139_fu_390_p2                 |     |        | add_ln139    | add    | fabric    | 0       |
+|   mac_muladd_6s_6s_6ns_6_4_1_U34      | 1   |        | mul_ln141    | mul    | dsp_slice | 3       |
+|   mac_muladd_6s_6s_6ns_6_4_1_U34      | 1   |        | add_ln141    | add    | dsp_slice | 3       |
+|   icmp_ln144_fu_400_p2                |     |        | icmp_ln144   | seteq  | auto      | 0       |
+|   icmp_ln146_fu_417_p2                |     |        | icmp_ln146   | seteq  | auto      | 0       |
+|   icmp_ln151_fu_438_p2                |     |        | icmp_ln151   | setlt  | auto      | 0       |
+|   add_ln151_fu_443_p2                 |     |        | add_ln151    | add    | fabric    | 0       |
+|   add_ln156_fu_550_p2                 |     |        | add_ln156    | add    | fabric    | 0       |
+|   r0_2_fu_458_p2                      |     |        | r0_2         | add    | fabric    | 0       |
+|   icmp_ln103_fu_473_p2                |     |        | icmp_ln103   | setlt  | auto      | 0       |
+|   add_ln103_fu_478_p2                 |     |        | add_ln103    | add    | fabric    | 0       |
+|   add_ln104_fu_484_p2                 |     |        | add_ln104    | add    | fabric    | 0       |
+|   r0_1_fu_494_p2                      |     |        | r0_1         | add    | fabric    | 0       |
+|   c0_1_fu_422_p2                      |     |        | c0_1         | add    | fabric    | 0       |
+|   target_3_fu_427_p3                  |     |        | target_3     | select | auto_sel  | 0       |
+|   icmp_ln123_fu_514_p2                |     |        | icmp_ln123   | setlt  | auto      | 0       |
+|   add_ln123_fu_519_p2                 |     |        | add_ln123    | add    | fabric    | 0       |
+|   mul_13s_13s_13_1_1_U33              | 1   |        | mul_ln124    | mul    | auto      | 0       |
+|   add_ln128_1_fu_567_p2               |     |        | add_ln128_1  | add    | fabric    | 0       |
+|  + cnn_hls_Pipeline_VITIS_LOOP_165_1  | 2   |        |              |        |           |         |
+|    icmp_ln165_fu_135_p2               |     |        | icmp_ln165   | setlt  | auto      | 0       |
+|    add_ln165_fu_155_p2                |     |        | add_ln165    | add    | fabric    | 0       |
+|    sdiv_13ns_32ns_13_17_1_U1          |     |        | sdiv_ln168   | sdiv   | auto      | 16      |
+|    mac_muladd_13s_13s_13ns_13_4_1_U3  | 1   |        | mul_ln168    | mul    | dsp_slice | 3       |
+|    srem_13ns_32ns_13_17_1_U2          |     |        | srem_ln168   | srem   | auto      | 16      |
+|    mac_muladd_13s_13s_13ns_13_4_1_U3  | 1   |        | add_ln168    | add    | dsp_slice | 3       |
+|    mac_muladd_8s_8s_32s_32_4_1_U4     | 1   |        | mul_ln168_1  | mul    | dsp_slice | 3       |
+|    mac_muladd_8s_8s_32s_32_4_1_U4     | 1   |        | sext_ln168_1 | sext   | dsp_slice | 3       |
+|    mac_muladd_8s_8s_32s_32_4_1_U4     | 1   |        | add_ln168_1  | add    | dsp_slice | 3       |
+|  + cnn_hls_Pipeline_VITIS_LOOP_153_2  | 1   |        |              |        |           |         |
+|    icmp_ln153_fu_136_p2               |     |        | icmp_ln153   | setlt  | auto      | 0       |
+|    add_ln154_fu_142_p2                |     |        | add_ln154    | add    | fabric    | 0       |
+|    mac_muladd_13s_13s_13ns_13_4_1_U16 | 1   |        | mul_ln154    | mul    | dsp_slice | 3       |
+|    mac_muladd_13s_13s_13ns_13_4_1_U16 | 1   |        | add_ln154_1  | add    | dsp_slice | 3       |
+|    addr_cmp_fu_167_p2                 |     |        | addr_cmp     | seteq  | auto      | 0       |
+|    reuse_select_fu_172_p3             |     |        | reuse_select | select | auto_sel  | 0       |
+|    add_ln154_3_fu_188_p2              |     |        | add_ln154_3  | add    | fabric    | 0       |
+|    add_ln154_2_fu_193_p2              |     |        | add_ln154_2  | add    | fabric    | 0       |
+|  + cnn_hls_Pipeline_VITIS_LOOP_105_2  | 1   |        |              |        |           |         |
+|    mul_13s_13s_13_1_1_U21             | 1   |        | mul_ln106    | mul    | auto      | 0       |
+|    add_ln106_fu_142_p2                |     |        | add_ln106    | add    | fabric    | 0       |
+|    addr_cmp_fu_176_p2                 |     |        | addr_cmp     | seteq  | auto      | 0       |
+|    reuse_select_fu_181_p3             |     |        | reuse_select | select | auto_sel  | 0       |
+|    add_ln105_fu_160_p2                |     |        | add_ln105    | add    | fabric    | 0       |
+|  + cnn_hls_Pipeline_VITIS_LOOP_125_2  | 0   |        |              |        |           |         |
+|    icmp_ln125_fu_95_p2                |     |        | icmp_ln125   | setlt  | auto      | 0       |
+|    add_ln126_fu_105_p2                |     |        | add_ln126    | add    | fabric    | 0       |
+|    add_ln126_1_fu_116_p2              |     |        | add_ln126_1  | add    | fabric    | 0       |
+|    add_ln125_fu_122_p2                |     |        | add_ln125    | add    | fabric    | 0       |
++---------------------------------------+-----+--------+--------------+--------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+| Type            | Options                                  | Location                                                                            |
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+| inline          |                                          | ../tutorial_example/source/cnn.h:100 in shiftup                                     |
+| inline          |                                          | ../tutorial_example/source/cnn.h:114 in shiftleft                                   |
+| inline          |                                          | ../tutorial_example/source/cnn.h:138 in shiftdown                                   |
+| array_partition | variable=arr_complete type=complete      | ../tutorial_example/source/hls.cpp:17 in assign_array_complete, arr_complete        |
+| disaggregate    | variable=vec_s1                          | ../tutorial_example/source/hls.cpp:35 in vector_add, vec_s1                         |
+| disaggregate    | variable=vec_s2                          | ../tutorial_example/source/hls.cpp:36 in vector_add, vec_s2                         |
+| disaggregate    | variable=vec_d1                          | ../tutorial_example/source/hls.cpp:37 in vector_add, vec_d1                         |
+| pipeline        | OFF                                      | ../tutorial_example/source/hls.cpp:46 in fill_value                                 |
+| array_partition | variable=tc_arr type=complete            | ../tutorial_example/source/hls.cpp:66 in hevc_loop_filter_chroma_8bit_hls, tc_arr   |
+| array_partition | variable=no_p_arr type=complete          | ../tutorial_example/source/hls.cpp:67 in hevc_loop_filter_chroma_8bit_hls, no_p_arr |
+| array_partition | variable=no_q_arr type=complete          | ../tutorial_example/source/hls.cpp:68 in hevc_loop_filter_chroma_8bit_hls, no_q_arr |
+| unroll          | OFF = TRUE                               | ../tutorial_example/source/hls.cpp:78 in hevc_loop_filter_chroma_8bit_hls           |
+| pipeline        |                                          | ../tutorial_example/source/hls.cpp:88 in hevc_loop_filter_chroma_8bit_hls           |
+| interface       | ap_memory port=pixel storage_type=RAM_2P | ../tutorial_example/source/hls.cpp:118 in cnn_hls, pixel                            |
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+
+

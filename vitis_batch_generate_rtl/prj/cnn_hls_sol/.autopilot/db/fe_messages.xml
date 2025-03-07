@@ -1,0 +1,147 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:11:28" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:11:45" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:11:62" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:16:36" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:16:53" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:16:70" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:25:24" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:25:41" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:25:58" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:34:25" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:34:42" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:34:59" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:44:25" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:44:42" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:44:59" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:62:47" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:62:64" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:62:81" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:117:64" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:117:81" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:117:98" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/cnn.h:100:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="shiftUp" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/cnn.h:114:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="shiftLeft" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/cnn.h:138:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="shiftDown" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="assign_array_complete" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=arr_complete type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vector_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=vec_s1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vector_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=vec_s2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vector_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=vec_d1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fill_value" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:66:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hevc_loop_filter_chroma_8bit_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=tc_arr type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:67:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hevc_loop_filter_chroma_8bit_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=no_p_arr type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:68:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hevc_loop_filter_chroma_8bit_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=no_q_arr type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:78:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hevc_loop_filter_chroma_8bit_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF = TRUE" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hevc_loop_filter_chroma_8bit_hls" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/hls.tcl:68:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="cnn_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=cnn_hls" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../tutorial_example/source/hls.cpp:118:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cnn_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_memory port=pixel storage_type=RAM_2P" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../tutorial_example/source/hls.cpp:147:18" msg_body="Inlining function 'cnnCore::shiftLeft()' into 'cnn_hls'">
+        <args Callee="cnnCore::shiftLeft()" Callee-DebugLoc="File ../tutorial_example/source/cnn.h Line 113 Column 0" Caller="cnn_hls" Caller-DebugLoc="File ../tutorial_example/source/hls.cpp Line 117 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../tutorial_example/source/hls.cpp:152:18" msg_body="Inlining function 'cnnCore::shiftDown()' into 'cnn_hls'">
+        <args Callee="cnnCore::shiftDown()" Callee-DebugLoc="File ../tutorial_example/source/cnn.h Line 137 Column 0" Caller="cnn_hls" Caller-DebugLoc="File ../tutorial_example/source/hls.cpp Line 117 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../tutorial_example/source/hls.cpp:149:18" msg_body="Inlining function 'cnnCore::shiftUp()' into 'cnn_hls'">
+        <args Callee="cnnCore::shiftUp()" Callee-DebugLoc="File ../tutorial_example/source/cnn.h Line 99 Column 0" Caller="cnn_hls" Caller-DebugLoc="File ../tutorial_example/source/hls.cpp Line 117 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../tutorial_example/source/hls.cpp:117:0" msg_body="Inlining function 'cnnCore::cnnCore()' into 'cnn_hls'">
+        <args Callee="cnnCore::cnnCore()" Callee-DebugLoc="File ../tutorial_example/source/cnn.h Line 66 Column 0" Caller="cnn_hls" Caller-DebugLoc="File ../tutorial_example/source/hls.cpp Line 117 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../tutorial_example/source/hls.cpp:117:0" msg_body="Inlining function 'cnnCore::config(int, int, int, char*, int*)' into 'cnn_hls'">
+        <args Callee="cnnCore::config(int, int, int, char*, int*)" Callee-DebugLoc="File ../tutorial_example/source/cnn.h Line 73 Column 0" Caller="cnn_hls" Caller-DebugLoc="File ../tutorial_example/source/hls.cpp Line 117 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../tutorial_example/source/hls.cpp:117:0" msg_body="Inlining function 'cnnCore::scalar_matrix_multAdd(bool, char)' into 'cnn_hls'">
+        <args Callee="cnnCore::scalar_matrix_multAdd(bool, char)" Callee-DebugLoc="File ../tutorial_example/source/cnn.h Line 162 Column 0" Caller="cnn_hls" Caller-DebugLoc="File ../tutorial_example/source/hls.cpp Line 117 Column 0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="../tutorial_example/source/cnn.h:151:21" msg_body="Automatically disabling loop flattening for loop 'VITIS_LOOP_151_1'.">
+        <args LoopName="VITIS_LOOP_151_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../tutorial_example/source/cnn.h:151:21" msg_body="loop_flatten 0 1 cnn_hls ../tutorial_example/source/cnn.h:151:21VITIS_LOOP_151_1 ../tutorial_example/source/cnn.h:151:21">
+        <args LoopLoc="../tutorial_example/source/cnn.h:151:21" LoopLoc-DebugLoc="File ../tutorial_example/source/cnn.h Line 151 Column 21" LoopName="VITIS_LOOP_151_1" PragmaFunction="cnn_hls" PragmaIsAuto="1" PragmaOptions="0" PragmaSrcLoc="../tutorial_example/source/cnn.h:151:21" PragmaSrcLoc-DebugLoc="File ../tutorial_example/source/cnn.h Line 151 Column 21" PragmaType="loop_flatten"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="../tutorial_example/source/cnn.h:103:21" msg_body="Automatically disabling loop flattening for loop 'VITIS_LOOP_103_1'.">
+        <args LoopName="VITIS_LOOP_103_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../tutorial_example/source/cnn.h:103:21" msg_body="loop_flatten 0 1 cnn_hls ../tutorial_example/source/cnn.h:103:21VITIS_LOOP_103_1 ../tutorial_example/source/cnn.h:103:21">
+        <args LoopLoc="../tutorial_example/source/cnn.h:103:21" LoopLoc-DebugLoc="File ../tutorial_example/source/cnn.h Line 103 Column 21" LoopName="VITIS_LOOP_103_1" PragmaFunction="cnn_hls" PragmaIsAuto="1" PragmaOptions="0" PragmaSrcLoc="../tutorial_example/source/cnn.h:103:21" PragmaSrcLoc-DebugLoc="File ../tutorial_example/source/cnn.h Line 103 Column 21" PragmaType="loop_flatten"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="../tutorial_example/source/cnn.h:123:21" msg_body="Automatically disabling loop flattening for loop 'VITIS_LOOP_123_1'.">
+        <args LoopName="VITIS_LOOP_123_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../tutorial_example/source/cnn.h:123:21" msg_body="loop_flatten 0 1 cnn_hls ../tutorial_example/source/cnn.h:123:21VITIS_LOOP_123_1 ../tutorial_example/source/cnn.h:123:21">
+        <args LoopLoc="../tutorial_example/source/cnn.h:123:21" LoopLoc-DebugLoc="File ../tutorial_example/source/cnn.h Line 123 Column 21" LoopName="VITIS_LOOP_123_1" PragmaFunction="cnn_hls" PragmaIsAuto="1" PragmaOptions="0" PragmaSrcLoc="../tutorial_example/source/cnn.h:123:21" PragmaSrcLoc-DebugLoc="File ../tutorial_example/source/cnn.h Line 123 Column 21" PragmaType="loop_flatten"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

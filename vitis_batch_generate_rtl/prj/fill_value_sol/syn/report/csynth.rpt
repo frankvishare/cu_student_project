@@ -1,0 +1,131 @@
+
+
+================================================================
+== Synthesis Summary Report of 'fill_value'
+================================================================
++ General Information: 
+    * Date:           Thu Feb 27 14:43:26 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        prj
+    * Solution:       fill_value_sol (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu19p-fsvb3824-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+----------+-----+
+    |       Modules      | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |          |          |     |
+    |       & Loops      | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF    |    LUT   | URAM|
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+----------+-----+
+    |+ fill_value        |     -|  0.28|        -|       -|         -|        -|     -|        no|     -|   -|  80 (~0%)|  83 (~0%)|    -|
+    | o VITIS_LOOP_45_1  |     -|  2.41|        -|       -|         1|        -|     -|        no|     -|   -|         -|         -|    -|
+    +--------------------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++--------------------+-----------+----------+
+| Port               | Direction | Bitwidth |
++--------------------+-----------+----------+
+| big_array_address0 | out       | 14       |
+| big_array_d0       | out       | 32       |
++--------------------+-----------+----------+
+
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| ap_core   | ap_none | in        | 8        |
+| ap_parent | ap_none | in        | 8        |
+| ap_part   | ap_none | in        | 8        |
+| fillsize  | ap_none | in        | 32       |
+| value_r   | ap_none | in        | 32       |
++-----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+-------------+-----------------------------------+
+| Interface | Type        | Ports                             |
++-----------+-------------+-----------------------------------+
+| ap_ce     | clockenable | ap_ce                             |
+| ap_clk    | clock       | ap_clk                            |
+| ap_rst    | reset       | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs  | ap_done ap_idle ap_ready ap_start |
++-----------+-------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+---------------+
+| Argument  | Direction | Datatype      |
++-----------+-----------+---------------+
+| ap_core   | in        | unsigned char |
+| ap_part   | in        | unsigned char |
+| ap_parent | in        | unsigned char |
+| value     | in        | int           |
+| fillsize  | in        | int           |
+| big_array | out       | int*          |
++-----------+-----------+---------------+
+
+* SW-to-HW Mapping
++-----------+--------------------+---------+----------+
+| Argument  | HW Interface       | HW Type | HW Usage |
++-----------+--------------------+---------+----------+
+| ap_core   | ap_core            | port    |          |
+| ap_part   | ap_part            | port    |          |
+| ap_parent | ap_parent          | port    |          |
+| value     | value_r            | port    |          |
+| fillsize  | fillsize           | port    |          |
+| big_array | big_array_address0 | port    | offset   |
+| big_array | big_array_ce0      | port    |          |
+| big_array | big_array_we0      | port    |          |
+| big_array | big_array_d0       | port    |          |
++-----------+--------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------+-----+--------+-----------+-------+--------+---------+
+| Name                 | DSP | Pragma | Variable  | Op    | Impl   | Latency |
++----------------------+-----+--------+-----------+-------+--------+---------+
+| + fill_value         | 0   |        |           |       |        |         |
+|   icmp_ln45_fu_87_p2 |     |        | icmp_ln45 | setlt | auto   | 0       |
+|   add_ln45_fu_92_p2  |     |        | add_ln45  | add   | fabric | 0       |
++----------------------+-----+--------+-----------+-------+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+| Type            | Options                                  | Location                                                                            |
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+| inline          |                                          | ../tutorial_example/source/cnn.h:100 in shiftup                                     |
+| inline          |                                          | ../tutorial_example/source/cnn.h:114 in shiftleft                                   |
+| inline          |                                          | ../tutorial_example/source/cnn.h:138 in shiftdown                                   |
+| array_partition | variable=arr_complete type=complete      | ../tutorial_example/source/hls.cpp:17 in assign_array_complete, arr_complete        |
+| disaggregate    | variable=vec_s1                          | ../tutorial_example/source/hls.cpp:35 in vector_add, vec_s1                         |
+| disaggregate    | variable=vec_s2                          | ../tutorial_example/source/hls.cpp:36 in vector_add, vec_s2                         |
+| disaggregate    | variable=vec_d1                          | ../tutorial_example/source/hls.cpp:37 in vector_add, vec_d1                         |
+| pipeline        | OFF                                      | ../tutorial_example/source/hls.cpp:46 in fill_value                                 |
+| array_partition | variable=tc_arr type=complete            | ../tutorial_example/source/hls.cpp:66 in hevc_loop_filter_chroma_8bit_hls, tc_arr   |
+| array_partition | variable=no_p_arr type=complete          | ../tutorial_example/source/hls.cpp:67 in hevc_loop_filter_chroma_8bit_hls, no_p_arr |
+| array_partition | variable=no_q_arr type=complete          | ../tutorial_example/source/hls.cpp:68 in hevc_loop_filter_chroma_8bit_hls, no_q_arr |
+| unroll          | OFF = TRUE                               | ../tutorial_example/source/hls.cpp:78 in hevc_loop_filter_chroma_8bit_hls           |
+| pipeline        |                                          | ../tutorial_example/source/hls.cpp:88 in hevc_loop_filter_chroma_8bit_hls           |
+| interface       | ap_memory port=pixel storage_type=RAM_2P | ../tutorial_example/source/hls.cpp:118 in cnn_hls, pixel                            |
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+
+

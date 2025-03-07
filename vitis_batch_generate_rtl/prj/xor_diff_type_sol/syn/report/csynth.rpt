@@ -1,0 +1,119 @@
+
+
+================================================================
+== Synthesis Summary Report of 'xor_diff_type'
+================================================================
++ General Information: 
+    * Date:           Thu Feb 27 14:42:03 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        prj
+    * Solution:       xor_diff_type_sol (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu19p-fsvb3824-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------+------+------+---------+--------+----------+---------+------+----------+------+----+---+----------+-----+
+    |     Modules     | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |   |          |     |
+    |     & Loops     | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP| FF|    LUT   | URAM|
+    +-----------------+------+------+---------+--------+----------+---------+------+----------+------+----+---+----------+-----+
+    |+ xor_diff_type  |     -|  2.12|        0|   0.000|         -|        1|     -|        no|     -|   -|  -|  16 (~0%)|    -|
+    +-----------------+------+------+---------+--------+----------+---------+------+----------+------+----+---+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| ap_core   | ap_none | in        | 8        |
+| ap_parent | ap_none | in        | 8        |
+| ap_part   | ap_none | in        | 8        |
+| xor_val16 | ap_none | in        | 16       |
+| xor_val32 | ap_vld  | out       | 32       |
+| xor_val8  | ap_none | in        | 8        |
++-----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+-------------+-----------------------------------+
+| Interface | Type        | Ports                             |
++-----------+-------------+-----------------------------------+
+| ap_ce     | clockenable | ap_ce                             |
+| ap_rst    | reset       | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs  | ap_done ap_idle ap_ready ap_start |
++-----------+-------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+----------------+
+| Argument  | Direction | Datatype       |
++-----------+-----------+----------------+
+| ap_core   | in        | unsigned char  |
+| ap_part   | in        | unsigned char  |
+| ap_parent | in        | unsigned char  |
+| xor_val32 | out       | unsigned int*  |
+| xor_val16 | in        | unsigned short |
+| xor_val8  | in        | unsigned char  |
++-----------+-----------+----------------+
+
+* SW-to-HW Mapping
++-----------+------------------+---------+
+| Argument  | HW Interface     | HW Type |
++-----------+------------------+---------+
+| ap_core   | ap_core          | port    |
+| ap_part   | ap_part          | port    |
+| ap_parent | ap_parent        | port    |
+| xor_val32 | xor_val32        | port    |
+| xor_val32 | xor_val32_ap_vld | port    |
+| xor_val16 | xor_val16        | port    |
+| xor_val8  | xor_val8         | port    |
++-----------+------------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------+-----+--------+----------+-----+------+---------+
+| Name                | DSP | Pragma | Variable | Op  | Impl | Latency |
++---------------------+-----+--------+----------+-----+------+---------+
+| + xor_diff_type     | 0   |        |          |     |      |         |
+|   xor_ln12_fu_57_p2 |     |        | xor_ln12 | xor | auto | 0       |
++---------------------+-----+--------+----------+-----+------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+| Type            | Options                                  | Location                                                                            |
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+| inline          |                                          | ../tutorial_example/source/cnn.h:100 in shiftup                                     |
+| inline          |                                          | ../tutorial_example/source/cnn.h:114 in shiftleft                                   |
+| inline          |                                          | ../tutorial_example/source/cnn.h:138 in shiftdown                                   |
+| array_partition | variable=arr_complete type=complete      | ../tutorial_example/source/hls.cpp:17 in assign_array_complete, arr_complete        |
+| disaggregate    | variable=vec_s1                          | ../tutorial_example/source/hls.cpp:35 in vector_add, vec_s1                         |
+| disaggregate    | variable=vec_s2                          | ../tutorial_example/source/hls.cpp:36 in vector_add, vec_s2                         |
+| disaggregate    | variable=vec_d1                          | ../tutorial_example/source/hls.cpp:37 in vector_add, vec_d1                         |
+| pipeline        | OFF                                      | ../tutorial_example/source/hls.cpp:46 in fill_value                                 |
+| array_partition | variable=tc_arr type=complete            | ../tutorial_example/source/hls.cpp:66 in hevc_loop_filter_chroma_8bit_hls, tc_arr   |
+| array_partition | variable=no_p_arr type=complete          | ../tutorial_example/source/hls.cpp:67 in hevc_loop_filter_chroma_8bit_hls, no_p_arr |
+| array_partition | variable=no_q_arr type=complete          | ../tutorial_example/source/hls.cpp:68 in hevc_loop_filter_chroma_8bit_hls, no_q_arr |
+| unroll          | OFF = TRUE                               | ../tutorial_example/source/hls.cpp:78 in hevc_loop_filter_chroma_8bit_hls           |
+| pipeline        |                                          | ../tutorial_example/source/hls.cpp:88 in hevc_loop_filter_chroma_8bit_hls           |
+| interface       | ap_memory port=pixel storage_type=RAM_2P | ../tutorial_example/source/hls.cpp:118 in cnn_hls, pixel                            |
++-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+
+

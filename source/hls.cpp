@@ -1,4 +1,6 @@
-#include "hls_cnn.h"
+#include "hls.h"
+#include "hls_config.h"
+#include "xmem.h"
 
 struct activation_func
 {
@@ -40,9 +42,13 @@ struct activation_func
 };
 //*-------------------------------------------------------------------------------------------------------/
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 // 卷积--------------------------------------------------------------------------------------------------/
-void convn_valid(double in_data[MAX_MAP_SIZE], int in_w, int in_h, 
+/*
+void IMPL(convn_valid)(double in_data[MAX_MAP_SIZE], int in_w, int in_h, 
                 double kernel[MAX_KERNEL_SIZE], int kernel_w, int kernel_h, 
                 double out_data[MAX_MAP_SIZE], int out_w, int out_h)
 {
@@ -63,7 +69,29 @@ void convn_valid(double in_data[MAX_MAP_SIZE], int in_w, int in_h,
         }
     }
 }
+	*/
 //*-------------------------------------------------------------------------------------------------------/
+void IMPL(convn_valid)(HLS_COMMON_ARG double in_data[MAX_MAP_SIZE], int in_w, int in_h, 
+	double kernel[MAX_KERNEL_SIZE], int kernel_w, int kernel_h, 
+	double out_data[MAX_MAP_SIZE], int out_w, int out_h)
+{
+double sum = 0.0;
+for (int i = 0; i < out_h; i++)
+{
+for (int j = 0; j < out_w; j++)
+{
+sum = 0.0;
+for (int n = 0; n < kernel_h; n++)
+{
+	for (int m = 0; m < kernel_w; m++)
+	{
+		sum += in_data[(i + n)*in_w + j + m] * kernel[n*kernel_w + m];
+	}
+}
+out_data[i*out_w + j] += sum;
+}
+}
+}
 
 // 正向传播----------------------------------------------------------------------------------------------/
 #define O true
@@ -80,7 +108,7 @@ bool connection_table[6*16] =
 #undef O
 #undef X
 
-void conv_fprop(Layer *prev_layer, Layer *layer, bool *pconnection)
+void IMPL(conv_fprop)(Layer *prev_layer, Layer *layer, bool pconnection[96])
 {
 	int index = 0;
 	int size = layer->map_w * layer->map_h;
@@ -138,7 +166,7 @@ void conv_fprop(Layer *prev_layer, Layer *layer, bool *pconnection)
 	}
 }*/
 
-void max_pooling_fprop(Layer *prev_layer, Layer *layer)
+void IMPL(max_pooling_fprop)(Layer *prev_layer, Layer *layer)
 {
 	int map_w = layer->map_w;
 	int map_h = layer->map_h;
@@ -165,7 +193,7 @@ void max_pooling_fprop(Layer *prev_layer, Layer *layer)
 	}
 }
 
-void fully_connected_fprop(Layer *prev_layer, Layer *layer)
+void IMPL(fully_connected_fprop)(Layer *prev_layer, Layer *layer)
 {
 	for (int i = 0; i < layer->map_count; i++) 
 	{
@@ -179,3 +207,12 @@ void fully_connected_fprop(Layer *prev_layer, Layer *layer)
 		layer->map[i].data[0] = activation_func::tan_h(sum);
 	}
 }
+
+#ifdef __cplusplus
+}
+#endif
+
+
+#if CAPTURE_COSIM
+	#include "hls_capture.cpp"
+#endif

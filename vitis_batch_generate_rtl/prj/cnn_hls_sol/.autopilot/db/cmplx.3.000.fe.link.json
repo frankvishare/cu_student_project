@@ -1,0 +1,98 @@
+{
+  "0": {
+    "basicblocks": 15,
+    "calls": "4 3 5 2 1 6",
+    "file": "hls.cpp",
+    "fileloc": 117,
+    "instructions": 53,
+    "loads": {
+      "T": 1
+    },
+    "name": "cnn_hls",
+    "total_instructions": 297
+  },
+  "1": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "cnn.h",
+    "fileloc": 99,
+    "instructions": 58,
+    "loads": {
+      "L": 12
+    },
+    "name": "shiftUp",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 58
+  },
+  "2": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "cnn.h",
+    "fileloc": 112,
+    "instructions": 60,
+    "loads": {
+      "L": 13
+    },
+    "name": "shiftLeft",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 60
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "cnn.h",
+    "fileloc": 72,
+    "instructions": 17,
+    "name": "config",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 17
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "cnn.h",
+    "fileloc": 65,
+    "instructions": 5,
+    "name": "cnnCore",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "5": {
+    "basicblocks": 8,
+    "calls": "",
+    "file": "cnn.h",
+    "fileloc": 161,
+    "instructions": 46,
+    "loads": {
+      "L": 10
+    },
+    "name": "scalar_matrix_multAdd",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 46
+  },
+  "6": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "cnn.h",
+    "fileloc": 137,
+    "instructions": 58,
+    "loads": {
+      "L": 12
+    },
+    "name": "shiftDown",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 58
+  }
+}

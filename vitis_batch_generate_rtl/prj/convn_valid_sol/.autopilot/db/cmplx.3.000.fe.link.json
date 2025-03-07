@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 25,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 74,
+    "instructions": 60,
+    "loads": {
+      "T": 3
+    },
+    "name": "convn_valid",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 60
+  }
+}

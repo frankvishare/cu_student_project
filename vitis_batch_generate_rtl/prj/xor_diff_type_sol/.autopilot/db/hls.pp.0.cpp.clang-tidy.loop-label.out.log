@@ -1,0 +1,98 @@
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:2262:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:2262:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:2276:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:2276:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:2290:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:2290:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:3924:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:3924:7: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:6046:2: warning: Added loop label VITIS_LOOP_83_1:   [xilinx-label-all-loops]
+ for (size_t i = 0; i < num; i++)
+ ^~~
+ VITIS_LOOP_83_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:6046:2: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:6056:2: warning: Added loop label VITIS_LOOP_93_1:   [xilinx-label-all-loops]
+ for (size_t i = 0; i < num; i++)
+ ^~~
+ VITIS_LOOP_93_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:6056:2: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34642:3: warning: Added loop label VITIS_LOOP_103_1:   [xilinx-label-all-loops]
+  for (x = 0; x < rwidth; x++) {
+  ^~~
+  VITIS_LOOP_103_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34642:3: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34644:4: warning: Added loop label VITIS_LOOP_105_2:   [xilinx-label-all-loops]
+   for (y = rheight - 2; y >= 0; y--){
+   ^~~
+   VITIS_LOOP_105_2: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34644:4: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34662:3: warning: Added loop label VITIS_LOOP_123_1:   [xilinx-label-all-loops]
+  for (y = 0; y < rheight; y++) {
+  ^~~
+  VITIS_LOOP_123_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34662:3: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34664:4: warning: Added loop label VITIS_LOOP_125_2:   [xilinx-label-all-loops]
+   for (x = 1; x < rwidth; x++) {
+   ^~~
+   VITIS_LOOP_125_2: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34664:4: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34681:3: warning: Added loop label VITIS_LOOP_151_1:   [xilinx-label-all-loops]
+  for (x = 0; x < rwidth; x++) {
+  ^~~
+  VITIS_LOOP_151_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34681:3: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34683:4: warning: Added loop label VITIS_LOOP_153_2:   [xilinx-label-all-loops]
+   for (y = 0; y < rheight-1; y++) {
+   ^~~
+   VITIS_LOOP_153_2: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34683:4: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34695:3: warning: Added loop label VITIS_LOOP_165_1:   [xilinx-label-all-loops]
+  for (i = 0; i < width * height; i++) {
+  ^~~
+  VITIS_LOOP_165_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34695:3: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34721:2: warning: Added loop label VITIS_LOOP_18_1:   [xilinx-label-all-loops]
+ for (int i=0; i<5; i++){
+ ^~~
+ VITIS_LOOP_18_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34721:2: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34731:5: warning: Added loop label VITIS_LOOP_28_1:   [xilinx-label-all-loops]
+    for (int i=0; i<MAX_ARR_SIZE && i < count; i++){
+    ^~~
+    VITIS_LOOP_28_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34731:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34748:5: warning: Added loop label VITIS_LOOP_45_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < fillsize; ++i) {
+    ^~~
+    VITIS_LOOP_45_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34748:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34768:5: warning: Added loop label VITIS_LOOP_76_1:   [xilinx-label-all-loops]
+    for (j = 0; j < 2; j++) {
+    ^~~
+    VITIS_LOOP_76_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34768:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34779:9: warning: Added loop label VITIS_LOOP_87_2:   [xilinx-label-all-loops]
+        for (d = 0; d < 4; d++) {
+        ^~~
+        VITIS_LOOP_87_2: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34779:9: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34801:57: error: RAM_2P is not valid value for option interface BRAM's option 'storage_type' [clang-diagnostic-error]
+#pragma HLS INTERFACE ap_memory port=pixel storage_type=RAM_2P
+                                                        ^
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34812:5: warning: Added loop label VITIS_LOOP_139_1:   [xilinx-label-all-loops]
+    for (i = 0; i < filter * filter; i++) {
+    ^~~
+    VITIS_LOOP_139_1: 
+/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/prj/xor_diff_type_sol/.autopilot/db/hls.pp.0.cpp:34812:5: note: FIX-IT applied suggested code changes

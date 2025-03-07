@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 34,
+    "instructions": 27,
+    "loads": {
+      "T": 4
+    },
+    "name": "vector_add",
+    "stores": {
+      "T": 2
+    },
+    "total_instructions": 27
+  }
+}

@@ -1,0 +1,187 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 100, Column: 4 }
+Function:        _Z10conv_fpropP6_LayerS0_Pb
+Args:            
+  - Callee:          'convn_valid(double*, int, int, double*, int, int, double*, int, int)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 50, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'conv_fprop(_Layer*, _Layer*, bool*)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 86, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 108, Column: 28 }
+Function:        _Z10conv_fpropP6_LayerS0_Pb
+Args:            
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'conv_fprop(_Layer*, _Layer*, bool*)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 86, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_conv_fprop_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            layer
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_conv_fprop_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            layer_map
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_conv_fprop_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            prev_layer
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_conv_fprop_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            prev_layer_map
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 100, Column: 4 }
+Function:        _Z10conv_fpropP6_LayerS0_Pb
+Args:            
+  - Callee:          'convn_valid(double*, int, int, double*, int, int, double*, int, int)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 50, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'conv_fprop(_Layer*, _Layer*, bool*)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 86, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 108, Column: 28 }
+Function:        _Z10conv_fpropP6_LayerS0_Pb
+Args:            
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'conv_fprop(_Layer*, _Layer*, bool*)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 86, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_conv_fprop_ir
+Args:            
+  - Callee:          'conv_fprop(_Layer*, _Layer*, bool*)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_conv_fprop_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../source/hls.cpp, Line: 86, Column: 0 }
+Function:        _Z10conv_fpropP6_LayerS0_Pb
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'convn_valid(double*, int, int, double*, int, int, double*, int, int)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 50, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv_fprop(_Layer*, _Layer*, bool*)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 86, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../source/hls.cpp, Line: 86, Column: 0 }
+Function:        _Z10conv_fpropP6_LayerS0_Pb
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv_fprop(_Layer*, _Layer*, bool*)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 86, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_conv_fprop_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            layer_kernel
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '3200'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_conv_fprop_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            prev_layer_kernel
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '3200'
+  - String:          '-bits'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_106_3
+  - String:          '> at '
+  - LoopLoc:         '../source/hls.cpp:106:21'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_59_4
+  - String:          '> at '
+  - LoopLoc:         '../source/hls.cpp:59:34'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         ''
+  - String:          ' '
+...

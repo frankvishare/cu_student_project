@@ -1,0 +1,34 @@
+{
+  "0": {
+    "basicblocks": 39,
+    "calls": "1",
+    "file": "hls.cpp",
+    "fileloc": 117,
+    "instructions": 200,
+    "loads": {
+      "L": 19,
+      "T": 7
+    },
+    "name": "cnn_hls",
+    "stores": {
+      "L": 4,
+      "T": 6
+    },
+    "total_instructions": 238
+  },
+  "1": {
+    "basicblocks": 8,
+    "calls": "",
+    "file": "cnn.h",
+    "fileloc": 161,
+    "instructions": 38,
+    "loads": {
+      "L": 7
+    },
+    "name": "scalar_matrix_multAdd",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 38
+  }
+}

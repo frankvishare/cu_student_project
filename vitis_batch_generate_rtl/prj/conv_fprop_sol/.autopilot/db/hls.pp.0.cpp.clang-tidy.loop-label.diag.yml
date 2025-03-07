@@ -1,0 +1,148 @@
+---
+MainSourceFile:  /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_83_1:  '
+    FileOffset:      83
+    FilePath:        /home/duludulu/Documents/hls/source/xmem.h
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          220424
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_83_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_93_1:  '
+    FileOffset:      93
+    FilePath:        /home/duludulu/Documents/hls/source/xmem.h
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          220627
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_93_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_52_1:  '
+    FileOffset:      52
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          221516
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_52_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_54_2:  '
+    FileOffset:      54
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          221562
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_54_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_57_3:  '
+    FileOffset:      57
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          221639
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_57_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_59_4:  '
+    FileOffset:      59
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          221704
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_59_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_89_1:  '
+    FileOffset:      89
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          222908
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_89_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_92_2:  '
+    FileOffset:      92
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          223009
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_92_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_106_3:  '
+    FileOffset:      106
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          223378
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_106_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_149_1:  '
+    FileOffset:      149
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          223687
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_149_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_151_2:  '
+    FileOffset:      151
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          223735
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_151_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_153_3:  '
+    FileOffset:      153
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          223774
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_153_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_156_4:  '
+    FileOffset:      156
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          223882
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_156_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_158_5:  '
+    FileOffset:      158
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          223931
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_158_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_172_1:  '
+    FileOffset:      172
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          224277
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_172_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_175_2:  '
+    FileOffset:      175
+    FilePath:        /home/duludulu/Documents/hls/source/hls.cpp
+    Replacements:    
+      - FilePath:        /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop_sol/.autopilot/db/hls.pp.0.cpp
+        Offset:          224345
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_175_2: '
+...

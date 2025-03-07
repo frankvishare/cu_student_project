@@ -1,0 +1,2 @@
+"Modules","Issue Type","Slack","Latency(cycles)","Latency(ns)","Iteration Latency","Interval","Trip Count","Pipelined","BRAM","DSP","FF","LUT","URAM"
+"conv_fprop","Timing","-0.57","-","-","-","-","-","no","-","82 (2%)","11179","9924","-"

@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 44,
+    "instructions": 13,
+    "name": "fill_value",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 13
+  }
+}

@@ -5,7 +5,7 @@ if (NOT DEFINED CMAKE_BUILD_TYPE)
   set (CMAKE_BUILD_TYPE Release CACHE STRING "Build type")
 endif ()
 
-project (autonet_example)
+project (testlenet)
 
 message("DEBUG: CMAKE_SYSTEM_PROCESSOR = ${CMAKE_SYSTEM_PROCESSOR}")
 message("DEBUG: CMAKE_SYSTEM_NAME      = ${CMAKE_SYSTEM_NAME}")
@@ -55,6 +55,8 @@ set(SOURCES_FILES
     stdafx.cpp
     TestLeNet.cpp
     hls.cpp
+    tgcapture.cpp
+    
 )
 
 if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "riscv")
@@ -83,7 +85,7 @@ endif()
 
 
 if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "riscv")
-    set(TARGET_EXEC_NAME example.elf)
+    set(TARGET_EXEC_NAME testlenet.elf)
 else()
     #riscv: libcrt already include relevant pthread functions
     if(PTHREADS_FOUND)
@@ -91,7 +93,7 @@ else()
     endif()
 
     #target_link_libraries(autonet_example m)
-    set(TARGET_EXEC_NAME example)
+    set(TARGET_EXEC_NAME testlenet)
 endif()
 
 include_directories(.)
@@ -120,14 +122,14 @@ endif()
 if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "riscv")
     add_custom_command(
         TARGET ${TARGET_EXEC_NAME} POST_BUILD
-        COMMAND python3 gen_image.py  ${TARGET_EXEC_NAME} example.img -p riscv32-unknown-elf-objcopy -t riscv32-unknown-elf-
+        COMMAND python3 gen_image.py  ${TARGET_EXEC_NAME} testlenet.img -p riscv32-unknown-elf-objcopy -t riscv32-unknown-elf-
     )
     
     add_custom_command(
         TARGET ${TARGET_EXEC_NAME} POST_BUILD
-        COMMAND riscv32-unknown-elf-objdump -d ${TARGET_EXEC_NAME} > example.S
+        COMMAND riscv32-unknown-elf-objdump -d ${TARGET_EXEC_NAME} > testlenet.S
         #disasm with source
-        #COMMAND riscv32-unknown-elf-objdump -S -d ${TARGET_EXEC_NAME} > example.S
+        #COMMAND riscv32-unknown-elf-objdump -S -d ${TARGET_EXEC_NAME} > testlenet.S
     )
 endif()
 

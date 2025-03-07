@@ -1,0 +1,31 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_assign_array_complete_ir
+Args:            
+  - Callee:          assign_array_complete
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 16, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_assign_array_complete_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 16, 
+                   Column: 0 }
+Function:        assign_array_complete
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          arr_complete
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

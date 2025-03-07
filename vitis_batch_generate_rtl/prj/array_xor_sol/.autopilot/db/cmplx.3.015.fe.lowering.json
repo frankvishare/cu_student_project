@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 25,
+    "instructions": 31,
+    "loads": {
+      "T": 2
+    },
+    "name": "array_xor",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 31
+  }
+}

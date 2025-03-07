@@ -1,0 +1,174 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'hevc_loop_filter_chroma_8bit_hls'" level="0">
+<item name = "Date">Thu Feb 27 14:43:43 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">prj</item>
+<item name = "Solution">hevc_loop_filter_chroma_8bit_hls_sol (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu19p-fsvb3824-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.30 ns, 2.153 ns, 0.89 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">5, 65, 16.500 ns, 0.214 us, 6, 66, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_hevc_loop_filter_chroma_8bit_hls_Pipeline_VITIS_LOOP_87_2_fu_153">hevc_loop_filter_chroma_8bit_hls_Pipeline_VITIS_LOOP_87_2, 30, 30, 99.000 ns, 99.000 ns, 29, 29, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_76_1">4, 64, 2 ~ 32, -, -, 2, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 201, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 236, 655, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 56, -</column>
+<column name="Register">-, -, 382, -, -</column>
+<specialColumn name="Available SLR">1080, 960, 2042880, 1021440, 80</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4320, 3840, 8171520, 4085760, 320</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_hevc_loop_filter_chroma_8bit_hls_Pipeline_VITIS_LOOP_87_2_fu_153">hevc_loop_filter_chroma_8bit_hls_Pipeline_VITIS_LOOP_87_2, 0, 0, 236, 655, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln76_1_fu_233_p2">+, 0, 0, 9, 2, 1</column>
+<column name="add_ln76_fu_296_p2">+, 0, 0, 43, 36, 36</column>
+<column name="mul13_cast_fu_200_p2">-, 0, 0, 28, 1, 21</column>
+<column name="sub38_fu_285_p2">-, 0, 0, 23, 1, 16</column>
+<column name="ap_block_state3_on_subcall_done">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_264">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_267">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op70_call_state2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln76_fu_227_p2">icmp, 0, 0, 10, 2, 3</column>
+<column name="icmp_ln79_fu_244_p2">icmp, 0, 0, 9, 2, 1</column>
+<column name="icmp_ln80_fu_265_p2">icmp, 0, 0, 23, 16, 1</column>
+<column name="select_ln79_fu_250_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln84_fu_271_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln85_fu_278_p3">select, 0, 0, 8, 1, 8</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">20, 4, 1, 4</column>
+<column name="ap_phi_mux_idx_ext3_pn_phi_fu_147_p4">9, 2, 34, 68</column>
+<column name="idx_ext3_pn_reg_144">9, 2, 34, 68</column>
+<column name="j_fu_86">9, 2, 2, 4</column>
+<column name="pix_07_idx_fu_82">9, 2, 36, 72</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln76_1_reg_383">2, 0, 2, 0</column>
+<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="grp_hevc_loop_filter_chroma_8bit_hls_Pipeline_VITIS_LOOP_87_2_fu_153_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln80_reg_398">1, 0, 1, 0</column>
+<column name="idx_ext3_pn_reg_144">34, 0, 34, 0</column>
+<column name="j_fu_86">2, 0, 2, 0</column>
+<column name="mul13_cast_reg_340">20, 0, 21, 1</column>
+<column name="mul_cast_reg_335">34, 0, 34, 0</column>
+<column name="no_p_arr_0_read_reg_360">8, 0, 8, 0</column>
+<column name="no_p_arr_1_read_reg_365">8, 0, 8, 0</column>
+<column name="no_q_arr_0_read_reg_370">8, 0, 8, 0</column>
+<column name="no_q_arr_1_read_reg_375">8, 0, 8, 0</column>
+<column name="pix_07_idx_fu_82">36, 0, 36, 0</column>
+<column name="select_ln84_reg_402">8, 0, 8, 0</column>
+<column name="select_ln85_reg_407">8, 0, 8, 0</column>
+<column name="shl_ln_reg_345">32, 0, 34, 2</column>
+<column name="sub38_reg_412">16, 0, 16, 0</column>
+<column name="tc_arr_0_read_reg_350">32, 0, 32, 0</column>
+<column name="tc_arr_1_read_reg_355">32, 0, 32, 0</column>
+<column name="trunc_ln62_reg_330">21, 0, 21, 0</column>
+<column name="trunc_ln76_reg_388">21, 0, 21, 0</column>
+<column name="trunc_ln79_1_reg_393">15, 0, 15, 0</column>
+<column name="ystride_read_reg_325">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, hevc_loop_filter_chroma_8bit_hls, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, hevc_loop_filter_chroma_8bit_hls, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, hevc_loop_filter_chroma_8bit_hls, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, hevc_loop_filter_chroma_8bit_hls, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, hevc_loop_filter_chroma_8bit_hls, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, hevc_loop_filter_chroma_8bit_hls, return value</column>
+<column name="ap_ce">in, 1, ap_ctrl_hs, hevc_loop_filter_chroma_8bit_hls, return value</column>
+<column name="ap_core">in, 8, ap_none, ap_core, scalar</column>
+<column name="ap_part">in, 8, ap_none, ap_part, scalar</column>
+<column name="ap_parent">in, 8, ap_none, ap_parent, scalar</column>
+<column name="pix_base_address0">out, 21, ap_memory, pix_base, array</column>
+<column name="pix_base_ce0">out, 1, ap_memory, pix_base, array</column>
+<column name="pix_base_we0">out, 1, ap_memory, pix_base, array</column>
+<column name="pix_base_d0">out, 8, ap_memory, pix_base, array</column>
+<column name="pix_base_q0">in, 8, ap_memory, pix_base, array</column>
+<column name="pix_base_address1">out, 21, ap_memory, pix_base, array</column>
+<column name="pix_base_ce1">out, 1, ap_memory, pix_base, array</column>
+<column name="pix_base_q1">in, 8, ap_memory, pix_base, array</column>
+<column name="frame_offset">in, 32, ap_none, frame_offset, scalar</column>
+<column name="xstride">in, 32, ap_none, xstride, scalar</column>
+<column name="ystride">in, 32, ap_none, ystride, scalar</column>
+<column name="tc_arr_0">in, 32, ap_none, tc_arr_0, pointer</column>
+<column name="tc_arr_1">in, 32, ap_none, tc_arr_1, pointer</column>
+<column name="no_p_arr_0">in, 8, ap_none, no_p_arr_0, pointer</column>
+<column name="no_p_arr_1">in, 8, ap_none, no_p_arr_1, pointer</column>
+<column name="no_q_arr_0">in, 8, ap_none, no_q_arr_0, pointer</column>
+<column name="no_q_arr_1">in, 8, ap_none, no_q_arr_1, pointer</column>
+</table>
+</item>
+</section>
+</profile>

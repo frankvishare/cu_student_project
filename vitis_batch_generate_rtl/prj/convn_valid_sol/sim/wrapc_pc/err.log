@@ -1,0 +1,12 @@
+   Build using "/tools/Xilinx/Vitis/2024.2/vcxx/libexec//clang++"
+   Compiling apatb_convn_valid.cpp
+apatb_convn_valid.cpp:53:14: warning: nested namespace definition is a C++17 extension; define each namespace separately [-Wc++17-extensions]
+namespace hls::sim
+             ^~~~~
+              { namespace sim
+apatb_convn_valid.cpp:100:14: warning: nested namespace definition is a C++17 extension; define each namespace separately [-Wc++17-extensions]
+namespace hls::sim
+             ^~~~~
+              { namespace sim
+2 warnings generated.
+   Generating cosim.pc.exe

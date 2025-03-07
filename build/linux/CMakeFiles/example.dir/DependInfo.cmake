@@ -1,23 +1,27 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/bsy/workspace/TestLeNet/source/TestLeNet.cpp" "/home/bsy/workspace/TestLeNet/build/linux/CMakeFiles/example.dir/TestLeNet.cpp.o"
-  "/home/bsy/workspace/TestLeNet/source/mt19937ar.cpp" "/home/bsy/workspace/TestLeNet/build/linux/CMakeFiles/example.dir/mt19937ar.cpp.o"
-  "/home/bsy/workspace/TestLeNet/source/stb_image_impl.cpp" "/home/bsy/workspace/TestLeNet/build/linux/CMakeFiles/example.dir/stb_image_impl.cpp.o"
-  "/home/bsy/workspace/TestLeNet/source/stdafx.cpp" "/home/bsy/workspace/TestLeNet/build/linux/CMakeFiles/example.dir/stdafx.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/bsy/workspace/TestLeNet/source/."
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/duludulu/Documents/hls/source/TestLeNet.cpp" "CMakeFiles/example.dir/TestLeNet.cpp.o" "gcc" "CMakeFiles/example.dir/TestLeNet.cpp.o.d"
+  "/home/duludulu/Documents/hls/source/hls.cpp" "CMakeFiles/example.dir/hls.cpp.o" "gcc" "CMakeFiles/example.dir/hls.cpp.o.d"
+  "/home/duludulu/Documents/hls/source/mt19937ar.cpp" "CMakeFiles/example.dir/mt19937ar.cpp.o" "gcc" "CMakeFiles/example.dir/mt19937ar.cpp.o.d"
+  "/home/duludulu/Documents/hls/source/stb_image_impl.cpp" "CMakeFiles/example.dir/stb_image_impl.cpp.o" "gcc" "CMakeFiles/example.dir/stb_image_impl.cpp.o.d"
+  "/home/duludulu/Documents/hls/source/stdafx.cpp" "CMakeFiles/example.dir/stdafx.cpp.o" "gcc" "CMakeFiles/example.dir/stdafx.cpp.o.d"
+  "/home/duludulu/Documents/hls/source/tgcapture.cpp" "CMakeFiles/example.dir/tgcapture.cpp.o" "gcc" "CMakeFiles/example.dir/tgcapture.cpp.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

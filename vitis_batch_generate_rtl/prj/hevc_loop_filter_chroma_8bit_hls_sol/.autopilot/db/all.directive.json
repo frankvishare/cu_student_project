@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "hevc_loop_filter_chroma_8bit_hls",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "hevc_loop_filter_chroma_8bit_hls"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/duludulu/Documents/vishare_tools/vitis_batch_generate_rtl/hls.tcl",
+    "sourceLine": 68,
+    "success": true
+  }
+]

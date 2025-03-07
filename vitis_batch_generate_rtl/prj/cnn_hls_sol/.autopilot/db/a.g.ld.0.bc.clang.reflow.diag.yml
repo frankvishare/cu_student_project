@@ -1,0 +1,320 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 132, 
+                   Column: 13 }
+Function:        cnn_hls
+Args:            
+  - Callee:          'cnnCore::cnnCore()'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 66, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 134, 
+                   Column: 10 }
+Function:        cnn_hls
+Args:            
+  - Callee:          'cnnCore::config(int, int, int, char*, int*)'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 73, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 141, 
+                   Column: 14 }
+Function:        cnn_hls
+Args:            
+  - Callee:          'cnnCore::scalar_matrix_multAdd(bool, char)'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 162, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 147, 
+                   Column: 18 }
+Function:        cnn_hls
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cnnCore::shiftLeft()'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 113, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 152, 
+                   Column: 18 }
+Function:        cnn_hls
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cnnCore::shiftDown()'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 137, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 149, 
+                   Column: 18 }
+Function:        cnn_hls
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cnnCore::shiftUp()'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 99, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            Inline
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                   Column: 0 }
+Function:        cnn_hls
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cnnCore::cnnCore()'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 66, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            Inline
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                   Column: 0 }
+Function:        cnn_hls
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cnnCore::config(int, int, int, char*, int*)'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 73, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 141, 
+                   Column: 14 }
+Function:        cnn_hls
+Args:            
+  - Callee:          'cnnCore::scalar_matrix_multAdd(bool, char)'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 162, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_cnn_hls_ir
+Args:            
+  - Callee:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_cnn_hls_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                   Column: 0 }
+Function:        cnn_hls
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cnnCore::scalar_matrix_multAdd(bool, char)'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 162, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          cnn_hls
+    DebugLoc:        { File: ../tutorial_example/source/hls.cpp, Line: 117, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_125_2
+  - String:          '> at '
+  - LoopLoc:         '../tutorial_example/source/cnn.h:125:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_105_2
+  - String:          '> at '
+  - LoopLoc:         '../tutorial_example/source/cnn.h:105:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_153_2
+  - String:          '> at '
+  - LoopLoc:         '../tutorial_example/source/cnn.h:153:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_165_1
+  - String:          '> at '
+  - LoopLoc:         '../tutorial_example/source/cnn.h:165:21'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 151, Column: 21 }
+Function:        cnn_hls
+Args:            
+  - String:          'Automatically disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_151_1
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 151, Column: 21 }
+Function:        cnn_hls
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   off
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cnn_hls
+  - String:          ' '
+  - PragmaSrcLoc:    '../tutorial_example/source/cnn.h:151:21'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 151, 
+                       Column: 21 }
+  - LoopName:        VITIS_LOOP_151_1
+  - String:          ' '
+  - LoopLoc:         '../tutorial_example/source/cnn.h:151:21'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 151, 
+                       Column: 21 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 103, Column: 21 }
+Function:        cnn_hls
+Args:            
+  - String:          'Automatically disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_103_1
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 103, Column: 21 }
+Function:        cnn_hls
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   off
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cnn_hls
+  - String:          ' '
+  - PragmaSrcLoc:    '../tutorial_example/source/cnn.h:103:21'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 103, 
+                       Column: 21 }
+  - LoopName:        VITIS_LOOP_103_1
+  - String:          ' '
+  - LoopLoc:         '../tutorial_example/source/cnn.h:103:21'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 103, 
+                       Column: 21 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 123, Column: 21 }
+Function:        cnn_hls
+Args:            
+  - String:          'Automatically disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_123_1
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 123, Column: 21 }
+Function:        cnn_hls
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   off
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cnn_hls
+  - String:          ' '
+  - PragmaSrcLoc:    '../tutorial_example/source/cnn.h:123:21'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 123, 
+                       Column: 21 }
+  - LoopName:        VITIS_LOOP_123_1
+  - String:          ' '
+  - LoopLoc:         '../tutorial_example/source/cnn.h:123:21'
+    DebugLoc:        { File: ../tutorial_example/source/cnn.h, Line: 123, 
+                       Column: 21 }
+  - String:          ' '
+...

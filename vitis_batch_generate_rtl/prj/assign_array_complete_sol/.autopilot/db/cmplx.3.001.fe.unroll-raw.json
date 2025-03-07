@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 16,
+    "instructions": 12,
+    "name": "assign_array_complete",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 12
+  }
+}

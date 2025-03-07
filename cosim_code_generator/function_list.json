@@ -1,0 +1,98 @@
+{
+    "convn_valid": {
+        "return_type": "void",
+        "para": [
+            [
+                "double[1024]",
+                "in_data"
+            ],
+            [
+                "int",
+                "in_w"
+            ],
+            [
+                "int",
+                "in_h"
+            ],
+            [
+                "double[25]",
+                "kernel"
+            ],
+            [
+                "int",
+                "kernel_w"
+            ],
+            [
+                "int",
+                "kernel_h"
+            ],
+            [
+                "double[1024]",
+                "out_data"
+            ],
+            [
+                "int",
+                "out_w"
+            ],
+            [
+                "int",
+                "out_h"
+            ]
+        ],
+        "func_impl": "void IMPL(convn_valid)(HLS_COMMON_ARG double in_data[MAX_MAP_SIZE], int in_w, int in_h, double kernel[MAX_KERNEL_SIZE], int kernel_w, int kernel_h, double out_data[MAX_MAP_SIZE], int out_w, int out_h) ",
+        "is_impl_func": true,
+        "visible": true
+    },
+    "conv_fprop": {
+        "return_type": "void",
+        "para": [
+            [
+                "Layer *",
+                "prev_layer"
+            ],
+            [
+                "Layer *",
+                "layer"
+            ],
+            [
+                "bool[96]",
+                "pconnection"
+            ]
+        ],
+        "func_impl": "void IMPL(conv_fprop)(Layer *prev_layer, Layer *layer, bool pconnection[96]) ",
+        "is_impl_func": true,
+        "visible": false
+    },
+    "max_pooling_fprop": {
+        "return_type": "void",
+        "para": [
+            [
+                "Layer *",
+                "prev_layer"
+            ],
+            [
+                "Layer *",
+                "layer"
+            ]
+        ],
+        "func_impl": "void IMPL(max_pooling_fprop)(Layer *prev_layer, Layer *layer) ",
+        "is_impl_func": true,
+        "visible": false
+    },
+    "fully_connected_fprop": {
+        "return_type": "void",
+        "para": [
+            [
+                "Layer *",
+                "prev_layer"
+            ],
+            [
+                "Layer *",
+                "layer"
+            ]
+        ],
+        "func_impl": "void IMPL(fully_connected_fprop)(Layer *prev_layer, Layer *layer) ",
+        "is_impl_func": true,
+        "visible": false
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 11,
+    "instructions": 17,
+    "name": "xor_diff_type",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 17
+  }
+}

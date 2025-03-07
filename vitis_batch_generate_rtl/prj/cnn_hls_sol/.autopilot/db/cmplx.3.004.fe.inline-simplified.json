@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 40,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 117,
+    "instructions": 163,
+    "loads": {
+      "T": 9
+    },
+    "name": "cnn_hls",
+    "stores": {
+      "T": 8
+    },
+    "total_instructions": 163
+  }
+}

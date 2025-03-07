@@ -1,0 +1,41 @@
+{
+  "0": {
+    "basicblocks": 22,
+    "calls": "1 2",
+    "file": "hls.cpp",
+    "fileloc": 85,
+    "instructions": 97,
+    "loads": {
+      "T": 14
+    },
+    "name": "conv_fprop",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 164
+  },
+  "1": {
+    "basicblocks": 25,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 47,
+    "instructions": 60,
+    "loads": {
+      "L": 3
+    },
+    "name": "convn_valid",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 60
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 8,
+    "instructions": 7,
+    "name": "tan_h",
+    "total_instructions": 7
+  }
+}
