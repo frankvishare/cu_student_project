@@ -1,5 +1,5 @@
 CMakeFiles/example.elf.dir/riscv/riscv_sys.cpp.obj: \
- /mnt/workspace/TestLeNet/source/riscv/riscv_sys.cpp \
+ /home/duludulu/Documents/hls/source/riscv/riscv_sys.cpp \
  /opt/riscv/riscv32-unknown-elf/include/c++/12.1.0/stdlib.h \
  /opt/riscv/riscv32-unknown-elf/include/c++/12.1.0/cstdlib \
  /opt/riscv/riscv32-unknown-elf/include/c++/12.1.0/riscv32-unknown-elf/bits/c++config.h \
@@ -59,6 +59,6 @@ CMakeFiles/example.elf.dir/riscv/riscv_sys.cpp.obj: \
  /opt/riscv/riscv32-unknown-elf/include/string.h \
  /opt/riscv/riscv32-unknown-elf/include/strings.h \
  /opt/riscv/riscv32-unknown-elf/include/sys/string.h \
- /mnt/workspace/TestLeNet/source/riscv/syscall.h \
- /mnt/workspace/TestLeNet/source/riscv/io_map.h \
- /mnt/workspace/TestLeNet/source/riscv/recursive_mutex.h
+ /home/duludulu/Documents/hls/source/riscv/syscall.h \
+ /home/duludulu/Documents/hls/source/riscv/io_map.h \
+ /home/duludulu/Documents/hls/source/riscv/recursive_mutex.h

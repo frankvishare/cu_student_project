@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/workspace/TestLeNet/source
+# Install script for directory: /home/duludulu/Documents/hls/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/workspace/TestLeNet/build/riscv-sim/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/duludulu/Documents/hls/build/riscv-sim/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

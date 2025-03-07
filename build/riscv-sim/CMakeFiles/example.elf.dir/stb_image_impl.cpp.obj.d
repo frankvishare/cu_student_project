@@ -1,6 +1,6 @@
 CMakeFiles/example.elf.dir/stb_image_impl.cpp.obj: \
- /mnt/workspace/TestLeNet/source/stb_image_impl.cpp \
- /mnt/workspace/TestLeNet/source/stb_image.h \
+ /home/duludulu/Documents/hls/source/stb_image_impl.cpp \
+ /home/duludulu/Documents/hls/source/stb_image.h \
  /opt/riscv/riscv32-unknown-elf/include/stdio.h \
  /opt/riscv/riscv32-unknown-elf/include/_ansi.h \
  /opt/riscv/riscv32-unknown-elf/include/newlib.h \

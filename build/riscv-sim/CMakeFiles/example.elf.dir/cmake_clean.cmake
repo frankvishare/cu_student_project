@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/example.elf.dir/TestLeNet.cpp.obj"
   "CMakeFiles/example.elf.dir/TestLeNet.cpp.obj.d"
+  "CMakeFiles/example.elf.dir/hls.cpp.obj"
+  "CMakeFiles/example.elf.dir/hls.cpp.obj.d"
   "CMakeFiles/example.elf.dir/mt19937ar.cpp.obj"
   "CMakeFiles/example.elf.dir/mt19937ar.cpp.obj.d"
   "CMakeFiles/example.elf.dir/riscv/riscv_sys.cpp.obj"

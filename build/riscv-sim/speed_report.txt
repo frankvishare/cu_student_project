@@ -3,3 +3,5 @@
 52M inst. per second.
 53M inst. per second.
 21M inst. per second.
+83M inst. per second.
+99M inst. per second.

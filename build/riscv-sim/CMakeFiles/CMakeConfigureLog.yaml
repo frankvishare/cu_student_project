@@ -1,0 +1,376 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      The target system is: Generic -  - riscv
+      The host system is: Linux - 6.11.0-17-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/riscv/bin/riscv32-unknown-elf-gcc 
+      Build flags: -DNO_ATOMICS;-D_POSIX_THREADS;-D_rvTranslate;-march=rv32im;-mabi=ilp32;-fdata-sections;-ffunction-sections;-DNO_ATOMICS;-D_POSIX_THREADS;-D_rvTranslate;-march=rv32im;-mabi=ilp32;-fdata-sections;-ffunction-sections
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/riscv/bin/riscv32-unknown-elf-g++ 
+      Build flags: -DNO_ATOMICS;-D_POSIX_THREADS;-D_rvTranslate;-march=rv32im;-mabi=ilp32;-fdata-sections;-ffunction-sections;-DNO_ATOMICS;-D_POSIX_THREADS;-D_rvTranslate;-march=rv32im;-mabi=ilp32;-fdata-sections;-ffunction-sections;-DNO_ATOMICS;-D_POSIX_THREADS;-D_rvTranslate;-march=rv32im;-mabi=ilp32;-fdata-sections;-ffunction-sections
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-jwQvwB"
+      binary: "/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-jwQvwB"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "  -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections  -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-jwQvwB'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f0d10/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f0d10.dir/build.make CMakeFiles/cmTC_f0d10.dir/build
+        gmake[1]: Entering directory '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-jwQvwB'
+        Building C object CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj
+        /opt/riscv/bin/riscv32-unknown-elf-gcc   -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections  -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections    -v -o CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/riscv/bin/riscv32-unknown-elf-gcc
+        Target: riscv32-unknown-elf
+        Configured with: /tmp/rv_gcc/riscv-gnu-toolchain/gcc/configure --target=riscv32-unknown-elf --prefix=/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-pkgversion=g1ea978e3066 --with-system-zlib --enable-tls --with-newlib --with-sysroot=/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=/tmp/rv_gcc/riscv-gnu-toolchain/gcc --disable-multilib --with-abi=ilp32 --with-arch=rv32i --with-tune=rocket --with-isa-spec=2.2 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 12.1.0 (g1ea978e3066) 
+        COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_f0d10.dir/'
+         /opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/cc1 -quiet -v -D NO_ATOMICS -D _POSIX_THREADS -D _rvTranslate -D NO_ATOMICS -D _POSIX_THREADS -D _rvTranslate /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f0d10.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32im -mabi=ilp32 -mtune=rocket -misa-spec=2.2 -march=rv32im -version -fdata-sections -ffunction-sections -o /tmp/ccwzTsYX.s
+        GNU C17 (g1ea978e3066) version 12.1.0 (riscv32-unknown-elf)
+        	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+        warning: GMP header version 6.2.0 differs from library version 6.3.0.
+        warning: MPFR header version 4.0.2 differs from library version 4.2.1.
+        warning: MPC header version 1.1.0 differs from library version 1.3.1.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/riscv/riscv32-unknown-elf/usr/local/include"
+        ignoring duplicate directory "/opt/riscv/riscv32-unknown-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include
+        End of search list.
+        GNU C17 (g1ea978e3066) version 12.1.0 (riscv32-unknown-elf)
+        	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+        warning: GMP header version 6.2.0 differs from library version 6.3.0.
+        warning: MPFR header version 4.0.2 differs from library version 4.2.1.
+        warning: MPC header version 1.1.0 differs from library version 1.3.1.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 75588199f8b154948defaa8af5a6b743
+        COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_f0d10.dir/'
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32im -march=rv32im -mabi=ilp32 -misa-spec=2.2 -o CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj /tmp/ccwzTsYX.s
+        GNU assembler version 2.39 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.39
+        COMPILER_PATH=/opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/lib/gcc/riscv32-unknown-elf/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/bin/
+        LIBRARY_PATH=/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/lib/:/opt/riscv/riscv32-unknown-elf/lib/
+        COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.'
+        Linking C static library libcmTC_f0d10.a
+        /usr/bin/cmake -P CMakeFiles/cmTC_f0d10.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0d10.dir/link.txt --verbose=1
+        /opt/riscv/bin/riscv32-unknown-elf-ar qc libcmTC_f0d10.a CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj
+        /opt/riscv/bin/riscv32-unknown-elf-ranlib libcmTC_f0d10.a
+        gmake[1]: Leaving directory '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-jwQvwB'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include]
+          add: [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed]
+          add: [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include]
+        end of search list found
+        collapse include dir [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include] ==> [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include]
+        collapse include dir [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed] ==> [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed]
+        collapse include dir [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include] ==> [/opt/riscv/riscv32-unknown-elf/include]
+        implicit include dirs: [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include;/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed;/opt/riscv/riscv32-unknown-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(script\\.ld  |CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-jwQvwB']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f0d10/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_f0d10.dir/build.make CMakeFiles/cmTC_f0d10.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-jwQvwB']
+        ignore line: [Building C object CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/opt/riscv/bin/riscv32-unknown-elf-gcc   -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections  -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections    -v -o CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/riscv/bin/riscv32-unknown-elf-gcc]
+        ignore line: [Target: riscv32-unknown-elf]
+        ignore line: [Configured with: /tmp/rv_gcc/riscv-gnu-toolchain/gcc/configure --target=riscv32-unknown-elf --prefix=/opt/riscv --disable-shared --disable-threads --enable-languages=c c++ --with-pkgversion=g1ea978e3066 --with-system-zlib --enable-tls --with-newlib --with-sysroot=/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=/tmp/rv_gcc/riscv-gnu-toolchain/gcc --disable-multilib --with-abi=ilp32 --with-arch=rv32i --with-tune=rocket --with-isa-spec=2.2 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.1.0 (g1ea978e3066) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_f0d10.dir/']
+        ignore line: [ /opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/cc1 -quiet -v -D NO_ATOMICS -D _POSIX_THREADS -D _rvTranslate -D NO_ATOMICS -D _POSIX_THREADS -D _rvTranslate /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f0d10.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32im -mabi=ilp32 -mtune=rocket -misa-spec=2.2 -march=rv32im -version -fdata-sections -ffunction-sections -o /tmp/ccwzTsYX.s]
+        ignore line: [GNU C17 (g1ea978e3066) version 12.1.0 (riscv32-unknown-elf)]
+        ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
+        ignore line: [warning: GMP header version 6.2.0 differs from library version 6.3.0.]
+        ignore line: [warning: MPFR header version 4.0.2 differs from library version 4.2.1.]
+        ignore line: [warning: MPC header version 1.1.0 differs from library version 1.3.1.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/riscv/riscv32-unknown-elf/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/opt/riscv/riscv32-unknown-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include]
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed]
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (g1ea978e3066) version 12.1.0 (riscv32-unknown-elf)]
+        ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
+        ignore line: [warning: GMP header version 6.2.0 differs from library version 6.3.0.]
+        ignore line: [warning: MPFR header version 4.0.2 differs from library version 4.2.1.]
+        ignore line: [warning: MPC header version 1.1.0 differs from library version 1.3.1.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 75588199f8b154948defaa8af5a6b743]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_f0d10.dir/']
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32im -march=rv32im -mabi=ilp32 -misa-spec=2.2 -o CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj /tmp/ccwzTsYX.s]
+        ignore line: [GNU assembler version 2.39 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.39]
+        ignore line: [COMPILER_PATH=/opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/lib/gcc/riscv32-unknown-elf/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/bin/]
+        ignore line: [LIBRARY_PATH=/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/lib/:/opt/riscv/riscv32-unknown-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C static library libcmTC_f0d10.a]
+        ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_f0d10.dir/cmake_clean_target.cmake]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0d10.dir/link.txt --verbose=1]
+        ignore line: [/opt/riscv/bin/riscv32-unknown-elf-ar qc libcmTC_f0d10.a CMakeFiles/cmTC_f0d10.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/opt/riscv/bin/riscv32-unknown-elf-ranlib libcmTC_f0d10.a]
+        ignore line: [gmake[1]: Leaving directory '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-jwQvwB']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-RZx9S9"
+      binary: "/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-RZx9S9"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "   -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections   -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections  -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-RZx9S9'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b1f1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1b1f1.dir/build.make CMakeFiles/cmTC_1b1f1.dir/build
+        gmake[1]: Entering directory '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-RZx9S9'
+        Building CXX object CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj
+        /opt/riscv/bin/riscv32-unknown-elf-g++   -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections   -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections  -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections    -v -o CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/opt/riscv/bin/riscv32-unknown-elf-g++
+        Target: riscv32-unknown-elf
+        Configured with: /tmp/rv_gcc/riscv-gnu-toolchain/gcc/configure --target=riscv32-unknown-elf --prefix=/opt/riscv --disable-shared --disable-threads --enable-languages=c,c++ --with-pkgversion=g1ea978e3066 --with-system-zlib --enable-tls --with-newlib --with-sysroot=/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=/tmp/rv_gcc/riscv-gnu-toolchain/gcc --disable-multilib --with-abi=ilp32 --with-arch=rv32i --with-tune=rocket --with-isa-spec=2.2 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow'
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 12.1.0 (g1ea978e3066) 
+        COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_1b1f1.dir/'
+         /opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/cc1plus -quiet -v -D NO_ATOMICS -D _POSIX_THREADS -D _rvTranslate -D NO_ATOMICS -D _POSIX_THREADS -D _rvTranslate -D NO_ATOMICS -D _POSIX_THREADS -D _rvTranslate /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1b1f1.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32im -mabi=ilp32 -mtune=rocket -misa-spec=2.2 -march=rv32im -version -fdata-sections -ffunction-sections -o /tmp/ccaXZ69T.s
+        GNU C++17 (g1ea978e3066) version 12.1.0 (riscv32-unknown-elf)
+        	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+        warning: GMP header version 6.2.0 differs from library version 6.3.0.
+        warning: MPFR header version 4.0.2 differs from library version 4.2.1.
+        warning: MPC header version 1.1.0 differs from library version 1.3.1.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/riscv/riscv32-unknown-elf/usr/local/include"
+        ignoring duplicate directory "/opt/riscv/riscv32-unknown-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0/riscv32-unknown-elf
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0/backward
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include
+        End of search list.
+        GNU C++17 (g1ea978e3066) version 12.1.0 (riscv32-unknown-elf)
+        	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
+        warning: GMP header version 6.2.0 differs from library version 6.3.0.
+        warning: MPFR header version 4.0.2 differs from library version 4.2.1.
+        warning: MPC header version 1.1.0 differs from library version 1.3.1.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 1de1f3b5f78d7d296a21907f278b732e
+        COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_1b1f1.dir/'
+         /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32im -march=rv32im -mabi=ilp32 -misa-spec=2.2 -o CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccaXZ69T.s
+        GNU assembler version 2.39 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.39
+        COMPILER_PATH=/opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/lib/gcc/riscv32-unknown-elf/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/bin/
+        LIBRARY_PATH=/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/lib/:/opt/riscv/riscv32-unknown-elf/lib/
+        COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX static library libcmTC_1b1f1.a
+        /usr/bin/cmake -P CMakeFiles/cmTC_1b1f1.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b1f1.dir/link.txt --verbose=1
+        /opt/riscv/bin/riscv32-unknown-elf-ar qc libcmTC_1b1f1.a CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj
+        /opt/riscv/bin/riscv32-unknown-elf-ranlib libcmTC_1b1f1.a
+        gmake[1]: Leaving directory '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-RZx9S9'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0]
+          add: [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0/riscv32-unknown-elf]
+          add: [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0/backward]
+          add: [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include]
+          add: [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed]
+          add: [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include]
+        end of search list found
+        collapse include dir [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0] ==> [/opt/riscv/riscv32-unknown-elf/include/c++/12.1.0]
+        collapse include dir [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0/riscv32-unknown-elf] ==> [/opt/riscv/riscv32-unknown-elf/include/c++/12.1.0/riscv32-unknown-elf]
+        collapse include dir [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0/backward] ==> [/opt/riscv/riscv32-unknown-elf/include/c++/12.1.0/backward]
+        collapse include dir [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include] ==> [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include]
+        collapse include dir [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed] ==> [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed]
+        collapse include dir [/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include] ==> [/opt/riscv/riscv32-unknown-elf/include]
+        implicit include dirs: [/opt/riscv/riscv32-unknown-elf/include/c++/12.1.0;/opt/riscv/riscv32-unknown-elf/include/c++/12.1.0/riscv32-unknown-elf;/opt/riscv/riscv32-unknown-elf/include/c++/12.1.0/backward;/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include;/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed;/opt/riscv/riscv32-unknown-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(script\\.ld  |CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-RZx9S9']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b1f1/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_1b1f1.dir/build.make CMakeFiles/cmTC_1b1f1.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-RZx9S9']
+        ignore line: [Building CXX object CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/opt/riscv/bin/riscv32-unknown-elf-g++   -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections   -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections  -DNO_ATOMICS -D_POSIX_THREADS -D_rvTranslate -march=rv32im -mabi=ilp32 -fdata-sections -ffunction-sections    -v -o CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/riscv/bin/riscv32-unknown-elf-g++]
+        ignore line: [Target: riscv32-unknown-elf]
+        ignore line: [Configured with: /tmp/rv_gcc/riscv-gnu-toolchain/gcc/configure --target=riscv32-unknown-elf --prefix=/opt/riscv --disable-shared --disable-threads --enable-languages=c c++ --with-pkgversion=g1ea978e3066 --with-system-zlib --enable-tls --with-newlib --with-sysroot=/opt/riscv/riscv32-unknown-elf --with-native-system-header-dir=/include --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libgomp --disable-nls --disable-tm-clone-registry --src=/tmp/rv_gcc/riscv-gnu-toolchain/gcc --disable-multilib --with-abi=ilp32 --with-arch=rv32i --with-tune=rocket --with-isa-spec=2.2 'CFLAGS_FOR_TARGET=-Os   -mcmodel=medlow' 'CXXFLAGS_FOR_TARGET=-Os   -mcmodel=medlow']
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.1.0 (g1ea978e3066) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_1b1f1.dir/']
+        ignore line: [ /opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/cc1plus -quiet -v -D NO_ATOMICS -D _POSIX_THREADS -D _rvTranslate -D NO_ATOMICS -D _POSIX_THREADS -D _rvTranslate -D NO_ATOMICS -D _POSIX_THREADS -D _rvTranslate /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1b1f1.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32im -mabi=ilp32 -mtune=rocket -misa-spec=2.2 -march=rv32im -version -fdata-sections -ffunction-sections -o /tmp/ccaXZ69T.s]
+        ignore line: [GNU C++17 (g1ea978e3066) version 12.1.0 (riscv32-unknown-elf)]
+        ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
+        ignore line: [warning: GMP header version 6.2.0 differs from library version 6.3.0.]
+        ignore line: [warning: MPFR header version 4.0.2 differs from library version 4.2.1.]
+        ignore line: [warning: MPC header version 1.1.0 differs from library version 1.3.1.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/riscv/riscv32-unknown-elf/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/opt/riscv/riscv32-unknown-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0]
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0/riscv32-unknown-elf]
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include/c++/12.1.0/backward]
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include]
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include-fixed]
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (g1ea978e3066) version 12.1.0 (riscv32-unknown-elf)]
+        ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
+        ignore line: [warning: GMP header version 6.2.0 differs from library version 6.3.0.]
+        ignore line: [warning: MPFR header version 4.0.2 differs from library version 4.2.1.]
+        ignore line: [warning: MPC header version 1.1.0 differs from library version 1.3.1.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 1de1f3b5f78d7d296a21907f278b732e]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_1b1f1.dir/']
+        ignore line: [ /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/bin/as -v --traditional-format -march=rv32im -march=rv32im -mabi=ilp32 -misa-spec=2.2 -o CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccaXZ69T.s]
+        ignore line: [GNU assembler version 2.39 (riscv32-unknown-elf) using BFD version (GNU Binutils) 2.39]
+        ignore line: [COMPILER_PATH=/opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/libexec/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/libexec/gcc/riscv32-unknown-elf/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/lib/gcc/riscv32-unknown-elf/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/bin/]
+        ignore line: [LIBRARY_PATH=/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/:/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/lib/:/opt/riscv/riscv32-unknown-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-D' 'NO_ATOMICS' '-D' '_POSIX_THREADS' '-D' '_rvTranslate' '-march=rv32im' '-mabi=ilp32' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=rocket' '-misa-spec=2.2' '-march=rv32im' '-dumpdir' 'CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX static library libcmTC_1b1f1.a]
+        ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_1b1f1.dir/cmake_clean_target.cmake]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b1f1.dir/link.txt --verbose=1]
+        ignore line: [/opt/riscv/bin/riscv32-unknown-elf-ar qc libcmTC_1b1f1.a CMakeFiles/cmTC_1b1f1.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/opt/riscv/bin/riscv32-unknown-elf-ranlib libcmTC_1b1f1.a]
+        ignore line: [gmake[1]: Leaving directory '/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/CMakeScratch/TryCompile-RZx9S9']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+...

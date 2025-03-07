@@ -54,6 +54,7 @@ set(SOURCES_FILES
     stb_image_impl.cpp
     stdafx.cpp
     TestLeNet.cpp
+    hls.cpp
 )
 
 if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "riscv")

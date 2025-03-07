@@ -1,6 +1,6 @@
 CMakeFiles/example.elf.dir/TestLeNet.cpp.obj: \
- /mnt/workspace/TestLeNet/source/TestLeNet.cpp \
- /mnt/workspace/TestLeNet/source/stdafx.h \
+ /home/duludulu/Documents/hls/source/TestLeNet.cpp \
+ /home/duludulu/Documents/hls/source/stdafx.h \
  /opt/riscv/riscv32-unknown-elf/include/stdio.h \
  /opt/riscv/riscv32-unknown-elf/include/_ansi.h \
  /opt/riscv/riscv32-unknown-elf/include/newlib.h \
@@ -82,5 +82,7 @@ CMakeFiles/example.elf.dir/TestLeNet.cpp.obj: \
  /opt/riscv/riscv32-unknown-elf/include/c++/12.1.0/tr1/riemann_zeta.tcc \
  /opt/riscv/riscv32-unknown-elf/include/time.h \
  /opt/riscv/riscv32-unknown-elf/include/machine/time.h \
- /mnt/workspace/TestLeNet/source/mt19937ar.h \
- /mnt/workspace/TestLeNet/source/stb_image.h
+ /home/duludulu/Documents/hls/source/mt19937ar.h \
+ /home/duludulu/Documents/hls/source/stb_image.h \
+ /home/duludulu/Documents/hls/source/hls_cnn.h \
+ /home/duludulu/Documents/hls/source/common.h

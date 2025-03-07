@@ -1,6 +1,6 @@
 CMakeFiles/example.elf.dir/stdafx.cpp.obj: \
- /mnt/workspace/TestLeNet/source/stdafx.cpp \
- /mnt/workspace/TestLeNet/source/stdafx.h \
+ /home/duludulu/Documents/hls/source/stdafx.cpp \
+ /home/duludulu/Documents/hls/source/stdafx.h \
  /opt/riscv/riscv32-unknown-elf/include/stdio.h \
  /opt/riscv/riscv32-unknown-elf/include/_ansi.h \
  /opt/riscv/riscv32-unknown-elf/include/newlib.h \
