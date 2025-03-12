@@ -1,0 +1,348 @@
+
+
+================================================================
+== Synthesis Summary Report of 'max_pooling_fprop1'
+================================================================
++ General Information: 
+    * Date:           Wed Mar 12 17:42:48 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        prj
+    * Solution:       max_pooling_fprop1_sol (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu19p-fsvb3824-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+---------+------------+------------+-----+
+    |                       Modules                      |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |         |            |            |     |
+    |                       & Loops                      |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF     |     LUT    | URAM|
+    +----------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+---------+------------+------------+-----+
+    |+ max_pooling_fprop1                                |  Timing|  -0.57|        -|       -|         -|        -|     -|        no|     -|  61 (1%)|  5908 (~0%)|  6845 (~0%)|    -|
+    | o VITIS_LOOP_233_1                                 |       -|   2.41|        -|       -|         -|        -|     -|        no|     -|        -|           -|           -|    -|
+    |  o VITIS_LOOP_235_2                                |       -|   2.41|        -|       -|         -|        -|     -|        no|     -|        -|           -|           -|    -|
+    |   o VITIS_LOOP_237_3                               |       -|   2.41|        -|       -|        92|        -|     -|        no|     -|        -|           -|           -|    -|
+    |    + max_pooling_fprop1_Pipeline_VITIS_LOOP_240_4  |  Timing|  -0.57|       17|  56.100|         -|       17|     -|        no|     -|  1 (~0%)|   835 (~0%)|   792 (~0%)|    -|
+    |     o VITIS_LOOP_240_4                             |      II|   2.41|       15|  49.500|        10|        6|     2|       yes|     -|        -|           -|           -|    -|
+    +----------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+---------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++--------------------------------------+-----------+----------+
+| Port                                 | Direction | Bitwidth |
++--------------------------------------+-----------+----------+
+| c1_conv_layer_kernel_address0        | out       | 11       |
+| c1_conv_layer_kernel_address1        | out       | 11       |
+| c1_conv_layer_kernel_d0              | out       | 3200     |
+| c1_conv_layer_kernel_d1              | out       | 3200     |
+| c1_conv_layer_kernel_q0              | in        | 3200     |
+| c1_conv_layer_kernel_q1              | in        | 3200     |
+| c1_conv_layer_map_b_address0         | out       | 7        |
+| c1_conv_layer_map_b_address1         | out       | 7        |
+| c1_conv_layer_map_b_d0               | out       | 64       |
+| c1_conv_layer_map_b_d1               | out       | 64       |
+| c1_conv_layer_map_b_q0               | in        | 64       |
+| c1_conv_layer_map_b_q1               | in        | 64       |
+| c1_conv_layer_map_common_address0    | out       | 10       |
+| c1_conv_layer_map_common_address1    | out       | 10       |
+| c1_conv_layer_map_common_d0          | out       | 64       |
+| c1_conv_layer_map_common_d1          | out       | 64       |
+| c1_conv_layer_map_common_q0          | in        | 64       |
+| c1_conv_layer_map_common_q1          | in        | 64       |
+| c1_conv_layer_map_data_address0      | out       | 17       |
+| c1_conv_layer_map_data_address1      | out       | 17       |
+| c1_conv_layer_map_data_q0            | in        | 64       |
+| c1_conv_layer_map_data_q1            | in        | 64       |
+| c1_conv_layer_map_db_address0        | out       | 7        |
+| c1_conv_layer_map_db_address1        | out       | 7        |
+| c1_conv_layer_map_db_d0              | out       | 64       |
+| c1_conv_layer_map_db_d1              | out       | 64       |
+| c1_conv_layer_map_db_q0              | in        | 64       |
+| c1_conv_layer_map_db_q1              | in        | 64       |
+| c1_conv_layer_map_error_address0     | out       | 17       |
+| c1_conv_layer_map_error_address1     | out       | 17       |
+| c1_conv_layer_map_error_d0           | out       | 64       |
+| c1_conv_layer_map_error_d1           | out       | 64       |
+| c1_conv_layer_map_error_q0           | in        | 64       |
+| c1_conv_layer_map_error_q1           | in        | 64       |
+| s2_pooling_layer_kernel_address0     | out       | 11       |
+| s2_pooling_layer_kernel_address1     | out       | 11       |
+| s2_pooling_layer_kernel_d0           | out       | 3200     |
+| s2_pooling_layer_kernel_d1           | out       | 3200     |
+| s2_pooling_layer_kernel_q0           | in        | 3200     |
+| s2_pooling_layer_kernel_q1           | in        | 3200     |
+| s2_pooling_layer_map_b_address0      | out       | 7        |
+| s2_pooling_layer_map_b_address1      | out       | 7        |
+| s2_pooling_layer_map_b_d0            | out       | 64       |
+| s2_pooling_layer_map_b_d1            | out       | 64       |
+| s2_pooling_layer_map_b_q0            | in        | 64       |
+| s2_pooling_layer_map_b_q1            | in        | 64       |
+| s2_pooling_layer_map_common_address0 | out       | 10       |
+| s2_pooling_layer_map_common_address1 | out       | 10       |
+| s2_pooling_layer_map_common_d0       | out       | 64       |
+| s2_pooling_layer_map_common_d1       | out       | 64       |
+| s2_pooling_layer_map_common_q0       | in        | 64       |
+| s2_pooling_layer_map_common_q1       | in        | 64       |
+| s2_pooling_layer_map_data_address0   | out       | 17       |
+| s2_pooling_layer_map_data_d0         | out       | 64       |
+| s2_pooling_layer_map_db_address0     | out       | 7        |
+| s2_pooling_layer_map_db_address1     | out       | 7        |
+| s2_pooling_layer_map_db_d0           | out       | 64       |
+| s2_pooling_layer_map_db_d1           | out       | 64       |
+| s2_pooling_layer_map_db_q0           | in        | 64       |
+| s2_pooling_layer_map_db_q1           | in        | 64       |
+| s2_pooling_layer_map_error_address0  | out       | 17       |
+| s2_pooling_layer_map_error_address1  | out       | 17       |
+| s2_pooling_layer_map_error_d0        | out       | 64       |
+| s2_pooling_layer_map_error_d1        | out       | 64       |
+| s2_pooling_layer_map_error_q0        | in        | 64       |
+| s2_pooling_layer_map_error_q1        | in        | 64       |
++--------------------------------------+-----------+----------+
+
+* Other Ports
++-------------------------------+---------+-----------+----------+
+| Port                          | Mode    | Direction | Bitwidth |
++-------------------------------+---------+-----------+----------+
+| ap_core                       | ap_none | in        | 8        |
+| ap_parent                     | ap_none | in        | 8        |
+| ap_part                       | ap_none | in        | 8        |
+| c1_conv_layer_kernel_count    | ap_none | in        | 32       |
+| c1_conv_layer_kernel_h        | ap_none | in        | 32       |
+| c1_conv_layer_kernel_w        | ap_none | in        | 32       |
+| c1_conv_layer_map_count       | ap_none | in        | 32       |
+| c1_conv_layer_map_h           | ap_none | in        | 32       |
+| c1_conv_layer_map_w           | ap_none | in        | 32       |
+| s2_pooling_layer_kernel_count | ap_none | in        | 32       |
+| s2_pooling_layer_kernel_h     | ap_none | in        | 32       |
+| s2_pooling_layer_kernel_w     | ap_none | in        | 32       |
+| s2_pooling_layer_map_count    | ap_none | in        | 32       |
+| s2_pooling_layer_map_h        | ap_none | in        | 32       |
+| s2_pooling_layer_map_w        | ap_none | in        | 32       |
++-------------------------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+-------------+-----------------------------------+
+| Interface | Type        | Ports                             |
++-----------+-------------+-----------------------------------+
+| ap_ce     | clockenable | ap_ce                             |
+| ap_clk    | clock       | ap_clk                            |
+| ap_rst    | reset       | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs  | ap_done ap_idle ap_ready ap_start |
++-----------+-------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------------+-----------+---------------+
+| Argument         | Direction | Datatype      |
++------------------+-----------+---------------+
+| ap_core          | in        | unsigned char |
+| ap_part          | in        | unsigned char |
+| ap_parent        | in        | unsigned char |
+| c1_conv_layer    | in        | _Layer*       |
+| s2_pooling_layer | inout     | _Layer*       |
++------------------+-----------+---------------+
+
+* SW-to-HW Mapping
++------------------+--------------------------------------+---------+----------+
+| Argument         | HW Interface                         | HW Type | HW Usage |
++------------------+--------------------------------------+---------+----------+
+| ap_core          | ap_core                              | port    |          |
+| ap_part          | ap_part                              | port    |          |
+| ap_parent        | ap_parent                            | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_w                  | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_h                  | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_count              | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_data_address0      | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_map_data_ce0           | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_data_q0            | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_data_address1      | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_map_data_ce1           | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_data_q1            | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_error_address0     | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_map_error_ce0          | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_error_we0          | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_error_d0           | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_error_q0           | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_error_address1     | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_map_error_ce1          | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_error_we1          | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_error_d1           | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_error_q1           | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_b_address0         | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_map_b_ce0              | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_b_we0              | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_b_d0               | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_b_q0               | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_b_address1         | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_map_b_ce1              | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_b_we1              | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_b_d1               | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_b_q1               | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_db_address0        | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_map_db_ce0             | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_db_we0             | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_db_d0              | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_db_q0              | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_db_address1        | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_map_db_ce1             | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_db_we1             | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_db_d1              | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_db_q1              | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_w               | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_h               | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_count           | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_address0        | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_kernel_ce0             | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_we0             | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_d0              | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_q0              | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_address1        | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_kernel_ce1             | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_we1             | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_d1              | port    |          |
+| c1_conv_layer    | c1_conv_layer_kernel_q1              | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_common_address0    | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_map_common_ce0         | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_common_we0         | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_common_d0          | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_common_q0          | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_common_address1    | port    | offset   |
+| c1_conv_layer    | c1_conv_layer_map_common_ce1         | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_common_we1         | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_common_d1          | port    |          |
+| c1_conv_layer    | c1_conv_layer_map_common_q1          | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_w               | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_h               | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_count           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_data_address0   | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_map_data_ce0        | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_data_we0        | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_data_d0         | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_error_address0  | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_map_error_ce0       | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_error_we0       | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_error_d0        | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_error_q0        | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_error_address1  | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_map_error_ce1       | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_error_we1       | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_error_d1        | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_error_q1        | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_b_address0      | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_map_b_ce0           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_b_we0           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_b_d0            | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_b_q0            | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_b_address1      | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_map_b_ce1           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_b_we1           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_b_d1            | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_b_q1            | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_db_address0     | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_map_db_ce0          | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_db_we0          | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_db_d0           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_db_q0           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_db_address1     | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_map_db_ce1          | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_db_we1          | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_db_d1           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_db_q1           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_w            | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_h            | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_count        | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_address0     | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_kernel_ce0          | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_we0          | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_d0           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_q0           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_address1     | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_kernel_ce1          | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_we1          | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_d1           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_kernel_q1           | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_common_address0 | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_map_common_ce0      | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_common_we0      | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_common_d0       | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_common_q0       | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_common_address1 | port    | offset   |
+| s2_pooling_layer | s2_pooling_layer_map_common_ce1      | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_common_we1      | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_common_d1       | port    |          |
+| s2_pooling_layer | s2_pooling_layer_map_common_q1       | port    |          |
++------------------+--------------------------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------+-----+--------+-------------------+--------+----------+---------+
+| Name                                            | DSP | Pragma | Variable          | Op     | Impl     | Latency |
++-------------------------------------------------+-----+--------+-------------------+--------+----------+---------+
+| + max_pooling_fprop1                            | 61  |        |                   |        |          |         |
+|   icmp_ln233_fu_301_p2                          |     |        | icmp_ln233        | setlt  | auto     | 0       |
+|   add_ln233_fu_306_p2                           |     |        | add_ln233         | add    | fabric   | 0       |
+|   icmp_ln235_fu_328_p2                          |     |        | icmp_ln235        | setlt  | auto     | 0       |
+|   indvars_iv_next39_fu_333_p2                   |     |        | indvars_iv_next39 | add    | fabric   | 0       |
+|   mul_16s_16s_16_1_1_U19                        | 1   |        | empty             | mul    | auto     | 0       |
+|   mul_17s_17s_17_1_1_U20                        | 1   |        | empty_16          | mul    | auto     | 0       |
+|   icmp_ln240_fu_357_p2                          |     |        | icmp_ln240        | setne  | auto     | 0       |
+|   select_ln240_fu_381_p3                        |     |        | select_ln240      | select | auto_sel | 0       |
+|   icmp_ln237_fu_397_p2                          |     |        | icmp_ln237        | setlt  | auto     | 0       |
+|   indvars_iv_next31_fu_402_p2                   |     |        | indvars_iv_next31 | add    | fabric   | 0       |
+|   add_ln239_fu_416_p2                           |     |        | add_ln239         | add    | fabric   | 0       |
+|   add_ln239_1_fu_429_p2                         |     |        | add_ln239_1       | add    | fabric   | 0       |
+|   dexp_64ns_64ns_64_30_full_dsp_1_U17           | 26  |        | ep                | dexp   | fulldsp  | 29      |
+|   xor_ln11_fu_510_p2                            |     |        | xor_ln11          | xor    | auto     | 0       |
+|   dexp_64ns_64ns_64_30_full_dsp_1_U18           | 26  |        | em                | dexp   | fulldsp  | 29      |
+|   dsub_64ns_64ns_64_8_full_dsp_1_U14            | 3   |        | sub1_i            | dsub   | fulldsp  | 7       |
+|   dadd_64ns_64ns_64_8_full_dsp_1_U15            | 3   |        | add_i             | dadd   | fulldsp  | 7       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U16             |     |        | div_i             | ddiv   | fabric   | 30      |
+|   add_ln237_fu_444_p2                           |     |        | add_ln237         | add    | fabric   | 0       |
+|   add_ln235_fu_450_p2                           |     |        | add_ln235         | add    | fabric   | 0       |
+|   add_ln235_1_fu_456_p2                         |     |        | add_ln235_1       | add    | fabric   | 0       |
+|  + max_pooling_fprop1_Pipeline_VITIS_LOOP_240_4 | 1   |        |                   |        |          |         |
+|    icmp_ln240_fu_169_p2                         |     |        | icmp_ln240        | seteq  | auto     | 0       |
+|    mul_17s_17s_17_1_1_U2                        | 1   |        | empty_15          | mul    | auto     | 0       |
+|    icmp_ln244_fu_263_p2                         |     |        | icmp_ln244        | setne  | auto     | 0       |
+|    icmp_ln244_1_fu_269_p2                       |     |        | icmp_ln244_1      | seteq  | auto     | 0       |
+|    or_ln244_fu_305_p2                           |     |        | or_ln244          | or     | auto     | 0       |
+|    icmp_ln244_2_fu_275_p2                       |     |        | icmp_ln244_2      | setne  | auto     | 0       |
+|    icmp_ln244_3_fu_280_p2                       |     |        | icmp_ln244_3      | seteq  | auto     | 0       |
+|    or_ln244_1_fu_309_p2                         |     |        | or_ln244_1        | or     | auto     | 0       |
+|    dcmp_64ns_64ns_1_2_no_dsp_1_U1               |     |        | tmp_2             | dcmp   | auto     | 1       |
+|    and_ln244_fu_313_p2                          |     |        | and_ln244         | and    | auto     | 0       |
+|    and_ln244_1_fu_318_p2                        |     |        | and_ln244_1       | and    | auto     | 0       |
+|    max_value_2_fu_324_p3                        |     |        | max_value_2       | select | auto_sel | 0       |
+|    icmp_ln244_4_fu_351_p2                       |     |        | icmp_ln244_4      | setne  | auto     | 0       |
+|    icmp_ln244_5_fu_357_p2                       |     |        | icmp_ln244_5      | seteq  | auto     | 0       |
+|    or_ln244_2_fu_363_p2                         |     |        | or_ln244_2        | or     | auto     | 0       |
+|    icmp_ln244_6_fu_285_p2                       |     |        | icmp_ln244_6      | setne  | auto     | 0       |
+|    icmp_ln244_7_fu_290_p2                       |     |        | icmp_ln244_7      | seteq  | auto     | 0       |
+|    or_ln244_3_fu_369_p2                         |     |        | or_ln244_3        | or     | auto     | 0       |
+|    dcmp_64ns_64ns_1_2_no_dsp_1_U1               |     |        | tmp_5             | dcmp   | auto     | 1       |
+|    and_ln244_2_fu_373_p2                        |     |        | and_ln244_2       | and    | auto     | 0       |
+|    and_ln244_3_fu_379_p2                        |     |        | and_ln244_3       | and    | auto     | 0       |
+|    max_value_3_fu_384_p3                        |     |        | max_value_3       | select | auto_sel | 0       |
+|    add_ln240_fu_295_p2                          |     |        | add_ln240         | add    | fabric   | 0       |
++-------------------------------------------------+-----+--------+-------------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+  No pragmas found
+

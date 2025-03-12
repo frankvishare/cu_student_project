@@ -1,0 +1,187 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 183, Column: 13 }
+Function:        conv_fprop3
+Args:            
+  - Callee:          convn_valid
+    DebugLoc:        { File: ../source/hls.cpp, Line: 77, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          conv_fprop3
+    DebugLoc:        { File: ../source/hls.cpp, Line: 169, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 191, Column: 45 }
+Function:        conv_fprop3
+Args:            
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          conv_fprop3
+    DebugLoc:        { File: ../source/hls.cpp, Line: 169, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_conv_fprop3_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            c5_conv_layer
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_conv_fprop3_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            c5_conv_layer_map
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_conv_fprop3_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            s4_pooling_layer
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_conv_fprop3_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            s4_pooling_layer_map
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 183, Column: 13 }
+Function:        conv_fprop3
+Args:            
+  - Callee:          convn_valid
+    DebugLoc:        { File: ../source/hls.cpp, Line: 77, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          conv_fprop3
+    DebugLoc:        { File: ../source/hls.cpp, Line: 169, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 191, Column: 45 }
+Function:        conv_fprop3
+Args:            
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          conv_fprop3
+    DebugLoc:        { File: ../source/hls.cpp, Line: 169, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_conv_fprop3_ir
+Args:            
+  - Callee:          conv_fprop3
+    DebugLoc:        { File: ../source/hls.cpp, Line: 169, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_conv_fprop3_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../source/hls.cpp, Line: 169, Column: 0 }
+Function:        conv_fprop3
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          convn_valid
+    DebugLoc:        { File: ../source/hls.cpp, Line: 77, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          conv_fprop3
+    DebugLoc:        { File: ../source/hls.cpp, Line: 169, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../source/hls.cpp, Line: 169, Column: 0 }
+Function:        conv_fprop3
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          conv_fprop3
+    DebugLoc:        { File: ../source/hls.cpp, Line: 169, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_conv_fprop3_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            c5_conv_layer_kernel
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '3200'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_conv_fprop3_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            s4_pooling_layer_kernel
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '3200'
+  - String:          '-bits'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_189_3
+  - String:          '> at '
+  - LoopLoc:         '../source/hls.cpp:189:27'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_86_4
+  - String:          '> at '
+  - LoopLoc:         '../source/hls.cpp:86:19'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         ''
+  - String:          ' '
+...

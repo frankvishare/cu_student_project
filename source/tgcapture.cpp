@@ -70,7 +70,7 @@ std::string filename_append_tidx(const std::string &filename){
     return ss.str();
 }
 
-#if 1
+#if 0
 //specialized for tutorial example vector_2d
 template<> void override_capture<const vector_2d>(CCapture &cap, enum CCapture::CAPTURE_STATUS mode, const std::string &func_name, const std::string& var_name,  const vector_2d &vec)
 {

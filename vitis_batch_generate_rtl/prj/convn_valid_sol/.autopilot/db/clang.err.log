@@ -1,0 +1,24 @@
+In file included from ../source/hls.cpp:1:
+In file included from ../source/hls.h:10:
+../source/xmem.h:46:35: warning: declaration does not declare anything [-Wmissing-declarations]
+    uint8_t xxxxx_paddingA[1976]; __attribute__((aligned(4)));
+                                  ^
+../source/hls.cpp:126:4: error: no matching function for call to 'convn_valid'
+   convn_valid(
+   ^~~~~~~~~~~
+../source/hls.cpp:74:6: note: candidate function not viable: requires 12 arguments, but 9 were provided
+void convn_valid(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, double in_data[1024], int in_w, int in_h,
+     ^
+../source/hls.cpp:155:13: error: no matching function for call to 'convn_valid'
+            convn_valid(
+            ^~~~~~~~~~~
+../source/hls.cpp:74:6: note: candidate function not viable: requires 12 arguments, but 9 were provided
+void convn_valid(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, double in_data[1024], int in_w, int in_h,
+     ^
+../source/hls.cpp:183:13: error: no matching function for call to 'convn_valid'
+            convn_valid(
+            ^~~~~~~~~~~
+../source/hls.cpp:74:6: note: candidate function not viable: requires 12 arguments, but 9 were provided
+void convn_valid(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, double in_data[1024], int in_w, int in_h,
+     ^
+1 warning and 3 errors generated.

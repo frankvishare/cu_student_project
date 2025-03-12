@@ -1,0 +1,305 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'max_pooling_fprop2'" level="0">
+<item name = "Date">Wed Mar 12 17:43:04 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">prj</item>
+<item name = "Solution">max_pooling_fprop2_sol (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu19p-fsvb3824-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.30 ns, 2.983 ns, 0.89 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4_fu_240">max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4, 17, 17, 56.100 ns, 56.100 ns, 16, 16, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_261_1">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_263_2">?, ?, ?, -, -, ?, no</column>
+<column name="  ++ VITIS_LOOP_265_3">?, ?, 92, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 502, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 61, 4783, 5892, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 451, -</column>
+<column name="Register">-, -, 1125, -, -</column>
+<specialColumn name="Available SLR">1080, 960, 2042880, 1021440, 80</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 6, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4320, 3840, 8171520, 4085760, 320</specialColumn>
+<specialColumn name="Utilization (%)">0, 1, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="dadd_64ns_64ns_64_8_full_dsp_1_U15">dadd_64ns_64ns_64_8_full_dsp_1, 0, 3, 685, 635, 0</column>
+<column name="ddiv_64ns_64ns_64_31_no_dsp_1_U16">ddiv_64ns_64ns_64_31_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="dexp_64ns_64ns_64_30_full_dsp_1_U17">dexp_64ns_64ns_64_30_full_dsp_1, 0, 26, 1289, 1910, 0</column>
+<column name="dexp_64ns_64ns_64_30_full_dsp_1_U18">dexp_64ns_64ns_64_30_full_dsp_1, 0, 26, 1289, 1910, 0</column>
+<column name="dsub_64ns_64ns_64_8_full_dsp_1_U14">dsub_64ns_64ns_64_8_full_dsp_1, 0, 3, 685, 635, 0</column>
+<column name="grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4_fu_240">max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4, 0, 1, 835, 792, 0</column>
+<column name="mul_16s_16s_16_1_1_U19">mul_16s_16s_16_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_17s_17s_17_1_1_U20">mul_17s_17s_17_1_1, 0, 1, 0, 5, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln261_fu_306_p2">+, 0, 0, 38, 31, 1</column>
+<column name="add_ln263_1_fu_456_p2">+, 0, 0, 39, 32, 2</column>
+<column name="add_ln263_fu_450_p2">+, 0, 0, 39, 32, 2</column>
+<column name="add_ln265_fu_444_p2">+, 0, 0, 39, 32, 2</column>
+<column name="add_ln267_1_fu_429_p2">+, 0, 0, 24, 17, 17</column>
+<column name="add_ln267_fu_416_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln276_1_fu_439_p2">+, 0, 0, 17, 17, 17</column>
+<column name="add_ln276_fu_434_p2">+, 0, 0, 17, 17, 17</column>
+<column name="indvars_iv_next31_fu_402_p2">+, 0, 0, 38, 31, 1</column>
+<column name="indvars_iv_next39_fu_333_p2">+, 0, 0, 38, 31, 1</column>
+<column name="icmp_ln261_fu_301_p2">icmp, 0, 0, 39, 32, 32</column>
+<column name="icmp_ln263_fu_328_p2">icmp, 0, 0, 39, 32, 32</column>
+<column name="icmp_ln265_fu_397_p2">icmp, 0, 0, 39, 32, 32</column>
+<column name="icmp_ln268_fu_357_p2">icmp, 0, 0, 39, 32, 32</column>
+<column name="select_ln268_fu_381_p3">select, 0, 0, 32, 1, 32</column>
+<column name="xor_ln11_fu_510_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">370, 79, 1, 79</column>
+<column name="c3_conv_layer_map_data_address0">9, 2, 17, 34</column>
+<column name="c3_conv_layer_map_data_ce0">9, 2, 1, 2</column>
+<column name="c3_conv_layer_map_data_ce1">9, 2, 1, 2</column>
+<column name="i_reg_182">9, 2, 31, 62</column>
+<column name="indvars_iv19_reg_205">9, 2, 32, 64</column>
+<column name="indvars_iv24_reg_193">9, 2, 32, 64</column>
+<column name="j_reg_217">9, 2, 31, 62</column>
+<column name="k_fu_124">9, 2, 31, 62</column>
+<column name="m_reg_228">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_i_reg_705">64, 0, 64, 0</column>
+<column name="add_ln261_reg_587">31, 0, 31, 0</column>
+<column name="add_ln265_reg_640">32, 0, 32, 0</column>
+<column name="add_ln267_1_reg_630">16, 0, 17, 1</column>
+<column name="add_ln276_1_reg_635">17, 0, 17, 0</column>
+<column name="ap_CS_fsm">78, 0, 78, 0</column>
+<column name="c3_conv_layer_map_data_load_reg_660">64, 0, 64, 0</column>
+<column name="div_i_reg_710">64, 0, 64, 0</column>
+<column name="em_reg_694">64, 0, 64, 0</column>
+<column name="empty_16_reg_612">17, 0, 17, 0</column>
+<column name="empty_reg_607">16, 0, 16, 0</column>
+<column name="ep_reg_688">64, 0, 64, 0</column>
+<column name="grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4_fu_240_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_reg_182">31, 0, 31, 0</column>
+<column name="indvars_iv19_reg_205">32, 0, 32, 0</column>
+<column name="indvars_iv24_reg_193">32, 0, 32, 0</column>
+<column name="indvars_iv_next31_reg_625">31, 0, 31, 0</column>
+<column name="indvars_iv_next39_reg_602">31, 0, 31, 0</column>
+<column name="j_reg_217">31, 0, 31, 0</column>
+<column name="k_fu_124">31, 0, 31, 0</column>
+<column name="m_1_reg_675">16, 0, 17, 1</column>
+<column name="m_reg_228">32, 0, 32, 0</column>
+<column name="max_value_reg_670">64, 0, 64, 0</column>
+<column name="s4_map_h_reg_559">32, 0, 32, 0</column>
+<column name="s4_map_w_reg_554">32, 0, 32, 0</column>
+<column name="s4_pooling_layer_map_count_read_reg_564">32, 0, 32, 0</column>
+<column name="select_ln268_reg_617">32, 0, 32, 0</column>
+<column name="sub1_i_reg_700">64, 0, 64, 0</column>
+<column name="tmp_6_reg_592">7, 0, 17, 10</column>
+<column name="trunc_ln261_1_reg_574">16, 0, 16, 0</column>
+<column name="trunc_ln261_2_reg_579">17, 0, 17, 0</column>
+<column name="trunc_ln261_reg_569">17, 0, 17, 0</column>
+<column name="trunc_ln265_1_reg_665">17, 0, 17, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, max_pooling_fprop2, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, max_pooling_fprop2, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, max_pooling_fprop2, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, max_pooling_fprop2, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, max_pooling_fprop2, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, max_pooling_fprop2, return value</column>
+<column name="ap_ce">in, 1, ap_ctrl_hs, max_pooling_fprop2, return value</column>
+<column name="ap_core">in, 8, ap_none, ap_core, scalar</column>
+<column name="ap_part">in, 8, ap_none, ap_part, scalar</column>
+<column name="ap_parent">in, 8, ap_none, ap_parent, scalar</column>
+<column name="c3_conv_layer_map_w">in, 32, ap_none, c3_conv_layer_map_w, pointer</column>
+<column name="c3_conv_layer_map_h">in, 32, ap_none, c3_conv_layer_map_h, pointer</column>
+<column name="c3_conv_layer_map_count">in, 32, ap_none, c3_conv_layer_map_count, pointer</column>
+<column name="c3_conv_layer_map_data_address0">out, 17, ap_memory, c3_conv_layer_map_data, array</column>
+<column name="c3_conv_layer_map_data_ce0">out, 1, ap_memory, c3_conv_layer_map_data, array</column>
+<column name="c3_conv_layer_map_data_q0">in, 64, ap_memory, c3_conv_layer_map_data, array</column>
+<column name="c3_conv_layer_map_data_address1">out, 17, ap_memory, c3_conv_layer_map_data, array</column>
+<column name="c3_conv_layer_map_data_ce1">out, 1, ap_memory, c3_conv_layer_map_data, array</column>
+<column name="c3_conv_layer_map_data_q1">in, 64, ap_memory, c3_conv_layer_map_data, array</column>
+<column name="c3_conv_layer_map_error_address0">out, 17, ap_memory, c3_conv_layer_map_error, array</column>
+<column name="c3_conv_layer_map_error_ce0">out, 1, ap_memory, c3_conv_layer_map_error, array</column>
+<column name="c3_conv_layer_map_error_we0">out, 1, ap_memory, c3_conv_layer_map_error, array</column>
+<column name="c3_conv_layer_map_error_d0">out, 64, ap_memory, c3_conv_layer_map_error, array</column>
+<column name="c3_conv_layer_map_error_q0">in, 64, ap_memory, c3_conv_layer_map_error, array</column>
+<column name="c3_conv_layer_map_error_address1">out, 17, ap_memory, c3_conv_layer_map_error, array</column>
+<column name="c3_conv_layer_map_error_ce1">out, 1, ap_memory, c3_conv_layer_map_error, array</column>
+<column name="c3_conv_layer_map_error_we1">out, 1, ap_memory, c3_conv_layer_map_error, array</column>
+<column name="c3_conv_layer_map_error_d1">out, 64, ap_memory, c3_conv_layer_map_error, array</column>
+<column name="c3_conv_layer_map_error_q1">in, 64, ap_memory, c3_conv_layer_map_error, array</column>
+<column name="c3_conv_layer_map_b_address0">out, 7, ap_memory, c3_conv_layer_map_b, array</column>
+<column name="c3_conv_layer_map_b_ce0">out, 1, ap_memory, c3_conv_layer_map_b, array</column>
+<column name="c3_conv_layer_map_b_we0">out, 1, ap_memory, c3_conv_layer_map_b, array</column>
+<column name="c3_conv_layer_map_b_d0">out, 64, ap_memory, c3_conv_layer_map_b, array</column>
+<column name="c3_conv_layer_map_b_q0">in, 64, ap_memory, c3_conv_layer_map_b, array</column>
+<column name="c3_conv_layer_map_b_address1">out, 7, ap_memory, c3_conv_layer_map_b, array</column>
+<column name="c3_conv_layer_map_b_ce1">out, 1, ap_memory, c3_conv_layer_map_b, array</column>
+<column name="c3_conv_layer_map_b_we1">out, 1, ap_memory, c3_conv_layer_map_b, array</column>
+<column name="c3_conv_layer_map_b_d1">out, 64, ap_memory, c3_conv_layer_map_b, array</column>
+<column name="c3_conv_layer_map_b_q1">in, 64, ap_memory, c3_conv_layer_map_b, array</column>
+<column name="c3_conv_layer_map_db_address0">out, 7, ap_memory, c3_conv_layer_map_db, array</column>
+<column name="c3_conv_layer_map_db_ce0">out, 1, ap_memory, c3_conv_layer_map_db, array</column>
+<column name="c3_conv_layer_map_db_we0">out, 1, ap_memory, c3_conv_layer_map_db, array</column>
+<column name="c3_conv_layer_map_db_d0">out, 64, ap_memory, c3_conv_layer_map_db, array</column>
+<column name="c3_conv_layer_map_db_q0">in, 64, ap_memory, c3_conv_layer_map_db, array</column>
+<column name="c3_conv_layer_map_db_address1">out, 7, ap_memory, c3_conv_layer_map_db, array</column>
+<column name="c3_conv_layer_map_db_ce1">out, 1, ap_memory, c3_conv_layer_map_db, array</column>
+<column name="c3_conv_layer_map_db_we1">out, 1, ap_memory, c3_conv_layer_map_db, array</column>
+<column name="c3_conv_layer_map_db_d1">out, 64, ap_memory, c3_conv_layer_map_db, array</column>
+<column name="c3_conv_layer_map_db_q1">in, 64, ap_memory, c3_conv_layer_map_db, array</column>
+<column name="c3_conv_layer_kernel_w">in, 32, ap_none, c3_conv_layer_kernel_w, pointer</column>
+<column name="c3_conv_layer_kernel_h">in, 32, ap_none, c3_conv_layer_kernel_h, pointer</column>
+<column name="c3_conv_layer_kernel_count">in, 32, ap_none, c3_conv_layer_kernel_count, pointer</column>
+<column name="c3_conv_layer_kernel_address0">out, 11, ap_memory, c3_conv_layer_kernel, array</column>
+<column name="c3_conv_layer_kernel_ce0">out, 1, ap_memory, c3_conv_layer_kernel, array</column>
+<column name="c3_conv_layer_kernel_we0">out, 1, ap_memory, c3_conv_layer_kernel, array</column>
+<column name="c3_conv_layer_kernel_d0">out, 3200, ap_memory, c3_conv_layer_kernel, array</column>
+<column name="c3_conv_layer_kernel_q0">in, 3200, ap_memory, c3_conv_layer_kernel, array</column>
+<column name="c3_conv_layer_kernel_address1">out, 11, ap_memory, c3_conv_layer_kernel, array</column>
+<column name="c3_conv_layer_kernel_ce1">out, 1, ap_memory, c3_conv_layer_kernel, array</column>
+<column name="c3_conv_layer_kernel_we1">out, 1, ap_memory, c3_conv_layer_kernel, array</column>
+<column name="c3_conv_layer_kernel_d1">out, 3200, ap_memory, c3_conv_layer_kernel, array</column>
+<column name="c3_conv_layer_kernel_q1">in, 3200, ap_memory, c3_conv_layer_kernel, array</column>
+<column name="c3_conv_layer_map_common_address0">out, 10, ap_memory, c3_conv_layer_map_common, array</column>
+<column name="c3_conv_layer_map_common_ce0">out, 1, ap_memory, c3_conv_layer_map_common, array</column>
+<column name="c3_conv_layer_map_common_we0">out, 1, ap_memory, c3_conv_layer_map_common, array</column>
+<column name="c3_conv_layer_map_common_d0">out, 64, ap_memory, c3_conv_layer_map_common, array</column>
+<column name="c3_conv_layer_map_common_q0">in, 64, ap_memory, c3_conv_layer_map_common, array</column>
+<column name="c3_conv_layer_map_common_address1">out, 10, ap_memory, c3_conv_layer_map_common, array</column>
+<column name="c3_conv_layer_map_common_ce1">out, 1, ap_memory, c3_conv_layer_map_common, array</column>
+<column name="c3_conv_layer_map_common_we1">out, 1, ap_memory, c3_conv_layer_map_common, array</column>
+<column name="c3_conv_layer_map_common_d1">out, 64, ap_memory, c3_conv_layer_map_common, array</column>
+<column name="c3_conv_layer_map_common_q1">in, 64, ap_memory, c3_conv_layer_map_common, array</column>
+<column name="s4_pooling_layer_map_w">in, 32, ap_none, s4_pooling_layer_map_w, pointer</column>
+<column name="s4_pooling_layer_map_h">in, 32, ap_none, s4_pooling_layer_map_h, pointer</column>
+<column name="s4_pooling_layer_map_count">in, 32, ap_none, s4_pooling_layer_map_count, pointer</column>
+<column name="s4_pooling_layer_map_data_address0">out, 17, ap_memory, s4_pooling_layer_map_data, array</column>
+<column name="s4_pooling_layer_map_data_ce0">out, 1, ap_memory, s4_pooling_layer_map_data, array</column>
+<column name="s4_pooling_layer_map_data_we0">out, 1, ap_memory, s4_pooling_layer_map_data, array</column>
+<column name="s4_pooling_layer_map_data_d0">out, 64, ap_memory, s4_pooling_layer_map_data, array</column>
+<column name="s4_pooling_layer_map_error_address0">out, 17, ap_memory, s4_pooling_layer_map_error, array</column>
+<column name="s4_pooling_layer_map_error_ce0">out, 1, ap_memory, s4_pooling_layer_map_error, array</column>
+<column name="s4_pooling_layer_map_error_we0">out, 1, ap_memory, s4_pooling_layer_map_error, array</column>
+<column name="s4_pooling_layer_map_error_d0">out, 64, ap_memory, s4_pooling_layer_map_error, array</column>
+<column name="s4_pooling_layer_map_error_q0">in, 64, ap_memory, s4_pooling_layer_map_error, array</column>
+<column name="s4_pooling_layer_map_error_address1">out, 17, ap_memory, s4_pooling_layer_map_error, array</column>
+<column name="s4_pooling_layer_map_error_ce1">out, 1, ap_memory, s4_pooling_layer_map_error, array</column>
+<column name="s4_pooling_layer_map_error_we1">out, 1, ap_memory, s4_pooling_layer_map_error, array</column>
+<column name="s4_pooling_layer_map_error_d1">out, 64, ap_memory, s4_pooling_layer_map_error, array</column>
+<column name="s4_pooling_layer_map_error_q1">in, 64, ap_memory, s4_pooling_layer_map_error, array</column>
+<column name="s4_pooling_layer_map_b_address0">out, 7, ap_memory, s4_pooling_layer_map_b, array</column>
+<column name="s4_pooling_layer_map_b_ce0">out, 1, ap_memory, s4_pooling_layer_map_b, array</column>
+<column name="s4_pooling_layer_map_b_we0">out, 1, ap_memory, s4_pooling_layer_map_b, array</column>
+<column name="s4_pooling_layer_map_b_d0">out, 64, ap_memory, s4_pooling_layer_map_b, array</column>
+<column name="s4_pooling_layer_map_b_q0">in, 64, ap_memory, s4_pooling_layer_map_b, array</column>
+<column name="s4_pooling_layer_map_b_address1">out, 7, ap_memory, s4_pooling_layer_map_b, array</column>
+<column name="s4_pooling_layer_map_b_ce1">out, 1, ap_memory, s4_pooling_layer_map_b, array</column>
+<column name="s4_pooling_layer_map_b_we1">out, 1, ap_memory, s4_pooling_layer_map_b, array</column>
+<column name="s4_pooling_layer_map_b_d1">out, 64, ap_memory, s4_pooling_layer_map_b, array</column>
+<column name="s4_pooling_layer_map_b_q1">in, 64, ap_memory, s4_pooling_layer_map_b, array</column>
+<column name="s4_pooling_layer_map_db_address0">out, 7, ap_memory, s4_pooling_layer_map_db, array</column>
+<column name="s4_pooling_layer_map_db_ce0">out, 1, ap_memory, s4_pooling_layer_map_db, array</column>
+<column name="s4_pooling_layer_map_db_we0">out, 1, ap_memory, s4_pooling_layer_map_db, array</column>
+<column name="s4_pooling_layer_map_db_d0">out, 64, ap_memory, s4_pooling_layer_map_db, array</column>
+<column name="s4_pooling_layer_map_db_q0">in, 64, ap_memory, s4_pooling_layer_map_db, array</column>
+<column name="s4_pooling_layer_map_db_address1">out, 7, ap_memory, s4_pooling_layer_map_db, array</column>
+<column name="s4_pooling_layer_map_db_ce1">out, 1, ap_memory, s4_pooling_layer_map_db, array</column>
+<column name="s4_pooling_layer_map_db_we1">out, 1, ap_memory, s4_pooling_layer_map_db, array</column>
+<column name="s4_pooling_layer_map_db_d1">out, 64, ap_memory, s4_pooling_layer_map_db, array</column>
+<column name="s4_pooling_layer_map_db_q1">in, 64, ap_memory, s4_pooling_layer_map_db, array</column>
+<column name="s4_pooling_layer_kernel_w">in, 32, ap_none, s4_pooling_layer_kernel_w, pointer</column>
+<column name="s4_pooling_layer_kernel_h">in, 32, ap_none, s4_pooling_layer_kernel_h, pointer</column>
+<column name="s4_pooling_layer_kernel_count">in, 32, ap_none, s4_pooling_layer_kernel_count, pointer</column>
+<column name="s4_pooling_layer_kernel_address0">out, 11, ap_memory, s4_pooling_layer_kernel, array</column>
+<column name="s4_pooling_layer_kernel_ce0">out, 1, ap_memory, s4_pooling_layer_kernel, array</column>
+<column name="s4_pooling_layer_kernel_we0">out, 1, ap_memory, s4_pooling_layer_kernel, array</column>
+<column name="s4_pooling_layer_kernel_d0">out, 3200, ap_memory, s4_pooling_layer_kernel, array</column>
+<column name="s4_pooling_layer_kernel_q0">in, 3200, ap_memory, s4_pooling_layer_kernel, array</column>
+<column name="s4_pooling_layer_kernel_address1">out, 11, ap_memory, s4_pooling_layer_kernel, array</column>
+<column name="s4_pooling_layer_kernel_ce1">out, 1, ap_memory, s4_pooling_layer_kernel, array</column>
+<column name="s4_pooling_layer_kernel_we1">out, 1, ap_memory, s4_pooling_layer_kernel, array</column>
+<column name="s4_pooling_layer_kernel_d1">out, 3200, ap_memory, s4_pooling_layer_kernel, array</column>
+<column name="s4_pooling_layer_kernel_q1">in, 3200, ap_memory, s4_pooling_layer_kernel, array</column>
+<column name="s4_pooling_layer_map_common_address0">out, 10, ap_memory, s4_pooling_layer_map_common, array</column>
+<column name="s4_pooling_layer_map_common_ce0">out, 1, ap_memory, s4_pooling_layer_map_common, array</column>
+<column name="s4_pooling_layer_map_common_we0">out, 1, ap_memory, s4_pooling_layer_map_common, array</column>
+<column name="s4_pooling_layer_map_common_d0">out, 64, ap_memory, s4_pooling_layer_map_common, array</column>
+<column name="s4_pooling_layer_map_common_q0">in, 64, ap_memory, s4_pooling_layer_map_common, array</column>
+<column name="s4_pooling_layer_map_common_address1">out, 10, ap_memory, s4_pooling_layer_map_common, array</column>
+<column name="s4_pooling_layer_map_common_ce1">out, 1, ap_memory, s4_pooling_layer_map_common, array</column>
+<column name="s4_pooling_layer_map_common_we1">out, 1, ap_memory, s4_pooling_layer_map_common, array</column>
+<column name="s4_pooling_layer_map_common_d1">out, 64, ap_memory, s4_pooling_layer_map_common, array</column>
+<column name="s4_pooling_layer_map_common_q1">in, 64, ap_memory, s4_pooling_layer_map_common, array</column>
+</table>
+</item>
+</section>
+</profile>

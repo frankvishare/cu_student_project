@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 21,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 227,
+    "instructions": 88,
+    "loads": {
+      "T": 6
+    },
+    "name": "max_pooling_fprop1",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 88
+  }
+}

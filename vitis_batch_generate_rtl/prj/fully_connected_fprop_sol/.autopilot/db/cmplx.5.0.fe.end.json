@@ -1,0 +1,41 @@
+{
+    "0": {
+        "name": "fully_connected_fprop",
+        "file": "..\/source\/hls.cpp",
+        "fileloc": "285",
+        "instructions": "95",
+        "total_instructions": "138",
+        "calls": "1",
+        "basicblocks": "4",
+        "loads": {
+            "L": "2",
+            "T": "1"
+        },
+        "stores": {
+            "L": "2",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "1": {
+        "name": "fully_connected_fprop_Pipeline_VITIS_LOOP_290_2",
+        "file": "..\/source\/hls.cpp",
+        "fileloc": "289",
+        "instructions": "43",
+        "total_instructions": "43",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "2"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

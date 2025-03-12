@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "max_pooling_fprop2",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "max_pooling_fprop2"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/duludulu/Documents/hls/vitis_batch_generate_rtl/hls.tcl",
+    "sourceLine": 68,
+    "success": true
+  }
+]

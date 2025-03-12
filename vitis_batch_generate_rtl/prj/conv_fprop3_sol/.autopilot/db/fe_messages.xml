@@ -1,0 +1,72 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-3993" msg_severity="WARNING" msg_loc="../source/xmem.h:46:35" msg_body="declaration does not declare anything">
+        <args ClangWarningOption="missing-declarations"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:74:54" msg_body="unused parameter 'in_h'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:111:26" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:111:43" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:111:60" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:140:26" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:140:43" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:140:60" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:168:72" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:168:89" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:168:106" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:227:33" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:227:50" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:227:67" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:255:33" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:255:50" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:255:67" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:285:36" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:285:53" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:285:70" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/duludulu/Documents/hls/vitis_batch_generate_rtl/hls.tcl:68:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="conv_fprop3" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=conv_fprop3" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../source/hls.cpp:169:0" msg_body="Inlining function 'convn_valid' into 'conv_fprop3'">
+        <args Callee="convn_valid" Callee-DebugLoc="File ../source/hls.cpp Line 77 Column 0" Caller="conv_fprop3" Caller-DebugLoc="File ../source/hls.cpp Line 169 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../source/hls.cpp:169:0" msg_body="Inlining function 'activation_func::tan_h(double)' into 'conv_fprop3'">
+        <args Callee="activation_func::tan_h(double)" Callee-DebugLoc="File ../source/hls.cpp Line 9 Column 0" Caller="conv_fprop3" Caller-DebugLoc="File ../source/hls.cpp Line 169 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,127 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 296, Column: 40 }
+Function:        fully_connected_fprop
+Args:            
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          fully_connected_fprop
+    DebugLoc:        { File: ../source/hls.cpp, Line: 286, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_fully_connected_fprop_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            output_layer
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_fully_connected_fprop_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            output_layer_map
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_fully_connected_fprop_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            c5_conv_layer
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_fully_connected_fprop_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            c5_conv_layer_map
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 296, Column: 40 }
+Function:        fully_connected_fprop
+Args:            
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          fully_connected_fprop
+    DebugLoc:        { File: ../source/hls.cpp, Line: 286, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_fully_connected_fprop_ir
+Args:            
+  - Callee:          fully_connected_fprop
+    DebugLoc:        { File: ../source/hls.cpp, Line: 286, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_fully_connected_fprop_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../source/hls.cpp, Line: 286, Column: 0 }
+Function:        fully_connected_fprop
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fully_connected_fprop
+    DebugLoc:        { File: ../source/hls.cpp, Line: 286, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_fully_connected_fprop_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            output_layer_kernel
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '3200'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_fully_connected_fprop_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            c5_conv_layer_kernel
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '3200'
+  - String:          '-bits'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_290_2
+  - String:          '> at '
+  - LoopLoc:         '../source/hls.cpp:290:27'
+  - String:          ' '
+...

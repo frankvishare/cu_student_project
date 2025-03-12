@@ -10,8 +10,28 @@
     #define TBCONFIG_ALL                             0
 #endif
 
-#ifndef TBCONFIG_CONVN_VALID
-    #define TBCONFIG_CONVN_VALID                     0
+#ifndef TBCONFIG_CONV_FPROP1
+    #define TBCONFIG_CONV_FPROP1                     0
+#endif
+
+#ifndef TBCONFIG_CONV_FPROP2
+    #define TBCONFIG_CONV_FPROP2                     0
+#endif
+
+#ifndef TBCONFIG_CONV_FPROP3
+    #define TBCONFIG_CONV_FPROP3                     0
+#endif
+
+#ifndef TBCONFIG_MAX_POOLING_FPROP1
+    #define TBCONFIG_MAX_POOLING_FPROP1              0
+#endif
+
+#ifndef TBCONFIG_MAX_POOLING_FPROP2
+    #define TBCONFIG_MAX_POOLING_FPROP2              0
+#endif
+
+#ifndef TBCONFIG_FULLY_CONNECTED_FPROP
+    #define TBCONFIG_FULLY_CONNECTED_FPROP           0
 #endif
 
 
@@ -51,144 +71,219 @@ void ap_uint_to_array(TSRC &src, TDST *dst, size_t dst_count){
     #error "DCACHE_SIZE is too large for cosimulation, please minimize the DACHE_SIZE for cosimulation and revert back the DCACHE_SIZE to 0x1FFFFFFF after cosim"
 #endif
 
-bool test_convn_valid(){
-#if (TBCONFIG_CONVN_VALID || TBCONFIG_ALL)
-    printf("Test convn_valid\n");
-    // define input variables 
-    int in_w;
-    int in_h;
-    int kernel_w;
-    int kernel_h;
-    int out_w;
-    int out_h;
-
-    // define arrays
-    double in_data [1024];
-    double kernel [25];
-    double out_data [1024];
-
-    // define temp variables
-
-
-    HLS_COMMON_INIT_VAR();
-
-    // start loading 
-    tgLoad("convn_valid_output.bin")
-    
-    unsigned int total_count = 0;
-    bool finish = false;
-    do{
-        tgPop(in_data,in_w,in_h,kernel,kernel_w,kernel_h,out_data,out_w,out_h);
-
-        if (finish) {
-            break;
-        }
-        // call the function
-        convn_valid(HLS_COMMON_ARG_CALL in_data,in_w,in_h,kernel,kernel_w,kernel_h,out_data,out_w,out_h);
-
-        tgCheck(in_data,kernel,out_data);
-        ++total_count;
-    } while(true);
-
-    printf("Passed after %d\n", total_count);
-    return true;
-#else
-    printf("Skip convn_valid\n");
-    return true;
-#endif
-}
-
-bool test_conv_fprop(){
-#if 0 //cosim_code_generator: This function is marked as skip in function_list.txt
-    printf("Test conv_fprop\n");
+bool test_conv_fprop1(){
+#if (TBCONFIG_CONV_FPROP1 || TBCONFIG_ALL)
+    printf("Test conv_fprop1\n");
     // define input variables 
 
     // define arrays
     bool pconnection [96];
 
     // define temp variables
-    Layer prev_layer;
-    Layer layer;
+    Layer input_layer;
+    Layer c1_conv_layer;
 
 
     HLS_COMMON_INIT_VAR();
 
     // start loading 
-    tgLoad("conv_fprop_output.bin")
+    tgLoad("conv_fprop1_output.bin")
     
     unsigned int total_count = 0;
     bool finish = false;
     do{
-        tgPop(prev_layer,layer,pconnection);
+        tgPop(input_layer,c1_conv_layer,pconnection);
 
         if (finish) {
             break;
         }
         // call the function
-        conv_fprop(HLS_COMMON_ARG_CALL &prev_layer,&layer,pconnection);
+        conv_fprop1(HLS_COMMON_ARG_CALL &input_layer,&c1_conv_layer,pconnection);
 
-        tgCheck(prev_layer,layer,pconnection);
+        tgCheck(input_layer,c1_conv_layer,pconnection);
         ++total_count;
     } while(true);
 
     printf("Passed after %d\n", total_count);
     return true;
 #else
-    printf("Skip conv_fprop\n");
+    printf("Skip conv_fprop1\n");
     return true;
 #endif
 }
 
-bool test_max_pooling_fprop(){
-#if 0 //cosim_code_generator: This function is marked as skip in function_list.txt
-    printf("Test max_pooling_fprop\n");
+bool test_conv_fprop2(){
+#if (TBCONFIG_CONV_FPROP2 || TBCONFIG_ALL)
+    printf("Test conv_fprop2\n");
+    // define input variables 
+
+    // define arrays
+    bool pconnection [96];
+
+    // define temp variables
+    Layer s2_pooling_la;
+    Layer c3_conv_layer;
+
+
+    HLS_COMMON_INIT_VAR();
+
+    // start loading 
+    tgLoad("conv_fprop2_output.bin")
+    
+    unsigned int total_count = 0;
+    bool finish = false;
+    do{
+        tgPop(s2_pooling_la,c3_conv_layer,pconnection);
+
+        if (finish) {
+            break;
+        }
+        // call the function
+        conv_fprop2(HLS_COMMON_ARG_CALL &s2_pooling_la,&c3_conv_layer,pconnection);
+
+        tgCheck(s2_pooling_la,c3_conv_layer,pconnection);
+        ++total_count;
+    } while(true);
+
+    printf("Passed after %d\n", total_count);
+    return true;
+#else
+    printf("Skip conv_fprop2\n");
+    return true;
+#endif
+}
+
+bool test_conv_fprop3(){
+#if (TBCONFIG_CONV_FPROP3 || TBCONFIG_ALL)
+    printf("Test conv_fprop3\n");
+    // define input variables 
+
+    // define arrays
+    bool pconnection [96];
+
+    // define temp variables
+    Layer s4_pooling_layer;
+    Layer c5_conv_layer;
+
+
+    HLS_COMMON_INIT_VAR();
+
+    // start loading 
+    tgLoad("conv_fprop3_output.bin")
+    
+    unsigned int total_count = 0;
+    bool finish = false;
+    do{
+        tgPop(s4_pooling_layer,c5_conv_layer,pconnection);
+
+        if (finish) {
+            break;
+        }
+        // call the function
+        conv_fprop3(HLS_COMMON_ARG_CALL &s4_pooling_layer,&c5_conv_layer,pconnection);
+
+        tgCheck(s4_pooling_layer,c5_conv_layer,pconnection);
+        ++total_count;
+    } while(true);
+
+    printf("Passed after %d\n", total_count);
+    return true;
+#else
+    printf("Skip conv_fprop3\n");
+    return true;
+#endif
+}
+
+bool test_max_pooling_fprop1(){
+#if (TBCONFIG_MAX_POOLING_FPROP1 || TBCONFIG_ALL)
+    printf("Test max_pooling_fprop1\n");
     // define input variables 
 
     // define arrays
 
     // define temp variables
-    Layer prev_layer;
-    Layer layer;
+    Layer c1_conv_layer;
+    Layer s2_pooling_layer;
 
 
     HLS_COMMON_INIT_VAR();
 
     // start loading 
-    tgLoad("max_pooling_fprop_output.bin")
+    tgLoad("max_pooling_fprop1_output.bin")
     
     unsigned int total_count = 0;
     bool finish = false;
     do{
-        tgPop(prev_layer,layer);
+        tgPop(c1_conv_layer,s2_pooling_layer);
 
         if (finish) {
             break;
         }
         // call the function
-        max_pooling_fprop(HLS_COMMON_ARG_CALL &prev_layer,&layer);
+        max_pooling_fprop1(HLS_COMMON_ARG_CALL &c1_conv_layer,&s2_pooling_layer);
 
-        tgCheck(prev_layer,layer);
+        tgCheck(c1_conv_layer,s2_pooling_layer);
         ++total_count;
     } while(true);
 
     printf("Passed after %d\n", total_count);
     return true;
 #else
-    printf("Skip max_pooling_fprop\n");
+    printf("Skip max_pooling_fprop1\n");
+    return true;
+#endif
+}
+
+bool test_max_pooling_fprop2(){
+#if (TBCONFIG_MAX_POOLING_FPROP2 || TBCONFIG_ALL)
+    printf("Test max_pooling_fprop2\n");
+    // define input variables 
+
+    // define arrays
+
+    // define temp variables
+    Layer c3_conv_layer;
+    Layer s4_pooling_layer;
+
+
+    HLS_COMMON_INIT_VAR();
+
+    // start loading 
+    tgLoad("max_pooling_fprop2_output.bin")
+    
+    unsigned int total_count = 0;
+    bool finish = false;
+    do{
+        tgPop(c3_conv_layer,s4_pooling_layer);
+
+        if (finish) {
+            break;
+        }
+        // call the function
+        max_pooling_fprop2(HLS_COMMON_ARG_CALL &c3_conv_layer,&s4_pooling_layer);
+
+        tgCheck(c3_conv_layer,s4_pooling_layer);
+        ++total_count;
+    } while(true);
+
+    printf("Passed after %d\n", total_count);
+    return true;
+#else
+    printf("Skip max_pooling_fprop2\n");
     return true;
 #endif
 }
 
 bool test_fully_connected_fprop(){
-#if 0 //cosim_code_generator: This function is marked as skip in function_list.txt
+#if (TBCONFIG_FULLY_CONNECTED_FPROP || TBCONFIG_ALL)
     printf("Test fully_connected_fprop\n");
     // define input variables 
 
     // define arrays
 
     // define temp variables
-    Layer prev_layer;
-    Layer layer;
+    Layer c5_conv_layer;
+    Layer output_layer;
 
 
     HLS_COMMON_INIT_VAR();
@@ -199,15 +294,15 @@ bool test_fully_connected_fprop(){
     unsigned int total_count = 0;
     bool finish = false;
     do{
-        tgPop(prev_layer,layer);
+        tgPop(c5_conv_layer,output_layer);
 
         if (finish) {
             break;
         }
         // call the function
-        fully_connected_fprop(HLS_COMMON_ARG_CALL &prev_layer,&layer);
+        fully_connected_fprop(HLS_COMMON_ARG_CALL &c5_conv_layer,&output_layer);
 
-        tgCheck(prev_layer,layer);
+        tgCheck(c5_conv_layer,output_layer);
         ++total_count;
     } while(true);
 
@@ -222,9 +317,11 @@ bool test_fully_connected_fprop(){
 
 
 int main(){
-    test_convn_valid();
-    test_conv_fprop();
-    test_max_pooling_fprop();
+    test_conv_fprop1();
+    test_conv_fprop2();
+    test_conv_fprop3();
+    test_max_pooling_fprop1();
+    test_max_pooling_fprop2();
     test_fully_connected_fprop();
 
     return 0;

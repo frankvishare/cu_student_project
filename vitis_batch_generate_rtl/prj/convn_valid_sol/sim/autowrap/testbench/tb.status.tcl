@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/convn_valid_sol/./sim/autowrap/testbench/hls.cpp_pre.cpp.tb.cpp

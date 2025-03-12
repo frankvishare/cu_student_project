@@ -1,0 +1,6 @@
+In file included from ../source/hls.cpp:1:
+In file included from ../source/hls.h:10:
+../source/xmem.h:46:35: warning: declaration does not declare anything [-Wmissing-declarations]
+    uint8_t xxxxx_paddingA[1976]; __attribute__((aligned(4)));
+                                  ^
+1 warning generated.

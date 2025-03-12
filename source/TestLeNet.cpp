@@ -11,7 +11,7 @@
 //#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #include "hls.h"
-
+#include "xmem.h"
 
 /*
 #define MAX_MAP_SIZE 1024     // 最大特征图大小 (32x32)
@@ -31,9 +31,9 @@ const int height = 32;
 //const int train_sample_count = 60000;
 //const int test_sample_count  = 10000;
 
-Layer input_layer, output_layer;
-Layer c1_conv_layer, c3_conv_layer, c5_conv_layer;
-Layer s2_pooling_layer, s4_pooling_layer;
+//Layer input_layer, output_layer;
+//Layer c1_conv_layer, c3_conv_layer, c5_conv_layer;
+//Layer s2_pooling_layer, s4_pooling_layer;
 
 //*-------------------------------------------------------------------------------------------------------/
 
@@ -345,25 +345,26 @@ void fully_connected_fprop(Layer *prev_layer, Layer *layer)
 #endif
 //到此为止
 
-void forward_propagation()
+void forward_propagation(xmem_t *xmem)
 {
+	memcpy(xmem->pconnection, connection_table,sizeof(connection_table));
 	// In-->C1
-	conv_fprop(&input_layer, &c1_conv_layer, NULL);
+	conv_fprop1(&xmem->input_layer, &xmem->c1_conv_layer, NULL);
 
 	// C1-->S2
-	max_pooling_fprop(&c1_conv_layer, &s2_pooling_layer);/*avg_pooling_fprop*/
+	max_pooling_fprop1(&xmem->c1_conv_layer, &xmem->s2_pooling_layer);/*avg_pooling_fprop*/
 
 	// S2-->C3
-	conv_fprop(&s2_pooling_layer, &c3_conv_layer, connection_table);
+	conv_fprop2(&xmem->s2_pooling_layer, &xmem->c3_conv_layer, xmem->pconnection);
 
 	// C3-->S4
-	max_pooling_fprop(&c3_conv_layer, &s4_pooling_layer);/*avg_pooling_fprop*/
+	max_pooling_fprop2(&xmem->c3_conv_layer, &xmem->s4_pooling_layer);/*avg_pooling_fprop*/
 
 	// S4-->C5
-	conv_fprop(&s4_pooling_layer, &c5_conv_layer, NULL);
+	conv_fprop3(&xmem->s4_pooling_layer, &xmem->c5_conv_layer, NULL);
 
 	// C5-->Out
-	fully_connected_fprop(&c5_conv_layer, &output_layer);
+	fully_connected_fprop(&xmem->c5_conv_layer, &xmem->output_layer);
 }
 
 int find_index(double *label) //获取真实标签
@@ -398,7 +399,7 @@ int find_index(Layer *layer)
 	return index;
 }
 
-
+/*
 void save_model(const char* filename) {
     FILE *fp = NULL;
     fp =fopen(filename, "wb");
@@ -442,8 +443,8 @@ void save_model(const char* filename) {
     printf("Model saved successfully to %s\n", filename);
     fclose(fp);
 }
-
-void load_model(const char* filename) {
+*/
+void load_model(xmem_t *xmem, const char* filename) {
     FILE *fp = NULL;
     fp =fopen(filename, "rb");
     if(!fp) {
@@ -468,8 +469,8 @@ void load_model(const char* filename) {
         return;
     }
     
-    Layer* layers[] = {&c1_conv_layer, &s2_pooling_layer, &c3_conv_layer, 
-                      &s4_pooling_layer, &c5_conv_layer, &output_layer};
+    Layer* layers[] = {&xmem->c1_conv_layer, &xmem->s2_pooling_layer, &xmem->c3_conv_layer, 
+                      &xmem->s4_pooling_layer, &xmem->c5_conv_layer, &xmem->output_layer};
     
     for(int l = 0; l < 6; l++) {
         Layer* layer = layers[l];
@@ -544,18 +545,18 @@ void load_and_preprocess_image(const char* image_path, double* image_data) {
 
 
 
-int predict_single_image(const char* image_path) {
+int predict_single_image(xmem_t *xmem, const char* image_path) {
     double* image_data = (double*)malloc(width * height * sizeof(double));
     load_and_preprocess_image(image_path, image_data);
     
-    memcpy(input_layer.map[0].data, image_data, width * height * sizeof(double));
+    memcpy(&xmem->input_layer.map[0].data, image_data, width * height * sizeof(double));
     
-    forward_propagation();
+    forward_propagation(xmem);
     
     double max_prob = -1;
     int prediction = 0;
     for (int i = 0; i < 10; i++) {
-        double prob = output_layer.map[i].data[0];
+        double prob = xmem->output_layer.map[i].data[0];
         if (prob > max_prob) {
             max_prob = prob;
             prediction = i;
@@ -565,53 +566,54 @@ int predict_single_image(const char* image_path) {
     free(image_data);
     return prediction;
 }
-void test_custom_image(const char* model_path, const char* image_path) {
+
+void test_custom_image(xmem_t *xmem, const char* model_path, const char* image_path) {
     int kernel_w = 0, kernel_h = 0;
     
     // 输入层
-    init_layer(&input_layer, 0, 1, kernel_w, kernel_h, width, height, false);
+    init_layer(&xmem->input_layer, 0, 1, kernel_w, kernel_h, width, height, false);
 
     // 卷积层C1
     kernel_w = 5; kernel_h = 5;
-    init_layer(&c1_conv_layer, 1, 6, kernel_w, kernel_h, 
-               input_layer.map_w - kernel_w + 1, input_layer.map_h - kernel_h + 1, false);
+    init_layer(&xmem->c1_conv_layer, 1, 6, kernel_w, kernel_h, 
+		xmem->input_layer.map_w - kernel_w + 1, xmem->input_layer.map_h - kernel_h + 1, false);
 
     // 采样层S2
     kernel_w = 1; kernel_h = 1;
-    init_layer(&s2_pooling_layer, 1, 6, kernel_w, kernel_h, 
-               c1_conv_layer.map_w / 2, c1_conv_layer.map_h / 2, true);
+    init_layer(&xmem->s2_pooling_layer, 1, 6, kernel_w, kernel_h, 
+		xmem->c1_conv_layer.map_w / 2, xmem->c1_conv_layer.map_h / 2, true);
 
     // 卷积层C3
     kernel_w = 5; kernel_h = 5;
-    init_layer(&c3_conv_layer, 6, 16, kernel_w, kernel_h, 
-               s2_pooling_layer.map_w - kernel_w + 1, s2_pooling_layer.map_h - kernel_h + 1, false);
+    init_layer(&xmem->c3_conv_layer, 6, 16, kernel_w, kernel_h, 
+		xmem->s2_pooling_layer.map_w - kernel_w + 1, xmem->s2_pooling_layer.map_h - kernel_h + 1, false);
 
     // 采样层S4
     kernel_w = 1; kernel_h = 1;
-    init_layer(&s4_pooling_layer, 1, 16, kernel_w, kernel_h, 
-               c3_conv_layer.map_w / 2, c3_conv_layer.map_h / 2, true);
+    init_layer(&xmem->s4_pooling_layer, 1, 16, kernel_w, kernel_h, 
+		xmem->c3_conv_layer.map_w / 2, xmem->c3_conv_layer.map_h / 2, true);
 
     // 卷积层C5
     kernel_w = 5; kernel_h = 5;
-    init_layer(&c5_conv_layer, 16, 120, kernel_w, kernel_h, 
-               s4_pooling_layer.map_w - kernel_w + 1, s4_pooling_layer.map_h - kernel_h + 1, false);
+    init_layer(&xmem->c5_conv_layer, 16, 120, kernel_w, kernel_h, 
+		xmem->s4_pooling_layer.map_w - kernel_w + 1, xmem->s4_pooling_layer.map_h - kernel_h + 1, false);
 
     // 输出层
     kernel_w = 1; kernel_h = 1;
-    init_layer(&output_layer, 120, 10, kernel_w, kernel_h, 1, 1, false);
+    init_layer(&xmem->output_layer, 120, 10, kernel_w, kernel_h, 1, 1, false);
 
-    load_model(model_path);
+    load_model(xmem, model_path);
   
-    int prediction = predict_single_image(image_path);
+    int prediction = predict_single_image(xmem,image_path);
     printf("Predicted digit: %d\n", prediction);
 
-    release_layer(&input_layer);
-    release_layer(&c1_conv_layer);
-    release_layer(&c3_conv_layer);
-    release_layer(&c5_conv_layer);
-    release_layer(&s2_pooling_layer);
-    release_layer(&s4_pooling_layer);
-    release_layer(&output_layer);
+    release_layer(&xmem->input_layer);
+    release_layer(&xmem->c1_conv_layer);
+    release_layer(&xmem->c3_conv_layer);
+    release_layer(&xmem->c5_conv_layer);
+    release_layer(&xmem->s2_pooling_layer);
+    release_layer(&xmem->s4_pooling_layer);
+    release_layer(&xmem->output_layer);
 }
 
 
@@ -621,12 +623,21 @@ int main(int argc, char* argv[])
         printf("Usage: %s model_path image_path\n", argv[0]);
         return 1;
     }
-    
+    #if __riscv && HLS_XMEM
+    xmem_t *xmem = (xmem_t*)get_riscv_xmem_base();
+#else
+    xmem_t *xmem = (xmem_t*)malloc(sizeof(xmem_t));
+    if (xmem == NULL){
+        printf("cannot allocate xmem\n");
+        exit(1);
+    }
+#endif
     const char* model_path = argv[1];
     const char* image_path = argv[2];
     
     init_genrand((unsigned long)time(NULL));
-    test_custom_image(model_path, image_path);
+
+    test_custom_image(xmem, model_path, image_path);
 
     system("pause");
     return 0;

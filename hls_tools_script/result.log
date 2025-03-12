@@ -1,1 +1,14 @@
-INFO - cflags: -I/home/duludulu/Documents/hls/source
+WARNING - input_layer.map is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - input_layer.kernel is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - c1_conv_layer.map is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - c1_conv_layer.kernel is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - s2_pooling_layer.map is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - s2_pooling_layer.kernel is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - c3_conv_layer.map is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - c3_conv_layer.kernel is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - s4_pooling_layer.map is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - s4_pooling_layer.kernel is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - c5_conv_layer.map is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - c5_conv_layer.kernel is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - output_layer.map is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function
+WARNING - output_layer.kernel is an array of structures. Address translation in FPGA can be complex and inefficient. Please use DCACHE to rewrite the function

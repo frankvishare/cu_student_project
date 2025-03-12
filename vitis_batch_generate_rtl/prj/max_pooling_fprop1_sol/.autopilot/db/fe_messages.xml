@@ -1,0 +1,81 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-3993" msg_severity="WARNING" msg_loc="../source/xmem.h:46:35" msg_body="declaration does not declare anything">
+        <args ClangWarningOption="missing-declarations"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:74:54" msg_body="unused parameter 'in_h'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:111:26" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:111:43" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:111:60" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:140:26" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:140:43" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:140:60" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:168:26" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:168:43" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:168:60" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:227:86" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:227:103" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:227:120" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:255:33" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:255:50" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:255:67" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:285:36" msg_body="unused parameter 'ap_core'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:285:53" msg_body="unused parameter 'ap_part'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:285:70" msg_body="unused parameter 'ap_parent'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/duludulu/Documents/hls/vitis_batch_generate_rtl/hls.tcl:68:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="max_pooling_fprop1" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=max_pooling_fprop1" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../source/hls.cpp:228:0" msg_body="Inlining function 'activation_func::tan_h(double)' into 'max_pooling_fprop1'">
+        <args Callee="activation_func::tan_h(double)" Callee-DebugLoc="File ../source/hls.cpp Line 9 Column 0" Caller="max_pooling_fprop1" Caller-DebugLoc="File ../source/hls.cpp Line 228 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../source/hls.cpp:242:39" msg_body="Loop 'VITIS_LOOP_242_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_242_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../source/hls.cpp:228:0" msg_body="Unrolling loop 'VITIS_LOOP_242_5' (../source/hls.cpp:242:39) in function 'max_pooling_fprop1' completely with a factor of 2">
+        <args Factor="2" LoopLoc="../source/hls.cpp:242:39" LoopName="VITIS_LOOP_242_5"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="../source/hls.cpp:237:31" msg_body="Automatically disabling loop flattening for loop 'VITIS_LOOP_237_3'.">
+        <args LoopName="VITIS_LOOP_237_3"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../source/hls.cpp:237:31" msg_body="loop_flatten 0 1 max_pooling_fprop1 ../source/hls.cpp:237:31VITIS_LOOP_237_3 ../source/hls.cpp:237:31">
+        <args LoopLoc="../source/hls.cpp:237:31" LoopLoc-DebugLoc="File ../source/hls.cpp Line 237 Column 31" LoopName="VITIS_LOOP_237_3" PragmaFunction="max_pooling_fprop1" PragmaIsAuto="1" PragmaOptions="0" PragmaSrcLoc="../source/hls.cpp:237:31" PragmaSrcLoc-DebugLoc="File ../source/hls.cpp Line 237 Column 31" PragmaType="loop_flatten"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,155 @@
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:2260:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:2260:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:2274:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:2274:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:2288:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:2288:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:3922:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:3922:7: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:12987:2: warning: Added loop label VITIS_LOOP_84_1:   [xilinx-label-all-loops]
+ for (size_t i = 0; i < num; i++)
+ ^~~
+ VITIS_LOOP_84_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:12987:2: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:12997:2: warning: Added loop label VITIS_LOOP_94_1:   [xilinx-label-all-loops]
+ for (size_t i = 0; i < num; i++)
+ ^~~
+ VITIS_LOOP_94_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:12997:2: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13097:1: warning: Added loop label VITIS_LOOP_79_1:   [xilinx-label-all-loops]
+for (int i = 0; i < out_h; i++)
+^~~
+VITIS_LOOP_79_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13097:1: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13099:1: warning: Added loop label VITIS_LOOP_81_2:   [xilinx-label-all-loops]
+for (int j = 0; j < out_w; j++)
+^~~
+VITIS_LOOP_81_2: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13099:1: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13102:1: warning: Added loop label VITIS_LOOP_84_3:   [xilinx-label-all-loops]
+for (int n = 0; n < kernel_h; n++)
+^~~
+VITIS_LOOP_84_3: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13102:1: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13104:2: warning: Added loop label VITIS_LOOP_86_4:   [xilinx-label-all-loops]
+ for (int m = 0; m < kernel_w; m++)
+ ^~~
+ VITIS_LOOP_86_4: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13104:2: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13133:2: warning: Added loop label VITIS_LOOP_115_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < c1_conv_layer->map_count; i++)
+ ^~~
+ VITIS_LOOP_115_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13133:2: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13136:3: warning: Added loop label VITIS_LOOP_118_2:   [xilinx-label-all-loops]
+  for (int j = 0; j < input_layer->map_count; j++)
+  ^~~
+  VITIS_LOOP_118_2: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13136:3: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13150:3: warning: Added loop label VITIS_LOOP_132_3:   [xilinx-label-all-loops]
+  for (int k = 0; k < size; k++)
+  ^~~
+  VITIS_LOOP_132_3: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13150:3: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13166:5: warning: Added loop label VITIS_LOOP_144_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < c3_conv_layer->map_count; i++)
+    ^~~
+    VITIS_LOOP_144_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13166:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13169:9: warning: Added loop label VITIS_LOOP_147_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < s2_pooling_la->map_count; j++)
+        ^~~
+        VITIS_LOOP_147_2: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13169:9: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13183:9: warning: Added loop label VITIS_LOOP_161_3:   [xilinx-label-all-loops]
+        for (int k = 0; k < size; k++)
+        ^~~
+        VITIS_LOOP_161_3: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13183:9: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13194:5: warning: Added loop label VITIS_LOOP_172_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < c5_conv_layer->map_count; i++)
+    ^~~
+    VITIS_LOOP_172_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13194:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13197:9: warning: Added loop label VITIS_LOOP_175_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < s4_pooling_layer->map_count; j++)
+        ^~~
+        VITIS_LOOP_175_2: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13197:9: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13211:9: warning: Added loop label VITIS_LOOP_189_3:   [xilinx-label-all-loops]
+        for (int k = 0; k < size; k++)
+        ^~~
+        VITIS_LOOP_189_3: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13211:9: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13224:5: warning: Added loop label VITIS_LOOP_233_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < s2_pooling_layer->map_count; k++)
+    ^~~
+    VITIS_LOOP_233_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13224:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13226:9: warning: Added loop label VITIS_LOOP_235_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < map_h; i++)
+        ^~~
+        VITIS_LOOP_235_2: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13226:9: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13228:13: warning: Added loop label VITIS_LOOP_237_3:   [xilinx-label-all-loops]
+            for (int j = 0; j < map_w; j++)
+            ^~~
+            VITIS_LOOP_237_3: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13228:13: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13231:17: warning: Added loop label VITIS_LOOP_240_4:   [xilinx-label-all-loops]
+                for (int n = 2*i; n < 2*(i + 1); n++)
+                ^~~
+                VITIS_LOOP_240_4: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13231:17: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13233:21: warning: Added loop label VITIS_LOOP_242_5:   [xilinx-label-all-loops]
+                    for (int m = 2*j; m < 2*(j + 1); m++)
+                    ^~~
+                    VITIS_LOOP_242_5: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13233:21: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13252:5: warning: Added loop label VITIS_LOOP_261_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < s4_pooling_layer->map_count; k++)
+    ^~~
+    VITIS_LOOP_261_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13252:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13254:9: warning: Added loop label VITIS_LOOP_263_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < s4_map_h; i++)
+        ^~~
+        VITIS_LOOP_263_2: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13254:9: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13256:13: warning: Added loop label VITIS_LOOP_265_3:   [xilinx-label-all-loops]
+            for (int j = 0; j < s4_map_w; j++)
+            ^~~
+            VITIS_LOOP_265_3: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13256:13: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13259:17: warning: Added loop label VITIS_LOOP_268_4:   [xilinx-label-all-loops]
+                for (int n = 2*i; n < 2*(i + 1); n++)
+                ^~~
+                VITIS_LOOP_268_4: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13259:17: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13261:21: warning: Added loop label VITIS_LOOP_270_5:   [xilinx-label-all-loops]
+                    for (int m = 2*j; m < 2*(j + 1); m++)
+                    ^~~
+                    VITIS_LOOP_270_5: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13261:21: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13278:5: warning: Added loop label VITIS_LOOP_287_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < output_layer->map_count; i++)
+    ^~~
+    VITIS_LOOP_287_1: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13278:5: note: FIX-IT applied suggested code changes
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13281:9: warning: Added loop label VITIS_LOOP_290_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < c5_conv_layer->map_count; j++)
+        ^~~
+        VITIS_LOOP_290_2: 
+/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop2_sol/.autopilot/db/hls.pp.0.cpp:13281:9: note: FIX-IT applied suggested code changes

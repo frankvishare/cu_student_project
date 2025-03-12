@@ -1,0 +1,107 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/convn_valid_sol/.autopilot/db/hls.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/xmem.h</string>
+      <key>line</key>
+      <integer>46</integer>
+      <key>column</key>
+      <integer>35</integer>
+      <key>message</key>
+      <string>declaration does not declare anything</string>
+      <key>ID</key>
+      <integer>3993</integer>
+      <key>WarningOption</key>
+      <string>missing-declarations</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>error</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>126</integer>
+      <key>column</key>
+      <integer>4</integer>
+      <key>message</key>
+      <string>no matching function for call to &apos;convn_valid&apos;</string>
+      <key>ID</key>
+      <integer>3339</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>note</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>74</integer>
+      <key>column</key>
+      <integer>6</integer>
+      <key>message</key>
+      <string>candidate function not viable: requires 12 arguments, but 9 were provided</string>
+      <key>ID</key>
+      <integer>4373</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>error</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>155</integer>
+      <key>column</key>
+      <integer>13</integer>
+      <key>message</key>
+      <string>no matching function for call to &apos;convn_valid&apos;</string>
+      <key>ID</key>
+      <integer>3339</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>note</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>74</integer>
+      <key>column</key>
+      <integer>6</integer>
+      <key>message</key>
+      <string>candidate function not viable: requires 12 arguments, but 9 were provided</string>
+      <key>ID</key>
+      <integer>4373</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>error</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>183</integer>
+      <key>column</key>
+      <integer>13</integer>
+      <key>message</key>
+      <string>no matching function for call to &apos;convn_valid&apos;</string>
+      <key>ID</key>
+      <integer>3339</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>note</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>74</integer>
+      <key>column</key>
+      <integer>6</integer>
+      <key>message</key>
+      <string>candidate function not viable: requires 12 arguments, but 9 were provided</string>
+      <key>ID</key>
+      <integer>4373</integer>
+    </dict>
+  </array>
+</dict>

@@ -1,6 +1,8 @@
 #FUNC,COPY_RTL,AP_CE,HEVCCONTEXT_ARG,DCACHE_ARG
 #------------------------------------------------------
-convn_valid                                        1 0 0 0
-#conv_fprop                                        1 0 0 0
-#max_pooling_fprop                                 1 0 0 0
-#fully_connected_fprop                             1 0 0 0
+conv_fprop1                                        1 1 0 0
+conv_fprop2                                        1 1 0 0
+conv_fprop3                                        1 1 0 0
+max_pooling_fprop1                                 1 1 0 0
+max_pooling_fprop2                                 1 1 0 0
+fully_connected_fprop                              1 1 0 0

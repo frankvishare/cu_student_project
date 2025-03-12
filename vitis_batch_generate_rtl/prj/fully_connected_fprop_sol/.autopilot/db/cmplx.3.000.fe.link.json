@@ -1,0 +1,26 @@
+{
+  "0": {
+    "basicblocks": 13,
+    "calls": "1",
+    "file": "hls.cpp",
+    "fileloc": 285,
+    "instructions": 55,
+    "loads": {
+      "T": 6
+    },
+    "name": "fully_connected_fprop",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 62
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 8,
+    "instructions": 7,
+    "name": "tan_h",
+    "total_instructions": 7
+  }
+}

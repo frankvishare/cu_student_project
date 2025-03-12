@@ -113,7 +113,7 @@ CMakeFiles/testlenet.dir/TestLeNet.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /home/duludulu/Documents/hls/source/mt19937ar.h \
  /home/duludulu/Documents/hls/source/stb_image.h \
- /home/duludulu/Documents/hls/source/hls_cnn.h \
+ /home/duludulu/Documents/hls/source/hls.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \

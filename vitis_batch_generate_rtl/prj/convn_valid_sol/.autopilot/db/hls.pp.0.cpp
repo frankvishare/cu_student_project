@@ -2257,7 +2257,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    VITIS_LOOP_676_1: for (unsigned i = low; i != high+1; ++i) {
+    for (unsigned i = low; i != high+1; ++i) {
 
 #pragma HLS unroll
 
@@ -2271,7 +2271,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    VITIS_LOOP_690_1: for (unsigned i = low; i != high+1; ++i) {
+    for (unsigned i = low; i != high+1; ++i) {
 
 #pragma HLS unroll
 
@@ -2285,7 +2285,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    VITIS_LOOP_704_1: for (unsigned i = low; i != high+1; ++i) {
+    for (unsigned i = low; i != high+1; ++i) {
 
 #pragma HLS unroll
 
@@ -3919,7 +3919,7 @@ struct ap_fixed_base : ssdm_int<_AP_W, _AP_S> {
       int NZeros = 0;
       int i = 0;
       bool hitNonZero = false;
-      VITIS_LOOP_1248_1: for (i = 0; i < __N - 1; ++i) {
+      for (i = 0; i < __N - 1; ++i) {
         ap_int_base<64, false> t;
         t.range(0, 63) = this->range(_AP_W - i * 64 - 64, _AP_W - i * 64 - 1);
         NZeros += hitNonZero ? 0 : (t.V == 0 ? 64 : __builtin_clzll(t.V));
@@ -5984,81 +5984,53 @@ typedef enum st_enum{
     ST_DONE
 } st_t;
 # 6 "../source/xmem.h" 2
-# 16 "../source/xmem.h"
-typedef struct {
-    int x __attribute__((aligned(4)));
-    int y __attribute__((aligned(4)));
-}vector_2d;
-
-
-
-typedef struct xmem_t{
-    uint8_t xor_val8 __attribute__((aligned(4)));
-    uint16_t xor_val16 __attribute__((aligned(4)));
-    uint32_t xor_val32 __attribute__((aligned(4)));
-    int arr_complete[5] __attribute__((aligned(4)));
-    vector_2d vec_s1 __attribute__((aligned(4)));
-    vector_2d vec_s2 __attribute__((aligned(4)));
-    vector_2d vec_d1 __attribute__((aligned(4)));
-    int tc_arr[2] __attribute__((aligned(4)));
-    uint8_t no_p_arr[2] __attribute__((aligned(4)));
-    uint8_t no_q_arr[2] __attribute__((aligned(4)));
-
-uint8_t xxxxx_paddingA[1976];
-
-    char filter_map[8 * 8] __attribute__((aligned(4)));
-    char pixel[(64 + 8 -1 ) * (64 + 8 - 1)] __attribute__((aligned(4)));
-    int sum [64 * 64] __attribute__((aligned(4)));
-    int arr_s1[10] __attribute__((aligned(4)));
-    int arr_s2[10] __attribute__((aligned(4)));
-    int arr_d1[10] __attribute__((aligned(4)));
-    int big_array[10000] __attribute__((aligned(4)));
-    uint8_t pix_base[1920*1080] __attribute__((aligned(4)));
 
 
 
 
 
-}xmem_t;
 
-
-extern "C" {
-
-
-
-void xmem_rw_test(void);
-
-
-}
-# 73 "../source/xmem.h"
-template <typename T>
-static void inline xmem_assign(T *dst, T value)
+# 1 "../source/common.h" 1
+# 23 "../source/common.h"
+typedef struct _Sample
 {
- volatile T *dst_ptr = static_cast<volatile T *>(dst);
- *dst_ptr = value;
-}
+ double data[1024];
+ double label[10];
 
-template <typename T>
-static void inline xmem_copy(T *dst, const T *src, size_t num)
+ int sample_w;
+ int sample_h;
+ int sample_count;
+} Sample;
+
+typedef struct _Kernel
 {
- VITIS_LOOP_83_1: for (size_t i = 0; i < num; i++)
- {
-  volatile T *dst_ptr = static_cast<volatile T *>(dst);
-  dst_ptr[i] = src[i];
- }
-}
+ double W[25];
+ double dW[25];
+} Kernel;
 
-template <typename T>
-static void inline xmem_set(T *dst, T value, size_t num)
+typedef struct _Map
 {
- VITIS_LOOP_93_1: for (size_t i = 0; i < num; i++)
- {
-  volatile T *dst_ptr = static_cast<volatile T *>(dst);
-  dst_ptr[i] = value;
- }
-}
-# 11 "../source/hls.h" 2
+ double data[1024];
+ double error[1024];
+ double b;
+ double db;
+} Map;
 
+typedef struct _Layer
+{
+ int map_w;
+ int map_h;
+ int map_count;
+ Map map[120];
+
+ int kernel_w;
+ int kernel_h;
+ int kernel_count;
+ Kernel kernel[1920];
+
+ double map_common[1024];
+} Layer;
+# 13 "../source/xmem.h" 2
 # 1 "/tools/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/math.h" 1 3
 # 36 "/tools/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/math.h" 3
 # 1 "/tools/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath" 1 3
@@ -12540,7 +12512,7 @@ using std::scalbln;
 using std::scalbn;
 using std::tgamma;
 using std::trunc;
-# 13 "../source/hls.h" 2
+# 14 "../source/xmem.h" 2
 # 1 "/usr/include/string.h" 1 3 4
 # 26 "/usr/include/string.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -12957,48 +12929,83 @@ extern "C++" const char *basename (const char *__filename)
      noexcept (true) __asm ("basename") __attribute__ ((__nonnull__ (1)));
 # 552 "/usr/include/string.h" 3 4
 }
-# 14 "../source/hls.h" 2
-# 1 "../source/common.h" 1
-# 23 "../source/common.h"
-typedef struct _Sample
+# 15 "../source/xmem.h" 2
+
+
+
+typedef struct xmem_t {
+
+
+
+
+    double in_data[1024] __attribute__((aligned(4)));
+    int in_w __attribute__((aligned(4)));
+    int in_h __attribute__((aligned(4)));
+    double kernel[25] __attribute__((aligned(4)));
+    int kernel_w __attribute__((aligned(4)));
+    int kernel_h __attribute__((aligned(4)));
+    double out_data[1024] __attribute__((aligned(4)));
+    int out_w __attribute__((aligned(4)));
+    int out_h __attribute__((aligned(4)));
+
+
+    Layer input_layer __attribute__((aligned(4)));
+    Layer c1_conv_layer __attribute__((aligned(4)));
+    Layer s2_pooling_layer __attribute__((aligned(4)));
+    Layer c3_conv_layer __attribute__((aligned(4)));
+    Layer s4_pooling_layer __attribute__((aligned(4)));
+    Layer c5_conv_layer __attribute__((aligned(4)));
+    Layer output_layer __attribute__((aligned(4)));
+
+
+    bool pconnection[96] __attribute__((aligned(4)));
+
+
+    uint8_t xxxxx_paddingA[1976]; __attribute__((aligned(4)));
+
+} xmem_t;
+
+
+extern "C" {
+
+
+
+void xmem_rw_test(void);
+# 64 "../source/xmem.h"
+}
+# 74 "../source/xmem.h"
+template <typename T>
+static void inline xmem_assign(T *dst, T value)
 {
- double data[1024];
- double label[10];
+ volatile T *dst_ptr = static_cast<volatile T *>(dst);
+ *dst_ptr = value;
+}
 
- int sample_w;
- int sample_h;
- int sample_count;
-} Sample;
-
-typedef struct _Kernel
+template <typename T>
+static void inline xmem_copy(T *dst, const T *src, size_t num)
 {
- double W[25];
- double dW[25];
-} Kernel;
+ for (size_t i = 0; i < num; i++)
+ {
+  volatile T *dst_ptr = static_cast<volatile T *>(dst);
+  dst_ptr[i] = src[i];
+ }
+}
 
-typedef struct _Map
+template <typename T>
+static void inline xmem_set(T *dst, T value, size_t num)
 {
- double data[1024];
- double error[1024];
- double b;
- double db;
-} Map;
+ for (size_t i = 0; i < num; i++)
+ {
+  volatile T *dst_ptr = static_cast<volatile T *>(dst);
+  dst_ptr[i] = value;
+ }
+}
+# 11 "../source/hls.h" 2
 
-typedef struct _Layer
-{
- int map_w;
- int map_h;
- int map_count;
- Map map[120];
+# 1 "/tools/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/math.h" 1 3
+# 13 "../source/hls.h" 2
 
- int kernel_w;
- int kernel_h;
- int kernel_count;
- Kernel kernel[1920];
 
- double map_common[1024];
-} Layer;
-# 15 "../source/hls.h" 2
 
 
 
@@ -13015,15 +13022,20 @@ extern bool connection_table[6*16];
 
 
 
-__attribute__((sdx_kernel("convn_valid", 0))) void convn_valid(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, double in_data[1024], int in_w, int in_h,
+void convn_valid(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, double in_data[1024], int in_w, int in_h,
                 double kernel[25], int kernel_w, int kernel_h,
                 double out_data[1024], int out_w, int out_h);
 
-void conv_fprop(Layer *prev_layer, Layer *layer, bool *pconnection);
+void conv_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *input_layer, Layer *c1_conv_layer, bool pconnection[96]);
+void max_pooling_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c1_conv_layer, Layer *s2_pooling_layer);
+void conv_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *s2_pooling_layer, Layer *c3_conv_layer, bool pconnection[96]);
+void max_pooling_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c3_conv_layer, Layer *s4_pooling_layer);
+void conv_fprop3(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *s4_pooling_layer, Layer *c5_conv_layer, bool pconnection[96]);
+void fully_connected_fprop(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c5_conv_layer, Layer *output_layer);
 
-void max_pooling_fprop(Layer *prev_layer, Layer *layer);
 
-void fully_connected_fprop(Layer *prev_layer, Layer *layer);
+
+
 
 
 
@@ -13075,23 +13087,19 @@ struct activation_func
 
 extern "C" {
 # 74 "../source/hls.cpp"
-__attribute__((sdx_kernel("convn_valid", 0))) void convn_valid(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, double in_data[1024], int in_w, int in_h,
+void convn_valid(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, double in_data[1024], int in_w, int in_h,
  double kernel[25], int kernel_w, int kernel_h,
  double out_data[1024], int out_w, int out_h)
 {
-#line 72 "/home/duludulu/Documents/hls/vitis_batch_generate_rtl/hls.tcl"
-#pragma HLSDIRECTIVE TOP name=convn_valid
-# 77 "../source/hls.cpp"
-
 double sum = 0.0;
-VITIS_LOOP_79_1: for (int i = 0; i < out_h; i++)
+for (int i = 0; i < out_h; i++)
 {
-VITIS_LOOP_81_2: for (int j = 0; j < out_w; j++)
+for (int j = 0; j < out_w; j++)
 {
 sum = 0.0;
-VITIS_LOOP_84_3: for (int n = 0; n < kernel_h; n++)
+for (int n = 0; n < kernel_h; n++)
 {
- VITIS_LOOP_86_4: for (int m = 0; m < kernel_w; m++)
+ for (int m = 0; m < kernel_w; m++)
  {
   sum += in_data[(i + n)*in_w + j + m] * kernel[n*kernel_w + m];
  }
@@ -13116,74 +13124,162 @@ bool connection_table[6*16] =
 
 
 
-void conv_fprop(Layer *prev_layer, Layer *layer, bool pconnection[96])
+void conv_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *input_layer, Layer *c1_conv_layer, bool pconnection[96])
 {
  int index = 0;
- int size = layer->map_w * layer->map_h;
- VITIS_LOOP_115_1: for (int i = 0; i < layer->map_count; i++)
+ int size = c1_conv_layer->map_w * c1_conv_layer->map_h;
+ for (int i = 0; i < c1_conv_layer->map_count; i++)
  {
-  memset(layer->map_common, 0, size*sizeof(double));
-  VITIS_LOOP_118_2: for (int j = 0; j < prev_layer->map_count; j++)
+  memset(c1_conv_layer->map_common, 0, size*sizeof(double));
+  for (int j = 0; j < input_layer->map_count; j++)
   {
-   index = j*layer->map_count + i;
+   index = j*c1_conv_layer->map_count + i;
    if (pconnection != __null && !pconnection[index])
    {
     continue;
    }
 
-
-
-
-
+   convn_valid(
+    input_layer->map[j].data, input_layer->map_w, input_layer->map_h,
+    c1_conv_layer->kernel[index].W, c1_conv_layer->kernel_w, c1_conv_layer->kernel_h,
+    c1_conv_layer->map_common, c1_conv_layer->map_w, c1_conv_layer->map_h);
   }
 
-  VITIS_LOOP_132_3: for (int k = 0; k < size; k++)
+  for (int k = 0; k < size; k++)
   {
-   layer->map[i].data[k] = activation_func::tan_h(layer->map_common[k] + layer->map[i].b);
+   c1_conv_layer->map[i].data[k] = activation_func::tan_h(c1_conv_layer->map_common[k] + c1_conv_layer->map[i].b);
   }
  }
 }
-# 169 "../source/hls.cpp"
-void max_pooling_fprop(Layer *prev_layer, Layer *layer)
-{
- int map_w = layer->map_w;
- int map_h = layer->map_h;
- int upmap_w = prev_layer->map_w;
 
- VITIS_LOOP_175_1: for (int k = 0; k < layer->map_count; k++)
- {
-  VITIS_LOOP_177_2: for (int i = 0; i < map_h; i++)
-  {
-   VITIS_LOOP_179_3: for (int j = 0; j < map_w; j++)
-   {
-    double max_value = prev_layer->map[k].data[2*i*upmap_w + 2*j];
-    VITIS_LOOP_182_4: for (int n = 2*i; n < 2*(i + 1); n++)
+
+void conv_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *s2_pooling_la, Layer *c3_conv_layer, bool pconnection[96])
+{
+    int index = 0;
+    int size = c3_conv_layer->map_w * c3_conv_layer->map_h;
+    for (int i = 0; i < c3_conv_layer->map_count; i++)
     {
-     VITIS_LOOP_184_5: for (int m = 2*j; m < 2*(j + 1); m++)
-     {
-      max_value = (((max_value) >= (prev_layer->map[k].data[n*upmap_w + m])) ? (max_value) : (prev_layer->map[k].data[n*upmap_w + m]));
-     }
-    }
+        memset(c3_conv_layer->map_common, 0, size*sizeof(double));
+        for (int j = 0; j < s2_pooling_la->map_count; j++)
+        {
+            index = j*c3_conv_layer->map_count + i;
+            if (pconnection != __null && !pconnection[index])
+            {
+                continue;
+            }
 
-    layer->map[k].data[i*map_w + j] = activation_func::tan_h(max_value);
-   }
-  }
- }
+            convn_valid(
+                s2_pooling_la->map[j].data, s2_pooling_la->map_w, s2_pooling_la->map_h,
+                c3_conv_layer->kernel[index].W, c3_conv_layer->kernel_w, c3_conv_layer->kernel_h,
+                c3_conv_layer->map_common, c3_conv_layer->map_w, c3_conv_layer->map_h);
+        }
+
+        for (int k = 0; k < size; k++)
+        {
+            c3_conv_layer->map[i].data[k] = activation_func::tan_h(c3_conv_layer->map_common[k] + c3_conv_layer->map[i].b);
+        }
+    }
 }
 
-void fully_connected_fprop(Layer *prev_layer, Layer *layer)
+void conv_fprop3(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *s4_pooling_layer, Layer *c5_conv_layer, bool pconnection[96])
 {
- VITIS_LOOP_198_1: for (int i = 0; i < layer->map_count; i++)
- {
-  double sum = 0.0;
-  VITIS_LOOP_201_2: for (int j = 0; j < prev_layer->map_count; j++)
-  {
-   sum += prev_layer->map[j].data[0] * layer->kernel[j*layer->map_count + i].W[0];
-  }
+    int index = 0;
+    int size = c5_conv_layer->map_w * c5_conv_layer->map_h;
+    for (int i = 0; i < c5_conv_layer->map_count; i++)
+    {
+        memset(c5_conv_layer->map_common, 0, size*sizeof(double));
+        for (int j = 0; j < s4_pooling_layer->map_count; j++)
+        {
+            index = j*c5_conv_layer->map_count + i;
+            if (pconnection != __null && !pconnection[index])
+            {
+                continue;
+            }
 
-  sum += layer->map[i].b;
-  layer->map[i].data[0] = activation_func::tan_h(sum);
- }
+            convn_valid(
+                s4_pooling_layer->map[j].data, s4_pooling_layer->map_w, s4_pooling_layer->map_h,
+                c5_conv_layer->kernel[index].W, c5_conv_layer->kernel_w, c5_conv_layer->kernel_h,
+                c5_conv_layer->map_common, c5_conv_layer->map_w, c5_conv_layer->map_h);
+        }
+
+        for (int k = 0; k < size; k++)
+        {
+            c5_conv_layer->map[i].data[k] = activation_func::tan_h(c5_conv_layer->map_common[k] + c5_conv_layer->map[i].b);
+        }
+    }
+}
+# 227 "../source/hls.cpp"
+void max_pooling_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c1_conv_layer, Layer *s2_pooling_layer)
+{
+    int map_w = s2_pooling_layer->map_w;
+    int map_h = s2_pooling_layer->map_h;
+    int upmap_w = c1_conv_layer->map_w;
+
+    for (int k = 0; k < s2_pooling_layer->map_count; k++)
+    {
+        for (int i = 0; i < map_h; i++)
+        {
+            for (int j = 0; j < map_w; j++)
+            {
+                double max_value = c1_conv_layer->map[k].data[2*i*upmap_w + 2*j];
+                for (int n = 2*i; n < 2*(i + 1); n++)
+                {
+                    for (int m = 2*j; m < 2*(j + 1); m++)
+                    {
+                        max_value = (((max_value) >= (c1_conv_layer->map[k].data[n*upmap_w + m])) ? (max_value) : (c1_conv_layer->map[k].data[n*upmap_w + m]));
+                    }
+                }
+
+                s2_pooling_layer->map[k].data[i*map_w + j] = activation_func::tan_h(max_value);
+            }
+        }
+    }
+}
+
+
+void max_pooling_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c3_conv_layer, Layer *s4_pooling_layer)
+{
+    int s4_map_w = s4_pooling_layer->map_w;
+    int s4_map_h = s4_pooling_layer->map_h;
+    int c3_map_w = c3_conv_layer->map_w;
+
+    for (int k = 0; k < s4_pooling_layer->map_count; k++)
+    {
+        for (int i = 0; i < s4_map_h; i++)
+        {
+            for (int j = 0; j < s4_map_w; j++)
+            {
+                double max_value = c3_conv_layer->map[k].data[2*i*c3_map_w + 2*j];
+                for (int n = 2*i; n < 2*(i + 1); n++)
+                {
+                    for (int m = 2*j; m < 2*(j + 1); m++)
+                    {
+                        max_value = (((max_value) >= (c3_conv_layer->map[k].data[n*c3_map_w + m])) ? (max_value) : (c3_conv_layer->map[k].data[n*c3_map_w + m]));
+                    }
+                }
+
+                s4_pooling_layer->map[k].data[i*s4_map_w + j] = activation_func::tan_h(max_value);
+            }
+        }
+    }
+}
+
+
+
+
+void fully_connected_fprop(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c5_conv_layer, Layer *output_layer)
+{
+    for (int i = 0; i < output_layer->map_count; i++)
+    {
+        double sum = 0.0;
+        for (int j = 0; j < c5_conv_layer->map_count; j++)
+        {
+            sum += c5_conv_layer->map[j].data[0] * output_layer->kernel[j*output_layer->map_count + i].W[0];
+        }
+
+        sum += output_layer->map[i].b;
+        output_layer->map[i].data[0] = activation_func::tan_h(sum);
+    }
 }
 
 

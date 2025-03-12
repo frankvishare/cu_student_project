@@ -1,0 +1,185 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 276, Column: 65 }
+Function:        max_pooling_fprop2
+Args:            
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          max_pooling_fprop2
+    DebugLoc:        { File: ../source/hls.cpp, Line: 256, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_max_pooling_fprop2_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            s4_pooling_layer
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_max_pooling_fprop2_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            s4_pooling_layer_map
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_max_pooling_fprop2_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            c3_conv_layer
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+Function:        apatb_max_pooling_fprop2_ir
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            c3_conv_layer_map
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../source/hls.cpp, Line: 276, Column: 65 }
+Function:        max_pooling_fprop2
+Args:            
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          max_pooling_fprop2
+    DebugLoc:        { File: ../source/hls.cpp, Line: 256, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_max_pooling_fprop2_ir
+Args:            
+  - Callee:          max_pooling_fprop2
+    DebugLoc:        { File: ../source/hls.cpp, Line: 256, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_max_pooling_fprop2_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../source/hls.cpp, Line: 256, Column: 0 }
+Function:        max_pooling_fprop2
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'activation_func::tan_h(double)'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          max_pooling_fprop2
+    DebugLoc:        { File: ../source/hls.cpp, Line: 256, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_max_pooling_fprop2_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            s4_pooling_layer_kernel
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '3200'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_max_pooling_fprop2_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            c3_conv_layer_kernel
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '3200'
+  - String:          '-bits'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_268_4
+  - String:          '> at '
+  - LoopLoc:         '../source/hls.cpp:268:35'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../source/hls.cpp, Line: 270, Column: 39 }
+Function:        max_pooling_fprop2
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_270_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../source/hls.cpp, Line: 256, Column: 0 }
+Function:        max_pooling_fprop2
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_270_5
+  - String:          ''' ('
+  - LoopLoc:         '../source/hls.cpp:270:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          max_pooling_fprop2
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: ../source/hls.cpp, Line: 265, Column: 31 }
+Function:        max_pooling_fprop2
+Args:            
+  - String:          'Automatically disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_265_3
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../source/hls.cpp, Line: 265, Column: 31 }
+Function:        max_pooling_fprop2
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   off
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  max_pooling_fprop2
+  - String:          ' '
+  - PragmaSrcLoc:    '../source/hls.cpp:265:31'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 265, Column: 31 }
+  - LoopName:        VITIS_LOOP_265_3
+  - String:          ' '
+  - LoopLoc:         '../source/hls.cpp:265:31'
+    DebugLoc:        { File: ../source/hls.cpp, Line: 265, Column: 31 }
+  - String:          ' '
+...

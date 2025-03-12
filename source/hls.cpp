@@ -71,7 +71,7 @@ void IMPL(convn_valid)(double in_data[MAX_MAP_SIZE], int in_w, int in_h,
 }
 	*/
 //*-------------------------------------------------------------------------------------------------------/
-void IMPL(convn_valid)(HLS_COMMON_ARG double in_data[MAX_MAP_SIZE], int in_w, int in_h, 
+void convn_valid(double in_data[MAX_MAP_SIZE], int in_w, int in_h, 
 	double kernel[MAX_KERNEL_SIZE], int kernel_w, int kernel_h, 
 	double out_data[MAX_MAP_SIZE], int out_w, int out_h)
 {
@@ -108,33 +108,91 @@ bool connection_table[6*16] =
 #undef O
 #undef X
 
-void (conv_fprop)(HLS_COMMON_ARG Layer *prev_layer, Layer *layer, bool pconnection[96])
+void IMPL(conv_fprop1)(HLS_COMMON_ARG Layer *input_layer, Layer *c1_conv_layer, bool pconnection[96])
 {
 	int index = 0;
-	int size = layer->map_w * layer->map_h;
-	for (int i = 0; i < layer->map_count; i++)
+	int size = c1_conv_layer->map_w * c1_conv_layer->map_h;
+	for (int i = 0; i < c1_conv_layer->map_count; i++)
 	{
-		memset(layer->map_common, 0, size*sizeof(double));
-		for (int j = 0; j < prev_layer->map_count; j++)
+		memset(c1_conv_layer->map_common, 0, size*sizeof(double));
+		for (int j = 0; j < input_layer->map_count; j++)
 		{
-			index = j*layer->map_count + i;
+			index = j*c1_conv_layer->map_count + i;
 			if (pconnection != NULL && !pconnection[index])
 			{
 				continue;
 			}
 		
 			convn_valid(
-				prev_layer->map[j].data, prev_layer->map_w, prev_layer->map_h, 
-				layer->kernel[index].W, layer->kernel_w, layer->kernel_h, 
-				layer->map_common, layer->map_w, layer->map_h);
+				input_layer->map[j].data, input_layer->map_w, input_layer->map_h, 
+				c1_conv_layer->kernel[index].W, c1_conv_layer->kernel_w, c1_conv_layer->kernel_h, 
+				c1_conv_layer->map_common, c1_conv_layer->map_w, c1_conv_layer->map_h);
 		}
 
 		for (int k = 0; k < size; k++)
 		{
-			layer->map[i].data[k] = activation_func::tan_h(layer->map_common[k] + layer->map[i].b);
+			c1_conv_layer->map[i].data[k] = activation_func::tan_h(c1_conv_layer->map_common[k] + c1_conv_layer->map[i].b);
 		}
 	}
 }
+
+
+void IMPL(conv_fprop2)(HLS_COMMON_ARG Layer *s2_pooling_la, Layer *c3_conv_layer, bool pconnection[96])
+{
+    int index = 0;
+    int size = c3_conv_layer->map_w * c3_conv_layer->map_h;
+    for (int i = 0; i < c3_conv_layer->map_count; i++)
+    {
+        memset(c3_conv_layer->map_common, 0, size*sizeof(double));
+        for (int j = 0; j < s2_pooling_la->map_count; j++)
+        {
+            index = j*c3_conv_layer->map_count + i;
+            if (pconnection != NULL && !pconnection[index])
+            {
+                continue;
+            }
+        
+            convn_valid(
+                s2_pooling_la->map[j].data, s2_pooling_la->map_w, s2_pooling_la->map_h, 
+                c3_conv_layer->kernel[index].W, c3_conv_layer->kernel_w, c3_conv_layer->kernel_h, 
+                c3_conv_layer->map_common, c3_conv_layer->map_w, c3_conv_layer->map_h);
+        }
+
+        for (int k = 0; k < size; k++)
+        {
+            c3_conv_layer->map[i].data[k] = activation_func::tan_h(c3_conv_layer->map_common[k] + c3_conv_layer->map[i].b);
+        }
+    }
+}
+
+void IMPL(conv_fprop3)(HLS_COMMON_ARG Layer *s4_pooling_layer, Layer *c5_conv_layer, bool pconnection[96])
+{
+    int index = 0;
+    int size = c5_conv_layer->map_w * c5_conv_layer->map_h;
+    for (int i = 0; i < c5_conv_layer->map_count; i++)
+    {
+        memset(c5_conv_layer->map_common, 0, size*sizeof(double));
+        for (int j = 0; j < s4_pooling_layer->map_count; j++)
+        {
+            index = j*c5_conv_layer->map_count + i;
+            if (pconnection != NULL && !pconnection[index])
+            {
+                continue;
+            }
+        
+            convn_valid(
+                s4_pooling_layer->map[j].data, s4_pooling_layer->map_w, s4_pooling_layer->map_h, 
+                c5_conv_layer->kernel[index].W, c5_conv_layer->kernel_w, c5_conv_layer->kernel_h, 
+                c5_conv_layer->map_common, c5_conv_layer->map_w, c5_conv_layer->map_h);
+        }
+
+        for (int k = 0; k < size; k++)
+        {
+            c5_conv_layer->map[i].data[k] = activation_func::tan_h(c5_conv_layer->map_common[k] + c5_conv_layer->map[i].b);
+        }
+    }
+}
+
 
 /*void avg_pooling_fprop(Layer *prev_layer, Layer *layer)
 {
@@ -166,46 +224,77 @@ void (conv_fprop)(HLS_COMMON_ARG Layer *prev_layer, Layer *layer, bool pconnecti
 	}
 }*/
 
-void IMPL(max_pooling_fprop)(HLS_COMMON_ARG Layer *prev_layer, Layer *layer)
+void IMPL(max_pooling_fprop1)(HLS_COMMON_ARG Layer *c1_conv_layer, Layer *s2_pooling_layer)
 {
-	int map_w = layer->map_w;
-	int map_h = layer->map_h;
-	int upmap_w = prev_layer->map_w;
+    int map_w = s2_pooling_layer->map_w;
+    int map_h = s2_pooling_layer->map_h;
+    int upmap_w = c1_conv_layer->map_w;
 
-	for (int k = 0; k < layer->map_count; k++)
-	{
-		for (int i = 0; i < map_h; i++)
-		{
-			for (int j = 0; j < map_w; j++)
-			{
-				double max_value = prev_layer->map[k].data[2*i*upmap_w + 2*j];
-				for (int n = 2*i; n < 2*(i + 1); n++)
-				{
-					for (int m = 2*j; m < 2*(j + 1); m++)
-					{
-						max_value = MAX(max_value, prev_layer->map[k].data[n*upmap_w + m]);
-					}
-				}
+    for (int k = 0; k < s2_pooling_layer->map_count; k++)
+    {
+        for (int i = 0; i < map_h; i++)
+        {
+            for (int j = 0; j < map_w; j++)
+            {
+                double max_value = c1_conv_layer->map[k].data[2*i*upmap_w + 2*j];
+                for (int n = 2*i; n < 2*(i + 1); n++)
+                {
+                    for (int m = 2*j; m < 2*(j + 1); m++)
+                    {
+                        max_value = MAX(max_value, c1_conv_layer->map[k].data[n*upmap_w + m]);
+                    }
+                }
 
-				layer->map[k].data[i*map_w + j] = activation_func::tan_h(max_value);
-			}
-		}
-	}
+                s2_pooling_layer->map[k].data[i*map_w + j] = activation_func::tan_h(max_value);
+            }
+        }
+    }
 }
 
-void IMPL(fully_connected_fprop)(HLS_COMMON_ARG Layer *prev_layer, Layer *layer)
-{
-	for (int i = 0; i < layer->map_count; i++) 
-	{
-		double sum = 0.0;
-		for (int j = 0; j < prev_layer->map_count; j++)
-		{
-			sum += prev_layer->map[j].data[0] * layer->kernel[j*layer->map_count + i].W[0];
-		}
 
-		sum += layer->map[i].b;
-		layer->map[i].data[0] = activation_func::tan_h(sum);
-	}
+void IMPL(max_pooling_fprop2)(HLS_COMMON_ARG Layer *c3_conv_layer, Layer *s4_pooling_layer)
+{
+    int s4_map_w = s4_pooling_layer->map_w;
+    int s4_map_h = s4_pooling_layer->map_h;
+    int c3_map_w = c3_conv_layer->map_w;
+
+    for (int k = 0; k < s4_pooling_layer->map_count; k++)
+    {
+        for (int i = 0; i < s4_map_h; i++)
+        {
+            for (int j = 0; j < s4_map_w; j++)
+            {
+                double max_value = c3_conv_layer->map[k].data[2*i*c3_map_w + 2*j];
+                for (int n = 2*i; n < 2*(i + 1); n++)
+                {
+                    for (int m = 2*j; m < 2*(j + 1); m++)
+                    {
+                        max_value = MAX(max_value, c3_conv_layer->map[k].data[n*c3_map_w + m]);
+                    }
+                }
+
+                s4_pooling_layer->map[k].data[i*s4_map_w + j] = activation_func::tan_h(max_value);
+            }
+        }
+    }
+}
+
+
+
+
+void IMPL(fully_connected_fprop)(HLS_COMMON_ARG Layer *c5_conv_layer, Layer *output_layer)
+{
+    for (int i = 0; i < output_layer->map_count; i++) 
+    {
+        double sum = 0.0;
+        for (int j = 0; j < c5_conv_layer->map_count; j++)
+        {
+            sum += c5_conv_layer->map[j].data[0] * output_layer->kernel[j*output_layer->map_count + i].W[0];
+        }
+
+        sum += output_layer->map[i].b;
+        output_layer->map[i].data[0] = activation_func::tan_h(sum);
+    }
 }
 
 #ifdef __cplusplus
