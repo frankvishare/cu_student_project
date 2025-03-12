@@ -108,7 +108,7 @@ bool connection_table[6*16] =
 #undef O
 #undef X
 
-void IMPL(conv_fprop)(Layer *prev_layer, Layer *layer, bool pconnection[96])
+void (conv_fprop)(HLS_COMMON_ARG Layer *prev_layer, Layer *layer, bool pconnection[96])
 {
 	int index = 0;
 	int size = layer->map_w * layer->map_h;
@@ -166,7 +166,7 @@ void IMPL(conv_fprop)(Layer *prev_layer, Layer *layer, bool pconnection[96])
 	}
 }*/
 
-void IMPL(max_pooling_fprop)(Layer *prev_layer, Layer *layer)
+void IMPL(max_pooling_fprop)(HLS_COMMON_ARG Layer *prev_layer, Layer *layer)
 {
 	int map_w = layer->map_w;
 	int map_h = layer->map_h;
@@ -193,7 +193,7 @@ void IMPL(max_pooling_fprop)(Layer *prev_layer, Layer *layer)
 	}
 }
 
-void IMPL(fully_connected_fprop)(Layer *prev_layer, Layer *layer)
+void IMPL(fully_connected_fprop)(HLS_COMMON_ARG Layer *prev_layer, Layer *layer)
 {
 	for (int i = 0; i < layer->map_count; i++) 
 	{

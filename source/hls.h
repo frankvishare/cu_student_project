@@ -32,11 +32,11 @@ void HLS_DECLARE(convn_valid)(HLS_COMMON_ARG double in_data[MAX_MAP_SIZE], int i
                 double kernel[MAX_KERNEL_SIZE], int kernel_w, int kernel_h,
                 double out_data[MAX_MAP_SIZE], int out_w, int out_h);
 
-void HLS_DECLARE(conv_fprop)(Layer *prev_layer, Layer *layer, bool *pconnection);
+void HLS_DECLARE(conv_fprop)(HLS_COMMON_ARG Layer *prev_layer, Layer *layer, bool *pconnection);
 
-void HLS_DECLARE(max_pooling_fprop)(Layer *prev_layer, Layer *layer);
+void HLS_DECLARE(max_pooling_fprop)(HLS_COMMON_ARG Layer *prev_layer, Layer *layer);
 
-void HLS_DECLARE(fully_connected_fprop)(Layer *prev_layer, Layer *layer);
+void HLS_DECLARE(fully_connected_fprop)(HLS_COMMON_ARG Layer *prev_layer, Layer *layer);
 
 
 #ifdef __cplusplus
