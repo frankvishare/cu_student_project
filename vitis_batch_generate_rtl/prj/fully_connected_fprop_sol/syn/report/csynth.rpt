@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'fully_connected_fprop'
 ================================================================
 + General Information: 
-    * Date:           Wed Mar 12 17:43:18 2025
+    * Date:           Fri Mar 14 16:55:56 2025
     * Version:        2024.2 (Build 5238294 on Nov  8 2024)
     * Project:        prj
     * Solution:       fully_connected_fprop_sol (Vivado IP Flow Target)
@@ -19,10 +19,10 @@
     |                       Modules                       |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |         |            |            |     |
     |                       & Loops                       |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF     |     LUT    | URAM|
     +-----------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+---------+------------+------------+-----+
-    |+ fully_connected_fprop                              |  Timing|  -0.57|        -|       -|         -|        -|     -|        no|     -|  66 (1%)|  5241 (~0%)|  6011 (~0%)|    -|
-    | o VITIS_LOOP_287_1                                  |       -|   2.41|        -|       -|         -|        -|     -|        no|     -|        -|           -|           -|    -|
-    |  + fully_connected_fprop_Pipeline_VITIS_LOOP_290_2  |  Timing|  -0.57|        -|       -|         -|        -|     -|        no|     -|  8 (~0%)|   707 (~0%)|   383 (~0%)|    -|
-    |   o VITIS_LOOP_290_2                                |      II|   2.41|        -|       -|        19|        7|     -|       yes|     -|        -|           -|           -|    -|
+    |+ fully_connected_fprop                              |  Timing|  -0.57|        -|       -|         -|        -|     -|        no|     -|  67 (1%)|  5268 (~0%)|  5988 (~0%)|    -|
+    | o VITIS_LOOP_259_1                                  |       -|   2.41|        -|       -|         -|        -|     -|        no|     -|        -|           -|           -|    -|
+    |  + fully_connected_fprop_Pipeline_VITIS_LOOP_262_2  |  Timing|  -0.57|        -|       -|         -|        -|     -|        no|     -|  9 (~0%)|   734 (~0%)|   360 (~0%)|    -|
+    |   o VITIS_LOOP_262_2                                |      II|   2.41|        -|       -|        20|        7|     -|       yes|     -|        -|           -|           -|    -|
     +-----------------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+---------+------------+------------+-----+
 
 
@@ -30,87 +30,99 @@
 == HW Interfaces
 ================================================================
 * AP_MEMORY
-+-----------------------------------+-----------+----------+
-| Port                              | Direction | Bitwidth |
-+-----------------------------------+-----------+----------+
-| c5_conv_layer_kernel_address0     | out       | 11       |
-| c5_conv_layer_kernel_address1     | out       | 11       |
-| c5_conv_layer_kernel_d0           | out       | 3200     |
-| c5_conv_layer_kernel_d1           | out       | 3200     |
-| c5_conv_layer_kernel_q0           | in        | 3200     |
-| c5_conv_layer_kernel_q1           | in        | 3200     |
-| c5_conv_layer_map_b_address0      | out       | 7        |
-| c5_conv_layer_map_b_address1      | out       | 7        |
-| c5_conv_layer_map_b_d0            | out       | 64       |
-| c5_conv_layer_map_b_d1            | out       | 64       |
-| c5_conv_layer_map_b_q0            | in        | 64       |
-| c5_conv_layer_map_b_q1            | in        | 64       |
-| c5_conv_layer_map_common_address0 | out       | 10       |
-| c5_conv_layer_map_common_address1 | out       | 10       |
-| c5_conv_layer_map_common_d0       | out       | 64       |
-| c5_conv_layer_map_common_d1       | out       | 64       |
-| c5_conv_layer_map_common_q0       | in        | 64       |
-| c5_conv_layer_map_common_q1       | in        | 64       |
-| c5_conv_layer_map_data_address0   | out       | 17       |
-| c5_conv_layer_map_data_q0         | in        | 64       |
-| c5_conv_layer_map_db_address0     | out       | 7        |
-| c5_conv_layer_map_db_address1     | out       | 7        |
-| c5_conv_layer_map_db_d0           | out       | 64       |
-| c5_conv_layer_map_db_d1           | out       | 64       |
-| c5_conv_layer_map_db_q0           | in        | 64       |
-| c5_conv_layer_map_db_q1           | in        | 64       |
-| c5_conv_layer_map_error_address0  | out       | 17       |
-| c5_conv_layer_map_error_address1  | out       | 17       |
-| c5_conv_layer_map_error_d0        | out       | 64       |
-| c5_conv_layer_map_error_d1        | out       | 64       |
-| c5_conv_layer_map_error_q0        | in        | 64       |
-| c5_conv_layer_map_error_q1        | in        | 64       |
-| output_layer_kernel_address0      | out       | 11       |
-| output_layer_kernel_q0            | in        | 3200     |
-| output_layer_map_b_address0       | out       | 7        |
-| output_layer_map_b_q0             | in        | 64       |
-| output_layer_map_common_address0  | out       | 10       |
-| output_layer_map_common_address1  | out       | 10       |
-| output_layer_map_common_d0        | out       | 64       |
-| output_layer_map_common_d1        | out       | 64       |
-| output_layer_map_common_q0        | in        | 64       |
-| output_layer_map_common_q1        | in        | 64       |
-| output_layer_map_data_address0    | out       | 17       |
-| output_layer_map_data_d0          | out       | 64       |
-| output_layer_map_db_address0      | out       | 7        |
-| output_layer_map_db_address1      | out       | 7        |
-| output_layer_map_db_d0            | out       | 64       |
-| output_layer_map_db_d1            | out       | 64       |
-| output_layer_map_db_q0            | in        | 64       |
-| output_layer_map_db_q1            | in        | 64       |
-| output_layer_map_error_address0   | out       | 17       |
-| output_layer_map_error_address1   | out       | 17       |
-| output_layer_map_error_d0         | out       | 64       |
-| output_layer_map_error_d1         | out       | 64       |
-| output_layer_map_error_q0         | in        | 64       |
-| output_layer_map_error_q1         | in        | 64       |
-+-----------------------------------+-----------+----------+
++------------------------------------+-----------+----------+
+| Port                               | Direction | Bitwidth |
++------------------------------------+-----------+----------+
+| c5_conv_layer2_W_address0          | out       | 16       |
+| c5_conv_layer2_W_address1          | out       | 16       |
+| c5_conv_layer2_W_d0                | out       | 64       |
+| c5_conv_layer2_W_d1                | out       | 64       |
+| c5_conv_layer2_W_q0                | in        | 64       |
+| c5_conv_layer2_W_q1                | in        | 64       |
+| c5_conv_layer2_b_address0          | out       | 7        |
+| c5_conv_layer2_b_address1          | out       | 7        |
+| c5_conv_layer2_b_d0                | out       | 64       |
+| c5_conv_layer2_b_d1                | out       | 64       |
+| c5_conv_layer2_b_q0                | in        | 64       |
+| c5_conv_layer2_b_q1                | in        | 64       |
+| c5_conv_layer2_dW_address0         | out       | 16       |
+| c5_conv_layer2_dW_address1         | out       | 16       |
+| c5_conv_layer2_dW_d0               | out       | 64       |
+| c5_conv_layer2_dW_d1               | out       | 64       |
+| c5_conv_layer2_dW_q0               | in        | 64       |
+| c5_conv_layer2_dW_q1               | in        | 64       |
+| c5_conv_layer2_data_address0       | out       | 17       |
+| c5_conv_layer2_data_q0             | in        | 64       |
+| c5_conv_layer2_db_address0         | out       | 7        |
+| c5_conv_layer2_db_address1         | out       | 7        |
+| c5_conv_layer2_db_d0               | out       | 64       |
+| c5_conv_layer2_db_d1               | out       | 64       |
+| c5_conv_layer2_db_q0               | in        | 64       |
+| c5_conv_layer2_db_q1               | in        | 64       |
+| c5_conv_layer2_error_address0      | out       | 17       |
+| c5_conv_layer2_error_address1      | out       | 17       |
+| c5_conv_layer2_error_d0            | out       | 64       |
+| c5_conv_layer2_error_d1            | out       | 64       |
+| c5_conv_layer2_error_q0            | in        | 64       |
+| c5_conv_layer2_error_q1            | in        | 64       |
+| c5_conv_layer2_map_common_address0 | out       | 10       |
+| c5_conv_layer2_map_common_address1 | out       | 10       |
+| c5_conv_layer2_map_common_d0       | out       | 64       |
+| c5_conv_layer2_map_common_d1       | out       | 64       |
+| c5_conv_layer2_map_common_q0       | in        | 64       |
+| c5_conv_layer2_map_common_q1       | in        | 64       |
+| output_layer2_W_address0           | out       | 16       |
+| output_layer2_W_q0                 | in        | 64       |
+| output_layer2_b_address0           | out       | 7        |
+| output_layer2_b_q0                 | in        | 64       |
+| output_layer2_dW_address0          | out       | 16       |
+| output_layer2_dW_address1          | out       | 16       |
+| output_layer2_dW_d0                | out       | 64       |
+| output_layer2_dW_d1                | out       | 64       |
+| output_layer2_dW_q0                | in        | 64       |
+| output_layer2_dW_q1                | in        | 64       |
+| output_layer2_data_address0        | out       | 17       |
+| output_layer2_data_d0              | out       | 64       |
+| output_layer2_db_address0          | out       | 7        |
+| output_layer2_db_address1          | out       | 7        |
+| output_layer2_db_d0                | out       | 64       |
+| output_layer2_db_d1                | out       | 64       |
+| output_layer2_db_q0                | in        | 64       |
+| output_layer2_db_q1                | in        | 64       |
+| output_layer2_error_address0       | out       | 17       |
+| output_layer2_error_address1       | out       | 17       |
+| output_layer2_error_d0             | out       | 64       |
+| output_layer2_error_d1             | out       | 64       |
+| output_layer2_error_q0             | in        | 64       |
+| output_layer2_error_q1             | in        | 64       |
+| output_layer2_map_common_address0  | out       | 10       |
+| output_layer2_map_common_address1  | out       | 10       |
+| output_layer2_map_common_d0        | out       | 64       |
+| output_layer2_map_common_d1        | out       | 64       |
+| output_layer2_map_common_q0        | in        | 64       |
+| output_layer2_map_common_q1        | in        | 64       |
++------------------------------------+-----------+----------+
 
 * Other Ports
-+----------------------------+---------+-----------+----------+
-| Port                       | Mode    | Direction | Bitwidth |
-+----------------------------+---------+-----------+----------+
-| ap_core                    | ap_none | in        | 8        |
-| ap_parent                  | ap_none | in        | 8        |
-| ap_part                    | ap_none | in        | 8        |
-| c5_conv_layer_kernel_count | ap_none | in        | 32       |
-| c5_conv_layer_kernel_h     | ap_none | in        | 32       |
-| c5_conv_layer_kernel_w     | ap_none | in        | 32       |
-| c5_conv_layer_map_count    | ap_none | in        | 32       |
-| c5_conv_layer_map_h        | ap_none | in        | 32       |
-| c5_conv_layer_map_w        | ap_none | in        | 32       |
-| output_layer_kernel_count  | ap_none | in        | 32       |
-| output_layer_kernel_h      | ap_none | in        | 32       |
-| output_layer_kernel_w      | ap_none | in        | 32       |
-| output_layer_map_count     | ap_none | in        | 32       |
-| output_layer_map_h         | ap_none | in        | 32       |
-| output_layer_map_w         | ap_none | in        | 32       |
-+----------------------------+---------+-----------+----------+
++-----------------------------+---------+-----------+----------+
+| Port                        | Mode    | Direction | Bitwidth |
++-----------------------------+---------+-----------+----------+
+| ap_core                     | ap_none | in        | 8        |
+| ap_parent                   | ap_none | in        | 8        |
+| ap_part                     | ap_none | in        | 8        |
+| c5_conv_layer1_kernel_count | ap_none | in        | 32       |
+| c5_conv_layer1_kernel_h     | ap_none | in        | 32       |
+| c5_conv_layer1_kernel_w     | ap_none | in        | 32       |
+| c5_conv_layer1_map_count    | ap_none | in        | 32       |
+| c5_conv_layer1_map_h        | ap_none | in        | 32       |
+| c5_conv_layer1_map_w        | ap_none | in        | 32       |
+| output_layer1_kernel_count  | ap_none | in        | 32       |
+| output_layer1_kernel_h      | ap_none | in        | 32       |
+| output_layer1_kernel_w      | ap_none | in        | 32       |
+| output_layer1_map_count     | ap_none | in        | 32       |
+| output_layer1_map_h         | ap_none | in        | 32       |
+| output_layer1_map_w         | ap_none | in        | 32       |
++-----------------------------+---------+-----------+----------+
 
 * TOP LEVEL CONTROL
 +-----------+-------------+-----------------------------------+
@@ -127,129 +139,151 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+---------------+-----------+---------------+
-| Argument      | Direction | Datatype      |
-+---------------+-----------+---------------+
-| ap_core       | in        | unsigned char |
-| ap_part       | in        | unsigned char |
-| ap_parent     | in        | unsigned char |
-| c5_conv_layer | in        | _Layer*       |
-| output_layer  | inout     | _Layer*       |
-+---------------+-----------+---------------+
++----------------+-----------+---------------+
+| Argument       | Direction | Datatype      |
++----------------+-----------+---------------+
+| ap_core        | in        | unsigned char |
+| ap_part        | in        | unsigned char |
+| ap_parent      | in        | unsigned char |
+| c5_conv_layer1 | in        | _Layer1*      |
+| c5_conv_layer2 | in        | _Layer2*      |
+| output_layer1  | in        | _Layer1*      |
+| output_layer2  | inout     | _Layer2*      |
++----------------+-----------+---------------+
 
 * SW-to-HW Mapping
-+---------------+-----------------------------------+---------+----------+
-| Argument      | HW Interface                      | HW Type | HW Usage |
-+---------------+-----------------------------------+---------+----------+
-| ap_core       | ap_core                           | port    |          |
-| ap_part       | ap_part                           | port    |          |
-| ap_parent     | ap_parent                         | port    |          |
-| c5_conv_layer | c5_conv_layer_map_w               | port    |          |
-| c5_conv_layer | c5_conv_layer_map_h               | port    |          |
-| c5_conv_layer | c5_conv_layer_map_count           | port    |          |
-| c5_conv_layer | c5_conv_layer_map_data_address0   | port    | offset   |
-| c5_conv_layer | c5_conv_layer_map_data_ce0        | port    |          |
-| c5_conv_layer | c5_conv_layer_map_data_q0         | port    |          |
-| c5_conv_layer | c5_conv_layer_map_error_address0  | port    | offset   |
-| c5_conv_layer | c5_conv_layer_map_error_ce0       | port    |          |
-| c5_conv_layer | c5_conv_layer_map_error_we0       | port    |          |
-| c5_conv_layer | c5_conv_layer_map_error_d0        | port    |          |
-| c5_conv_layer | c5_conv_layer_map_error_q0        | port    |          |
-| c5_conv_layer | c5_conv_layer_map_error_address1  | port    | offset   |
-| c5_conv_layer | c5_conv_layer_map_error_ce1       | port    |          |
-| c5_conv_layer | c5_conv_layer_map_error_we1       | port    |          |
-| c5_conv_layer | c5_conv_layer_map_error_d1        | port    |          |
-| c5_conv_layer | c5_conv_layer_map_error_q1        | port    |          |
-| c5_conv_layer | c5_conv_layer_map_b_address0      | port    | offset   |
-| c5_conv_layer | c5_conv_layer_map_b_ce0           | port    |          |
-| c5_conv_layer | c5_conv_layer_map_b_we0           | port    |          |
-| c5_conv_layer | c5_conv_layer_map_b_d0            | port    |          |
-| c5_conv_layer | c5_conv_layer_map_b_q0            | port    |          |
-| c5_conv_layer | c5_conv_layer_map_b_address1      | port    | offset   |
-| c5_conv_layer | c5_conv_layer_map_b_ce1           | port    |          |
-| c5_conv_layer | c5_conv_layer_map_b_we1           | port    |          |
-| c5_conv_layer | c5_conv_layer_map_b_d1            | port    |          |
-| c5_conv_layer | c5_conv_layer_map_b_q1            | port    |          |
-| c5_conv_layer | c5_conv_layer_map_db_address0     | port    | offset   |
-| c5_conv_layer | c5_conv_layer_map_db_ce0          | port    |          |
-| c5_conv_layer | c5_conv_layer_map_db_we0          | port    |          |
-| c5_conv_layer | c5_conv_layer_map_db_d0           | port    |          |
-| c5_conv_layer | c5_conv_layer_map_db_q0           | port    |          |
-| c5_conv_layer | c5_conv_layer_map_db_address1     | port    | offset   |
-| c5_conv_layer | c5_conv_layer_map_db_ce1          | port    |          |
-| c5_conv_layer | c5_conv_layer_map_db_we1          | port    |          |
-| c5_conv_layer | c5_conv_layer_map_db_d1           | port    |          |
-| c5_conv_layer | c5_conv_layer_map_db_q1           | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_w            | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_h            | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_count        | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_address0     | port    | offset   |
-| c5_conv_layer | c5_conv_layer_kernel_ce0          | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_we0          | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_d0           | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_q0           | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_address1     | port    | offset   |
-| c5_conv_layer | c5_conv_layer_kernel_ce1          | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_we1          | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_d1           | port    |          |
-| c5_conv_layer | c5_conv_layer_kernel_q1           | port    |          |
-| c5_conv_layer | c5_conv_layer_map_common_address0 | port    | offset   |
-| c5_conv_layer | c5_conv_layer_map_common_ce0      | port    |          |
-| c5_conv_layer | c5_conv_layer_map_common_we0      | port    |          |
-| c5_conv_layer | c5_conv_layer_map_common_d0       | port    |          |
-| c5_conv_layer | c5_conv_layer_map_common_q0       | port    |          |
-| c5_conv_layer | c5_conv_layer_map_common_address1 | port    | offset   |
-| c5_conv_layer | c5_conv_layer_map_common_ce1      | port    |          |
-| c5_conv_layer | c5_conv_layer_map_common_we1      | port    |          |
-| c5_conv_layer | c5_conv_layer_map_common_d1       | port    |          |
-| c5_conv_layer | c5_conv_layer_map_common_q1       | port    |          |
-| output_layer  | output_layer_map_w                | port    |          |
-| output_layer  | output_layer_map_h                | port    |          |
-| output_layer  | output_layer_map_count            | port    |          |
-| output_layer  | output_layer_map_data_address0    | port    | offset   |
-| output_layer  | output_layer_map_data_ce0         | port    |          |
-| output_layer  | output_layer_map_data_we0         | port    |          |
-| output_layer  | output_layer_map_data_d0          | port    |          |
-| output_layer  | output_layer_map_error_address0   | port    | offset   |
-| output_layer  | output_layer_map_error_ce0        | port    |          |
-| output_layer  | output_layer_map_error_we0        | port    |          |
-| output_layer  | output_layer_map_error_d0         | port    |          |
-| output_layer  | output_layer_map_error_q0         | port    |          |
-| output_layer  | output_layer_map_error_address1   | port    | offset   |
-| output_layer  | output_layer_map_error_ce1        | port    |          |
-| output_layer  | output_layer_map_error_we1        | port    |          |
-| output_layer  | output_layer_map_error_d1         | port    |          |
-| output_layer  | output_layer_map_error_q1         | port    |          |
-| output_layer  | output_layer_map_b_address0       | port    | offset   |
-| output_layer  | output_layer_map_b_ce0            | port    |          |
-| output_layer  | output_layer_map_b_q0             | port    |          |
-| output_layer  | output_layer_map_db_address0      | port    | offset   |
-| output_layer  | output_layer_map_db_ce0           | port    |          |
-| output_layer  | output_layer_map_db_we0           | port    |          |
-| output_layer  | output_layer_map_db_d0            | port    |          |
-| output_layer  | output_layer_map_db_q0            | port    |          |
-| output_layer  | output_layer_map_db_address1      | port    | offset   |
-| output_layer  | output_layer_map_db_ce1           | port    |          |
-| output_layer  | output_layer_map_db_we1           | port    |          |
-| output_layer  | output_layer_map_db_d1            | port    |          |
-| output_layer  | output_layer_map_db_q1            | port    |          |
-| output_layer  | output_layer_kernel_w             | port    |          |
-| output_layer  | output_layer_kernel_h             | port    |          |
-| output_layer  | output_layer_kernel_count         | port    |          |
-| output_layer  | output_layer_kernel_address0      | port    | offset   |
-| output_layer  | output_layer_kernel_ce0           | port    |          |
-| output_layer  | output_layer_kernel_q0            | port    |          |
-| output_layer  | output_layer_map_common_address0  | port    | offset   |
-| output_layer  | output_layer_map_common_ce0       | port    |          |
-| output_layer  | output_layer_map_common_we0       | port    |          |
-| output_layer  | output_layer_map_common_d0        | port    |          |
-| output_layer  | output_layer_map_common_q0        | port    |          |
-| output_layer  | output_layer_map_common_address1  | port    | offset   |
-| output_layer  | output_layer_map_common_ce1       | port    |          |
-| output_layer  | output_layer_map_common_we1       | port    |          |
-| output_layer  | output_layer_map_common_d1        | port    |          |
-| output_layer  | output_layer_map_common_q1        | port    |          |
-+---------------+-----------------------------------+---------+----------+
++----------------+------------------------------------+---------+----------+
+| Argument       | HW Interface                       | HW Type | HW Usage |
++----------------+------------------------------------+---------+----------+
+| ap_core        | ap_core                            | port    |          |
+| ap_part        | ap_part                            | port    |          |
+| ap_parent      | ap_parent                          | port    |          |
+| c5_conv_layer1 | c5_conv_layer1_map_w               | port    |          |
+| c5_conv_layer1 | c5_conv_layer1_map_h               | port    |          |
+| c5_conv_layer1 | c5_conv_layer1_map_count           | port    |          |
+| c5_conv_layer1 | c5_conv_layer1_kernel_w            | port    |          |
+| c5_conv_layer1 | c5_conv_layer1_kernel_h            | port    |          |
+| c5_conv_layer1 | c5_conv_layer1_kernel_count        | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_data_address0       | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_data_ce0            | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_data_q0             | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_error_address0      | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_error_ce0           | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_error_we0           | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_error_d0            | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_error_q0            | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_error_address1      | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_error_ce1           | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_error_we1           | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_error_d1            | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_error_q1            | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_b_address0          | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_b_ce0               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_b_we0               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_b_d0                | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_b_q0                | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_b_address1          | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_b_ce1               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_b_we1               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_b_d1                | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_b_q1                | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_db_address0         | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_db_ce0              | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_db_we0              | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_db_d0               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_db_q0               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_db_address1         | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_db_ce1              | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_db_we1              | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_db_d1               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_db_q1               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_W_address0          | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_W_ce0               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_W_we0               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_W_d0                | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_W_q0                | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_W_address1          | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_W_ce1               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_W_we1               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_W_d1                | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_W_q1                | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_dW_address0         | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_dW_ce0              | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_dW_we0              | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_dW_d0               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_dW_q0               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_dW_address1         | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_dW_ce1              | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_dW_we1              | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_dW_d1               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_dW_q1               | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_map_common_address0 | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_map_common_ce0      | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_map_common_we0      | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_map_common_d0       | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_map_common_q0       | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_map_common_address1 | port    | offset   |
+| c5_conv_layer2 | c5_conv_layer2_map_common_ce1      | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_map_common_we1      | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_map_common_d1       | port    |          |
+| c5_conv_layer2 | c5_conv_layer2_map_common_q1       | port    |          |
+| output_layer1  | output_layer1_map_w                | port    |          |
+| output_layer1  | output_layer1_map_h                | port    |          |
+| output_layer1  | output_layer1_map_count            | port    |          |
+| output_layer1  | output_layer1_kernel_w             | port    |          |
+| output_layer1  | output_layer1_kernel_h             | port    |          |
+| output_layer1  | output_layer1_kernel_count         | port    |          |
+| output_layer2  | output_layer2_data_address0        | port    | offset   |
+| output_layer2  | output_layer2_data_ce0             | port    |          |
+| output_layer2  | output_layer2_data_we0             | port    |          |
+| output_layer2  | output_layer2_data_d0              | port    |          |
+| output_layer2  | output_layer2_error_address0       | port    | offset   |
+| output_layer2  | output_layer2_error_ce0            | port    |          |
+| output_layer2  | output_layer2_error_we0            | port    |          |
+| output_layer2  | output_layer2_error_d0             | port    |          |
+| output_layer2  | output_layer2_error_q0             | port    |          |
+| output_layer2  | output_layer2_error_address1       | port    | offset   |
+| output_layer2  | output_layer2_error_ce1            | port    |          |
+| output_layer2  | output_layer2_error_we1            | port    |          |
+| output_layer2  | output_layer2_error_d1             | port    |          |
+| output_layer2  | output_layer2_error_q1             | port    |          |
+| output_layer2  | output_layer2_b_address0           | port    | offset   |
+| output_layer2  | output_layer2_b_ce0                | port    |          |
+| output_layer2  | output_layer2_b_q0                 | port    |          |
+| output_layer2  | output_layer2_db_address0          | port    | offset   |
+| output_layer2  | output_layer2_db_ce0               | port    |          |
+| output_layer2  | output_layer2_db_we0               | port    |          |
+| output_layer2  | output_layer2_db_d0                | port    |          |
+| output_layer2  | output_layer2_db_q0                | port    |          |
+| output_layer2  | output_layer2_db_address1          | port    | offset   |
+| output_layer2  | output_layer2_db_ce1               | port    |          |
+| output_layer2  | output_layer2_db_we1               | port    |          |
+| output_layer2  | output_layer2_db_d1                | port    |          |
+| output_layer2  | output_layer2_db_q1                | port    |          |
+| output_layer2  | output_layer2_W_address0           | port    | offset   |
+| output_layer2  | output_layer2_W_ce0                | port    |          |
+| output_layer2  | output_layer2_W_q0                 | port    |          |
+| output_layer2  | output_layer2_dW_address0          | port    | offset   |
+| output_layer2  | output_layer2_dW_ce0               | port    |          |
+| output_layer2  | output_layer2_dW_we0               | port    |          |
+| output_layer2  | output_layer2_dW_d0                | port    |          |
+| output_layer2  | output_layer2_dW_q0                | port    |          |
+| output_layer2  | output_layer2_dW_address1          | port    | offset   |
+| output_layer2  | output_layer2_dW_ce1               | port    |          |
+| output_layer2  | output_layer2_dW_we1               | port    |          |
+| output_layer2  | output_layer2_dW_d1                | port    |          |
+| output_layer2  | output_layer2_dW_q1                | port    |          |
+| output_layer2  | output_layer2_map_common_address0  | port    | offset   |
+| output_layer2  | output_layer2_map_common_ce0       | port    |          |
+| output_layer2  | output_layer2_map_common_we0       | port    |          |
+| output_layer2  | output_layer2_map_common_d0        | port    |          |
+| output_layer2  | output_layer2_map_common_q0        | port    |          |
+| output_layer2  | output_layer2_map_common_address1  | port    | offset   |
+| output_layer2  | output_layer2_map_common_ce1       | port    |          |
+| output_layer2  | output_layer2_map_common_we1       | port    |          |
+| output_layer2  | output_layer2_map_common_d1        | port    |          |
+| output_layer2  | output_layer2_map_common_q1        | port    |          |
++----------------+------------------------------------+---------+----------+
 
 
 ================================================================
@@ -258,21 +292,22 @@
 +----------------------------------------------------+-----+--------+-------------+-------+---------+---------+
 | Name                                               | DSP | Pragma | Variable    | Op    | Impl    | Latency |
 +----------------------------------------------------+-----+--------+-------------+-------+---------+---------+
-| + fully_connected_fprop                            | 66  |        |             |       |         |         |
-|   icmp_ln287_fu_204_p2                             |     |        | icmp_ln287  | setlt | auto    | 0       |
-|   add_ln287_fu_209_p2                              |     |        | add_ln287   | add   | fabric  | 0       |
-|   dadddsub_64ns_64ns_64_8_full_dsp_1_U10           | 3   |        | sum         | dadd  | fulldsp | 7       |
-|   dexp_64ns_64ns_64_30_full_dsp_1_U13              | 26  |        | ep          | dexp  | fulldsp | 29      |
-|   xor_ln11_fu_250_p2                               |     |        | xor_ln11    | xor   | auto    | 0       |
-|   dexp_64ns_64ns_64_30_full_dsp_1_U14              | 26  |        | em          | dexp  | fulldsp | 29      |
-|   dadddsub_64ns_64ns_64_8_full_dsp_1_U10           | 3   |        | sub1_i      | dadd  | fulldsp | 7       |
-|   dadd_64ns_64ns_64_8_full_dsp_1_U11               | 3   |        | add_i       | dadd  | fulldsp | 7       |
-|   ddiv_64ns_64ns_64_31_no_dsp_1_U12                |     |        | div_i       | ddiv  | fabric  | 30      |
-|  + fully_connected_fprop_Pipeline_VITIS_LOOP_290_2 | 8   |        |             |       |         |         |
-|    icmp_ln290_fu_143_p2                            |     |        | icmp_ln290  | setlt | auto    | 0       |
-|    add_ln290_fu_149_p2                             |     |        | add_ln290   | add   | fabric  | 0       |
-|    add_ln292_1_fu_179_p2                           |     |        | add_ln292_1 | add   | fabric  | 0       |
-|    add_ln292_fu_184_p2                             |     |        | add_ln292   | add   | fabric  | 0       |
+| + fully_connected_fprop                            | 67  |        |             |       |         |         |
+|   icmp_ln259_fu_208_p2                             |     |        | icmp_ln259  | setlt | auto    | 0       |
+|   add_ln259_fu_213_p2                              |     |        | add_ln259   | add   | fabric  | 0       |
+|   dadddsub_64ns_64ns_64_8_full_dsp_1_U12           | 3   |        | sum         | dadd  | fulldsp | 7       |
+|   dexp_64ns_64ns_64_30_full_dsp_1_U15              | 26  |        | ep          | dexp  | fulldsp | 29      |
+|   xor_ln11_fu_254_p2                               |     |        | xor_ln11    | xor   | auto    | 0       |
+|   dexp_64ns_64ns_64_30_full_dsp_1_U16              | 26  |        | em          | dexp  | fulldsp | 29      |
+|   dadddsub_64ns_64ns_64_8_full_dsp_1_U12           | 3   |        | sub1_i      | dadd  | fulldsp | 7       |
+|   dadd_64ns_64ns_64_8_full_dsp_1_U13               | 3   |        | add_i       | dadd  | fulldsp | 7       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U14                |     |        | div_i       | ddiv  | fabric  | 30      |
+|  + fully_connected_fprop_Pipeline_VITIS_LOOP_262_2 | 9   |        |             |       |         |         |
+|    icmp_ln262_fu_145_p2                            |     |        | icmp_ln262  | setlt | auto    | 0       |
+|    add_ln262_fu_150_p2                             |     |        | add_ln262   | add   | fabric  | 0       |
+|    add_ln264_1_fu_163_p2                           |     |        | add_ln264_1 | add   | fabric  | 0       |
+|    add_ln264_fu_168_p2                             |     |        | add_ln264   | add   | fabric  | 0       |
+|    mul_11ns_6ns_16_1_1_U3                          | 1   |        | mul_ln264   | mul   | auto    | 0       |
 |    dmul_64ns_64ns_64_8_max_dsp_1_U2                | 8   |        | mul         | dmul  | maxdsp  | 7       |
 +----------------------------------------------------+-----+--------+-------------+-------+---------+---------+
 
@@ -285,5 +320,34 @@
 ================================================================
 == Pragma Report
 ================================================================
-  No pragmas found
+* Valid Pragma Syntax
++--------------+----------------------------+----------------------------------------------------------------+
+| Type         | Options                    | Location                                                       |
++--------------+----------------------------+----------------------------------------------------------------+
+| disaggregate | variable=input_layer1      | ../source/hls.cpp:86 in conv_fprop1, input_layer1              |
+| disaggregate | variable=input_layer2      | ../source/hls.cpp:87 in conv_fprop1, input_layer2              |
+| disaggregate | variable=c1_conv_layer1    | ../source/hls.cpp:88 in conv_fprop1, c1_conv_layer1            |
+| disaggregate | variable=c1_conv_layer2    | ../source/hls.cpp:89 in conv_fprop1, c1_conv_layer2            |
+| disaggregate | variable=s2_pooling_layer1 | ../source/hls.cpp:120 in conv_fprop2, s2_pooling_layer1        |
+| disaggregate | variable=s2_pooling_layer2 | ../source/hls.cpp:121 in conv_fprop2, s2_pooling_layer2        |
+| disaggregate | variable=c3_conv_layer1    | ../source/hls.cpp:122 in conv_fprop2, c3_conv_layer1           |
+| disaggregate | variable=c3_conv_layer2    | ../source/hls.cpp:123 in conv_fprop2, c3_conv_layer2           |
+| disaggregate | variable=s4_pooling_layer1 | ../source/hls.cpp:154 in conv_fprop3, s4_pooling_layer1        |
+| disaggregate | variable=s4_pooling_layer2 | ../source/hls.cpp:155 in conv_fprop3, s4_pooling_layer2        |
+| disaggregate | variable=c5_conv_layer1    | ../source/hls.cpp:156 in conv_fprop3, c5_conv_layer1           |
+| disaggregate | variable=c5_conv_layer2    | ../source/hls.cpp:157 in conv_fprop3, c5_conv_layer2           |
+| disaggregate | variable=c1_conv_layer1    | ../source/hls.cpp:188 in max_pooling_fprop1, c1_conv_layer1    |
+| disaggregate | variable=c1_conv_layer2    | ../source/hls.cpp:189 in max_pooling_fprop1, c1_conv_layer2    |
+| disaggregate | variable=s2_pooling_layer1 | ../source/hls.cpp:190 in max_pooling_fprop1, s2_pooling_layer1 |
+| disaggregate | variable=s2_pooling_layer2 | ../source/hls.cpp:191 in max_pooling_fprop1, s2_pooling_layer2 |
+| disaggregate | variable=c3_conv_layer1    | ../source/hls.cpp:221 in max_pooling_fprop2, c3_conv_layer1    |
+| disaggregate | variable=c3_conv_layer2    | ../source/hls.cpp:222 in max_pooling_fprop2, c3_conv_layer2    |
+| disaggregate | variable=s4_pooling_layer1 | ../source/hls.cpp:223 in max_pooling_fprop2, s4_pooling_layer1 |
+| disaggregate | variable=s4_pooling_layer2 | ../source/hls.cpp:224 in max_pooling_fprop2, s4_pooling_layer2 |
+| disaggregate | variable=c5_conv_layer1    | ../source/hls.cpp:254 in fully_connected_fprop, c5_conv_layer1 |
+| disaggregate | variable=c5_conv_layer2    | ../source/hls.cpp:255 in fully_connected_fprop, c5_conv_layer2 |
+| disaggregate | variable=output_layer1     | ../source/hls.cpp:256 in fully_connected_fprop, output_layer1  |
+| disaggregate | variable=output_layer2     | ../source/hls.cpp:257 in fully_connected_fprop, output_layer2  |
++--------------+----------------------------+----------------------------------------------------------------+
+
 

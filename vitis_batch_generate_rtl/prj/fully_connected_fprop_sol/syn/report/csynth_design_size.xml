@@ -13,26 +13,26 @@
             <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
             <column name="">(1) array partition,  41, user array partition pragmas are applied</column>
             <column name="">(2) simplification,  41, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
-            <column name="">(3) aggregate/disaggregate ,  44, user struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(4) array reshape,  45, apply array reshape pragmas</column>
-            <column name="">(5) access patterns,  48, array access pattern optmizations</column>
+            <column name="">(3) aggregate/disaggregate ,  41, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,  41, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,  44, array access pattern optmizations</column>
             <column name="">, , </column>
             <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
-            <column name="">(1) loop simplification,  48, loop and instruction simplification</column>
-            <column name="">(2) parallelization,  47, loops are unrolled or pipelined to meet performance targets</column>
-            <column name="">(3) array partition,  45, arrays are partitioned to meet performance targets</column>
-            <column name="">(4) simplification,  45, simplification of design after performance transformations</column>
+            <column name="">(1) loop simplification,  44, loop and instruction simplification</column>
+            <column name="">(2) parallelization,  43, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,  41, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,  41, simplification of design after performance transformations</column>
             <column name="">, , </column>
             <column name="HW Transforms">, , After hardware transfomations</column>
-            <column name="">(1) lowering, 102, initial conversion to HW specific instructions</column>
-            <column name="">(2) optimizations, 100, high level synthesis optimizations</column>
+            <column name="">(1) lowering, 103, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 103, high level synthesis optimizations</column>
         </table>
     </item>
     <item name="Instructions per Function for each Compilation Phase">
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="fully_connected_fprop" col1="hls.cpp:285" col2="62" col3="43" col4="48" col5="45" col6="100">
+                <row id="0" col0="fully_connected_fprop" col1="hls.cpp:251" col2="62" col3="43" col4="44" col5="41" col6="103">
                     <row id="1" col0="tan_h" col1="hls.cpp:8" col2="7" col3="" col4="" col5="" col6=""/>
                 </row>
             </rows>

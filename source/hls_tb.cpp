@@ -80,8 +80,10 @@ bool test_conv_fprop1(){
     bool pconnection [96];
 
     // define temp variables
-    Layer input_layer;
-    Layer c1_conv_layer;
+    Layer1 input_layer1;
+    Layer2 input_layer2;
+    Layer1 c1_conv_layer1;
+    Layer2 c1_conv_layer2;
 
 
     HLS_COMMON_INIT_VAR();
@@ -92,15 +94,15 @@ bool test_conv_fprop1(){
     unsigned int total_count = 0;
     bool finish = false;
     do{
-        tgPop(input_layer,c1_conv_layer,pconnection);
+        tgPop(input_layer1,input_layer2,c1_conv_layer1,c1_conv_layer2,pconnection);
 
         if (finish) {
             break;
         }
         // call the function
-        conv_fprop1(HLS_COMMON_ARG_CALL &input_layer,&c1_conv_layer,pconnection);
+        conv_fprop1(HLS_COMMON_ARG_CALL &input_layer1,&input_layer2,&c1_conv_layer1,&c1_conv_layer2,pconnection);
 
-        tgCheck(input_layer,c1_conv_layer,pconnection);
+        tgCheck(input_layer1,input_layer2,c1_conv_layer1,c1_conv_layer2,pconnection);
         ++total_count;
     } while(true);
 
@@ -121,8 +123,10 @@ bool test_conv_fprop2(){
     bool pconnection [96];
 
     // define temp variables
-    Layer s2_pooling_la;
-    Layer c3_conv_layer;
+    Layer1 s2_pooling_layer1;
+    Layer2 s2_pooling_layer2;
+    Layer1 c3_conv_layer1;
+    Layer2 c3_conv_layer2;
 
 
     HLS_COMMON_INIT_VAR();
@@ -133,15 +137,15 @@ bool test_conv_fprop2(){
     unsigned int total_count = 0;
     bool finish = false;
     do{
-        tgPop(s2_pooling_la,c3_conv_layer,pconnection);
+        tgPop(s2_pooling_layer1,s2_pooling_layer2,c3_conv_layer1,c3_conv_layer2,pconnection);
 
         if (finish) {
             break;
         }
         // call the function
-        conv_fprop2(HLS_COMMON_ARG_CALL &s2_pooling_la,&c3_conv_layer,pconnection);
+        conv_fprop2(HLS_COMMON_ARG_CALL &s2_pooling_layer1,&s2_pooling_layer2,&c3_conv_layer1,&c3_conv_layer2,pconnection);
 
-        tgCheck(s2_pooling_la,c3_conv_layer,pconnection);
+        tgCheck(s2_pooling_layer1,s2_pooling_layer2,c3_conv_layer1,c3_conv_layer2,pconnection);
         ++total_count;
     } while(true);
 
@@ -162,8 +166,10 @@ bool test_conv_fprop3(){
     bool pconnection [96];
 
     // define temp variables
-    Layer s4_pooling_layer;
-    Layer c5_conv_layer;
+    Layer1 s4_pooling_layer1;
+    Layer2 s4_pooling_layer2;
+    Layer1 c5_conv_layer1;
+    Layer2 c5_conv_layer2;
 
 
     HLS_COMMON_INIT_VAR();
@@ -174,15 +180,15 @@ bool test_conv_fprop3(){
     unsigned int total_count = 0;
     bool finish = false;
     do{
-        tgPop(s4_pooling_layer,c5_conv_layer,pconnection);
+        tgPop(s4_pooling_layer1,s4_pooling_layer2,c5_conv_layer1,c5_conv_layer2,pconnection);
 
         if (finish) {
             break;
         }
         // call the function
-        conv_fprop3(HLS_COMMON_ARG_CALL &s4_pooling_layer,&c5_conv_layer,pconnection);
+        conv_fprop3(HLS_COMMON_ARG_CALL &s4_pooling_layer1,&s4_pooling_layer2,&c5_conv_layer1,&c5_conv_layer2,pconnection);
 
-        tgCheck(s4_pooling_layer,c5_conv_layer,pconnection);
+        tgCheck(s4_pooling_layer1,s4_pooling_layer2,c5_conv_layer1,c5_conv_layer2,pconnection);
         ++total_count;
     } while(true);
 
@@ -202,8 +208,10 @@ bool test_max_pooling_fprop1(){
     // define arrays
 
     // define temp variables
-    Layer c1_conv_layer;
-    Layer s2_pooling_layer;
+    Layer1 c1_conv_layer1;
+    Layer2 c1_conv_layer2;
+    Layer1 s2_pooling_layer1;
+    Layer2 s2_pooling_layer2;
 
 
     HLS_COMMON_INIT_VAR();
@@ -214,15 +222,15 @@ bool test_max_pooling_fprop1(){
     unsigned int total_count = 0;
     bool finish = false;
     do{
-        tgPop(c1_conv_layer,s2_pooling_layer);
+        tgPop(c1_conv_layer1,c1_conv_layer2,s2_pooling_layer1,s2_pooling_layer2);
 
         if (finish) {
             break;
         }
         // call the function
-        max_pooling_fprop1(HLS_COMMON_ARG_CALL &c1_conv_layer,&s2_pooling_layer);
+        max_pooling_fprop1(HLS_COMMON_ARG_CALL &c1_conv_layer1,&c1_conv_layer2,&s2_pooling_layer1,&s2_pooling_layer2);
 
-        tgCheck(c1_conv_layer,s2_pooling_layer);
+        tgCheck(c1_conv_layer1,c1_conv_layer2,s2_pooling_layer1,s2_pooling_layer2);
         ++total_count;
     } while(true);
 
@@ -242,8 +250,10 @@ bool test_max_pooling_fprop2(){
     // define arrays
 
     // define temp variables
-    Layer c3_conv_layer;
-    Layer s4_pooling_layer;
+    Layer1 c3_conv_layer1;
+    Layer2 c3_conv_layer2;
+    Layer1 s4_pooling_layer1;
+    Layer2 s4_pooling_layer2;
 
 
     HLS_COMMON_INIT_VAR();
@@ -254,15 +264,15 @@ bool test_max_pooling_fprop2(){
     unsigned int total_count = 0;
     bool finish = false;
     do{
-        tgPop(c3_conv_layer,s4_pooling_layer);
+        tgPop(c3_conv_layer1,c3_conv_layer2,s4_pooling_layer1,s4_pooling_layer2);
 
         if (finish) {
             break;
         }
         // call the function
-        max_pooling_fprop2(HLS_COMMON_ARG_CALL &c3_conv_layer,&s4_pooling_layer);
+        max_pooling_fprop2(HLS_COMMON_ARG_CALL &c3_conv_layer1,&c3_conv_layer2,&s4_pooling_layer1,&s4_pooling_layer2);
 
-        tgCheck(c3_conv_layer,s4_pooling_layer);
+        tgCheck(c3_conv_layer1,c3_conv_layer2,s4_pooling_layer1,s4_pooling_layer2);
         ++total_count;
     } while(true);
 
@@ -282,8 +292,10 @@ bool test_fully_connected_fprop(){
     // define arrays
 
     // define temp variables
-    Layer c5_conv_layer;
-    Layer output_layer;
+    Layer1 c5_conv_layer1;
+    Layer2 c5_conv_layer2;
+    Layer1 output_layer1;
+    Layer2 output_layer2;
 
 
     HLS_COMMON_INIT_VAR();
@@ -294,15 +306,15 @@ bool test_fully_connected_fprop(){
     unsigned int total_count = 0;
     bool finish = false;
     do{
-        tgPop(c5_conv_layer,output_layer);
+        tgPop(c5_conv_layer1,c5_conv_layer2,output_layer1,output_layer2);
 
         if (finish) {
             break;
         }
         // call the function
-        fully_connected_fprop(HLS_COMMON_ARG_CALL &c5_conv_layer,&output_layer);
+        fully_connected_fprop(HLS_COMMON_ARG_CALL &c5_conv_layer1,&c5_conv_layer2,&output_layer1,&output_layer2);
 
-        tgCheck(c5_conv_layer,output_layer);
+        tgCheck(c5_conv_layer1,c5_conv_layer2,output_layer1,output_layer2);
         ++total_count;
     } while(true);
 

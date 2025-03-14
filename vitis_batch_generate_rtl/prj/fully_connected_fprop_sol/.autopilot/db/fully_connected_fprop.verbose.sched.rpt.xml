@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fully_connected_fprop'" level="0">
-<item name = "Date">Wed Mar 12 17:43:17 2025
+<item name = "Date">Fri Mar 14 16:55:55 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">prj</item>
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_287_1">?, ?, ?, -, -, ?, no</column>
+<column name="- VITIS_LOOP_259_1">?, ?, ?, -, -, ?, no</column>
 </table>
 </item>
 </section>

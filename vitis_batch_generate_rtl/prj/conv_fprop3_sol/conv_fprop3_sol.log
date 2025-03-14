@@ -11,29 +11,29 @@ INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
 INFO: [HLS 200-1510] Running: config_interface -clock_enable=true 
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 796.695 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 798.867 MB.
 INFO: [HLS 200-10] Analyzing design file '../source/hls.cpp' ... 
-WARNING: [HLS 207-3993] declaration does not declare anything (../source/xmem.h:46:35)
-WARNING: [HLS 207-5292] unused parameter 'in_h' (../source/hls.cpp:74:54)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:111:26)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:111:43)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:111:60)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:140:26)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:140:43)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:140:60)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:168:72)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:168:89)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:168:106)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:227:33)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:227:50)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:227:67)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:255:33)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:255:50)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:255:67)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:285:36)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:285:53)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:285:70)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.77 seconds. CPU system time: 0.94 seconds. Elapsed time: 3.77 seconds; current allocated memory: 796.695 MB.
+WARNING: [HLS 207-3993] declaration does not declare anything (../source/xmem.h:54:35)
+WARNING: [HLS 207-5292] unused parameter 'in_h' (../source/hls.cpp:47:54)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:83:26)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:83:43)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:83:60)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:117:26)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:117:43)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:117:60)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:151:72)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:151:89)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:151:106)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:185:33)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:185:50)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:185:67)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:218:33)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:218:50)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:218:67)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:251:36)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:251:53)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:251:70)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.25 seconds. CPU system time: 0.53 seconds. Elapsed time: 2.83 seconds; current allocated memory: 798.867 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 200-1995] There were 164 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 161 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
@@ -42,38 +42,36 @@ INFO: [HLS 200-1995] There were 133 instructions in the design after the 'Unroll
 INFO: [HLS 200-1995] There were 130 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 139 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 139 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 137 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 191 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 132 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 132 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 130 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 189 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 188 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-INFO: [HLS 214-210] Disaggregating variable 'c5_conv_layer'
-INFO: [HLS 214-210] Disaggregating variable 'c5_conv_layer_map'
-INFO: [HLS 214-210] Disaggregating variable 's4_pooling_layer'
-INFO: [HLS 214-210] Disaggregating variable 's4_pooling_layer_map'
-INFO: [HLS 214-178] Inlining function 'convn_valid' into 'conv_fprop3' (../source/hls.cpp:169:0)
-INFO: [HLS 214-178] Inlining function 'activation_func::tan_h(double)' into 'conv_fprop3' (../source/hls.cpp:169:0)
-INFO: [HLS 214-241] Aggregating bram variable 'c5_conv_layer_kernel' with compact=bit mode in 3200-bits
-INFO: [HLS 214-241] Aggregating bram variable 's4_pooling_layer_kernel' with compact=bit mode in 3200-bits
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_189_3> at ../source/hls.cpp:189:27 
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_86_4> at ../source/hls.cpp:86:19 
+INFO: [HLS 214-210] Disaggregating variable 's4_pooling_layer1' (../source/hls.cpp:153:0)
+INFO: [HLS 214-210] Disaggregating variable 's4_pooling_layer2'
+INFO: [HLS 214-210] Disaggregating variable 'c5_conv_layer1' (../source/hls.cpp:153:0)
+INFO: [HLS 214-210] Disaggregating variable 'c5_conv_layer2'
+INFO: [HLS 214-178] Inlining function 'convn_valid' into 'conv_fprop3' (../source/hls.cpp:153:0)
+INFO: [HLS 214-178] Inlining function 'activation_func::tan_h(double)' into 'conv_fprop3' (../source/hls.cpp:153:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_178_3> at ../source/hls.cpp:178:27 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_59_4> at ../source/hls.cpp:59:34 
 INFO: [HLS 214-376] automatically set the pipeline for Loop< unknown> at  
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.74 seconds. CPU system time: 0.62 seconds. Elapsed time: 6.95 seconds; current allocated memory: 796.695 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 796.695 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.62 seconds. CPU system time: 0.56 seconds. Elapsed time: 6.84 seconds; current allocated memory: 798.867 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 798.867 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 796.695 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 798.867 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 796.695 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 815.816 MB.
-INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_84_3'(../source/hls.cpp:84:18) and 'VITIS_LOOP_86_4'(../source/hls.cpp:86:19) in function 'conv_fprop3' into perfectly nested loops.
-INFO: [HLS 200-2060] Failed to convert nested loops 'VITIS_LOOP_81_2'(../source/hls.cpp:81:18) and 'VITIS_LOOP_84_3'(../source/hls.cpp:84:18) in function 'conv_fprop3' into perfectly nested loops.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_84_3' (../source/hls.cpp:84:18) in function 'conv_fprop3'.
-WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_81_2' (../source/hls.cpp:81:18) in function 'conv_fprop3' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 835.453 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 798.867 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 818.043 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_57_3'(../source/hls.cpp:57:30) and 'VITIS_LOOP_59_4'(../source/hls.cpp:59:34) in function 'conv_fprop3' into perfectly nested loops.
+INFO: [HLS 200-2060] Failed to convert nested loops 'VITIS_LOOP_54_2'(../source/hls.cpp:54:26) and 'VITIS_LOOP_57_3'(../source/hls.cpp:57:30) in function 'conv_fprop3' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_57_3' (../source/hls.cpp:57:30) in function 'conv_fprop3'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_54_2' (../source/hls.cpp:54:26) in function 'conv_fprop3' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 837.672 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'conv_fprop3' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -83,121 +81,124 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.05 seconds; current allocated memory: 836.074 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.05 seconds; current allocated memory: 838.445 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 836.074 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 838.445 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' 
+INFO: [HLS 200-42] -- Implementing module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln88) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 24, loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 25, loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'
 WARNING: [HLS 200-871] Estimated clock period (2.983 ns) exceeds the target (target clock period: 3.300 ns, clock uncertainty: 0.891 ns, effective delay budget: 2.409 ns).
-WARNING: [HLS 200-1016] The critical path in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' consists of the following:
-	'getelementptr' operation 17 bit ('s4_pooling_layer_map_data_addr', ../source/hls.cpp:88->../source/hls.cpp:183) [57]  (0.000 ns)
-	'load' operation 64 bit ('s4_pooling_layer_map_data_load', ../source/hls.cpp:88->../source/hls.cpp:183) on array 's4_pooling_layer_map_data' [58]  (2.983 ns)
+WARNING: [HLS 200-1016] The critical path in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' consists of the following:
+	'getelementptr' operation 17 bit ('s4_pooling_layer2_data_addr', ../source/hls.cpp:61->../source/hls.cpp:172) [58]  (0.000 ns)
+	'load' operation 64 bit ('s4_pooling_layer2_data_load', ../source/hls.cpp:61->../source/hls.cpp:172) on array 's4_pooling_layer2_data' [59]  (2.983 ns)
 
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.1 seconds; current allocated memory: 836.285 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 838.504 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 836.285 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 838.504 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv_fprop3_Pipeline_VITIS_LOOP_189_3' 
+INFO: [HLS 200-42] -- Implementing module 'conv_fprop3_Pipeline_VITIS_LOOP_178_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_189_3'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 80, loop 'VITIS_LOOP_189_3'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_178_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 80, loop 'VITIS_LOOP_178_3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 836.285 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 838.504 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.09 seconds; current allocated memory: 836.285 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 838.504 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv_fprop3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln177) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln166) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 836.336 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 838.555 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 836.336 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 838.555 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3_Pipeline_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3_Pipeline_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 836.336 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 838.555 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' 
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' pipeline 'VITIS_LOOP_84_3_VITIS_LOOP_86_4' pipeline type 'loop pipeline'
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' pipeline 'VITIS_LOOP_57_3_VITIS_LOOP_59_4' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_17ns_17ns_17s_17ns_17_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_8_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_31ns_32s_58_2_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.09 seconds; current allocated memory: 836.336 MB.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 838.555 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3_Pipeline_VITIS_LOOP_189_3' 
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3_Pipeline_VITIS_LOOP_178_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_fprop3_Pipeline_VITIS_LOOP_189_3' pipeline 'VITIS_LOOP_189_3' pipeline type 'loop pipeline'
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_fprop3_Pipeline_VITIS_LOOP_178_3' pipeline 'VITIS_LOOP_178_3' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_8_full_dsp_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dexp_64ns_64ns_64_30_full_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3_Pipeline_VITIS_LOOP_189_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.14 seconds; current allocated memory: 838.398 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3_Pipeline_VITIS_LOOP_178_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.13 seconds; current allocated memory: 840.672 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/ap_core' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/ap_part' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/ap_parent' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_w' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_h' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_count' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_data' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_error' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_b' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_db' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_kernel_w' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_kernel_h' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_kernel_count' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_kernel' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_common' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_w' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_h' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_count' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_data' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_error' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_b' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_db' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_kernel_w' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_kernel_h' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_kernel_count' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_kernel' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_common' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_map_w' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_map_h' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_map_count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_kernel_w' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_kernel_h' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_kernel_count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_error' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_db' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_W' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_dW' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_map_common' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_map_w' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_map_h' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_map_count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_kernel_w' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_kernel_h' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_kernel_count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_error' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_db' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_W' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_dW' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_map_common' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/pconnection' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'conv_fprop3' to 'ap_ctrl_hs'.
 WARNING: [RTGEN 206-101] Port 'conv_fprop3/ap_core' has no fanin or fanout and is left dangling.
@@ -206,224 +207,281 @@ WARNING: [RTGEN 206-101] Port 'conv_fprop3/ap_part' has no fanin or fanout and i
                Please use C simulation to confirm this function argument can be read from or written to.
 WARNING: [RTGEN 206-101] Port 'conv_fprop3/ap_parent' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_h' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer1_map_h' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer1_kernel_w' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer1_kernel_h' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer1_kernel_count' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_w' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_h' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_count' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer1_kernel_count' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_kernel_count' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
 INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_11s_11ns_11_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_10s_10s_10_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11ns_6ns_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_31ns_31ns_62_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.25 seconds. Elapsed time: 0.76 seconds; current allocated memory: 841.914 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.18 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.23 seconds; current allocated memory: 845.090 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.04 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.08 seconds; current allocated memory: 849.410 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.5 seconds. CPU system time: 0.37 seconds. Elapsed time: 0.98 seconds; current allocated memory: 844.434 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.14 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.19 seconds; current allocated memory: 847.656 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.87 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.91 seconds; current allocated memory: 852.676 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for conv_fprop3.
 INFO: [VLOG 209-307] Generating Verilog RTL for conv_fprop3.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 335.23 MHz
-INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:13; Allocated memory: 53.070 MB.
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:12; Allocated memory: 54.180 MB.
 INFO: [HLS 200-1510] Running: close_solution 

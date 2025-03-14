@@ -13,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4_fu_240/grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4_fu_240_activity": {
+				"grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4_fu_244/grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4_fu_244_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

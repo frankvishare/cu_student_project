@@ -12,16 +12,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 1 \
-    name c5_conv_layer_map_common \
+    name c5_conv_layer2_map_common \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename c5_conv_layer_map_common \
+    corename c5_conv_layer2_map_common \
     op interface \
-    ports { c5_conv_layer_map_common_address0 { O 10 vector } c5_conv_layer_map_common_ce0 { O 1 bit } c5_conv_layer_map_common_we0 { O 1 bit } c5_conv_layer_map_common_d0 { O 64 vector } } \
+    ports { c5_conv_layer2_map_common_address0 { O 10 vector } c5_conv_layer2_map_common_ce0 { O 1 bit } c5_conv_layer2_map_common_we0 { O 1 bit } c5_conv_layer2_map_common_d0 { O 64 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c5_conv_layer_map_common'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c5_conv_layer2_map_common'"
 }
 }
 

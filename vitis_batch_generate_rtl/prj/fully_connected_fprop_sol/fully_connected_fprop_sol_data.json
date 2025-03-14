@@ -54,752 +54,908 @@
           "direction": "in"
         }]
     },
-    "c5_conv_layer": {
+    "c5_conv_layer1": {
       "index": "3",
       "direction": "in",
-      "srcType": "_Layer*",
-      "srcSize": "21953792",
+      "srcType": "_Layer1*",
+      "srcSize": "192",
       "hwRefs": [
         {
           "type": "port",
-          "interface": "c5_conv_layer_map_w",
-          "name": "c5_conv_layer_map_w",
+          "interface": "c5_conv_layer1_map_w",
+          "name": "c5_conv_layer1_map_w",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "c5_conv_layer_map_h",
-          "name": "c5_conv_layer_map_h",
+          "interface": "c5_conv_layer1_map_h",
+          "name": "c5_conv_layer1_map_h",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "c5_conv_layer_map_count",
-          "name": "c5_conv_layer_map_count",
+          "interface": "c5_conv_layer1_map_count",
+          "name": "c5_conv_layer1_map_count",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "c5_conv_layer_map_data_address0",
-          "name": "c5_conv_layer_map_data_address0",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_data_ce0",
-          "name": "c5_conv_layer_map_data_ce0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_data_q0",
-          "name": "c5_conv_layer_map_data_q0",
+          "interface": "c5_conv_layer1_kernel_w",
+          "name": "c5_conv_layer1_kernel_w",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "c5_conv_layer_map_error_address0",
-          "name": "c5_conv_layer_map_error_address0",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_error_ce0",
-          "name": "c5_conv_layer_map_error_ce0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_error_we0",
-          "name": "c5_conv_layer_map_error_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_error_d0",
-          "name": "c5_conv_layer_map_error_d0",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_error_q0",
-          "name": "c5_conv_layer_map_error_q0",
+          "interface": "c5_conv_layer1_kernel_h",
+          "name": "c5_conv_layer1_kernel_h",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "c5_conv_layer_map_error_address1",
-          "name": "c5_conv_layer_map_error_address1",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_error_ce1",
-          "name": "c5_conv_layer_map_error_ce1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_error_we1",
-          "name": "c5_conv_layer_map_error_we1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_error_d1",
-          "name": "c5_conv_layer_map_error_d1",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_error_q1",
-          "name": "c5_conv_layer_map_error_q1",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_b_address0",
-          "name": "c5_conv_layer_map_b_address0",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_b_ce0",
-          "name": "c5_conv_layer_map_b_ce0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_b_we0",
-          "name": "c5_conv_layer_map_b_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_b_d0",
-          "name": "c5_conv_layer_map_b_d0",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_b_q0",
-          "name": "c5_conv_layer_map_b_q0",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_b_address1",
-          "name": "c5_conv_layer_map_b_address1",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_b_ce1",
-          "name": "c5_conv_layer_map_b_ce1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_b_we1",
-          "name": "c5_conv_layer_map_b_we1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_b_d1",
-          "name": "c5_conv_layer_map_b_d1",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_b_q1",
-          "name": "c5_conv_layer_map_b_q1",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_db_address0",
-          "name": "c5_conv_layer_map_db_address0",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_db_ce0",
-          "name": "c5_conv_layer_map_db_ce0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_db_we0",
-          "name": "c5_conv_layer_map_db_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_db_d0",
-          "name": "c5_conv_layer_map_db_d0",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_db_q0",
-          "name": "c5_conv_layer_map_db_q0",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_db_address1",
-          "name": "c5_conv_layer_map_db_address1",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_db_ce1",
-          "name": "c5_conv_layer_map_db_ce1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_db_we1",
-          "name": "c5_conv_layer_map_db_we1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_db_d1",
-          "name": "c5_conv_layer_map_db_d1",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_db_q1",
-          "name": "c5_conv_layer_map_db_q1",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_w",
-          "name": "c5_conv_layer_kernel_w",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_h",
-          "name": "c5_conv_layer_kernel_h",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_count",
-          "name": "c5_conv_layer_kernel_count",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_address0",
-          "name": "c5_conv_layer_kernel_address0",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_ce0",
-          "name": "c5_conv_layer_kernel_ce0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_we0",
-          "name": "c5_conv_layer_kernel_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_d0",
-          "name": "c5_conv_layer_kernel_d0",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_q0",
-          "name": "c5_conv_layer_kernel_q0",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_address1",
-          "name": "c5_conv_layer_kernel_address1",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_ce1",
-          "name": "c5_conv_layer_kernel_ce1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_we1",
-          "name": "c5_conv_layer_kernel_we1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_d1",
-          "name": "c5_conv_layer_kernel_d1",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_kernel_q1",
-          "name": "c5_conv_layer_kernel_q1",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_common_address0",
-          "name": "c5_conv_layer_map_common_address0",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_common_ce0",
-          "name": "c5_conv_layer_map_common_ce0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_common_we0",
-          "name": "c5_conv_layer_map_common_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_common_d0",
-          "name": "c5_conv_layer_map_common_d0",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_common_q0",
-          "name": "c5_conv_layer_map_common_q0",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_common_address1",
-          "name": "c5_conv_layer_map_common_address1",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_common_ce1",
-          "name": "c5_conv_layer_map_common_ce1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_common_we1",
-          "name": "c5_conv_layer_map_common_we1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_common_d1",
-          "name": "c5_conv_layer_map_common_d1",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c5_conv_layer_map_common_q1",
-          "name": "c5_conv_layer_map_common_q1",
+          "interface": "c5_conv_layer1_kernel_count",
+          "name": "c5_conv_layer1_kernel_count",
           "usage": "data",
           "direction": "in"
         }
       ]
     },
-    "output_layer": {
+    "c5_conv_layer2": {
       "index": "4",
-      "direction": "inout",
-      "srcType": "_Layer*",
-      "srcSize": "21953792",
+      "direction": "in",
+      "srcType": "_Layer2*",
+      "srcSize": "21953536",
       "hwRefs": [
         {
           "type": "port",
-          "interface": "output_layer_map_w",
-          "name": "output_layer_map_w",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "output_layer_map_h",
-          "name": "output_layer_map_h",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "output_layer_map_count",
-          "name": "output_layer_map_count",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "output_layer_map_data_address0",
-          "name": "output_layer_map_data_address0",
+          "interface": "c5_conv_layer2_data_address0",
+          "name": "c5_conv_layer2_data_address0",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_data_ce0",
-          "name": "output_layer_map_data_ce0",
+          "interface": "c5_conv_layer2_data_ce0",
+          "name": "c5_conv_layer2_data_ce0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_data_we0",
-          "name": "output_layer_map_data_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "output_layer_map_data_d0",
-          "name": "output_layer_map_data_d0",
+          "interface": "c5_conv_layer2_data_q0",
+          "name": "c5_conv_layer2_data_q0",
           "usage": "data",
-          "direction": "out"
+          "direction": "in"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_error_address0",
-          "name": "output_layer_map_error_address0",
+          "interface": "c5_conv_layer2_error_address0",
+          "name": "c5_conv_layer2_error_address0",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_error_ce0",
-          "name": "output_layer_map_error_ce0",
+          "interface": "c5_conv_layer2_error_ce0",
+          "name": "c5_conv_layer2_error_ce0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_error_we0",
-          "name": "output_layer_map_error_we0",
+          "interface": "c5_conv_layer2_error_we0",
+          "name": "c5_conv_layer2_error_we0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_error_d0",
-          "name": "output_layer_map_error_d0",
+          "interface": "c5_conv_layer2_error_d0",
+          "name": "c5_conv_layer2_error_d0",
           "usage": "data",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_error_q0",
-          "name": "output_layer_map_error_q0",
+          "interface": "c5_conv_layer2_error_q0",
+          "name": "c5_conv_layer2_error_q0",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_error_address1",
-          "name": "output_layer_map_error_address1",
+          "interface": "c5_conv_layer2_error_address1",
+          "name": "c5_conv_layer2_error_address1",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_error_ce1",
-          "name": "output_layer_map_error_ce1",
+          "interface": "c5_conv_layer2_error_ce1",
+          "name": "c5_conv_layer2_error_ce1",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_error_we1",
-          "name": "output_layer_map_error_we1",
+          "interface": "c5_conv_layer2_error_we1",
+          "name": "c5_conv_layer2_error_we1",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_error_d1",
-          "name": "output_layer_map_error_d1",
+          "interface": "c5_conv_layer2_error_d1",
+          "name": "c5_conv_layer2_error_d1",
           "usage": "data",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_error_q1",
-          "name": "output_layer_map_error_q1",
+          "interface": "c5_conv_layer2_error_q1",
+          "name": "c5_conv_layer2_error_q1",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_b_address0",
-          "name": "output_layer_map_b_address0",
+          "interface": "c5_conv_layer2_b_address0",
+          "name": "c5_conv_layer2_b_address0",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_b_ce0",
-          "name": "output_layer_map_b_ce0",
+          "interface": "c5_conv_layer2_b_ce0",
+          "name": "c5_conv_layer2_b_ce0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_b_q0",
-          "name": "output_layer_map_b_q0",
+          "interface": "c5_conv_layer2_b_we0",
+          "name": "c5_conv_layer2_b_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_b_d0",
+          "name": "c5_conv_layer2_b_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_b_q0",
+          "name": "c5_conv_layer2_b_q0",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_db_address0",
-          "name": "output_layer_map_db_address0",
+          "interface": "c5_conv_layer2_b_address1",
+          "name": "c5_conv_layer2_b_address1",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_db_ce0",
-          "name": "output_layer_map_db_ce0",
+          "interface": "c5_conv_layer2_b_ce1",
+          "name": "c5_conv_layer2_b_ce1",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_db_we0",
-          "name": "output_layer_map_db_we0",
+          "interface": "c5_conv_layer2_b_we1",
+          "name": "c5_conv_layer2_b_we1",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_db_d0",
-          "name": "output_layer_map_db_d0",
+          "interface": "c5_conv_layer2_b_d1",
+          "name": "c5_conv_layer2_b_d1",
           "usage": "data",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_db_q0",
-          "name": "output_layer_map_db_q0",
+          "interface": "c5_conv_layer2_b_q1",
+          "name": "c5_conv_layer2_b_q1",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_db_address1",
-          "name": "output_layer_map_db_address1",
+          "interface": "c5_conv_layer2_db_address0",
+          "name": "c5_conv_layer2_db_address0",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_db_ce1",
-          "name": "output_layer_map_db_ce1",
+          "interface": "c5_conv_layer2_db_ce0",
+          "name": "c5_conv_layer2_db_ce0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_db_we1",
-          "name": "output_layer_map_db_we1",
+          "interface": "c5_conv_layer2_db_we0",
+          "name": "c5_conv_layer2_db_we0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_db_d1",
-          "name": "output_layer_map_db_d1",
+          "interface": "c5_conv_layer2_db_d0",
+          "name": "c5_conv_layer2_db_d0",
           "usage": "data",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_db_q1",
-          "name": "output_layer_map_db_q1",
+          "interface": "c5_conv_layer2_db_q0",
+          "name": "c5_conv_layer2_db_q0",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "output_layer_kernel_w",
-          "name": "output_layer_kernel_w",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "output_layer_kernel_h",
-          "name": "output_layer_kernel_h",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "output_layer_kernel_count",
-          "name": "output_layer_kernel_count",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "output_layer_kernel_address0",
-          "name": "output_layer_kernel_address0",
+          "interface": "c5_conv_layer2_db_address1",
+          "name": "c5_conv_layer2_db_address1",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_kernel_ce0",
-          "name": "output_layer_kernel_ce0",
+          "interface": "c5_conv_layer2_db_ce1",
+          "name": "c5_conv_layer2_db_ce1",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_kernel_q0",
-          "name": "output_layer_kernel_q0",
+          "interface": "c5_conv_layer2_db_we1",
+          "name": "c5_conv_layer2_db_we1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_db_d1",
+          "name": "c5_conv_layer2_db_d1",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_db_q1",
+          "name": "c5_conv_layer2_db_q1",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_common_address0",
-          "name": "output_layer_map_common_address0",
+          "interface": "c5_conv_layer2_W_address0",
+          "name": "c5_conv_layer2_W_address0",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_common_ce0",
-          "name": "output_layer_map_common_ce0",
+          "interface": "c5_conv_layer2_W_ce0",
+          "name": "c5_conv_layer2_W_ce0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_common_we0",
-          "name": "output_layer_map_common_we0",
+          "interface": "c5_conv_layer2_W_we0",
+          "name": "c5_conv_layer2_W_we0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_common_d0",
-          "name": "output_layer_map_common_d0",
+          "interface": "c5_conv_layer2_W_d0",
+          "name": "c5_conv_layer2_W_d0",
           "usage": "data",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_common_q0",
-          "name": "output_layer_map_common_q0",
+          "interface": "c5_conv_layer2_W_q0",
+          "name": "c5_conv_layer2_W_q0",
           "usage": "data",
           "direction": "in"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_common_address1",
-          "name": "output_layer_map_common_address1",
+          "interface": "c5_conv_layer2_W_address1",
+          "name": "c5_conv_layer2_W_address1",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_common_ce1",
-          "name": "output_layer_map_common_ce1",
+          "interface": "c5_conv_layer2_W_ce1",
+          "name": "c5_conv_layer2_W_ce1",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_common_we1",
-          "name": "output_layer_map_common_we1",
+          "interface": "c5_conv_layer2_W_we1",
+          "name": "c5_conv_layer2_W_we1",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_common_d1",
-          "name": "output_layer_map_common_d1",
+          "interface": "c5_conv_layer2_W_d1",
+          "name": "c5_conv_layer2_W_d1",
           "usage": "data",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_layer_map_common_q1",
-          "name": "output_layer_map_common_q1",
+          "interface": "c5_conv_layer2_W_q1",
+          "name": "c5_conv_layer2_W_q1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_dW_address0",
+          "name": "c5_conv_layer2_dW_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_dW_ce0",
+          "name": "c5_conv_layer2_dW_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_dW_we0",
+          "name": "c5_conv_layer2_dW_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_dW_d0",
+          "name": "c5_conv_layer2_dW_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_dW_q0",
+          "name": "c5_conv_layer2_dW_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_dW_address1",
+          "name": "c5_conv_layer2_dW_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_dW_ce1",
+          "name": "c5_conv_layer2_dW_ce1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_dW_we1",
+          "name": "c5_conv_layer2_dW_we1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_dW_d1",
+          "name": "c5_conv_layer2_dW_d1",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_dW_q1",
+          "name": "c5_conv_layer2_dW_q1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_map_common_address0",
+          "name": "c5_conv_layer2_map_common_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_map_common_ce0",
+          "name": "c5_conv_layer2_map_common_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_map_common_we0",
+          "name": "c5_conv_layer2_map_common_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_map_common_d0",
+          "name": "c5_conv_layer2_map_common_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_map_common_q0",
+          "name": "c5_conv_layer2_map_common_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_map_common_address1",
+          "name": "c5_conv_layer2_map_common_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_map_common_ce1",
+          "name": "c5_conv_layer2_map_common_ce1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_map_common_we1",
+          "name": "c5_conv_layer2_map_common_we1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_map_common_d1",
+          "name": "c5_conv_layer2_map_common_d1",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c5_conv_layer2_map_common_q1",
+          "name": "c5_conv_layer2_map_common_q1",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "output_layer1": {
+      "index": "5",
+      "direction": "in",
+      "srcType": "_Layer1*",
+      "srcSize": "192",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "output_layer1_map_w",
+          "name": "output_layer1_map_w",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer1_map_h",
+          "name": "output_layer1_map_h",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer1_map_count",
+          "name": "output_layer1_map_count",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer1_kernel_w",
+          "name": "output_layer1_kernel_w",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer1_kernel_h",
+          "name": "output_layer1_kernel_h",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer1_kernel_count",
+          "name": "output_layer1_kernel_count",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "output_layer2": {
+      "index": "6",
+      "direction": "inout",
+      "srcType": "_Layer2*",
+      "srcSize": "21953536",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "output_layer2_data_address0",
+          "name": "output_layer2_data_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_data_ce0",
+          "name": "output_layer2_data_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_data_we0",
+          "name": "output_layer2_data_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_data_d0",
+          "name": "output_layer2_data_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_error_address0",
+          "name": "output_layer2_error_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_error_ce0",
+          "name": "output_layer2_error_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_error_we0",
+          "name": "output_layer2_error_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_error_d0",
+          "name": "output_layer2_error_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_error_q0",
+          "name": "output_layer2_error_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_error_address1",
+          "name": "output_layer2_error_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_error_ce1",
+          "name": "output_layer2_error_ce1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_error_we1",
+          "name": "output_layer2_error_we1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_error_d1",
+          "name": "output_layer2_error_d1",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_error_q1",
+          "name": "output_layer2_error_q1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_b_address0",
+          "name": "output_layer2_b_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_b_ce0",
+          "name": "output_layer2_b_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_b_q0",
+          "name": "output_layer2_b_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_db_address0",
+          "name": "output_layer2_db_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_db_ce0",
+          "name": "output_layer2_db_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_db_we0",
+          "name": "output_layer2_db_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_db_d0",
+          "name": "output_layer2_db_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_db_q0",
+          "name": "output_layer2_db_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_db_address1",
+          "name": "output_layer2_db_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_db_ce1",
+          "name": "output_layer2_db_ce1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_db_we1",
+          "name": "output_layer2_db_we1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_db_d1",
+          "name": "output_layer2_db_d1",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_db_q1",
+          "name": "output_layer2_db_q1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_W_address0",
+          "name": "output_layer2_W_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_W_ce0",
+          "name": "output_layer2_W_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_W_q0",
+          "name": "output_layer2_W_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_dW_address0",
+          "name": "output_layer2_dW_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_dW_ce0",
+          "name": "output_layer2_dW_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_dW_we0",
+          "name": "output_layer2_dW_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_dW_d0",
+          "name": "output_layer2_dW_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_dW_q0",
+          "name": "output_layer2_dW_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_dW_address1",
+          "name": "output_layer2_dW_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_dW_ce1",
+          "name": "output_layer2_dW_ce1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_dW_we1",
+          "name": "output_layer2_dW_we1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_dW_d1",
+          "name": "output_layer2_dW_d1",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_dW_q1",
+          "name": "output_layer2_dW_q1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_map_common_address0",
+          "name": "output_layer2_map_common_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_map_common_ce0",
+          "name": "output_layer2_map_common_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_map_common_we0",
+          "name": "output_layer2_map_common_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_map_common_d0",
+          "name": "output_layer2_map_common_d0",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_map_common_q0",
+          "name": "output_layer2_map_common_q0",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_map_common_address1",
+          "name": "output_layer2_map_common_address1",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_map_common_ce1",
+          "name": "output_layer2_map_common_ce1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_map_common_we1",
+          "name": "output_layer2_map_common_we1",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_map_common_d1",
+          "name": "output_layer2_map_common_d1",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "output_layer2_map_common_q1",
+          "name": "output_layer2_map_common_q1",
           "usage": "data",
           "direction": "in"
         }
@@ -828,7 +984,7 @@
     "Name": "fully_connected_fprop",
     "Version": "1.0",
     "DisplayName": "Fully_connected_fprop",
-    "Revision": "2113992463",
+    "Revision": "2113995295",
     "Description": "An IP generated by Vitis HLS",
     "Taxonomy": "\/VITIS_HLS_IP",
     "AutoFamilySupport": "",
@@ -844,7 +1000,8 @@
       "impl\/vhdl\/fully_connected_fprop_dexp_64ns_64ns_64_30_full_dsp_1.vhd",
       "impl\/vhdl\/fully_connected_fprop_dmul_64ns_64ns_64_8_max_dsp_1.vhd",
       "impl\/vhdl\/fully_connected_fprop_flow_control_loop_pipe_sequential_init.vhd",
-      "impl\/vhdl\/fully_connected_fprop_fully_connected_fprop_Pipeline_VITIS_LOOP_290_2.vhd",
+      "impl\/vhdl\/fully_connected_fprop_fully_connected_fprop_Pipeline_VITIS_LOOP_262_2.vhd",
+      "impl\/vhdl\/fully_connected_fprop_mul_11ns_6ns_16_1_1.vhd",
       "impl\/vhdl\/fully_connected_fprop.vhd"
     ],
     "Verilog": [
@@ -854,7 +1011,8 @@
       "impl\/verilog\/fully_connected_fprop_dexp_64ns_64ns_64_30_full_dsp_1.v",
       "impl\/verilog\/fully_connected_fprop_dmul_64ns_64ns_64_8_max_dsp_1.v",
       "impl\/verilog\/fully_connected_fprop_flow_control_loop_pipe_sequential_init.v",
-      "impl\/verilog\/fully_connected_fprop_fully_connected_fprop_Pipeline_VITIS_LOOP_290_2.v",
+      "impl\/verilog\/fully_connected_fprop_fully_connected_fprop_Pipeline_VITIS_LOOP_262_2.v",
+      "impl\/verilog\/fully_connected_fprop_mul_11ns_6ns_16_1_1.v",
       "impl\/verilog\/fully_connected_fprop.v"
     ],
     "IpMisc": ["impl\/misc\/logo.png"],
@@ -992,1024 +1150,1204 @@
           "argName": "ap_parent"
         }]
     },
-    "c5_conv_layer_map_w": {
+    "c5_conv_layer1_map_w": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_none",
       "mode": "slave",
       "dataWidth": "32",
-      "portMap": {"c5_conv_layer_map_w": "DATA"},
-      "ports": ["c5_conv_layer_map_w"],
+      "portMap": {"c5_conv_layer1_map_w": "DATA"},
+      "ports": ["c5_conv_layer1_map_w"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_none",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer1"
         }]
     },
-    "c5_conv_layer_map_h": {
+    "c5_conv_layer1_map_h": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_none",
       "mode": "slave",
       "dataWidth": "32",
-      "portMap": {"c5_conv_layer_map_h": "DATA"},
-      "ports": ["c5_conv_layer_map_h"],
+      "portMap": {"c5_conv_layer1_map_h": "DATA"},
+      "ports": ["c5_conv_layer1_map_h"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_none",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer1"
         }]
     },
-    "c5_conv_layer_map_count": {
+    "c5_conv_layer1_map_count": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_none",
       "mode": "slave",
       "dataWidth": "32",
-      "portMap": {"c5_conv_layer_map_count": "DATA"},
-      "ports": ["c5_conv_layer_map_count"],
+      "portMap": {"c5_conv_layer1_map_count": "DATA"},
+      "ports": ["c5_conv_layer1_map_count"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_none",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer1"
         }]
     },
-    "c5_conv_layer_map_data_address0": {
+    "c5_conv_layer1_kernel_w": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"c5_conv_layer1_kernel_w": "DATA"},
+      "ports": ["c5_conv_layer1_kernel_w"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "c5_conv_layer1"
+        }]
+    },
+    "c5_conv_layer1_kernel_h": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"c5_conv_layer1_kernel_h": "DATA"},
+      "ports": ["c5_conv_layer1_kernel_h"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "c5_conv_layer1"
+        }]
+    },
+    "c5_conv_layer1_kernel_count": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"c5_conv_layer1_kernel_count": "DATA"},
+      "ports": ["c5_conv_layer1_kernel_count"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "c5_conv_layer1"
+        }]
+    },
+    "c5_conv_layer2_data_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "17",
-      "portMap": {"c5_conv_layer_map_data_address0": "DATA"},
-      "ports": ["c5_conv_layer_map_data_address0"],
+      "portMap": {"c5_conv_layer2_data_address0": "DATA"},
+      "ports": ["c5_conv_layer2_data_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_data_q0": {
+    "c5_conv_layer2_data_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_data_q0": "DATA"},
-      "ports": ["c5_conv_layer_map_data_q0"],
+      "portMap": {"c5_conv_layer2_data_q0": "DATA"},
+      "ports": ["c5_conv_layer2_data_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_error_address0": {
+    "c5_conv_layer2_error_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "17",
-      "portMap": {"c5_conv_layer_map_error_address0": "DATA"},
-      "ports": ["c5_conv_layer_map_error_address0"],
+      "portMap": {"c5_conv_layer2_error_address0": "DATA"},
+      "ports": ["c5_conv_layer2_error_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_error_d0": {
+    "c5_conv_layer2_error_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_error_d0": "DATA"},
-      "ports": ["c5_conv_layer_map_error_d0"],
+      "portMap": {"c5_conv_layer2_error_d0": "DATA"},
+      "ports": ["c5_conv_layer2_error_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_error_q0": {
+    "c5_conv_layer2_error_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_error_q0": "DATA"},
-      "ports": ["c5_conv_layer_map_error_q0"],
+      "portMap": {"c5_conv_layer2_error_q0": "DATA"},
+      "ports": ["c5_conv_layer2_error_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_error_address1": {
+    "c5_conv_layer2_error_address1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "17",
-      "portMap": {"c5_conv_layer_map_error_address1": "DATA"},
-      "ports": ["c5_conv_layer_map_error_address1"],
+      "portMap": {"c5_conv_layer2_error_address1": "DATA"},
+      "ports": ["c5_conv_layer2_error_address1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_error_d1": {
+    "c5_conv_layer2_error_d1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_error_d1": "DATA"},
-      "ports": ["c5_conv_layer_map_error_d1"],
+      "portMap": {"c5_conv_layer2_error_d1": "DATA"},
+      "ports": ["c5_conv_layer2_error_d1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_error_q1": {
+    "c5_conv_layer2_error_q1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_error_q1": "DATA"},
-      "ports": ["c5_conv_layer_map_error_q1"],
+      "portMap": {"c5_conv_layer2_error_q1": "DATA"},
+      "ports": ["c5_conv_layer2_error_q1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_b_address0": {
+    "c5_conv_layer2_b_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "7",
-      "portMap": {"c5_conv_layer_map_b_address0": "DATA"},
-      "ports": ["c5_conv_layer_map_b_address0"],
+      "portMap": {"c5_conv_layer2_b_address0": "DATA"},
+      "ports": ["c5_conv_layer2_b_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_b_d0": {
+    "c5_conv_layer2_b_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_b_d0": "DATA"},
-      "ports": ["c5_conv_layer_map_b_d0"],
+      "portMap": {"c5_conv_layer2_b_d0": "DATA"},
+      "ports": ["c5_conv_layer2_b_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_b_q0": {
+    "c5_conv_layer2_b_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_b_q0": "DATA"},
-      "ports": ["c5_conv_layer_map_b_q0"],
+      "portMap": {"c5_conv_layer2_b_q0": "DATA"},
+      "ports": ["c5_conv_layer2_b_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_b_address1": {
+    "c5_conv_layer2_b_address1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "7",
-      "portMap": {"c5_conv_layer_map_b_address1": "DATA"},
-      "ports": ["c5_conv_layer_map_b_address1"],
+      "portMap": {"c5_conv_layer2_b_address1": "DATA"},
+      "ports": ["c5_conv_layer2_b_address1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_b_d1": {
+    "c5_conv_layer2_b_d1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_b_d1": "DATA"},
-      "ports": ["c5_conv_layer_map_b_d1"],
+      "portMap": {"c5_conv_layer2_b_d1": "DATA"},
+      "ports": ["c5_conv_layer2_b_d1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_b_q1": {
+    "c5_conv_layer2_b_q1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_b_q1": "DATA"},
-      "ports": ["c5_conv_layer_map_b_q1"],
+      "portMap": {"c5_conv_layer2_b_q1": "DATA"},
+      "ports": ["c5_conv_layer2_b_q1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_db_address0": {
+    "c5_conv_layer2_db_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "7",
-      "portMap": {"c5_conv_layer_map_db_address0": "DATA"},
-      "ports": ["c5_conv_layer_map_db_address0"],
+      "portMap": {"c5_conv_layer2_db_address0": "DATA"},
+      "ports": ["c5_conv_layer2_db_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_db_d0": {
+    "c5_conv_layer2_db_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_db_d0": "DATA"},
-      "ports": ["c5_conv_layer_map_db_d0"],
+      "portMap": {"c5_conv_layer2_db_d0": "DATA"},
+      "ports": ["c5_conv_layer2_db_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_db_q0": {
+    "c5_conv_layer2_db_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_db_q0": "DATA"},
-      "ports": ["c5_conv_layer_map_db_q0"],
+      "portMap": {"c5_conv_layer2_db_q0": "DATA"},
+      "ports": ["c5_conv_layer2_db_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_db_address1": {
+    "c5_conv_layer2_db_address1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "7",
-      "portMap": {"c5_conv_layer_map_db_address1": "DATA"},
-      "ports": ["c5_conv_layer_map_db_address1"],
+      "portMap": {"c5_conv_layer2_db_address1": "DATA"},
+      "ports": ["c5_conv_layer2_db_address1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_db_d1": {
+    "c5_conv_layer2_db_d1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_db_d1": "DATA"},
-      "ports": ["c5_conv_layer_map_db_d1"],
+      "portMap": {"c5_conv_layer2_db_d1": "DATA"},
+      "ports": ["c5_conv_layer2_db_d1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_db_q1": {
+    "c5_conv_layer2_db_q1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_db_q1": "DATA"},
-      "ports": ["c5_conv_layer_map_db_q1"],
+      "portMap": {"c5_conv_layer2_db_q1": "DATA"},
+      "ports": ["c5_conv_layer2_db_q1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_kernel_w": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_none",
-      "mode": "slave",
-      "dataWidth": "32",
-      "portMap": {"c5_conv_layer_kernel_w": "DATA"},
-      "ports": ["c5_conv_layer_kernel_w"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "c5_conv_layer"
-        }]
-    },
-    "c5_conv_layer_kernel_h": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_none",
-      "mode": "slave",
-      "dataWidth": "32",
-      "portMap": {"c5_conv_layer_kernel_h": "DATA"},
-      "ports": ["c5_conv_layer_kernel_h"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "c5_conv_layer"
-        }]
-    },
-    "c5_conv_layer_kernel_count": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_none",
-      "mode": "slave",
-      "dataWidth": "32",
-      "portMap": {"c5_conv_layer_kernel_count": "DATA"},
-      "ports": ["c5_conv_layer_kernel_count"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "c5_conv_layer"
-        }]
-    },
-    "c5_conv_layer_kernel_address0": {
+    "c5_conv_layer2_W_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
-      "dataWidth": "11",
-      "portMap": {"c5_conv_layer_kernel_address0": "DATA"},
-      "ports": ["c5_conv_layer_kernel_address0"],
+      "dataWidth": "16",
+      "portMap": {"c5_conv_layer2_W_address0": "DATA"},
+      "ports": ["c5_conv_layer2_W_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_kernel_d0": {
+    "c5_conv_layer2_W_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
-      "dataWidth": "3200",
-      "portMap": {"c5_conv_layer_kernel_d0": "DATA"},
-      "ports": ["c5_conv_layer_kernel_d0"],
+      "dataWidth": "64",
+      "portMap": {"c5_conv_layer2_W_d0": "DATA"},
+      "ports": ["c5_conv_layer2_W_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_kernel_q0": {
+    "c5_conv_layer2_W_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
-      "dataWidth": "3200",
-      "portMap": {"c5_conv_layer_kernel_q0": "DATA"},
-      "ports": ["c5_conv_layer_kernel_q0"],
+      "dataWidth": "64",
+      "portMap": {"c5_conv_layer2_W_q0": "DATA"},
+      "ports": ["c5_conv_layer2_W_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_kernel_address1": {
+    "c5_conv_layer2_W_address1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
-      "dataWidth": "11",
-      "portMap": {"c5_conv_layer_kernel_address1": "DATA"},
-      "ports": ["c5_conv_layer_kernel_address1"],
+      "dataWidth": "16",
+      "portMap": {"c5_conv_layer2_W_address1": "DATA"},
+      "ports": ["c5_conv_layer2_W_address1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_kernel_d1": {
+    "c5_conv_layer2_W_d1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
-      "dataWidth": "3200",
-      "portMap": {"c5_conv_layer_kernel_d1": "DATA"},
-      "ports": ["c5_conv_layer_kernel_d1"],
+      "dataWidth": "64",
+      "portMap": {"c5_conv_layer2_W_d1": "DATA"},
+      "ports": ["c5_conv_layer2_W_d1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_kernel_q1": {
+    "c5_conv_layer2_W_q1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
-      "dataWidth": "3200",
-      "portMap": {"c5_conv_layer_kernel_q1": "DATA"},
-      "ports": ["c5_conv_layer_kernel_q1"],
+      "dataWidth": "64",
+      "portMap": {"c5_conv_layer2_W_q1": "DATA"},
+      "ports": ["c5_conv_layer2_W_q1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_common_address0": {
+    "c5_conv_layer2_dW_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "16",
+      "portMap": {"c5_conv_layer2_dW_address0": "DATA"},
+      "ports": ["c5_conv_layer2_dW_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "c5_conv_layer2"
+        }]
+    },
+    "c5_conv_layer2_dW_d0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "64",
+      "portMap": {"c5_conv_layer2_dW_d0": "DATA"},
+      "ports": ["c5_conv_layer2_dW_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "c5_conv_layer2"
+        }]
+    },
+    "c5_conv_layer2_dW_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "64",
+      "portMap": {"c5_conv_layer2_dW_q0": "DATA"},
+      "ports": ["c5_conv_layer2_dW_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "c5_conv_layer2"
+        }]
+    },
+    "c5_conv_layer2_dW_address1": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "16",
+      "portMap": {"c5_conv_layer2_dW_address1": "DATA"},
+      "ports": ["c5_conv_layer2_dW_address1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "c5_conv_layer2"
+        }]
+    },
+    "c5_conv_layer2_dW_d1": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "64",
+      "portMap": {"c5_conv_layer2_dW_d1": "DATA"},
+      "ports": ["c5_conv_layer2_dW_d1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "c5_conv_layer2"
+        }]
+    },
+    "c5_conv_layer2_dW_q1": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "64",
+      "portMap": {"c5_conv_layer2_dW_q1": "DATA"},
+      "ports": ["c5_conv_layer2_dW_q1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "c5_conv_layer2"
+        }]
+    },
+    "c5_conv_layer2_map_common_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "10",
-      "portMap": {"c5_conv_layer_map_common_address0": "DATA"},
-      "ports": ["c5_conv_layer_map_common_address0"],
+      "portMap": {"c5_conv_layer2_map_common_address0": "DATA"},
+      "ports": ["c5_conv_layer2_map_common_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_common_d0": {
+    "c5_conv_layer2_map_common_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_common_d0": "DATA"},
-      "ports": ["c5_conv_layer_map_common_d0"],
+      "portMap": {"c5_conv_layer2_map_common_d0": "DATA"},
+      "ports": ["c5_conv_layer2_map_common_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_common_q0": {
+    "c5_conv_layer2_map_common_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_common_q0": "DATA"},
-      "ports": ["c5_conv_layer_map_common_q0"],
+      "portMap": {"c5_conv_layer2_map_common_q0": "DATA"},
+      "ports": ["c5_conv_layer2_map_common_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_common_address1": {
+    "c5_conv_layer2_map_common_address1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "10",
-      "portMap": {"c5_conv_layer_map_common_address1": "DATA"},
-      "ports": ["c5_conv_layer_map_common_address1"],
+      "portMap": {"c5_conv_layer2_map_common_address1": "DATA"},
+      "ports": ["c5_conv_layer2_map_common_address1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_common_d1": {
+    "c5_conv_layer2_map_common_d1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_common_d1": "DATA"},
-      "ports": ["c5_conv_layer_map_common_d1"],
+      "portMap": {"c5_conv_layer2_map_common_d1": "DATA"},
+      "ports": ["c5_conv_layer2_map_common_d1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "c5_conv_layer_map_common_q1": {
+    "c5_conv_layer2_map_common_q1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"c5_conv_layer_map_common_q1": "DATA"},
-      "ports": ["c5_conv_layer_map_common_q1"],
+      "portMap": {"c5_conv_layer2_map_common_q1": "DATA"},
+      "ports": ["c5_conv_layer2_map_common_q1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "c5_conv_layer"
+          "argName": "c5_conv_layer2"
         }]
     },
-    "output_layer_map_w": {
+    "output_layer1_map_w": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_none",
       "mode": "slave",
       "dataWidth": "32",
-      "portMap": {"output_layer_map_w": "DATA"},
-      "ports": ["output_layer_map_w"],
+      "portMap": {"output_layer1_map_w": "DATA"},
+      "ports": ["output_layer1_map_w"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_none",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer1"
         }]
     },
-    "output_layer_map_h": {
+    "output_layer1_map_h": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_none",
       "mode": "slave",
       "dataWidth": "32",
-      "portMap": {"output_layer_map_h": "DATA"},
-      "ports": ["output_layer_map_h"],
+      "portMap": {"output_layer1_map_h": "DATA"},
+      "ports": ["output_layer1_map_h"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_none",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer1"
         }]
     },
-    "output_layer_map_count": {
+    "output_layer1_map_count": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_none",
       "mode": "slave",
       "dataWidth": "32",
-      "portMap": {"output_layer_map_count": "DATA"},
-      "ports": ["output_layer_map_count"],
+      "portMap": {"output_layer1_map_count": "DATA"},
+      "ports": ["output_layer1_map_count"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_none",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer1"
         }]
     },
-    "output_layer_map_data_address0": {
+    "output_layer1_kernel_w": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"output_layer1_kernel_w": "DATA"},
+      "ports": ["output_layer1_kernel_w"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "output_layer1"
+        }]
+    },
+    "output_layer1_kernel_h": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"output_layer1_kernel_h": "DATA"},
+      "ports": ["output_layer1_kernel_h"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "output_layer1"
+        }]
+    },
+    "output_layer1_kernel_count": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"output_layer1_kernel_count": "DATA"},
+      "ports": ["output_layer1_kernel_count"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "output_layer1"
+        }]
+    },
+    "output_layer2_data_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "17",
-      "portMap": {"output_layer_map_data_address0": "DATA"},
-      "ports": ["output_layer_map_data_address0"],
+      "portMap": {"output_layer2_data_address0": "DATA"},
+      "ports": ["output_layer2_data_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_data_d0": {
+    "output_layer2_data_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_data_d0": "DATA"},
-      "ports": ["output_layer_map_data_d0"],
+      "portMap": {"output_layer2_data_d0": "DATA"},
+      "ports": ["output_layer2_data_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_error_address0": {
+    "output_layer2_error_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "17",
-      "portMap": {"output_layer_map_error_address0": "DATA"},
-      "ports": ["output_layer_map_error_address0"],
+      "portMap": {"output_layer2_error_address0": "DATA"},
+      "ports": ["output_layer2_error_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_error_d0": {
+    "output_layer2_error_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_error_d0": "DATA"},
-      "ports": ["output_layer_map_error_d0"],
+      "portMap": {"output_layer2_error_d0": "DATA"},
+      "ports": ["output_layer2_error_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_error_q0": {
+    "output_layer2_error_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_error_q0": "DATA"},
-      "ports": ["output_layer_map_error_q0"],
+      "portMap": {"output_layer2_error_q0": "DATA"},
+      "ports": ["output_layer2_error_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_error_address1": {
+    "output_layer2_error_address1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "17",
-      "portMap": {"output_layer_map_error_address1": "DATA"},
-      "ports": ["output_layer_map_error_address1"],
+      "portMap": {"output_layer2_error_address1": "DATA"},
+      "ports": ["output_layer2_error_address1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_error_d1": {
+    "output_layer2_error_d1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_error_d1": "DATA"},
-      "ports": ["output_layer_map_error_d1"],
+      "portMap": {"output_layer2_error_d1": "DATA"},
+      "ports": ["output_layer2_error_d1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_error_q1": {
+    "output_layer2_error_q1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_error_q1": "DATA"},
-      "ports": ["output_layer_map_error_q1"],
+      "portMap": {"output_layer2_error_q1": "DATA"},
+      "ports": ["output_layer2_error_q1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_b_address0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "7",
-      "portMap": {"output_layer_map_b_address0": "DATA"},
-      "ports": ["output_layer_map_b_address0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "output_layer"
-        }]
-    },
-    "output_layer_map_b_q0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "slave",
-      "dataWidth": "64",
-      "portMap": {"output_layer_map_b_q0": "DATA"},
-      "ports": ["output_layer_map_b_q0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "output_layer"
-        }]
-    },
-    "output_layer_map_db_address0": {
+    "output_layer2_b_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "7",
-      "portMap": {"output_layer_map_db_address0": "DATA"},
-      "ports": ["output_layer_map_db_address0"],
+      "portMap": {"output_layer2_b_address0": "DATA"},
+      "ports": ["output_layer2_b_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_db_d0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "64",
-      "portMap": {"output_layer_map_db_d0": "DATA"},
-      "ports": ["output_layer_map_db_d0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "output_layer"
-        }]
-    },
-    "output_layer_map_db_q0": {
+    "output_layer2_b_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_db_q0": "DATA"},
-      "ports": ["output_layer_map_db_q0"],
+      "portMap": {"output_layer2_b_q0": "DATA"},
+      "ports": ["output_layer2_b_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_db_address1": {
+    "output_layer2_db_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "7",
-      "portMap": {"output_layer_map_db_address1": "DATA"},
-      "ports": ["output_layer_map_db_address1"],
+      "portMap": {"output_layer2_db_address0": "DATA"},
+      "ports": ["output_layer2_db_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_db_d1": {
+    "output_layer2_db_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_db_d1": "DATA"},
-      "ports": ["output_layer_map_db_d1"],
+      "portMap": {"output_layer2_db_d0": "DATA"},
+      "ports": ["output_layer2_db_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_db_q1": {
+    "output_layer2_db_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_db_q1": "DATA"},
-      "ports": ["output_layer_map_db_q1"],
+      "portMap": {"output_layer2_db_q0": "DATA"},
+      "ports": ["output_layer2_db_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_kernel_w": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_none",
-      "mode": "slave",
-      "dataWidth": "32",
-      "portMap": {"output_layer_kernel_w": "DATA"},
-      "ports": ["output_layer_kernel_w"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "output_layer"
-        }]
-    },
-    "output_layer_kernel_h": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_none",
-      "mode": "slave",
-      "dataWidth": "32",
-      "portMap": {"output_layer_kernel_h": "DATA"},
-      "ports": ["output_layer_kernel_h"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "output_layer"
-        }]
-    },
-    "output_layer_kernel_count": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_none",
-      "mode": "slave",
-      "dataWidth": "32",
-      "portMap": {"output_layer_kernel_count": "DATA"},
-      "ports": ["output_layer_kernel_count"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "output_layer"
-        }]
-    },
-    "output_layer_kernel_address0": {
+    "output_layer2_db_address1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
-      "dataWidth": "11",
-      "portMap": {"output_layer_kernel_address0": "DATA"},
-      "ports": ["output_layer_kernel_address0"],
+      "dataWidth": "7",
+      "portMap": {"output_layer2_db_address1": "DATA"},
+      "ports": ["output_layer2_db_address1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_kernel_q0": {
+    "output_layer2_db_d1": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "64",
+      "portMap": {"output_layer2_db_d1": "DATA"},
+      "ports": ["output_layer2_db_d1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output_layer2"
+        }]
+    },
+    "output_layer2_db_q1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
-      "dataWidth": "3200",
-      "portMap": {"output_layer_kernel_q0": "DATA"},
-      "ports": ["output_layer_kernel_q0"],
+      "dataWidth": "64",
+      "portMap": {"output_layer2_db_q1": "DATA"},
+      "ports": ["output_layer2_db_q1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_common_address0": {
+    "output_layer2_W_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "16",
+      "portMap": {"output_layer2_W_address0": "DATA"},
+      "ports": ["output_layer2_W_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output_layer2"
+        }]
+    },
+    "output_layer2_W_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "64",
+      "portMap": {"output_layer2_W_q0": "DATA"},
+      "ports": ["output_layer2_W_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output_layer2"
+        }]
+    },
+    "output_layer2_dW_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "16",
+      "portMap": {"output_layer2_dW_address0": "DATA"},
+      "ports": ["output_layer2_dW_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output_layer2"
+        }]
+    },
+    "output_layer2_dW_d0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "64",
+      "portMap": {"output_layer2_dW_d0": "DATA"},
+      "ports": ["output_layer2_dW_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output_layer2"
+        }]
+    },
+    "output_layer2_dW_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "64",
+      "portMap": {"output_layer2_dW_q0": "DATA"},
+      "ports": ["output_layer2_dW_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output_layer2"
+        }]
+    },
+    "output_layer2_dW_address1": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "16",
+      "portMap": {"output_layer2_dW_address1": "DATA"},
+      "ports": ["output_layer2_dW_address1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output_layer2"
+        }]
+    },
+    "output_layer2_dW_d1": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "64",
+      "portMap": {"output_layer2_dW_d1": "DATA"},
+      "ports": ["output_layer2_dW_d1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output_layer2"
+        }]
+    },
+    "output_layer2_dW_q1": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "64",
+      "portMap": {"output_layer2_dW_q1": "DATA"},
+      "ports": ["output_layer2_dW_q1"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "output_layer2"
+        }]
+    },
+    "output_layer2_map_common_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "10",
-      "portMap": {"output_layer_map_common_address0": "DATA"},
-      "ports": ["output_layer_map_common_address0"],
+      "portMap": {"output_layer2_map_common_address0": "DATA"},
+      "ports": ["output_layer2_map_common_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_common_d0": {
+    "output_layer2_map_common_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_common_d0": "DATA"},
-      "ports": ["output_layer_map_common_d0"],
+      "portMap": {"output_layer2_map_common_d0": "DATA"},
+      "ports": ["output_layer2_map_common_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_common_q0": {
+    "output_layer2_map_common_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_common_q0": "DATA"},
-      "ports": ["output_layer_map_common_q0"],
+      "portMap": {"output_layer2_map_common_q0": "DATA"},
+      "ports": ["output_layer2_map_common_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_common_address1": {
+    "output_layer2_map_common_address1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "10",
-      "portMap": {"output_layer_map_common_address1": "DATA"},
-      "ports": ["output_layer_map_common_address1"],
+      "portMap": {"output_layer2_map_common_address1": "DATA"},
+      "ports": ["output_layer2_map_common_address1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_common_d1": {
+    "output_layer2_map_common_d1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_common_d1": "DATA"},
-      "ports": ["output_layer_map_common_d1"],
+      "portMap": {"output_layer2_map_common_d1": "DATA"},
+      "ports": ["output_layer2_map_common_d1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     },
-    "output_layer_map_common_q1": {
+    "output_layer2_map_common_q1": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "64",
-      "portMap": {"output_layer_map_common_q1": "DATA"},
-      "ports": ["output_layer_map_common_q1"],
+      "portMap": {"output_layer2_map_common_q1": "DATA"},
+      "ports": ["output_layer2_map_common_q1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "output_layer"
+          "argName": "output_layer2"
         }]
     }
   },
@@ -2054,423 +2392,503 @@
       "dir": "in",
       "width": "8"
     },
-    "c5_conv_layer_map_w": {
+    "c5_conv_layer1_map_w": {
       "dir": "in",
       "width": "32"
     },
-    "c5_conv_layer_map_h": {
+    "c5_conv_layer1_map_h": {
       "dir": "in",
       "width": "32"
     },
-    "c5_conv_layer_map_count": {
+    "c5_conv_layer1_map_count": {
       "dir": "in",
       "width": "32"
     },
-    "c5_conv_layer_map_data_address0": {
+    "c5_conv_layer1_kernel_w": {
+      "dir": "in",
+      "width": "32"
+    },
+    "c5_conv_layer1_kernel_h": {
+      "dir": "in",
+      "width": "32"
+    },
+    "c5_conv_layer1_kernel_count": {
+      "dir": "in",
+      "width": "32"
+    },
+    "c5_conv_layer2_data_address0": {
       "dir": "out",
       "width": "17"
     },
-    "c5_conv_layer_map_data_ce0": {
+    "c5_conv_layer2_data_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_data_q0": {
+    "c5_conv_layer2_data_q0": {
       "dir": "in",
       "width": "64"
     },
-    "c5_conv_layer_map_error_address0": {
+    "c5_conv_layer2_error_address0": {
       "dir": "out",
       "width": "17"
     },
-    "c5_conv_layer_map_error_ce0": {
+    "c5_conv_layer2_error_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_error_we0": {
+    "c5_conv_layer2_error_we0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_error_d0": {
+    "c5_conv_layer2_error_d0": {
       "dir": "out",
       "width": "64"
     },
-    "c5_conv_layer_map_error_q0": {
+    "c5_conv_layer2_error_q0": {
       "dir": "in",
       "width": "64"
     },
-    "c5_conv_layer_map_error_address1": {
+    "c5_conv_layer2_error_address1": {
       "dir": "out",
       "width": "17"
     },
-    "c5_conv_layer_map_error_ce1": {
+    "c5_conv_layer2_error_ce1": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_error_we1": {
+    "c5_conv_layer2_error_we1": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_error_d1": {
+    "c5_conv_layer2_error_d1": {
       "dir": "out",
       "width": "64"
     },
-    "c5_conv_layer_map_error_q1": {
+    "c5_conv_layer2_error_q1": {
       "dir": "in",
       "width": "64"
     },
-    "c5_conv_layer_map_b_address0": {
+    "c5_conv_layer2_b_address0": {
       "dir": "out",
       "width": "7"
     },
-    "c5_conv_layer_map_b_ce0": {
+    "c5_conv_layer2_b_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_b_we0": {
+    "c5_conv_layer2_b_we0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_b_d0": {
+    "c5_conv_layer2_b_d0": {
       "dir": "out",
       "width": "64"
     },
-    "c5_conv_layer_map_b_q0": {
+    "c5_conv_layer2_b_q0": {
       "dir": "in",
       "width": "64"
     },
-    "c5_conv_layer_map_b_address1": {
+    "c5_conv_layer2_b_address1": {
       "dir": "out",
       "width": "7"
     },
-    "c5_conv_layer_map_b_ce1": {
+    "c5_conv_layer2_b_ce1": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_b_we1": {
+    "c5_conv_layer2_b_we1": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_b_d1": {
+    "c5_conv_layer2_b_d1": {
       "dir": "out",
       "width": "64"
     },
-    "c5_conv_layer_map_b_q1": {
+    "c5_conv_layer2_b_q1": {
       "dir": "in",
       "width": "64"
     },
-    "c5_conv_layer_map_db_address0": {
+    "c5_conv_layer2_db_address0": {
       "dir": "out",
       "width": "7"
     },
-    "c5_conv_layer_map_db_ce0": {
+    "c5_conv_layer2_db_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_db_we0": {
+    "c5_conv_layer2_db_we0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_db_d0": {
+    "c5_conv_layer2_db_d0": {
       "dir": "out",
       "width": "64"
     },
-    "c5_conv_layer_map_db_q0": {
+    "c5_conv_layer2_db_q0": {
       "dir": "in",
       "width": "64"
     },
-    "c5_conv_layer_map_db_address1": {
+    "c5_conv_layer2_db_address1": {
       "dir": "out",
       "width": "7"
     },
-    "c5_conv_layer_map_db_ce1": {
+    "c5_conv_layer2_db_ce1": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_db_we1": {
+    "c5_conv_layer2_db_we1": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_db_d1": {
+    "c5_conv_layer2_db_d1": {
       "dir": "out",
       "width": "64"
     },
-    "c5_conv_layer_map_db_q1": {
+    "c5_conv_layer2_db_q1": {
       "dir": "in",
       "width": "64"
     },
-    "c5_conv_layer_kernel_w": {
-      "dir": "in",
-      "width": "32"
-    },
-    "c5_conv_layer_kernel_h": {
-      "dir": "in",
-      "width": "32"
-    },
-    "c5_conv_layer_kernel_count": {
-      "dir": "in",
-      "width": "32"
-    },
-    "c5_conv_layer_kernel_address0": {
+    "c5_conv_layer2_W_address0": {
       "dir": "out",
-      "width": "11"
+      "width": "16"
     },
-    "c5_conv_layer_kernel_ce0": {
+    "c5_conv_layer2_W_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_kernel_we0": {
+    "c5_conv_layer2_W_we0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_kernel_d0": {
+    "c5_conv_layer2_W_d0": {
       "dir": "out",
-      "width": "3200"
+      "width": "64"
     },
-    "c5_conv_layer_kernel_q0": {
+    "c5_conv_layer2_W_q0": {
       "dir": "in",
-      "width": "3200"
+      "width": "64"
     },
-    "c5_conv_layer_kernel_address1": {
+    "c5_conv_layer2_W_address1": {
       "dir": "out",
-      "width": "11"
+      "width": "16"
     },
-    "c5_conv_layer_kernel_ce1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "c5_conv_layer_kernel_we1": {
+    "c5_conv_layer2_W_ce1": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_kernel_d1": {
+    "c5_conv_layer2_W_we1": {
       "dir": "out",
-      "width": "3200"
+      "width": "1"
     },
-    "c5_conv_layer_kernel_q1": {
+    "c5_conv_layer2_W_d1": {
+      "dir": "out",
+      "width": "64"
+    },
+    "c5_conv_layer2_W_q1": {
       "dir": "in",
-      "width": "3200"
+      "width": "64"
     },
-    "c5_conv_layer_map_common_address0": {
+    "c5_conv_layer2_dW_address0": {
+      "dir": "out",
+      "width": "16"
+    },
+    "c5_conv_layer2_dW_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "c5_conv_layer2_dW_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "c5_conv_layer2_dW_d0": {
+      "dir": "out",
+      "width": "64"
+    },
+    "c5_conv_layer2_dW_q0": {
+      "dir": "in",
+      "width": "64"
+    },
+    "c5_conv_layer2_dW_address1": {
+      "dir": "out",
+      "width": "16"
+    },
+    "c5_conv_layer2_dW_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "c5_conv_layer2_dW_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "c5_conv_layer2_dW_d1": {
+      "dir": "out",
+      "width": "64"
+    },
+    "c5_conv_layer2_dW_q1": {
+      "dir": "in",
+      "width": "64"
+    },
+    "c5_conv_layer2_map_common_address0": {
       "dir": "out",
       "width": "10"
     },
-    "c5_conv_layer_map_common_ce0": {
+    "c5_conv_layer2_map_common_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_common_we0": {
+    "c5_conv_layer2_map_common_we0": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_common_d0": {
+    "c5_conv_layer2_map_common_d0": {
       "dir": "out",
       "width": "64"
     },
-    "c5_conv_layer_map_common_q0": {
+    "c5_conv_layer2_map_common_q0": {
       "dir": "in",
       "width": "64"
     },
-    "c5_conv_layer_map_common_address1": {
+    "c5_conv_layer2_map_common_address1": {
       "dir": "out",
       "width": "10"
     },
-    "c5_conv_layer_map_common_ce1": {
+    "c5_conv_layer2_map_common_ce1": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_common_we1": {
+    "c5_conv_layer2_map_common_we1": {
       "dir": "out",
       "width": "1"
     },
-    "c5_conv_layer_map_common_d1": {
+    "c5_conv_layer2_map_common_d1": {
       "dir": "out",
       "width": "64"
     },
-    "c5_conv_layer_map_common_q1": {
+    "c5_conv_layer2_map_common_q1": {
       "dir": "in",
       "width": "64"
     },
-    "output_layer_map_w": {
+    "output_layer1_map_w": {
       "dir": "in",
       "width": "32"
     },
-    "output_layer_map_h": {
+    "output_layer1_map_h": {
       "dir": "in",
       "width": "32"
     },
-    "output_layer_map_count": {
+    "output_layer1_map_count": {
       "dir": "in",
       "width": "32"
     },
-    "output_layer_map_data_address0": {
+    "output_layer1_kernel_w": {
+      "dir": "in",
+      "width": "32"
+    },
+    "output_layer1_kernel_h": {
+      "dir": "in",
+      "width": "32"
+    },
+    "output_layer1_kernel_count": {
+      "dir": "in",
+      "width": "32"
+    },
+    "output_layer2_data_address0": {
       "dir": "out",
       "width": "17"
     },
-    "output_layer_map_data_ce0": {
+    "output_layer2_data_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_data_we0": {
+    "output_layer2_data_we0": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_data_d0": {
+    "output_layer2_data_d0": {
       "dir": "out",
       "width": "64"
     },
-    "output_layer_map_error_address0": {
+    "output_layer2_error_address0": {
       "dir": "out",
       "width": "17"
     },
-    "output_layer_map_error_ce0": {
+    "output_layer2_error_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_error_we0": {
+    "output_layer2_error_we0": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_error_d0": {
+    "output_layer2_error_d0": {
       "dir": "out",
       "width": "64"
     },
-    "output_layer_map_error_q0": {
+    "output_layer2_error_q0": {
       "dir": "in",
       "width": "64"
     },
-    "output_layer_map_error_address1": {
+    "output_layer2_error_address1": {
       "dir": "out",
       "width": "17"
     },
-    "output_layer_map_error_ce1": {
+    "output_layer2_error_ce1": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_error_we1": {
+    "output_layer2_error_we1": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_error_d1": {
+    "output_layer2_error_d1": {
       "dir": "out",
       "width": "64"
     },
-    "output_layer_map_error_q1": {
+    "output_layer2_error_q1": {
       "dir": "in",
       "width": "64"
     },
-    "output_layer_map_b_address0": {
+    "output_layer2_b_address0": {
       "dir": "out",
       "width": "7"
     },
-    "output_layer_map_b_ce0": {
+    "output_layer2_b_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_b_q0": {
+    "output_layer2_b_q0": {
       "dir": "in",
       "width": "64"
     },
-    "output_layer_map_db_address0": {
+    "output_layer2_db_address0": {
       "dir": "out",
       "width": "7"
     },
-    "output_layer_map_db_ce0": {
+    "output_layer2_db_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_db_we0": {
+    "output_layer2_db_we0": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_db_d0": {
+    "output_layer2_db_d0": {
       "dir": "out",
       "width": "64"
     },
-    "output_layer_map_db_q0": {
+    "output_layer2_db_q0": {
       "dir": "in",
       "width": "64"
     },
-    "output_layer_map_db_address1": {
+    "output_layer2_db_address1": {
       "dir": "out",
       "width": "7"
     },
-    "output_layer_map_db_ce1": {
+    "output_layer2_db_ce1": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_db_we1": {
+    "output_layer2_db_we1": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_db_d1": {
+    "output_layer2_db_d1": {
       "dir": "out",
       "width": "64"
     },
-    "output_layer_map_db_q1": {
+    "output_layer2_db_q1": {
       "dir": "in",
       "width": "64"
     },
-    "output_layer_kernel_w": {
-      "dir": "in",
-      "width": "32"
-    },
-    "output_layer_kernel_h": {
-      "dir": "in",
-      "width": "32"
-    },
-    "output_layer_kernel_count": {
-      "dir": "in",
-      "width": "32"
-    },
-    "output_layer_kernel_address0": {
+    "output_layer2_W_address0": {
       "dir": "out",
-      "width": "11"
+      "width": "16"
     },
-    "output_layer_kernel_ce0": {
+    "output_layer2_W_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_kernel_q0": {
+    "output_layer2_W_q0": {
       "dir": "in",
-      "width": "3200"
+      "width": "64"
     },
-    "output_layer_map_common_address0": {
+    "output_layer2_dW_address0": {
+      "dir": "out",
+      "width": "16"
+    },
+    "output_layer2_dW_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "output_layer2_dW_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "output_layer2_dW_d0": {
+      "dir": "out",
+      "width": "64"
+    },
+    "output_layer2_dW_q0": {
+      "dir": "in",
+      "width": "64"
+    },
+    "output_layer2_dW_address1": {
+      "dir": "out",
+      "width": "16"
+    },
+    "output_layer2_dW_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "output_layer2_dW_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "output_layer2_dW_d1": {
+      "dir": "out",
+      "width": "64"
+    },
+    "output_layer2_dW_q1": {
+      "dir": "in",
+      "width": "64"
+    },
+    "output_layer2_map_common_address0": {
       "dir": "out",
       "width": "10"
     },
-    "output_layer_map_common_ce0": {
+    "output_layer2_map_common_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_common_we0": {
+    "output_layer2_map_common_we0": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_common_d0": {
+    "output_layer2_map_common_d0": {
       "dir": "out",
       "width": "64"
     },
-    "output_layer_map_common_q0": {
+    "output_layer2_map_common_q0": {
       "dir": "in",
       "width": "64"
     },
-    "output_layer_map_common_address1": {
+    "output_layer2_map_common_address1": {
       "dir": "out",
       "width": "10"
     },
-    "output_layer_map_common_ce1": {
+    "output_layer2_map_common_ce1": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_common_we1": {
+    "output_layer2_map_common_we1": {
       "dir": "out",
       "width": "1"
     },
-    "output_layer_map_common_d1": {
+    "output_layer2_map_common_d1": {
       "dir": "out",
       "width": "64"
     },
-    "output_layer_map_common_q1": {
+    "output_layer2_map_common_q1": {
       "dir": "in",
       "width": "64"
     }
@@ -2478,15 +2896,15 @@
   "ModuleInfo": {
     "Hierarchy": {
       "ModuleName": "fully_connected_fprop",
-      "BindInstances": "icmp_ln287_fu_204_p2 add_ln287_fu_209_p2 dadddsub_64ns_64ns_64_8_full_dsp_1_U10 dexp_64ns_64ns_64_30_full_dsp_1_U13 xor_ln11_fu_250_p2 dexp_64ns_64ns_64_30_full_dsp_1_U14 dadddsub_64ns_64ns_64_8_full_dsp_1_U10 dadd_64ns_64ns_64_8_full_dsp_1_U11 ddiv_64ns_64ns_64_31_no_dsp_1_U12",
+      "BindInstances": "icmp_ln259_fu_208_p2 add_ln259_fu_213_p2 dadddsub_64ns_64ns_64_8_full_dsp_1_U12 dexp_64ns_64ns_64_30_full_dsp_1_U15 xor_ln11_fu_254_p2 dexp_64ns_64ns_64_30_full_dsp_1_U16 dadddsub_64ns_64ns_64_8_full_dsp_1_U12 dadd_64ns_64ns_64_8_full_dsp_1_U13 ddiv_64ns_64ns_64_31_no_dsp_1_U14",
       "Instances": [{
-          "ModuleName": "fully_connected_fprop_Pipeline_VITIS_LOOP_290_2",
-          "InstanceName": "grp_fully_connected_fprop_Pipeline_VITIS_LOOP_290_2_fu_148",
-          "BindInstances": "icmp_ln290_fu_143_p2 add_ln290_fu_149_p2 add_ln292_1_fu_179_p2 add_ln292_fu_184_p2 dmul_64ns_64ns_64_8_max_dsp_1_U2"
+          "ModuleName": "fully_connected_fprop_Pipeline_VITIS_LOOP_262_2",
+          "InstanceName": "grp_fully_connected_fprop_Pipeline_VITIS_LOOP_262_2_fu_152",
+          "BindInstances": "icmp_ln262_fu_145_p2 add_ln262_fu_150_p2 add_ln264_1_fu_163_p2 add_ln264_fu_168_p2 mul_11ns_6ns_16_1_1_U3 dmul_64ns_64ns_64_8_max_dsp_1_U2"
         }]
     },
     "Info": {
-      "fully_connected_fprop_Pipeline_VITIS_LOOP_290_2": {
+      "fully_connected_fprop_Pipeline_VITIS_LOOP_262_2": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
@@ -2502,7 +2920,7 @@
       }
     },
     "Metrics": {
-      "fully_connected_fprop_Pipeline_VITIS_LOOP_290_2": {
+      "fully_connected_fprop_Pipeline_VITIS_LOOP_262_2": {
         "Latency": {
           "LatencyBest": "",
           "LatencyAvg": "",
@@ -2517,20 +2935,20 @@
           "Estimate": "2.983"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_290_2",
+            "Name": "VITIS_LOOP_262_2",
             "TripCount": "",
             "Latency": "",
             "PipelineII": "7",
-            "PipelineDepth": "19"
+            "PipelineDepth": "20"
           }],
         "Area": {
-          "DSP": "8",
+          "DSP": "9",
           "AVAIL_DSP": "3840",
           "UTIL_DSP": "~0",
-          "FF": "707",
+          "FF": "734",
           "AVAIL_FF": "8171520",
           "UTIL_FF": "~0",
-          "LUT": "383",
+          "LUT": "360",
           "AVAIL_LUT": "4085760",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -2556,20 +2974,20 @@
           "Estimate": "2.983"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_287_1",
+            "Name": "VITIS_LOOP_259_1",
             "TripCount": "",
             "Latency": "",
             "PipelineII": "",
             "PipelineDepth": ""
           }],
         "Area": {
-          "DSP": "66",
+          "DSP": "67",
           "AVAIL_DSP": "3840",
           "UTIL_DSP": "1",
-          "FF": "5241",
+          "FF": "5268",
           "AVAIL_FF": "8171520",
           "UTIL_FF": "~0",
-          "LUT": "6011",
+          "LUT": "5988",
           "AVAIL_LUT": "4085760",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -2585,7 +3003,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2025-03-12 17:43:19 CST",
+    "Time": "2025-03-14 16:55:57 CST",
     "ToolName": "vitis_hls",
     "ToolVersion": "2024.2"
   }

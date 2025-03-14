@@ -36,55 +36,17 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 20 \
-    name c5_conv_layer_map_data \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename c5_conv_layer_map_data \
-    op interface \
-    ports { c5_conv_layer_map_data_address0 { O 17 vector } c5_conv_layer_map_data_ce0 { O 1 bit } c5_conv_layer_map_data_q0 { I 64 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c5_conv_layer_map_data'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 22 \
-    name output_layer_map_data \
-    reset_level 1 \
-    sync_rst true \
-    dir O \
-    corename output_layer_map_data \
-    op interface \
-    ports { output_layer_map_data_address0 { O 17 vector } output_layer_map_data_ce0 { O 1 bit } output_layer_map_data_we0 { O 1 bit } output_layer_map_data_d0 { O 64 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_layer_map_data'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 23 \
-    name output_layer_map_b \
+    name c5_conv_layer2_data \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename output_layer_map_b \
+    corename c5_conv_layer2_data \
     op interface \
-    ports { output_layer_map_b_address0 { O 7 vector } output_layer_map_b_ce0 { O 1 bit } output_layer_map_b_q0 { I 64 vector } } \
+    ports { c5_conv_layer2_data_address0 { O 17 vector } c5_conv_layer2_data_ce0 { O 1 bit } c5_conv_layer2_data_q0 { I 64 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_layer_map_b'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c5_conv_layer2_data'"
 }
 }
 
@@ -94,47 +56,85 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 24 \
-    name output_layer_kernel \
+    name output_layer2_data \
     reset_level 1 \
     sync_rst true \
-    dir I \
-    corename output_layer_kernel \
+    dir O \
+    corename output_layer2_data \
     op interface \
-    ports { output_layer_kernel_address0 { O 11 vector } output_layer_kernel_ce0 { O 1 bit } output_layer_kernel_q0 { I 3200 vector } } \
+    ports { output_layer2_data_address0 { O 17 vector } output_layer2_data_ce0 { O 1 bit } output_layer2_data_we0 { O 1 bit } output_layer2_data_d0 { O 64 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_layer_kernel'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_layer2_data'"
 }
 }
 
 
-# Direct connection:
+# XIL_BRAM:
 if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 19 \
-    name c5_conv_layer_map_count \
-    type other \
-    dir I \
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 25 \
+    name output_layer2_b \
     reset_level 1 \
     sync_rst true \
-    corename dc_c5_conv_layer_map_count \
+    dir I \
+    corename output_layer2_b \
     op interface \
-    ports { c5_conv_layer_map_count { I 32 vector } } \
+    ports { output_layer2_b_address0 { O 7 vector } output_layer2_b_ce0 { O 1 bit } output_layer2_b_q0 { I 64 vector } } \
 } "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_layer2_b'"
 }
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 26 \
+    name output_layer2_W \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename output_layer2_W \
+    op interface \
+    ports { output_layer2_W_address0 { O 16 vector } output_layer2_W_ce0 { O 1 bit } output_layer2_W_q0 { I 64 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_layer2_W'"
+}
+}
+
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 21 \
-    name output_layer_map_count \
+    name c5_conv_layer1_map_count \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_output_layer_map_count \
+    corename dc_c5_conv_layer1_map_count \
     op interface \
-    ports { output_layer_map_count { I 32 vector } } \
+    ports { c5_conv_layer1_map_count { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 23 \
+    name output_layer1_map_count \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_output_layer1_map_count \
+    op interface \
+    ports { output_layer1_map_count { I 32 vector } } \
 } "
 }
 

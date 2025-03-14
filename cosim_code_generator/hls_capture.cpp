@@ -103,7 +103,7 @@ void decodeBin_log(int ctx, int bin)
 extern "C" {
 #endif
 
-void CAPTURE_(conv_fprop1)(Layer * input_layer_ptr,Layer * c1_conv_layer_ptr,bool pconnection[96]){
+void CAPTURE_(conv_fprop1)(Layer1 * input_layer1_ptr,Layer2 * input_layer2_ptr,Layer1 * c1_conv_layer1_ptr,Layer2 * c1_conv_layer2_ptr,bool pconnection[96]){
 #if 1
 static CCapture capture_conv_fprop1;
 CCapture *capture = &capture_conv_fprop1;
@@ -115,26 +115,28 @@ pthread_t __tid = pthread_self();
     enum PARENT_FUNCTION_STATUS parent_func_status = CCapture::is_parent_func(__func__);
 
     // define temporary variables to hold pointers
-    Layer & input_layer = ASSIGN_REF(input_layer_ptr, __FUNCTION__);
-    Layer & c1_conv_layer = ASSIGN_REF(c1_conv_layer_ptr, __FUNCTION__);
+    Layer1 & input_layer1 = ASSIGN_REF(input_layer1_ptr, __FUNCTION__);
+    Layer2 & input_layer2 = ASSIGN_REF(input_layer2_ptr, __FUNCTION__);
+    Layer1 & c1_conv_layer1 = ASSIGN_REF(c1_conv_layer1_ptr, __FUNCTION__);
+    Layer2 & c1_conv_layer2 = ASSIGN_REF(c1_conv_layer2_ptr, __FUNCTION__);
 
 
-    tgOpen("conv_fprop1_output.bin", input_layer, c1_conv_layer, pconnection);
+    tgOpen("conv_fprop1_output.bin", input_layer1, input_layer2, c1_conv_layer1, c1_conv_layer2, pconnection);
 
-    tgCaptureBeforeCall(input_layer,c1_conv_layer,pconnection,96);
+    tgCaptureBeforeCall(input_layer1,input_layer2,c1_conv_layer1,c1_conv_layer2,pconnection,96);
 
     // call the function with the initial parameters
-    IMPL(conv_fprop1)(input_layer_ptr, c1_conv_layer_ptr, pconnection);
+    IMPL(conv_fprop1)(input_layer1_ptr, input_layer2_ptr, c1_conv_layer1_ptr, c1_conv_layer2_ptr, pconnection);
 
-    tgCaptureAfterCall(input_layer,c1_conv_layer,pconnection,96);
+    tgCaptureAfterCall(input_layer1,input_layer2,c1_conv_layer1,c1_conv_layer2,pconnection,96);
 
     tgClose();
 #else
-    IMPL(conv_fprop1)(input_layer_ptr, c1_conv_layer_ptr, pconnection);
+    IMPL(conv_fprop1)(input_layer1_ptr, input_layer2_ptr, c1_conv_layer1_ptr, c1_conv_layer2_ptr, pconnection);
 #endif
 }
 
-void CAPTURE_(conv_fprop2)(Layer * s2_pooling_la_ptr,Layer * c3_conv_layer_ptr,bool pconnection[96]){
+void CAPTURE_(conv_fprop2)(Layer1 * s2_pooling_layer1_ptr,Layer2 * s2_pooling_layer2_ptr,Layer1 * c3_conv_layer1_ptr,Layer2 * c3_conv_layer2_ptr,bool pconnection[96]){
 #if 1
 static CCapture capture_conv_fprop2;
 CCapture *capture = &capture_conv_fprop2;
@@ -146,26 +148,28 @@ pthread_t __tid = pthread_self();
     enum PARENT_FUNCTION_STATUS parent_func_status = CCapture::is_parent_func(__func__);
 
     // define temporary variables to hold pointers
-    Layer & s2_pooling_la = ASSIGN_REF(s2_pooling_la_ptr, __FUNCTION__);
-    Layer & c3_conv_layer = ASSIGN_REF(c3_conv_layer_ptr, __FUNCTION__);
+    Layer1 & s2_pooling_layer1 = ASSIGN_REF(s2_pooling_layer1_ptr, __FUNCTION__);
+    Layer2 & s2_pooling_layer2 = ASSIGN_REF(s2_pooling_layer2_ptr, __FUNCTION__);
+    Layer1 & c3_conv_layer1 = ASSIGN_REF(c3_conv_layer1_ptr, __FUNCTION__);
+    Layer2 & c3_conv_layer2 = ASSIGN_REF(c3_conv_layer2_ptr, __FUNCTION__);
 
 
-    tgOpen("conv_fprop2_output.bin", s2_pooling_la, c3_conv_layer, pconnection);
+    tgOpen("conv_fprop2_output.bin", s2_pooling_layer1, s2_pooling_layer2, c3_conv_layer1, c3_conv_layer2, pconnection);
 
-    tgCaptureBeforeCall(s2_pooling_la,c3_conv_layer,pconnection,96);
+    tgCaptureBeforeCall(s2_pooling_layer1,s2_pooling_layer2,c3_conv_layer1,c3_conv_layer2,pconnection,96);
 
     // call the function with the initial parameters
-    IMPL(conv_fprop2)(s2_pooling_la_ptr, c3_conv_layer_ptr, pconnection);
+    IMPL(conv_fprop2)(s2_pooling_layer1_ptr, s2_pooling_layer2_ptr, c3_conv_layer1_ptr, c3_conv_layer2_ptr, pconnection);
 
-    tgCaptureAfterCall(s2_pooling_la,c3_conv_layer,pconnection,96);
+    tgCaptureAfterCall(s2_pooling_layer1,s2_pooling_layer2,c3_conv_layer1,c3_conv_layer2,pconnection,96);
 
     tgClose();
 #else
-    IMPL(conv_fprop2)(s2_pooling_la_ptr, c3_conv_layer_ptr, pconnection);
+    IMPL(conv_fprop2)(s2_pooling_layer1_ptr, s2_pooling_layer2_ptr, c3_conv_layer1_ptr, c3_conv_layer2_ptr, pconnection);
 #endif
 }
 
-void CAPTURE_(conv_fprop3)(Layer * s4_pooling_layer_ptr,Layer * c5_conv_layer_ptr,bool pconnection[96]){
+void CAPTURE_(conv_fprop3)(Layer1 * s4_pooling_layer1_ptr,Layer2 * s4_pooling_layer2_ptr,Layer1 * c5_conv_layer1_ptr,Layer2 * c5_conv_layer2_ptr,bool pconnection[96]){
 #if 1
 static CCapture capture_conv_fprop3;
 CCapture *capture = &capture_conv_fprop3;
@@ -177,26 +181,28 @@ pthread_t __tid = pthread_self();
     enum PARENT_FUNCTION_STATUS parent_func_status = CCapture::is_parent_func(__func__);
 
     // define temporary variables to hold pointers
-    Layer & s4_pooling_layer = ASSIGN_REF(s4_pooling_layer_ptr, __FUNCTION__);
-    Layer & c5_conv_layer = ASSIGN_REF(c5_conv_layer_ptr, __FUNCTION__);
+    Layer1 & s4_pooling_layer1 = ASSIGN_REF(s4_pooling_layer1_ptr, __FUNCTION__);
+    Layer2 & s4_pooling_layer2 = ASSIGN_REF(s4_pooling_layer2_ptr, __FUNCTION__);
+    Layer1 & c5_conv_layer1 = ASSIGN_REF(c5_conv_layer1_ptr, __FUNCTION__);
+    Layer2 & c5_conv_layer2 = ASSIGN_REF(c5_conv_layer2_ptr, __FUNCTION__);
 
 
-    tgOpen("conv_fprop3_output.bin", s4_pooling_layer, c5_conv_layer, pconnection);
+    tgOpen("conv_fprop3_output.bin", s4_pooling_layer1, s4_pooling_layer2, c5_conv_layer1, c5_conv_layer2, pconnection);
 
-    tgCaptureBeforeCall(s4_pooling_layer,c5_conv_layer,pconnection,96);
+    tgCaptureBeforeCall(s4_pooling_layer1,s4_pooling_layer2,c5_conv_layer1,c5_conv_layer2,pconnection,96);
 
     // call the function with the initial parameters
-    IMPL(conv_fprop3)(s4_pooling_layer_ptr, c5_conv_layer_ptr, pconnection);
+    IMPL(conv_fprop3)(s4_pooling_layer1_ptr, s4_pooling_layer2_ptr, c5_conv_layer1_ptr, c5_conv_layer2_ptr, pconnection);
 
-    tgCaptureAfterCall(s4_pooling_layer,c5_conv_layer,pconnection,96);
+    tgCaptureAfterCall(s4_pooling_layer1,s4_pooling_layer2,c5_conv_layer1,c5_conv_layer2,pconnection,96);
 
     tgClose();
 #else
-    IMPL(conv_fprop3)(s4_pooling_layer_ptr, c5_conv_layer_ptr, pconnection);
+    IMPL(conv_fprop3)(s4_pooling_layer1_ptr, s4_pooling_layer2_ptr, c5_conv_layer1_ptr, c5_conv_layer2_ptr, pconnection);
 #endif
 }
 
-void CAPTURE_(max_pooling_fprop1)(Layer * c1_conv_layer_ptr,Layer * s2_pooling_layer_ptr){
+void CAPTURE_(max_pooling_fprop1)(Layer1 * c1_conv_layer1_ptr,Layer2 * c1_conv_layer2_ptr,Layer1 * s2_pooling_layer1_ptr,Layer2 * s2_pooling_layer2_ptr){
 #if 1
 static CCapture capture_max_pooling_fprop1;
 CCapture *capture = &capture_max_pooling_fprop1;
@@ -208,26 +214,28 @@ pthread_t __tid = pthread_self();
     enum PARENT_FUNCTION_STATUS parent_func_status = CCapture::is_parent_func(__func__);
 
     // define temporary variables to hold pointers
-    Layer & c1_conv_layer = ASSIGN_REF(c1_conv_layer_ptr, __FUNCTION__);
-    Layer & s2_pooling_layer = ASSIGN_REF(s2_pooling_layer_ptr, __FUNCTION__);
+    Layer1 & c1_conv_layer1 = ASSIGN_REF(c1_conv_layer1_ptr, __FUNCTION__);
+    Layer2 & c1_conv_layer2 = ASSIGN_REF(c1_conv_layer2_ptr, __FUNCTION__);
+    Layer1 & s2_pooling_layer1 = ASSIGN_REF(s2_pooling_layer1_ptr, __FUNCTION__);
+    Layer2 & s2_pooling_layer2 = ASSIGN_REF(s2_pooling_layer2_ptr, __FUNCTION__);
 
 
-    tgOpen("max_pooling_fprop1_output.bin", c1_conv_layer, s2_pooling_layer);
+    tgOpen("max_pooling_fprop1_output.bin", c1_conv_layer1, c1_conv_layer2, s2_pooling_layer1, s2_pooling_layer2);
 
-    tgCaptureBeforeCall(c1_conv_layer,s2_pooling_layer);
+    tgCaptureBeforeCall(c1_conv_layer1,c1_conv_layer2,s2_pooling_layer1,s2_pooling_layer2);
 
     // call the function with the initial parameters
-    IMPL(max_pooling_fprop1)(c1_conv_layer_ptr, s2_pooling_layer_ptr);
+    IMPL(max_pooling_fprop1)(c1_conv_layer1_ptr, c1_conv_layer2_ptr, s2_pooling_layer1_ptr, s2_pooling_layer2_ptr);
 
-    tgCaptureAfterCall(c1_conv_layer,s2_pooling_layer);
+    tgCaptureAfterCall(c1_conv_layer1,c1_conv_layer2,s2_pooling_layer1,s2_pooling_layer2);
 
     tgClose();
 #else
-    IMPL(max_pooling_fprop1)(c1_conv_layer_ptr, s2_pooling_layer_ptr);
+    IMPL(max_pooling_fprop1)(c1_conv_layer1_ptr, c1_conv_layer2_ptr, s2_pooling_layer1_ptr, s2_pooling_layer2_ptr);
 #endif
 }
 
-void CAPTURE_(max_pooling_fprop2)(Layer * c3_conv_layer_ptr,Layer * s4_pooling_layer_ptr){
+void CAPTURE_(max_pooling_fprop2)(Layer1 * c3_conv_layer1_ptr,Layer2 * c3_conv_layer2_ptr,Layer1 * s4_pooling_layer1_ptr,Layer2 * s4_pooling_layer2_ptr){
 #if 1
 static CCapture capture_max_pooling_fprop2;
 CCapture *capture = &capture_max_pooling_fprop2;
@@ -239,26 +247,28 @@ pthread_t __tid = pthread_self();
     enum PARENT_FUNCTION_STATUS parent_func_status = CCapture::is_parent_func(__func__);
 
     // define temporary variables to hold pointers
-    Layer & c3_conv_layer = ASSIGN_REF(c3_conv_layer_ptr, __FUNCTION__);
-    Layer & s4_pooling_layer = ASSIGN_REF(s4_pooling_layer_ptr, __FUNCTION__);
+    Layer1 & c3_conv_layer1 = ASSIGN_REF(c3_conv_layer1_ptr, __FUNCTION__);
+    Layer2 & c3_conv_layer2 = ASSIGN_REF(c3_conv_layer2_ptr, __FUNCTION__);
+    Layer1 & s4_pooling_layer1 = ASSIGN_REF(s4_pooling_layer1_ptr, __FUNCTION__);
+    Layer2 & s4_pooling_layer2 = ASSIGN_REF(s4_pooling_layer2_ptr, __FUNCTION__);
 
 
-    tgOpen("max_pooling_fprop2_output.bin", c3_conv_layer, s4_pooling_layer);
+    tgOpen("max_pooling_fprop2_output.bin", c3_conv_layer1, c3_conv_layer2, s4_pooling_layer1, s4_pooling_layer2);
 
-    tgCaptureBeforeCall(c3_conv_layer,s4_pooling_layer);
+    tgCaptureBeforeCall(c3_conv_layer1,c3_conv_layer2,s4_pooling_layer1,s4_pooling_layer2);
 
     // call the function with the initial parameters
-    IMPL(max_pooling_fprop2)(c3_conv_layer_ptr, s4_pooling_layer_ptr);
+    IMPL(max_pooling_fprop2)(c3_conv_layer1_ptr, c3_conv_layer2_ptr, s4_pooling_layer1_ptr, s4_pooling_layer2_ptr);
 
-    tgCaptureAfterCall(c3_conv_layer,s4_pooling_layer);
+    tgCaptureAfterCall(c3_conv_layer1,c3_conv_layer2,s4_pooling_layer1,s4_pooling_layer2);
 
     tgClose();
 #else
-    IMPL(max_pooling_fprop2)(c3_conv_layer_ptr, s4_pooling_layer_ptr);
+    IMPL(max_pooling_fprop2)(c3_conv_layer1_ptr, c3_conv_layer2_ptr, s4_pooling_layer1_ptr, s4_pooling_layer2_ptr);
 #endif
 }
 
-void CAPTURE_(fully_connected_fprop)(Layer * c5_conv_layer_ptr,Layer * output_layer_ptr){
+void CAPTURE_(fully_connected_fprop)(Layer1 * c5_conv_layer1_ptr,Layer2 * c5_conv_layer2_ptr,Layer1 * output_layer1_ptr,Layer2 * output_layer2_ptr){
 #if 1
 static CCapture capture_fully_connected_fprop;
 CCapture *capture = &capture_fully_connected_fprop;
@@ -270,22 +280,24 @@ pthread_t __tid = pthread_self();
     enum PARENT_FUNCTION_STATUS parent_func_status = CCapture::is_parent_func(__func__);
 
     // define temporary variables to hold pointers
-    Layer & c5_conv_layer = ASSIGN_REF(c5_conv_layer_ptr, __FUNCTION__);
-    Layer & output_layer = ASSIGN_REF(output_layer_ptr, __FUNCTION__);
+    Layer1 & c5_conv_layer1 = ASSIGN_REF(c5_conv_layer1_ptr, __FUNCTION__);
+    Layer2 & c5_conv_layer2 = ASSIGN_REF(c5_conv_layer2_ptr, __FUNCTION__);
+    Layer1 & output_layer1 = ASSIGN_REF(output_layer1_ptr, __FUNCTION__);
+    Layer2 & output_layer2 = ASSIGN_REF(output_layer2_ptr, __FUNCTION__);
 
 
-    tgOpen("fully_connected_fprop_output.bin", c5_conv_layer, output_layer);
+    tgOpen("fully_connected_fprop_output.bin", c5_conv_layer1, c5_conv_layer2, output_layer1, output_layer2);
 
-    tgCaptureBeforeCall(c5_conv_layer,output_layer);
+    tgCaptureBeforeCall(c5_conv_layer1,c5_conv_layer2,output_layer1,output_layer2);
 
     // call the function with the initial parameters
-    IMPL(fully_connected_fprop)(c5_conv_layer_ptr, output_layer_ptr);
+    IMPL(fully_connected_fprop)(c5_conv_layer1_ptr, c5_conv_layer2_ptr, output_layer1_ptr, output_layer2_ptr);
 
-    tgCaptureAfterCall(c5_conv_layer,output_layer);
+    tgCaptureAfterCall(c5_conv_layer1,c5_conv_layer2,output_layer1,output_layer2);
 
     tgClose();
 #else
-    IMPL(fully_connected_fprop)(c5_conv_layer_ptr, output_layer_ptr);
+    IMPL(fully_connected_fprop)(c5_conv_layer1_ptr, c5_conv_layer2_ptr, output_layer1_ptr, output_layer2_ptr);
 #endif
 }
 

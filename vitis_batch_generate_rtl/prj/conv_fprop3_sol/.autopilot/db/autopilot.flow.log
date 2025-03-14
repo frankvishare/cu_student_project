@@ -1,10 +1,9 @@
-INFO-FLOW: Workspace /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol opened at Wed Mar 12 17:42:21 CST 2025
+INFO-FLOW: Workspace /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol opened at Fri Mar 14 16:55:07 CST 2025
 Execute         send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute       set_part xcvu19p-fsvb3824-2-e 
 INFO: [HLS 200-1510] Running: set_part xcvu19p-fsvb3824-2-e 
 Execute         create_platform xcvu19p-fsvb3824-2-e -board  
-Command         create_platform done; 0.13 sec.
 Execute         source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/common/xilinx.gen 
 Execute           source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/plb46.gen 
 Execute           source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/axi4.gen 
@@ -19,7 +18,7 @@ Execute           source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/
 Execute           source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute         ap_part_info -name xcvu19p-fsvb3824-2-e -data info 
 Execute         config_compile -quiet -complex-mul-dsp=0 
-Command       set_part done; 0.26 sec.
+Command       set_part done; 0.21 sec.
 Execute       create_clock -period 3.3 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 3.3 -name default 
 Execute         ap_set_clock -name default -period 3.3 -unit ns -default=false 
@@ -31,7 +30,7 @@ INFO: [HLS 200-1510] Running: csynth_design
 Execute         ::AP::init_summary_file csynth 
 INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
 Execute         elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 796.695 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 798.867 MB.
 Execute           set_directive_top conv_fprop3 -name=conv_fprop3 
 INFO: [HLS 200-10] Analyzing design file '../source/hls.cpp' ... 
 INFO-FLOW: Compiling one TU...
@@ -43,44 +42,44 @@ INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csyn
 INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
 INFO-FLOW: Source syntax check for synthesis
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll|inline -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis/2024.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4320.000000_DSP_3840.000000_FF_8171520.000000_LUT_4085760.000000_SLICE_510720.000000_SLR_4.000000_URAM_320.000000 -device-name-info=xcvu19p-fsvb3824-2-e > /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/clang.out.log 2> /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/clang.err.log
-WARNING: [HLS 207-3993] declaration does not declare anything (../source/xmem.h:46:35)
+WARNING: [HLS 207-3993] declaration does not declare anything (../source/xmem.h:54:35)
 Execute           clang_tidy xilinx-systemc-detector -desc systemc-detector /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/.systemc_flag -fix-errors /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
 Command           clang_tidy done; 0.35 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute           clang_tidy xilinx-directive2pragma -desc directive2pragma /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/all.directive.json -fix-errors /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command           clang_tidy done; 0.56 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.6 seconds per iteration
+Command           clang_tidy done; 0.51 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.5 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute           clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp.clang-tidy.loop-label.err.log
-Command           clang_tidy done; 1.07 sec.
+Command           clang_tidy done; 0.61 sec.
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp.xilinx-dataflow-lawyer.err.log
 Execute           ap_part_info -name xcvu19p-fsvb3824-2-e -data info 
 INFO-FLOW: compiling source code to llvm bc
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll|inline -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing -hls-emit-hint-scope /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp -DTBCONFIG_CONV_FPROP3 -DXMEM_ARRAY_LATENCY_3=1 -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=3.3 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis/2024.2/common/technology/autopilot -I /tools/Xilinx/Vitis/2024.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.bc -hls-platform-db-name=/tools/Xilinx/Vitis/2024.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4320.000000_DSP_3840.000000_FF_8171520.000000_LUT_4085760.000000_SLICE_510720.000000_SLR_4.000000_URAM_320.000000 -device-name-info=xcvu19p-fsvb3824-2-e > /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp.clang.out.log 2> /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.pp.0.cpp.clang.err.log
-WARNING: [HLS 207-5292] unused parameter 'in_h' (../source/hls.cpp:74:54)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:111:26)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:111:43)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:111:60)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:140:26)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:140:43)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:140:60)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:168:72)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:168:89)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:168:106)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:227:33)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:227:50)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:227:67)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:255:33)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:255:50)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:255:67)
-WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:285:36)
-WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:285:53)
-WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:285:70)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.77 seconds. CPU system time: 0.94 seconds. Elapsed time: 3.77 seconds; current allocated memory: 796.695 MB.
+WARNING: [HLS 207-5292] unused parameter 'in_h' (../source/hls.cpp:47:54)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:83:26)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:83:43)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:83:60)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:117:26)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:117:43)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:117:60)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:151:72)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:151:89)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:151:106)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:185:33)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:185:50)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:185:67)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:218:33)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:218:50)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:218:67)
+WARNING: [HLS 207-5292] unused parameter 'ap_core' (../source/hls.cpp:251:36)
+WARNING: [HLS 207-5292] unused parameter 'ap_part' (../source/hls.cpp:251:53)
+WARNING: [HLS 207-5292] unused parameter 'ap_parent' (../source/hls.cpp:251:70)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.25 seconds. CPU system time: 0.53 seconds. Elapsed time: 2.83 seconds; current allocated memory: 798.867 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute           run_link_or_opt -out /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.0.bc -args  "/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/hls.g.bc"  
@@ -92,12 +91,12 @@ INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
 INFO-FLOW: Linking math bc lib
 Execute           run_link_or_opt -out /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.2.m1.bc -args /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis/2024.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis/2024.2/lnx64/lib/libhlsmc++_39.bc 
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis/2024.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis/2024.2/lnx64/lib/libhlsmc++_39.bc -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.2.m1.bc > /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
-Command           run_link_or_opt done; 1.21 sec.
+Command           run_link_or_opt done; 1.07 sec.
 Execute           run_link_or_opt -opt -out /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.3.fpc.bc -args /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=conv_fprop3 -reflow-float-conversion 
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll|inline -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=conv_fprop3 -reflow-float-conversion -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.3.fpc.bc > /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
-Command           run_link_or_opt done; 0.42 sec.
+Command           run_link_or_opt done; 0.45 sec.
 Execute           run_link_or_opt -out /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.4.m2.bc -args /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis/2024.2/lnx64/lib/libfloatconversion_39.bc 
 INFO-FLOW: run_clang exec: /tools/Xilinx/Vitis/2024.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis/2024.2/lnx64/lib/libfloatconversion_39.bc -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.4.m2.bc > /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
 Execute           run_link_or_opt -opt -out /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.5.gdce.bc -args /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=conv_fprop3 
@@ -123,69 +122,67 @@ Execute           send_msg_by_id INFO @200-1995@%s%s%s 122 Array/Struct (step 1)
 INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
 Execute           send_msg_by_id INFO @200-1995@%s%s%s 122 Array/Struct (step 2) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
 INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-Execute           send_msg_by_id INFO @200-1995@%s%s%s 129 Array/Struct (step 3) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-Execute           send_msg_by_id INFO @200-1995@%s%s%s 129 Array/Struct (step 4) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-Execute           send_msg_by_id INFO @200-1995@%s%s%s 139 Array/Struct (step 5) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 139 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-Execute           send_msg_by_id INFO @200-1995@%s%s%s 139 Performance (step 1) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 139 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-Execute           send_msg_by_id INFO @200-1995@%s%s%s 137 Performance (step 2) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 137 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-Execute           send_msg_by_id INFO @200-1995@%s%s%s 129 Performance (step 3) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-Execute           send_msg_by_id INFO @200-1995@%s%s%s 129 Performance (step 4) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 129 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-Execute           send_msg_by_id INFO @200-1995@%s%s%s 191 HW Transforms (step 1) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
-INFO: [HLS 200-1995] There were 191 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+Execute           send_msg_by_id INFO @200-1995@%s%s%s 122 Array/Struct (step 3) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+Execute           send_msg_by_id INFO @200-1995@%s%s%s 122 Array/Struct (step 4) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+Execute           send_msg_by_id INFO @200-1995@%s%s%s 132 Array/Struct (step 5) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 132 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+Execute           send_msg_by_id INFO @200-1995@%s%s%s 132 Performance (step 1) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 132 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+Execute           send_msg_by_id INFO @200-1995@%s%s%s 130 Performance (step 2) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 130 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+Execute           send_msg_by_id INFO @200-1995@%s%s%s 122 Performance (step 3) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+Execute           send_msg_by_id INFO @200-1995@%s%s%s 122 Performance (step 4) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 122 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
+Execute           send_msg_by_id INFO @200-1995@%s%s%s 189 HW Transforms (step 1) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 189 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
 Execute           send_msg_by_id INFO @200-1995@%s%s%s 188 HW Transforms (step 2) /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt 
 INFO: [HLS 200-1995] There were 188 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth_design_size.rpt
-INFO: [HLS 214-210] Disaggregating variable 'c5_conv_layer'
-INFO: [HLS 214-210] Disaggregating variable 'c5_conv_layer_map'
-INFO: [HLS 214-210] Disaggregating variable 's4_pooling_layer'
-INFO: [HLS 214-210] Disaggregating variable 's4_pooling_layer_map'
-INFO: [HLS 214-178] Inlining function 'convn_valid' into 'conv_fprop3' (../source/hls.cpp:169:0)
-INFO: [HLS 214-178] Inlining function 'activation_func::tan_h(double)' into 'conv_fprop3' (../source/hls.cpp:169:0)
-INFO: [HLS 214-241] Aggregating bram variable 'c5_conv_layer_kernel' with compact=bit mode in 3200-bits
-INFO: [HLS 214-241] Aggregating bram variable 's4_pooling_layer_kernel' with compact=bit mode in 3200-bits
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_189_3> at ../source/hls.cpp:189:27 
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_86_4> at ../source/hls.cpp:86:19 
+INFO: [HLS 214-210] Disaggregating variable 's4_pooling_layer1' (../source/hls.cpp:153:0)
+INFO: [HLS 214-210] Disaggregating variable 's4_pooling_layer2'
+INFO: [HLS 214-210] Disaggregating variable 'c5_conv_layer1' (../source/hls.cpp:153:0)
+INFO: [HLS 214-210] Disaggregating variable 'c5_conv_layer2'
+INFO: [HLS 214-178] Inlining function 'convn_valid' into 'conv_fprop3' (../source/hls.cpp:153:0)
+INFO: [HLS 214-178] Inlining function 'activation_func::tan_h(double)' into 'conv_fprop3' (../source/hls.cpp:153:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_178_3> at ../source/hls.cpp:178:27 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_59_4> at ../source/hls.cpp:59:34 
 INFO: [HLS 214-376] automatically set the pipeline for Loop< unknown> at  
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.74 seconds. CPU system time: 0.62 seconds. Elapsed time: 6.95 seconds; current allocated memory: 796.695 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 796.695 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.62 seconds. CPU system time: 0.56 seconds. Elapsed time: 6.84 seconds; current allocated memory: 798.867 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 798.867 MB.
 Execute           opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute             cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute             transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top conv_fprop3 -deadargelim -mem2reg -instcombine -dce -presyn-prepare -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -promote-dbg-pointer -norm-name /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.0.bc -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 796.695 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 798.867 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute             transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.1.bc -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute             transform -syn-check /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.2.prechk.bc -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 796.695 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 798.867 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.g.1.bc to /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute             transform -hls -tmp /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -dce -hls-dead-arg-elim -deadargelim -mem2reg -instcombine -dce -simplifycfg -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -loop-simplify -loop-bound -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -lcssa -loop-simplify -phi-select-elim -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -scalar-stream -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -clean-array-spec -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.o.1.bc -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.o.1.tmp.bc -f 
 INFO-FLOW: Presyn 2...
 Execute             transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.o.1.tmp.bc -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 815.816 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 818.043 MB.
 Execute             transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -inst-simplify -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -inst-simplify -inst-rectify -instcombine -adce -deadargelim -load-elim -read-loop-dep -loop-simplify -loop-rewind-sink-hoist -loop-outline -hls-dead-arg-elim -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -mul2addshift -deadargelim -inst-simplify -dce -mem2reg -instcombine -gvn -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -inst-clarity -bitwidth -dce -validate-dataflow -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.o.2.bc -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_84_3'(../source/hls.cpp:84:18) and 'VITIS_LOOP_86_4'(../source/hls.cpp:86:19) in function 'conv_fprop3' into perfectly nested loops.
-INFO: [HLS 200-2060] Failed to convert nested loops 'VITIS_LOOP_81_2'(../source/hls.cpp:81:18) and 'VITIS_LOOP_84_3'(../source/hls.cpp:84:18) in function 'conv_fprop3' into perfectly nested loops.
-INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_84_3' (../source/hls.cpp:84:18) in function 'conv_fprop3'.
-WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_81_2' (../source/hls.cpp:81:18) in function 'conv_fprop3' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_57_3'(../source/hls.cpp:57:30) and 'VITIS_LOOP_59_4'(../source/hls.cpp:59:34) in function 'conv_fprop3' into perfectly nested loops.
+INFO: [HLS 200-2060] Failed to convert nested loops 'VITIS_LOOP_54_2'(../source/hls.cpp:54:26) and 'VITIS_LOOP_57_3'(../source/hls.cpp:57:30) in function 'conv_fprop3' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_57_3' (../source/hls.cpp:57:30) in function 'conv_fprop3'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_54_2' (../source/hls.cpp:54:26) in function 'conv_fprop3' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
 Execute               auto_get_db
 INFO-FLOW: Building ssdm...
 Execute             transform -hls -cdfg-build /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.o.3.bc -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 835.453 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 837.672 MB.
 INFO-FLOW: Finish building internal data model.
-Command           opt_and_import_c done; 0.17 sec.
-Command         elaborate done; 10.9 sec.
+Command           opt_and_import_c done; 0.18 sec.
+Command         elaborate done; 9.85 sec.
 Execute         ap_eval exec zip -j /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute         autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -194,41 +191,41 @@ INFO: [HLS 200-10] Synthesizing 'conv_fprop3' ...
 Execute           ap_set_top_model conv_fprop3 
 Execute           get_model_list conv_fprop3 -filter all-wo-channel -topdown 
 Execute           preproc_iomode -model conv_fprop3 
-Execute           preproc_iomode -model conv_fprop3_Pipeline_VITIS_LOOP_189_3 
-Execute           preproc_iomode -model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
+Execute           preproc_iomode -model conv_fprop3_Pipeline_VITIS_LOOP_178_3 
+Execute           preproc_iomode -model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
 Execute           preproc_iomode -model conv_fprop3_Pipeline_1 
 Execute           get_model_list conv_fprop3 -filter all-wo-channel 
-INFO-FLOW: Model list for configure: conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 conv_fprop3_Pipeline_VITIS_LOOP_189_3 conv_fprop3
+INFO-FLOW: Model list for configure: conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 conv_fprop3_Pipeline_VITIS_LOOP_178_3 conv_fprop3
 INFO-FLOW: Configuring Module : conv_fprop3_Pipeline_1 ...
 Execute           set_default_model conv_fprop3_Pipeline_1 
 Execute           apply_spec_resource_limit conv_fprop3_Pipeline_1 
-INFO-FLOW: Configuring Module : conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 ...
-Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
-Execute           apply_spec_resource_limit conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
-INFO-FLOW: Configuring Module : conv_fprop3_Pipeline_VITIS_LOOP_189_3 ...
-Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_189_3 
-Execute           apply_spec_resource_limit conv_fprop3_Pipeline_VITIS_LOOP_189_3 
+INFO-FLOW: Configuring Module : conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 ...
+Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
+Execute           apply_spec_resource_limit conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
+INFO-FLOW: Configuring Module : conv_fprop3_Pipeline_VITIS_LOOP_178_3 ...
+Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_178_3 
+Execute           apply_spec_resource_limit conv_fprop3_Pipeline_VITIS_LOOP_178_3 
 INFO-FLOW: Configuring Module : conv_fprop3 ...
 Execute           set_default_model conv_fprop3 
 Execute           apply_spec_resource_limit conv_fprop3 
-INFO-FLOW: Model list for preprocess: conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 conv_fprop3_Pipeline_VITIS_LOOP_189_3 conv_fprop3
+INFO-FLOW: Model list for preprocess: conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 conv_fprop3_Pipeline_VITIS_LOOP_178_3 conv_fprop3
 INFO-FLOW: Preprocessing Module: conv_fprop3_Pipeline_1 ...
 Execute           set_default_model conv_fprop3_Pipeline_1 
 Execute           cdfg_preprocess -model conv_fprop3_Pipeline_1 
 Execute           rtl_gen_preprocess conv_fprop3_Pipeline_1 
-INFO-FLOW: Preprocessing Module: conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 ...
-Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
-Execute           cdfg_preprocess -model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
-Execute           rtl_gen_preprocess conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
-INFO-FLOW: Preprocessing Module: conv_fprop3_Pipeline_VITIS_LOOP_189_3 ...
-Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_189_3 
-Execute           cdfg_preprocess -model conv_fprop3_Pipeline_VITIS_LOOP_189_3 
-Execute           rtl_gen_preprocess conv_fprop3_Pipeline_VITIS_LOOP_189_3 
+INFO-FLOW: Preprocessing Module: conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 ...
+Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
+Execute           cdfg_preprocess -model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
+Execute           rtl_gen_preprocess conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
+INFO-FLOW: Preprocessing Module: conv_fprop3_Pipeline_VITIS_LOOP_178_3 ...
+Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_178_3 
+Execute           cdfg_preprocess -model conv_fprop3_Pipeline_VITIS_LOOP_178_3 
+Execute           rtl_gen_preprocess conv_fprop3_Pipeline_VITIS_LOOP_178_3 
 INFO-FLOW: Preprocessing Module: conv_fprop3 ...
 Execute           set_default_model conv_fprop3 
 Execute           cdfg_preprocess -model conv_fprop3 
 Execute           rtl_gen_preprocess conv_fprop3 
-INFO-FLOW: Model list for synthesis: conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 conv_fprop3_Pipeline_VITIS_LOOP_189_3 conv_fprop3
+INFO-FLOW: Model list for synthesis: conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 conv_fprop3_Pipeline_VITIS_LOOP_178_3 conv_fprop3
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv_fprop3_Pipeline_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -238,7 +235,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.05 seconds; current allocated memory: 836.074 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.05 seconds; current allocated memory: 838.445 MB.
 Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_1.verbose.sched.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
@@ -252,7 +249,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 836.074 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 838.445 MB.
 Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_1.verbose.bind.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
@@ -260,86 +257,87 @@ Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data famil
 Execute           db_write -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_1.bind.adb -f 
 INFO-FLOW: Finish binding conv_fprop3_Pipeline_1.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' 
+INFO: [HLS 200-42] -- Implementing module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
-Execute           schedule -model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
+Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
+Execute           schedule -model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln88) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' (loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln78', ../source/hls.cpp:78->../source/hls.cpp:183) of variable 'sum', ../source/hls.cpp:88->../source/hls.cpp:183 on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:88->../source/hls.cpp:183) on local variable 'sum', ../source/hls.cpp:78->../source/hls.cpp:183.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 24, loop 'VITIS_LOOP_84_3_VITIS_LOOP_86_4'
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+WARNING: [HLS 200-880] The II Violation in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' (loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 0) between 'store' operation 0 bit ('sum_write_ln51', ../source/hls.cpp:51->../source/hls.cpp:172) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:172 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172 and 'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:172) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:172.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 25, loop 'VITIS_LOOP_57_3_VITIS_LOOP_59_4'
 WARNING: [HLS 200-871] Estimated clock period (2.983 ns) exceeds the target (target clock period: 3.300 ns, clock uncertainty: 0.891 ns, effective delay budget: 2.409 ns).
-WARNING: [HLS 200-1016] The critical path in module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' consists of the following:
-	'getelementptr' operation 17 bit ('s4_pooling_layer_map_data_addr', ../source/hls.cpp:88->../source/hls.cpp:183) [57]  (0.000 ns)
-	'load' operation 64 bit ('s4_pooling_layer_map_data_load', ../source/hls.cpp:88->../source/hls.cpp:183) on array 's4_pooling_layer_map_data' [58]  (2.983 ns)
+WARNING: [HLS 200-1016] The critical path in module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' consists of the following:
+	'getelementptr' operation 17 bit ('s4_pooling_layer2_data_addr', ../source/hls.cpp:61->../source/hls.cpp:172) [58]  (0.000 ns)
+	'load' operation 64 bit ('s4_pooling_layer2_data_load', ../source/hls.cpp:61->../source/hls.cpp:172) on array 's4_pooling_layer2_data' [59]  (2.983 ns)
 
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.1 seconds; current allocated memory: 836.285 MB.
-Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.verbose.sched.rpt 
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 838.504 MB.
+Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.verbose.sched.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
 Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data family 
-Execute           db_write -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.sched.adb -f 
-INFO-FLOW: Finish scheduling conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.
-Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
-Execute           bind -model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
+Execute           db_write -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.sched.adb -f 
+INFO-FLOW: Finish scheduling conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.
+Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
+Execute           bind -model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 836.285 MB.
-Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.verbose.bind.rpt 
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 838.504 MB.
+Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.verbose.bind.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
 Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data family 
-Execute           db_write -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.bind.adb -f 
-INFO-FLOW: Finish binding conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.
+Execute           db_write -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.bind.adb -f 
+INFO-FLOW: Finish binding conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv_fprop3_Pipeline_VITIS_LOOP_189_3' 
+INFO: [HLS 200-42] -- Implementing module 'conv_fprop3_Pipeline_VITIS_LOOP_178_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_189_3 
-Execute           schedule -model conv_fprop3_Pipeline_VITIS_LOOP_189_3 
+Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_178_3 
+Execute           schedule -model conv_fprop3_Pipeline_VITIS_LOOP_178_3 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_189_3'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 80, loop 'VITIS_LOOP_189_3'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_178_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 80, loop 'VITIS_LOOP_178_3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 836.285 MB.
-Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3.verbose.sched.rpt 
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 838.504 MB.
+Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3.verbose.sched.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
 Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data family 
-Execute           db_write -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3.sched.adb -f 
-INFO-FLOW: Finish scheduling conv_fprop3_Pipeline_VITIS_LOOP_189_3.
-Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_189_3 
-Execute           bind -model conv_fprop3_Pipeline_VITIS_LOOP_189_3 
+Execute           db_write -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3.sched.adb -f 
+INFO-FLOW: Finish scheduling conv_fprop3_Pipeline_VITIS_LOOP_178_3.
+Execute           set_default_model conv_fprop3_Pipeline_VITIS_LOOP_178_3 
+Execute           bind -model conv_fprop3_Pipeline_VITIS_LOOP_178_3 
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.09 seconds; current allocated memory: 836.285 MB.
-Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3.verbose.bind.rpt 
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 838.504 MB.
+Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3.verbose.bind.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
 Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data family 
-Execute           db_write -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3.bind.adb -f 
-INFO-FLOW: Finish binding conv_fprop3_Pipeline_VITIS_LOOP_189_3.
+Execute           db_write -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3.bind.adb -f 
+INFO-FLOW: Finish binding conv_fprop3_Pipeline_VITIS_LOOP_178_3.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv_fprop3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute           set_default_model conv_fprop3 
 Execute           schedule -model conv_fprop3 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln177) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln166) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 836.336 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 838.555 MB.
 Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.verbose.sched.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
@@ -353,7 +351,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 836.336 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 838.555 MB.
 Execute           syn_report -verbosereport -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.verbose.bind.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
@@ -363,16 +361,16 @@ INFO-FLOW: Finish binding conv_fprop3.
 Execute           get_model_list conv_fprop3 -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
 Execute           rtl_gen_preprocess conv_fprop3_Pipeline_1 
-Execute           rtl_gen_preprocess conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
-Execute           rtl_gen_preprocess conv_fprop3_Pipeline_VITIS_LOOP_189_3 
+Execute           rtl_gen_preprocess conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
+Execute           rtl_gen_preprocess conv_fprop3_Pipeline_VITIS_LOOP_178_3 
 Execute           rtl_gen_preprocess conv_fprop3 
-INFO-FLOW: Model list for RTL generation: conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 conv_fprop3_Pipeline_VITIS_LOOP_189_3 conv_fprop3
+INFO-FLOW: Model list for RTL generation: conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 conv_fprop3_Pipeline_VITIS_LOOP_178_3 conv_fprop3
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3_Pipeline_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute           create_rtl_model conv_fprop3_Pipeline_1 -top_prefix conv_fprop3_ -sub_prefix conv_fprop3_ -mg_file /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_1.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3_Pipeline_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 836.336 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 838.555 MB.
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.rtl_wrap.cfg.tcl 
 Execute           gen_rtl conv_fprop3_Pipeline_1 -style xilinx -f -lang vhdl -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/vhdl/conv_fprop3_conv_fprop3_Pipeline_1 
 Execute           gen_rtl conv_fprop3_Pipeline_1 -style xilinx -f -lang vlog -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/verilog/conv_fprop3_conv_fprop3_Pipeline_1 
@@ -392,63 +390,63 @@ Execute           db_write -model conv_fprop3_Pipeline_1 -f -o /home/duludulu/Do
 Execute           db_write -model conv_fprop3_Pipeline_1 -bindview -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/design.bindinfo.xml 
 Execute           gen_tb_info conv_fprop3_Pipeline_1 -p /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' 
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute           create_rtl_model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 -top_prefix conv_fprop3_ -sub_prefix conv_fprop3_ -mg_file /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.compgen.tcl 
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4' pipeline 'VITIS_LOOP_84_3_VITIS_LOOP_86_4' pipeline type 'loop pipeline'
+Execute           create_rtl_model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 -top_prefix conv_fprop3_ -sub_prefix conv_fprop3_ -mg_file /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4' pipeline 'VITIS_LOOP_57_3_VITIS_LOOP_59_4' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_17ns_17ns_17s_17ns_17_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_8_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_31ns_32s_58_2_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.09 seconds; current allocated memory: 836.336 MB.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 838.555 MB.
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.rtl_wrap.cfg.tcl 
-Execute           gen_rtl conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 -style xilinx -f -lang vhdl -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/vhdl/conv_fprop3_conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
-Execute           gen_rtl conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 -style xilinx -f -lang vlog -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/verilog/conv_fprop3_conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
-Execute           syn_report -csynth -model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4_csynth.rpt 
+Execute           gen_rtl conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 -style xilinx -f -lang vhdl -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/vhdl/conv_fprop3_conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
+Execute           gen_rtl conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 -style xilinx -f -lang vlog -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/verilog/conv_fprop3_conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
+Execute           syn_report -csynth -model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4_csynth.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
 Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data family 
-Execute           syn_report -rtlxml -model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4_csynth.xml 
+Execute           syn_report -rtlxml -model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4_csynth.xml 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
 Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data family 
-Execute           syn_report -verbosereport -model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.verbose.rpt 
+Execute           syn_report -verbosereport -model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.verbose.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
 Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data family 
-Execute           db_write -model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 -f -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.adb 
-Execute           db_write -model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 -bindview -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/design.bindinfo.xml 
-Execute           gen_tb_info conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 -p /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 
+Execute           db_write -model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 -f -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.adb 
+Execute           db_write -model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 -bindview -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/design.bindinfo.xml 
+Execute           gen_tb_info conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 -p /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3_Pipeline_VITIS_LOOP_189_3' 
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3_Pipeline_VITIS_LOOP_178_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute           create_rtl_model conv_fprop3_Pipeline_VITIS_LOOP_189_3 -top_prefix conv_fprop3_ -sub_prefix conv_fprop3_ -mg_file /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3.compgen.tcl 
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_fprop3_Pipeline_VITIS_LOOP_189_3' pipeline 'VITIS_LOOP_189_3' pipeline type 'loop pipeline'
+Execute           create_rtl_model conv_fprop3_Pipeline_VITIS_LOOP_178_3 -top_prefix conv_fprop3_ -sub_prefix conv_fprop3_ -mg_file /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv_fprop3_Pipeline_VITIS_LOOP_178_3' pipeline 'VITIS_LOOP_178_3' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_8_full_dsp_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dexp_64ns_64ns_64_30_full_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3_Pipeline_VITIS_LOOP_189_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.14 seconds; current allocated memory: 838.398 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3_Pipeline_VITIS_LOOP_178_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.13 seconds; current allocated memory: 840.672 MB.
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.rtl_wrap.cfg.tcl 
-Execute           gen_rtl conv_fprop3_Pipeline_VITIS_LOOP_189_3 -style xilinx -f -lang vhdl -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/vhdl/conv_fprop3_conv_fprop3_Pipeline_VITIS_LOOP_189_3 
-Execute           gen_rtl conv_fprop3_Pipeline_VITIS_LOOP_189_3 -style xilinx -f -lang vlog -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/verilog/conv_fprop3_conv_fprop3_Pipeline_VITIS_LOOP_189_3 
-Execute           syn_report -csynth -model conv_fprop3_Pipeline_VITIS_LOOP_189_3 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/conv_fprop3_Pipeline_VITIS_LOOP_189_3_csynth.rpt 
+Execute           gen_rtl conv_fprop3_Pipeline_VITIS_LOOP_178_3 -style xilinx -f -lang vhdl -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/vhdl/conv_fprop3_conv_fprop3_Pipeline_VITIS_LOOP_178_3 
+Execute           gen_rtl conv_fprop3_Pipeline_VITIS_LOOP_178_3 -style xilinx -f -lang vlog -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/verilog/conv_fprop3_conv_fprop3_Pipeline_VITIS_LOOP_178_3 
+Execute           syn_report -csynth -model conv_fprop3_Pipeline_VITIS_LOOP_178_3 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/conv_fprop3_Pipeline_VITIS_LOOP_178_3_csynth.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
 Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data family 
-Execute           syn_report -rtlxml -model conv_fprop3_Pipeline_VITIS_LOOP_189_3 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/conv_fprop3_Pipeline_VITIS_LOOP_189_3_csynth.xml 
+Execute           syn_report -rtlxml -model conv_fprop3_Pipeline_VITIS_LOOP_178_3 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/conv_fprop3_Pipeline_VITIS_LOOP_178_3_csynth.xml 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
 Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data family 
-Execute           syn_report -verbosereport -model conv_fprop3_Pipeline_VITIS_LOOP_189_3 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3.verbose.rpt 
+Execute           syn_report -verbosereport -model conv_fprop3_Pipeline_VITIS_LOOP_178_3 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3.verbose.rpt 
 Execute             list_part -family xcvu19p-fsvb3824-2-e 
 Execute               ap_family_info -name xcvu19p-fsvb3824-2-e -data names 
 Execute               ap_part_info -quiet -name xcvu19p-fsvb3824-2-e -data family 
-Execute           db_write -model conv_fprop3_Pipeline_VITIS_LOOP_189_3 -f -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3.adb 
-Execute           db_write -model conv_fprop3_Pipeline_VITIS_LOOP_189_3 -bindview -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/design.bindinfo.xml 
-Execute           gen_tb_info conv_fprop3_Pipeline_VITIS_LOOP_189_3 -p /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3 
+Execute           db_write -model conv_fprop3_Pipeline_VITIS_LOOP_178_3 -f -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3.adb 
+Execute           db_write -model conv_fprop3_Pipeline_VITIS_LOOP_178_3 -bindview -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/design.bindinfo.xml 
+Execute           gen_tb_info conv_fprop3_Pipeline_VITIS_LOOP_178_3 -p /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv_fprop3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -456,30 +454,32 @@ Execute           create_rtl_model conv_fprop3 -top_prefix  -sub_prefix conv_fpr
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/ap_core' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/ap_part' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/ap_parent' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_w' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_h' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_count' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_data' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_error' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_b' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_db' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_kernel_w' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_kernel_h' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_kernel_count' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_kernel' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer_map_common' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_w' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_h' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_count' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_data' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_error' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_b' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_db' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_kernel_w' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_kernel_h' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_kernel_count' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_kernel' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer_map_common' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_map_w' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_map_h' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_map_count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_kernel_w' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_kernel_h' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer1_kernel_count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_error' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_db' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_W' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_dW' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/s4_pooling_layer2_map_common' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_map_w' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_map_h' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_map_count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_kernel_w' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_kernel_h' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer1_kernel_count' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_error' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_db' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_W' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_dW' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/c5_conv_layer2_map_common' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv_fprop3/pconnection' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'conv_fprop3' to 'ap_ctrl_hs'.
 WARNING: [RTGEN 206-101] Port 'conv_fprop3/ap_core' has no fanin or fanout and is left dangling.
@@ -488,220 +488,277 @@ WARNING: [RTGEN 206-101] Port 'conv_fprop3/ap_part' has no fanin or fanout and i
                Please use C simulation to confirm this function argument can be read from or written to.
 WARNING: [RTGEN 206-101] Port 'conv_fprop3/ap_parent' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_h' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer1_map_h' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer1_kernel_w' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer1_kernel_h' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer1_kernel_count' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_error_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_error_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_error_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_error_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_b_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_b_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_b_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_b_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_db_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_db_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_w' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_h' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_count' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_db_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_db_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_kernel_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_kernel_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_W_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_W_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer_map_common_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer_map_common_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_dW_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_dW_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_error_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_error_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/s4_pooling_layer2_map_common_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/s4_pooling_layer2_map_common_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_address0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer1_kernel_count' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_address0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_ce0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_address0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_ce0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_we0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_ce0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_we0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_d0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_we0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_d0' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_q0' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_d0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_address1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_q0' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_address1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_ce1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_address1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_ce1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_we1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_ce1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_we1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_d1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_we1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer_map_db_d1' to 0.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_map_db_q1' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_d1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer_kernel_count' has no fanin or fanout and is left dangling.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_error_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_error_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_db_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_db_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv_fprop3/c5_conv_layer2_dW_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'conv_fprop3/c5_conv_layer2_dW_q1' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
 INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_11s_11ns_11_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_10s_10s_10_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11ns_6ns_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_31ns_31ns_62_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_fprop3'.
-Command           create_rtl_model done; 0.66 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.25 seconds. Elapsed time: 0.76 seconds; current allocated memory: 841.914 MB.
+Command           create_rtl_model done; 0.89 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.5 seconds. CPU system time: 0.37 seconds. Elapsed time: 0.98 seconds; current allocated memory: 844.434 MB.
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.rtl_wrap.cfg.tcl 
 Execute           gen_rtl conv_fprop3 -istop -style xilinx -f -lang vhdl -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/vhdl/conv_fprop3 
 Execute           gen_rtl conv_fprop3 -istop -style xilinx -f -lang vlog -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/verilog/conv_fprop3 
@@ -730,23 +787,23 @@ Execute           syn_report -wcfg -model conv_fprop3 -o /home/duludulu/Document
 Execute           syn_report -protoinst -model conv_fprop3 -o /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.protoinst 
 Execute           sc_get_clocks conv_fprop3 
 Execute           sc_get_portdomain conv_fprop3 
-INFO-FLOW: Model list for RTL component generation: conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 conv_fprop3_Pipeline_VITIS_LOOP_189_3 conv_fprop3
+INFO-FLOW: Model list for RTL component generation: conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 conv_fprop3_Pipeline_VITIS_LOOP_178_3 conv_fprop3
 INFO-FLOW: Handling components in module [conv_fprop3_Pipeline_1] ... 
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_1.compgen.tcl 
 INFO-FLOW: Found component conv_fprop3_flow_control_loop_pipe_sequential_init.
 INFO-FLOW: Append model conv_fprop3_flow_control_loop_pipe_sequential_init
-INFO-FLOW: Handling components in module [conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4] ... 
-Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.compgen.tcl 
+INFO-FLOW: Handling components in module [conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4] ... 
+Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.compgen.tcl 
 INFO-FLOW: Found component conv_fprop3_dmul_64ns_64ns_64_8_max_dsp_1.
 INFO-FLOW: Append model conv_fprop3_dmul_64ns_64ns_64_8_max_dsp_1
-INFO-FLOW: Found component conv_fprop3_mul_31ns_32s_58_2_1.
-INFO-FLOW: Append model conv_fprop3_mul_31ns_32s_58_2_1
 INFO-FLOW: Found component conv_fprop3_ama_addmuladd_17ns_17ns_17s_17ns_17_4_1.
 INFO-FLOW: Append model conv_fprop3_ama_addmuladd_17ns_17ns_17s_17ns_17_4_1
+INFO-FLOW: Found component conv_fprop3_mac_muladd_16s_16s_16ns_16_4_1.
+INFO-FLOW: Append model conv_fprop3_mac_muladd_16s_16s_16ns_16_4_1
 INFO-FLOW: Found component conv_fprop3_flow_control_loop_pipe_sequential_init.
 INFO-FLOW: Append model conv_fprop3_flow_control_loop_pipe_sequential_init
-INFO-FLOW: Handling components in module [conv_fprop3_Pipeline_VITIS_LOOP_189_3] ... 
-Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3.compgen.tcl 
+INFO-FLOW: Handling components in module [conv_fprop3_Pipeline_VITIS_LOOP_178_3] ... 
+Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3.compgen.tcl 
 INFO-FLOW: Found component conv_fprop3_dadd_64ns_64ns_64_8_full_dsp_1.
 INFO-FLOW: Append model conv_fprop3_dadd_64ns_64ns_64_8_full_dsp_1
 INFO-FLOW: Found component conv_fprop3_ddiv_64ns_64ns_64_31_no_dsp_1.
@@ -763,21 +820,23 @@ INFO-FLOW: Found component conv_fprop3_mul_31ns_31ns_62_2_1.
 INFO-FLOW: Append model conv_fprop3_mul_31ns_31ns_62_2_1
 INFO-FLOW: Found component conv_fprop3_mul_32s_32s_32_2_1.
 INFO-FLOW: Append model conv_fprop3_mul_32s_32s_32_2_1
+INFO-FLOW: Found component conv_fprop3_mul_11ns_6ns_16_1_1.
+INFO-FLOW: Append model conv_fprop3_mul_11ns_6ns_16_1_1
 INFO-FLOW: Found component conv_fprop3_mul_10s_10s_10_1_1.
 INFO-FLOW: Append model conv_fprop3_mul_10s_10s_10_1_1
 INFO-FLOW: Found component conv_fprop3_mac_muladd_11s_11s_11ns_11_4_1.
 INFO-FLOW: Append model conv_fprop3_mac_muladd_11s_11s_11ns_11_4_1
 INFO-FLOW: Append model conv_fprop3_Pipeline_1
-INFO-FLOW: Append model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4
-INFO-FLOW: Append model conv_fprop3_Pipeline_VITIS_LOOP_189_3
+INFO-FLOW: Append model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4
+INFO-FLOW: Append model conv_fprop3_Pipeline_VITIS_LOOP_178_3
 INFO-FLOW: Append model conv_fprop3
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: conv_fprop3_flow_control_loop_pipe_sequential_init conv_fprop3_dmul_64ns_64ns_64_8_max_dsp_1 conv_fprop3_mul_31ns_32s_58_2_1 conv_fprop3_ama_addmuladd_17ns_17ns_17s_17ns_17_4_1 conv_fprop3_flow_control_loop_pipe_sequential_init conv_fprop3_dadd_64ns_64ns_64_8_full_dsp_1 conv_fprop3_ddiv_64ns_64ns_64_31_no_dsp_1 conv_fprop3_dexp_64ns_64ns_64_30_full_dsp_1 conv_fprop3_flow_control_loop_pipe_sequential_init conv_fprop3_dadddsub_64ns_64ns_64_8_full_dsp_1 conv_fprop3_mul_31ns_31ns_62_2_1 conv_fprop3_mul_32s_32s_32_2_1 conv_fprop3_mul_10s_10s_10_1_1 conv_fprop3_mac_muladd_11s_11s_11ns_11_4_1 conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 conv_fprop3_Pipeline_VITIS_LOOP_189_3 conv_fprop3
+INFO-FLOW: All models in this session: conv_fprop3_flow_control_loop_pipe_sequential_init conv_fprop3_dmul_64ns_64ns_64_8_max_dsp_1 conv_fprop3_ama_addmuladd_17ns_17ns_17s_17ns_17_4_1 conv_fprop3_mac_muladd_16s_16s_16ns_16_4_1 conv_fprop3_flow_control_loop_pipe_sequential_init conv_fprop3_dadd_64ns_64ns_64_8_full_dsp_1 conv_fprop3_ddiv_64ns_64ns_64_31_no_dsp_1 conv_fprop3_dexp_64ns_64ns_64_30_full_dsp_1 conv_fprop3_flow_control_loop_pipe_sequential_init conv_fprop3_dadddsub_64ns_64ns_64_8_full_dsp_1 conv_fprop3_mul_31ns_31ns_62_2_1 conv_fprop3_mul_32s_32s_32_2_1 conv_fprop3_mul_11ns_6ns_16_1_1 conv_fprop3_mul_10s_10s_10_1_1 conv_fprop3_mac_muladd_11s_11s_11ns_11_4_1 conv_fprop3_Pipeline_1 conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 conv_fprop3_Pipeline_VITIS_LOOP_178_3 conv_fprop3
 INFO-FLOW: Generating /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/autopilot.rtl.models.txt file...
 INFO-FLOW: To file: write model conv_fprop3_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model conv_fprop3_dmul_64ns_64ns_64_8_max_dsp_1
-INFO-FLOW: To file: write model conv_fprop3_mul_31ns_32s_58_2_1
 INFO-FLOW: To file: write model conv_fprop3_ama_addmuladd_17ns_17ns_17s_17ns_17_4_1
+INFO-FLOW: To file: write model conv_fprop3_mac_muladd_16s_16s_16ns_16_4_1
 INFO-FLOW: To file: write model conv_fprop3_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model conv_fprop3_dadd_64ns_64ns_64_8_full_dsp_1
 INFO-FLOW: To file: write model conv_fprop3_ddiv_64ns_64ns_64_31_no_dsp_1
@@ -786,11 +845,12 @@ INFO-FLOW: To file: write model conv_fprop3_flow_control_loop_pipe_sequential_in
 INFO-FLOW: To file: write model conv_fprop3_dadddsub_64ns_64ns_64_8_full_dsp_1
 INFO-FLOW: To file: write model conv_fprop3_mul_31ns_31ns_62_2_1
 INFO-FLOW: To file: write model conv_fprop3_mul_32s_32s_32_2_1
+INFO-FLOW: To file: write model conv_fprop3_mul_11ns_6ns_16_1_1
 INFO-FLOW: To file: write model conv_fprop3_mul_10s_10s_10_1_1
 INFO-FLOW: To file: write model conv_fprop3_mac_muladd_11s_11s_11ns_11_4_1
 INFO-FLOW: To file: write model conv_fprop3_Pipeline_1
-INFO-FLOW: To file: write model conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4
-INFO-FLOW: To file: write model conv_fprop3_Pipeline_VITIS_LOOP_189_3
+INFO-FLOW: To file: write model conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4
+INFO-FLOW: To file: write model conv_fprop3_Pipeline_VITIS_LOOP_178_3
 INFO-FLOW: To file: write model conv_fprop3
 INFO-FLOW: Generating /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/autopilot.rtl.models.tcl file...
 INFO-FLOW: Finished generating RTL model list.
@@ -821,8 +881,8 @@ Execute             source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/i
 Execute             source /tools/Xilinx/Vitis/2024.2/common/technology/xilinx/DSP48/dsp48.gen 
 INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='1' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/vhdl' dstVlogDir='/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/vlog' tclDir='/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db' modelList='conv_fprop3_flow_control_loop_pipe_sequential_init
 conv_fprop3_dmul_64ns_64ns_64_8_max_dsp_1
-conv_fprop3_mul_31ns_32s_58_2_1
 conv_fprop3_ama_addmuladd_17ns_17ns_17s_17ns_17_4_1
+conv_fprop3_mac_muladd_16s_16s_16ns_16_4_1
 conv_fprop3_flow_control_loop_pipe_sequential_init
 conv_fprop3_dadd_64ns_64ns_64_8_full_dsp_1
 conv_fprop3_ddiv_64ns_64ns_64_31_no_dsp_1
@@ -831,34 +891,35 @@ conv_fprop3_flow_control_loop_pipe_sequential_init
 conv_fprop3_dadddsub_64ns_64ns_64_8_full_dsp_1
 conv_fprop3_mul_31ns_31ns_62_2_1
 conv_fprop3_mul_32s_32s_32_2_1
+conv_fprop3_mul_11ns_6ns_16_1_1
 conv_fprop3_mul_10s_10s_10_1_1
 conv_fprop3_mac_muladd_11s_11s_11ns_11_4_1
 conv_fprop3_Pipeline_1
-conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4
-conv_fprop3_Pipeline_VITIS_LOOP_189_3
+conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4
+conv_fprop3_Pipeline_VITIS_LOOP_178_3
 conv_fprop3
 ' expOnly='0'
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/global.setting.tcl 
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/global.setting.tcl 
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_1.compgen.tcl 
-Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.compgen.tcl 
-Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3.compgen.tcl 
+Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.compgen.tcl 
+Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3.compgen.tcl 
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.compgen.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.18 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.23 seconds; current allocated memory: 845.090 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.14 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.19 seconds; current allocated memory: 847.656 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='conv_fprop3_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml bind info
 INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml config info
-INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Done: create_csynth_xml config info time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml write xml
 INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/syn/report/csynth.xml
 INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='conv_fprop3_flow_control_loop_pipe_sequential_init
 conv_fprop3_dmul_64ns_64ns_64_8_max_dsp_1
-conv_fprop3_mul_31ns_32s_58_2_1
 conv_fprop3_ama_addmuladd_17ns_17ns_17s_17ns_17_4_1
+conv_fprop3_mac_muladd_16s_16s_16ns_16_4_1
 conv_fprop3_flow_control_loop_pipe_sequential_init
 conv_fprop3_dadd_64ns_64ns_64_8_full_dsp_1
 conv_fprop3_ddiv_64ns_64ns_64_31_no_dsp_1
@@ -867,11 +928,12 @@ conv_fprop3_flow_control_loop_pipe_sequential_init
 conv_fprop3_dadddsub_64ns_64ns_64_8_full_dsp_1
 conv_fprop3_mul_31ns_31ns_62_2_1
 conv_fprop3_mul_32s_32s_32_2_1
+conv_fprop3_mul_11ns_6ns_16_1_1
 conv_fprop3_mul_10s_10s_10_1_1
 conv_fprop3_mac_muladd_11s_11s_11ns_11_4_1
 conv_fprop3_Pipeline_1
-conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4
-conv_fprop3_Pipeline_VITIS_LOOP_189_3
+conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4
+conv_fprop3_Pipeline_VITIS_LOOP_178_3
 conv_fprop3
 ' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/global.setting.tcl 
@@ -881,8 +943,8 @@ Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/p
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.rtl_wrap.cfg.tcl 
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.compgen.dataonly.tcl 
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_1.tbgen.tcl 
-Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4.tbgen.tcl 
-Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_189_3.tbgen.tcl 
+Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4.tbgen.tcl 
+Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3_Pipeline_VITIS_LOOP_178_3.tbgen.tcl 
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/conv_fprop3.tbgen.tcl 
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/.autopilot/db/global.setting.tcl 
 Execute           ap_part_info -name xcvu19p-fsvb3824-2-e -data names -quiet 
@@ -895,21 +957,21 @@ Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/p
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/impl/misc/conv_fprop3_ddiv_64ns_64ns_64_31_no_dsp_1_ip.tcl 
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/impl/misc/conv_fprop3_dexp_64ns_64ns_64_30_full_dsp_1_ip.tcl 
 Execute           source /home/duludulu/Documents/hls/vitis_batch_generate_rtl/prj/conv_fprop3_sol/impl/misc/conv_fprop3_dmul_64ns_64ns_64_8_max_dsp_1_ip.tcl 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} cache_nodes {} report_dict {TOPINST conv_fprop3 MODULE2INSTS {conv_fprop3 conv_fprop3 conv_fprop3_Pipeline_1 grp_conv_fprop3_Pipeline_1_fu_241 conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 grp_conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4_fu_248 conv_fprop3_Pipeline_VITIS_LOOP_189_3 grp_conv_fprop3_Pipeline_VITIS_LOOP_189_3_fu_263} INST2MODULE {conv_fprop3 conv_fprop3 grp_conv_fprop3_Pipeline_1_fu_241 conv_fprop3_Pipeline_1 grp_conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4_fu_248 conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 grp_conv_fprop3_Pipeline_VITIS_LOOP_189_3_fu_263 conv_fprop3_Pipeline_VITIS_LOOP_189_3} INSTDATA {conv_fprop3 {DEPTH 1 CHILDREN {grp_conv_fprop3_Pipeline_1_fu_241 grp_conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4_fu_248 grp_conv_fprop3_Pipeline_VITIS_LOOP_189_3_fu_263}} grp_conv_fprop3_Pipeline_1_fu_241 {DEPTH 2 CHILDREN {}} grp_conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4_fu_248 {DEPTH 2 CHILDREN {}} grp_conv_fprop3_Pipeline_VITIS_LOOP_189_3_fu_263 {DEPTH 2 CHILDREN {}}} MODULEDATA {conv_fprop3_Pipeline_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_16_fu_69_p2 SOURCE {} VARIABLE empty_16 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME exitcond_fu_79_p2 SOURCE {} VARIABLE exitcond LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false}} AREA {DSP 0 BRAM 0 URAM 0}} conv_fprop3_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4 {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln86_fu_194_p2 SOURCE ../source/hls.cpp:86 VARIABLE icmp_ln86 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln84_fu_199_p2 SOURCE ../source/hls.cpp:84 VARIABLE icmp_ln84 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln84_1_fu_204_p2 SOURCE ../source/hls.cpp:84 VARIABLE add_ln84_1 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln84_fu_213_p2 SOURCE ../source/hls.cpp:84 VARIABLE add_ln84 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln84_fu_245_p3 SOURCE ../source/hls.cpp:84 VARIABLE select_ln84 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln84_1_fu_219_p3 SOURCE ../source/hls.cpp:84 VARIABLE select_ln84_1 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_17ns_17ns_17s_17ns_17_4_1_U6 SOURCE ../source/hls.cpp:84 VARIABLE empty_13 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME ama_addmuladd_17ns_17ns_17s_17ns_17_4_1_U6 SOURCE ../source/hls.cpp:84 VARIABLE empty_14 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_31ns_32s_58_2_1_U5 SOURCE ../source/hls.cpp:84 VARIABLE empty_15 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_329_p3 SOURCE ../source/hls.cpp:88 VARIABLE add_ln88_1 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_17ns_17ns_17s_17ns_17_4_1_U6 SOURCE ../source/hls.cpp:88 VARIABLE add_ln88 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln88_3_fu_280_p2 SOURCE ../source/hls.cpp:88 VARIABLE add_ln88_3 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln88_2_fu_264_p2 SOURCE ../source/hls.cpp:88 VARIABLE add_ln88_2 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto_pipe LATENCY 0 OPTYPE lshr PRAGMA {} RTLNAME lshr_ln88_fu_295_p2 SOURCE ../source/hls.cpp:88 VARIABLE lshr_ln88 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op lshr} VISIBLE false} {BINDTYPE op ID {} IMPL maxdsp LATENCY 7 OPTYPE dmul PRAGMA {} RTLNAME dmul_64ns_64ns_64_8_max_dsp_1_U4 SOURCE ../source/hls.cpp:88 VARIABLE mul19_i LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 8 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dmul} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln86_fu_269_p2 SOURCE ../source/hls.cpp:86 VARIABLE add_ln86 LOOP VITIS_LOOP_84_3_VITIS_LOOP_86_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true}} AREA {DSP 13 BRAM 0 URAM 0}} conv_fprop3_Pipeline_VITIS_LOOP_189_3 {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln189_fu_136_p2 SOURCE ../source/hls.cpp:189 VARIABLE icmp_ln189 LOOP VITIS_LOOP_189_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln189_fu_142_p2 SOURCE ../source/hls.cpp:189 VARIABLE add_ln189 LOOP VITIS_LOOP_189_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln191_fu_153_p2 SOURCE ../source/hls.cpp:191 VARIABLE add_ln191 LOOP VITIS_LOOP_189_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 7 OPTYPE dadd PRAGMA {} RTLNAME dadd_64ns_64ns_64_8_full_dsp_1_U20 SOURCE ../source/hls.cpp:191 VARIABLE val_assign LOOP VITIS_LOOP_189_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dadd} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 29 OPTYPE dexp PRAGMA {} RTLNAME dexp_64ns_64ns_64_30_full_dsp_1_U24 SOURCE ../source/hls.cpp:10 VARIABLE ep LOOP VITIS_LOOP_189_3 BUNDLEDNAME {} DSP 26 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dexp} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE xor PRAGMA {} RTLNAME xor_ln11_fu_179_p2 SOURCE ../source/hls.cpp:11 VARIABLE xor_ln11 LOOP VITIS_LOOP_189_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op xor} VISIBLE false} {BINDTYPE op ID {} IMPL fulldsp LATENCY 29 OPTYPE dexp PRAGMA {} RTLNAME dexp_64ns_64ns_64_30_full_dsp_1_U25 SOURCE ../source/hls.cpp:11 VARIABLE em LOOP VITIS_LOOP_189_3 BUNDLEDNAME {} DSP 26 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dexp} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 7 OPTYPE dadd PRAGMA {} RTLNAME dadd_64ns_64ns_64_8_full_dsp_1_U22 SOURCE ../source/hls.cpp:13 VARIABLE add_i LOOP VITIS_LOOP_189_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dadd} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 30 OPTYPE ddiv PRAGMA {} RTLNAME ddiv_64ns_64ns_64_31_no_dsp_1_U23 SOURCE ../source/hls.cpp:13 VARIABLE div_i LOOP VITIS_LOOP_189_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op ddiv} VISIBLE true}} AREA {DSP 58 BRAM 0 URAM 0}} conv_fprop3 {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U36 SOURCE ../source/hls.cpp:171 VARIABLE size LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME empty_fu_297_p2 SOURCE ../source/hls.cpp:171 VARIABLE empty LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln172_fu_313_p2 SOURCE ../source/hls.cpp:172 VARIABLE icmp_ln172 LOOP VITIS_LOOP_172_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln172_fu_318_p2 SOURCE ../source/hls.cpp:172 VARIABLE add_ln172 LOOP VITIS_LOOP_172_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setgt PRAGMA {} RTLNAME empty_19_fu_352_p2 SOURCE ../source/hls.cpp:185 VARIABLE empty_19 LOOP VITIS_LOOP_172_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setgt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME smax_fu_358_p3 SOURCE ../source/hls.cpp:185 VARIABLE smax LOOP VITIS_LOOP_172_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setgt PRAGMA {} RTLNAME empty_20_fu_366_p2 SOURCE ../source/hls.cpp:185 VARIABLE empty_20 LOOP VITIS_LOOP_172_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setgt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME smax1_fu_372_p3 SOURCE ../source/hls.cpp:185 VARIABLE smax1 LOOP VITIS_LOOP_172_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_31ns_31ns_62_2_1_U35 SOURCE ../source/hls.cpp:184 VARIABLE mul_ln184 LOOP VITIS_LOOP_172_1 BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln175_fu_396_p2 SOURCE ../source/hls.cpp:175 VARIABLE icmp_ln175 LOOP VITIS_LOOP_175_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln175_fu_401_p2 SOURCE ../source/hls.cpp:175 VARIABLE add_ln175 LOOP VITIS_LOOP_175_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_11s_11s_11ns_11_4_1_U38 SOURCE ../source/hls.cpp:177 VARIABLE mul_ln177 LOOP VITIS_LOOP_175_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_11s_11s_11ns_11_4_1_U38 SOURCE ../source/hls.cpp:177 VARIABLE add_ln177 LOOP VITIS_LOOP_175_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln79_fu_434_p2 SOURCE ../source/hls.cpp:79 VARIABLE icmp_ln79 LOOP VITIS_LOOP_79_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln79_fu_439_p2 SOURCE ../source/hls.cpp:79 VARIABLE add_ln79 LOOP VITIS_LOOP_79_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_10s_10s_10_1_1_U37 SOURCE ../source/hls.cpp:79 VARIABLE empty_21 LOOP VITIS_LOOP_79_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln81_fu_462_p2 SOURCE ../source/hls.cpp:81 VARIABLE icmp_ln81 LOOP VITIS_LOOP_81_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln81_fu_467_p2 SOURCE ../source/hls.cpp:81 VARIABLE add_ln81 LOOP VITIS_LOOP_81_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln91_fu_482_p2 SOURCE ../source/hls.cpp:91 VARIABLE add_ln91 LOOP VITIS_LOOP_81_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 7 OPTYPE dadd PRAGMA {} RTLNAME dadddsub_64ns_64ns_64_8_full_dsp_1_U34 SOURCE ../source/hls.cpp:91 VARIABLE add28_i LOOP VITIS_LOOP_81_2 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dadd} VISIBLE true}} AREA {DSP 82 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} cache_nodes {} report_dict {TOPINST conv_fprop3 MODULE2INSTS {conv_fprop3 conv_fprop3 conv_fprop3_Pipeline_1 grp_conv_fprop3_Pipeline_1_fu_234 conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 grp_conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4_fu_241 conv_fprop3_Pipeline_VITIS_LOOP_178_3 grp_conv_fprop3_Pipeline_VITIS_LOOP_178_3_fu_258} INST2MODULE {conv_fprop3 conv_fprop3 grp_conv_fprop3_Pipeline_1_fu_234 conv_fprop3_Pipeline_1 grp_conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4_fu_241 conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 grp_conv_fprop3_Pipeline_VITIS_LOOP_178_3_fu_258 conv_fprop3_Pipeline_VITIS_LOOP_178_3} INSTDATA {conv_fprop3 {DEPTH 1 CHILDREN {grp_conv_fprop3_Pipeline_1_fu_234 grp_conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4_fu_241 grp_conv_fprop3_Pipeline_VITIS_LOOP_178_3_fu_258}} grp_conv_fprop3_Pipeline_1_fu_234 {DEPTH 2 CHILDREN {}} grp_conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4_fu_241 {DEPTH 2 CHILDREN {}} grp_conv_fprop3_Pipeline_VITIS_LOOP_178_3_fu_258 {DEPTH 2 CHILDREN {}}} MODULEDATA {conv_fprop3_Pipeline_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_17_fu_69_p2 SOURCE {} VARIABLE empty_17 LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME exitcond_fu_79_p2 SOURCE {} VARIABLE exitcond LOOP {Loop 1} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false}} AREA {DSP 0 BRAM 0 URAM 0}} conv_fprop3_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4 {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln59_fu_197_p2 SOURCE ../source/hls.cpp:59 VARIABLE icmp_ln59 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln57_fu_202_p2 SOURCE ../source/hls.cpp:57 VARIABLE icmp_ln57 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln57_1_fu_207_p2 SOURCE ../source/hls.cpp:57 VARIABLE add_ln57_1 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln57_fu_216_p2 SOURCE ../source/hls.cpp:57 VARIABLE add_ln57 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln57_fu_248_p3 SOURCE ../source/hls.cpp:57 VARIABLE select_ln57 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME select_ln57_1_fu_222_p3 SOURCE ../source/hls.cpp:57 VARIABLE select_ln57_1 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_17ns_17ns_17s_17ns_17_4_1_U5 SOURCE ../source/hls.cpp:57 VARIABLE empty_14 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME ama_addmuladd_17ns_17ns_17s_17ns_17_4_1_U5 SOURCE ../source/hls.cpp:57 VARIABLE empty_15 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_16s_16s_16ns_16_4_1_U6 SOURCE ../source/hls.cpp:57 VARIABLE empty_16 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln61_2_fu_262_p2 SOURCE ../source/hls.cpp:61 VARIABLE add_ln61_2 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_17ns_17ns_17s_17ns_17_4_1_U5 SOURCE ../source/hls.cpp:61 VARIABLE add_ln61 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln61_3_fu_278_p2 SOURCE ../source/hls.cpp:61 VARIABLE add_ln61_3 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16s_16s_16ns_16_4_1_U6 SOURCE ../source/hls.cpp:61 VARIABLE add_ln61_1 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln61_4_fu_286_p2 SOURCE ../source/hls.cpp:61 VARIABLE add_ln61_4 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL maxdsp LATENCY 7 OPTYPE dmul PRAGMA {} RTLNAME dmul_64ns_64ns_64_8_max_dsp_1_U4 SOURCE ../source/hls.cpp:61 VARIABLE mul19_i LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 8 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dmul} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_fu_267_p2 SOURCE ../source/hls.cpp:59 VARIABLE add_ln59 LOOP VITIS_LOOP_57_3_VITIS_LOOP_59_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true}} AREA {DSP 10 BRAM 0 URAM 0}} conv_fprop3_Pipeline_VITIS_LOOP_178_3 {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln178_fu_136_p2 SOURCE ../source/hls.cpp:178 VARIABLE icmp_ln178 LOOP VITIS_LOOP_178_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln178_fu_142_p2 SOURCE ../source/hls.cpp:178 VARIABLE add_ln178 LOOP VITIS_LOOP_178_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln180_fu_153_p2 SOURCE ../source/hls.cpp:180 VARIABLE add_ln180 LOOP VITIS_LOOP_178_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 7 OPTYPE dadd PRAGMA {} RTLNAME dadd_64ns_64ns_64_8_full_dsp_1_U21 SOURCE ../source/hls.cpp:180 VARIABLE val_assign LOOP VITIS_LOOP_178_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dadd} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 29 OPTYPE dexp PRAGMA {} RTLNAME dexp_64ns_64ns_64_30_full_dsp_1_U25 SOURCE ../source/hls.cpp:10 VARIABLE ep LOOP VITIS_LOOP_178_3 BUNDLEDNAME {} DSP 26 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dexp} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE xor PRAGMA {} RTLNAME xor_ln11_fu_179_p2 SOURCE ../source/hls.cpp:11 VARIABLE xor_ln11 LOOP VITIS_LOOP_178_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op xor} VISIBLE false} {BINDTYPE op ID {} IMPL fulldsp LATENCY 29 OPTYPE dexp PRAGMA {} RTLNAME dexp_64ns_64ns_64_30_full_dsp_1_U26 SOURCE ../source/hls.cpp:11 VARIABLE em LOOP VITIS_LOOP_178_3 BUNDLEDNAME {} DSP 26 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dexp} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 7 OPTYPE dadd PRAGMA {} RTLNAME dadd_64ns_64ns_64_8_full_dsp_1_U23 SOURCE ../source/hls.cpp:12 VARIABLE add_i LOOP VITIS_LOOP_178_3 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dadd} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 30 OPTYPE ddiv PRAGMA {} RTLNAME ddiv_64ns_64ns_64_31_no_dsp_1_U24 SOURCE ../source/hls.cpp:12 VARIABLE div_i LOOP VITIS_LOOP_178_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op ddiv} VISIBLE true}} AREA {DSP 58 BRAM 0 URAM 0}} conv_fprop3 {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U37 SOURCE ../source/hls.cpp:160 VARIABLE size LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME empty_fu_292_p2 SOURCE ../source/hls.cpp:160 VARIABLE empty LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln161_fu_308_p2 SOURCE ../source/hls.cpp:161 VARIABLE icmp_ln161 LOOP VITIS_LOOP_161_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln161_fu_313_p2 SOURCE ../source/hls.cpp:161 VARIABLE add_ln161 LOOP VITIS_LOOP_161_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setgt PRAGMA {} RTLNAME empty_20_fu_351_p2 SOURCE ../source/hls.cpp:174 VARIABLE empty_20 LOOP VITIS_LOOP_161_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setgt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME smax_fu_357_p3 SOURCE ../source/hls.cpp:174 VARIABLE smax LOOP VITIS_LOOP_161_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setgt PRAGMA {} RTLNAME empty_21_fu_365_p2 SOURCE ../source/hls.cpp:174 VARIABLE empty_21 LOOP VITIS_LOOP_161_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setgt} VISIBLE false} {BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME smax1_fu_371_p3 SOURCE ../source/hls.cpp:174 VARIABLE smax1 LOOP VITIS_LOOP_161_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_31ns_31ns_62_2_1_U36 SOURCE ../source/hls.cpp:173 VARIABLE mul_ln173 LOOP VITIS_LOOP_161_1 BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln164_fu_395_p2 SOURCE ../source/hls.cpp:164 VARIABLE icmp_ln164 LOOP VITIS_LOOP_164_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln164_fu_400_p2 SOURCE ../source/hls.cpp:164 VARIABLE add_ln164 LOOP VITIS_LOOP_164_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_11s_11s_11ns_11_4_1_U40 SOURCE ../source/hls.cpp:166 VARIABLE mul_ln166 LOOP VITIS_LOOP_164_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL dsp_slice LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_11s_11s_11ns_11_4_1_U40 SOURCE ../source/hls.cpp:166 VARIABLE add_ln166 LOOP VITIS_LOOP_164_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_11ns_6ns_16_1_1_U38 SOURCE ../source/hls.cpp:61 VARIABLE mul_ln61 LOOP VITIS_LOOP_164_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln52_fu_442_p2 SOURCE ../source/hls.cpp:52 VARIABLE icmp_ln52 LOOP VITIS_LOOP_52_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln52_fu_447_p2 SOURCE ../source/hls.cpp:52 VARIABLE add_ln52 LOOP VITIS_LOOP_52_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_10s_10s_10_1_1_U39 SOURCE ../source/hls.cpp:52 VARIABLE empty_22 LOOP VITIS_LOOP_52_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op mul} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE setlt PRAGMA {} RTLNAME icmp_ln54_fu_470_p2 SOURCE ../source/hls.cpp:54 VARIABLE icmp_ln54 LOOP VITIS_LOOP_54_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op setlt} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln54_fu_475_p2 SOURCE ../source/hls.cpp:54 VARIABLE add_ln54 LOOP VITIS_LOOP_54_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln64_fu_490_p2 SOURCE ../source/hls.cpp:64 VARIABLE add_ln64 LOOP VITIS_LOOP_54_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fulldsp LATENCY 7 OPTYPE dadd PRAGMA {} RTLNAME dadddsub_64ns_64ns_64_8_full_dsp_1_U35 SOURCE ../source/hls.cpp:64 VARIABLE add28_i LOOP VITIS_LOOP_54_2 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op dadd} VISIBLE true}} AREA {DSP 80 BRAM 0 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.04 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.08 seconds; current allocated memory: 849.410 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.87 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.91 seconds; current allocated memory: 852.676 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for conv_fprop3.
 INFO: [VLOG 209-307] Generating Verilog RTL for conv_fprop3.
 Execute           syn_report -model conv_fprop3 -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 335.23 MHz
-Command         autosyn done; 2.97 sec.
-Command       csynth_design done; 13.98 sec.
-INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:13; Allocated memory: 53.070 MB.
+Command         autosyn done; 2.78 sec.
+Command       csynth_design done; 12.74 sec.
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:12; Allocated memory: 54.180 MB.
 Execute       close_solution 
 INFO: [HLS 200-1510] Running: close_solution 
 Execute         cleanup_all 

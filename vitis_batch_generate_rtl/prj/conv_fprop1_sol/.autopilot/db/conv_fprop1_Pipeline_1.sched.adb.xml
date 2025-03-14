@@ -34,7 +34,7 @@ newFuncRoot:0 %empty = alloca i32 1
 
 <Node id="4" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
 <![CDATA[
-newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c1_conv_layer_map_common, void @empty_1, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
+newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c1_conv_layer2_map_common, void @empty_1, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -139,10 +139,10 @@ memset.loop:2 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 
 
 <Node id="12" bw="10" op_0_bw="64" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-memset.loop:3 %c1_conv_layer_map_common_addr = getelementptr i64 %c1_conv_layer_map_common, i64 0, i64 %p_cast13
+memset.loop:3 %c1_conv_layer2_map_common_addr = getelementptr i64 %c1_conv_layer2_map_common, i64 0, i64 %p_cast13
 
 ]]></Node>
-<StgValue><ssdm name="c1_conv_layer_map_common_addr"/></StgValue>
+<StgValue><ssdm name="c1_conv_layer2_map_common_addr"/></StgValue>
 </operation>
 
 <operation id="13" st_id="1" stage="1" lat="1">
@@ -154,7 +154,7 @@ memset.loop:3 %c1_conv_layer_map_common_addr = getelementptr i64 %c1_conv_layer_
 
 <Node id="13" bw="0" op_0_bw="64" op_1_bw="10">
 <![CDATA[
-memset.loop:4 %store_ln0 = store i64 0, i10 %c1_conv_layer_map_common_addr
+memset.loop:4 %store_ln0 = store i64 0, i10 %c1_conv_layer2_map_common_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -169,10 +169,10 @@ memset.loop:4 %store_ln0 = store i64 0, i10 %c1_conv_layer_map_common_addr
 
 <Node id="14" bw="11" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-memset.loop:5 %empty_16 = add i11 %p_load, i11 1
+memset.loop:5 %empty_17 = add i11 %p_load, i11 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_16"/></StgValue>
+<StgValue><ssdm name="empty_17"/></StgValue>
 </operation>
 
 <operation id="15" st_id="1" stage="1" lat="1">
@@ -184,10 +184,10 @@ memset.loop:5 %empty_16 = add i11 %p_load, i11 1
 
 <Node id="15" bw="32" op_0_bw="11">
 <![CDATA[
-memset.loop:6 %p_cast20 = zext i11 %empty_16
+memset.loop:6 %p_cast21 = zext i11 %empty_17
 
 ]]></Node>
-<StgValue><ssdm name="p_cast20"/></StgValue>
+<StgValue><ssdm name="p_cast21"/></StgValue>
 </operation>
 
 <operation id="16" st_id="1" stage="1" lat="1">
@@ -199,7 +199,7 @@ memset.loop:6 %p_cast20 = zext i11 %empty_16
 
 <Node id="16" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-memset.loop:7 %exitcond = icmp_eq  i32 %p_cast20, i32 %size_read
+memset.loop:7 %exitcond = icmp_eq  i32 %p_cast21, i32 %size_read
 
 ]]></Node>
 <StgValue><ssdm name="exitcond"/></StgValue>
@@ -214,10 +214,10 @@ memset.loop:7 %exitcond = icmp_eq  i32 %p_cast20, i32 %size_read
 
 <Node id="17" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-memset.loop:8 %empty_17 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0
+memset.loop:8 %empty_18 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0
 
 ]]></Node>
-<StgValue><ssdm name="empty_17"/></StgValue>
+<StgValue><ssdm name="empty_18"/></StgValue>
 </operation>
 
 <operation id="18" st_id="1" stage="1" lat="1">
@@ -229,7 +229,7 @@ memset.loop:8 %empty_17 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64
 
 <Node id="18" bw="0" op_0_bw="11" op_1_bw="11" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-memset.loop:9 %store_ln0 = store i11 %empty_16, i11 %empty
+memset.loop:9 %store_ln0 = store i11 %empty_17, i11 %empty
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -244,7 +244,7 @@ memset.loop:9 %store_ln0 = store i11 %empty_16, i11 %empty
 
 <Node id="19" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-memset.loop:10 %br_ln0 = br i1 %exitcond, void %memset.loop, void %VITIS_LOOP_118_2.loopexit.exitStub
+memset.loop:10 %br_ln0 = br i1 %exitcond, void %memset.loop, void %VITIS_LOOP_96_2.loopexit.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -260,7 +260,7 @@ memset.loop:10 %br_ln0 = br i1 %exitcond, void %memset.loop, void %VITIS_LOOP_11
 
 <Node id="21" bw="0">
 <![CDATA[
-VITIS_LOOP_118_2.loopexit.exitStub:0 %ret_ln0 = ret
+VITIS_LOOP_96_2.loopexit.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>

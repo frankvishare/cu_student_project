@@ -1,8 +1,8 @@
 {
     "1": {
-        "name": "max_pooling_fprop1_Pipeline_VITIS_LOOP_240_4",
+        "name": "max_pooling_fprop1_Pipeline_VITIS_LOOP_204_4",
         "file": "..\/source\/hls.cpp",
-        "fileloc": "239",
+        "fileloc": "203",
         "instructions": "73",
         "total_instructions": "73",
         "calls": "",
@@ -21,9 +21,9 @@
     "0": {
         "name": "max_pooling_fprop1",
         "file": "..\/source\/hls.cpp",
-        "fileloc": "227",
-        "instructions": "138",
-        "total_instructions": "211",
+        "fileloc": "185",
+        "instructions": "142",
+        "total_instructions": "215",
         "calls": "1",
         "basicblocks": "10",
         "loads": {

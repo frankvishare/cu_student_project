@@ -47,19 +47,27 @@
         "return_type": "void",
         "para": [
             [
-                "Layer *",
-                "input_layer"
+                "Layer1 *",
+                "input_layer1"
             ],
             [
-                "Layer *",
-                "c1_conv_layer"
+                "Layer2 *",
+                "input_layer2"
+            ],
+            [
+                "Layer1 *",
+                "c1_conv_layer1"
+            ],
+            [
+                "Layer2 *",
+                "c1_conv_layer2"
             ],
             [
                 "bool[96]",
                 "pconnection"
             ]
         ],
-        "func_impl": "void IMPL(conv_fprop1)(HLS_COMMON_ARG Layer *input_layer, Layer *c1_conv_layer, bool pconnection[96]) ",
+        "func_impl": "void IMPL(conv_fprop1)(HLS_COMMON_ARG Layer1 *input_layer1, Layer2 *input_layer2, Layer1 *c1_conv_layer1, Layer2 *c1_conv_layer2, bool pconnection[96]) ",
         "is_impl_func": true,
         "visible": true
     },
@@ -67,19 +75,27 @@
         "return_type": "void",
         "para": [
             [
-                "Layer *",
-                "s2_pooling_la"
+                "Layer1 *",
+                "s2_pooling_layer1"
             ],
             [
-                "Layer *",
-                "c3_conv_layer"
+                "Layer2 *",
+                "s2_pooling_layer2"
+            ],
+            [
+                "Layer1 *",
+                "c3_conv_layer1"
+            ],
+            [
+                "Layer2 *",
+                "c3_conv_layer2"
             ],
             [
                 "bool[96]",
                 "pconnection"
             ]
         ],
-        "func_impl": "void IMPL(conv_fprop2)(HLS_COMMON_ARG Layer *s2_pooling_la, Layer *c3_conv_layer, bool pconnection[96]) ",
+        "func_impl": "void IMPL(conv_fprop2)(HLS_COMMON_ARG Layer1 *s2_pooling_layer1, Layer2 *s2_pooling_layer2, Layer1 *c3_conv_layer1, Layer2 *c3_conv_layer2, bool pconnection[96]) ",
         "is_impl_func": true,
         "visible": true
     },
@@ -87,19 +103,27 @@
         "return_type": "void",
         "para": [
             [
-                "Layer *",
-                "s4_pooling_layer"
+                "Layer1 *",
+                "s4_pooling_layer1"
             ],
             [
-                "Layer *",
-                "c5_conv_layer"
+                "Layer2 *",
+                "s4_pooling_layer2"
+            ],
+            [
+                "Layer1 *",
+                "c5_conv_layer1"
+            ],
+            [
+                "Layer2 *",
+                "c5_conv_layer2"
             ],
             [
                 "bool[96]",
                 "pconnection"
             ]
         ],
-        "func_impl": "void IMPL(conv_fprop3)(HLS_COMMON_ARG Layer *s4_pooling_layer, Layer *c5_conv_layer, bool pconnection[96]) ",
+        "func_impl": "void IMPL(conv_fprop3)(HLS_COMMON_ARG Layer1 *s4_pooling_layer1, Layer2 *s4_pooling_layer2, Layer1 *c5_conv_layer1, Layer2 *c5_conv_layer2, bool pconnection[96]) ",
         "is_impl_func": true,
         "visible": true
     },
@@ -107,15 +131,23 @@
         "return_type": "void",
         "para": [
             [
-                "Layer *",
-                "c1_conv_layer"
+                "Layer1 *",
+                "c1_conv_layer1"
             ],
             [
-                "Layer *",
-                "s2_pooling_layer"
+                "Layer2 *",
+                "c1_conv_layer2"
+            ],
+            [
+                "Layer1 *",
+                "s2_pooling_layer1"
+            ],
+            [
+                "Layer2 *",
+                "s2_pooling_layer2"
             ]
         ],
-        "func_impl": "void IMPL(max_pooling_fprop1)(HLS_COMMON_ARG Layer *c1_conv_layer, Layer *s2_pooling_layer) ",
+        "func_impl": "void IMPL(max_pooling_fprop1)(HLS_COMMON_ARG Layer1 *c1_conv_layer1, Layer2 *c1_conv_layer2, Layer1 *s2_pooling_layer1, Layer2 *s2_pooling_layer2) ",
         "is_impl_func": true,
         "visible": true
     },
@@ -123,15 +155,23 @@
         "return_type": "void",
         "para": [
             [
-                "Layer *",
-                "c3_conv_layer"
+                "Layer1 *",
+                "c3_conv_layer1"
             ],
             [
-                "Layer *",
-                "s4_pooling_layer"
+                "Layer2 *",
+                "c3_conv_layer2"
+            ],
+            [
+                "Layer1 *",
+                "s4_pooling_layer1"
+            ],
+            [
+                "Layer2 *",
+                "s4_pooling_layer2"
             ]
         ],
-        "func_impl": "void IMPL(max_pooling_fprop2)(HLS_COMMON_ARG Layer *c3_conv_layer, Layer *s4_pooling_layer) ",
+        "func_impl": "void IMPL(max_pooling_fprop2)(HLS_COMMON_ARG Layer1 *c3_conv_layer1, Layer2 *c3_conv_layer2, Layer1 *s4_pooling_layer1, Layer2 *s4_pooling_layer2) ",
         "is_impl_func": true,
         "visible": true
     },
@@ -139,15 +179,23 @@
         "return_type": "void",
         "para": [
             [
-                "Layer *",
-                "c5_conv_layer"
+                "Layer1 *",
+                "c5_conv_layer1"
             ],
             [
-                "Layer *",
-                "output_layer"
+                "Layer2 *",
+                "c5_conv_layer2"
+            ],
+            [
+                "Layer1 *",
+                "output_layer1"
+            ],
+            [
+                "Layer2 *",
+                "output_layer2"
             ]
         ],
-        "func_impl": "void IMPL(fully_connected_fprop)(HLS_COMMON_ARG Layer *c5_conv_layer, Layer *output_layer) ",
+        "func_impl": "void IMPL(fully_connected_fprop)(HLS_COMMON_ARG Layer1 *c5_conv_layer1, Layer2 *c5_conv_layer2, Layer1 *output_layer1, Layer2 *output_layer2) ",
         "is_impl_func": true,
         "visible": true
     }

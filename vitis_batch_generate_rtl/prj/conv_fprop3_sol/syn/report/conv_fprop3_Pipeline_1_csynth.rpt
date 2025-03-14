@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv_fprop3_Pipeline_1'
 ================================================================
-* Date:           Wed Mar 12 17:42:32 2025
+* Date:           Fri Mar 14 16:55:17 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        prj
@@ -89,7 +89,7 @@
     +-------------------+----------+----+---+----+------------+------------+
     |   Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-------------------+----------+----+---+----+------------+------------+
-    |empty_16_fu_69_p2  |         +|   0|  0|  18|          11|           1|
+    |empty_17_fu_69_p2  |         +|   0|  0|  18|          11|           1|
     |ap_condition_55    |       and|   0|  0|   2|           1|           1|
     |exitcond_fu_79_p2  |      icmp|   0|  0|  39|          32|          32|
     +-------------------+----------+----+---+----+------------+------------+
@@ -124,20 +124,20 @@
 == Interface
 ================================================================
 * Summary: 
-+-----------------------------------+-----+-----+------------+--------------------------+--------------+
-|             RTL Ports             | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
-+-----------------------------------+-----+-----+------------+--------------------------+--------------+
-|ap_clk                             |   in|    1|  ap_ctrl_hs|    conv_fprop3_Pipeline_1|  return value|
-|ap_rst                             |   in|    1|  ap_ctrl_hs|    conv_fprop3_Pipeline_1|  return value|
-|ap_start                           |   in|    1|  ap_ctrl_hs|    conv_fprop3_Pipeline_1|  return value|
-|ap_done                            |  out|    1|  ap_ctrl_hs|    conv_fprop3_Pipeline_1|  return value|
-|ap_idle                            |  out|    1|  ap_ctrl_hs|    conv_fprop3_Pipeline_1|  return value|
-|ap_ready                           |  out|    1|  ap_ctrl_hs|    conv_fprop3_Pipeline_1|  return value|
-|ap_ce                              |   in|    1|  ap_ctrl_hs|    conv_fprop3_Pipeline_1|  return value|
-|c5_conv_layer_map_common_address0  |  out|   10|   ap_memory|  c5_conv_layer_map_common|         array|
-|c5_conv_layer_map_common_ce0       |  out|    1|   ap_memory|  c5_conv_layer_map_common|         array|
-|c5_conv_layer_map_common_we0       |  out|    1|   ap_memory|  c5_conv_layer_map_common|         array|
-|c5_conv_layer_map_common_d0        |  out|   64|   ap_memory|  c5_conv_layer_map_common|         array|
-|size                               |   in|   32|     ap_none|                      size|        scalar|
-+-----------------------------------+-----+-----+------------+--------------------------+--------------+
++------------------------------------+-----+-----+------------+---------------------------+--------------+
+|              RTL Ports             | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++------------------------------------+-----+-----+------------+---------------------------+--------------+
+|ap_clk                              |   in|    1|  ap_ctrl_hs|     conv_fprop3_Pipeline_1|  return value|
+|ap_rst                              |   in|    1|  ap_ctrl_hs|     conv_fprop3_Pipeline_1|  return value|
+|ap_start                            |   in|    1|  ap_ctrl_hs|     conv_fprop3_Pipeline_1|  return value|
+|ap_done                             |  out|    1|  ap_ctrl_hs|     conv_fprop3_Pipeline_1|  return value|
+|ap_idle                             |  out|    1|  ap_ctrl_hs|     conv_fprop3_Pipeline_1|  return value|
+|ap_ready                            |  out|    1|  ap_ctrl_hs|     conv_fprop3_Pipeline_1|  return value|
+|ap_ce                               |   in|    1|  ap_ctrl_hs|     conv_fprop3_Pipeline_1|  return value|
+|c5_conv_layer2_map_common_address0  |  out|   10|   ap_memory|  c5_conv_layer2_map_common|         array|
+|c5_conv_layer2_map_common_ce0       |  out|    1|   ap_memory|  c5_conv_layer2_map_common|         array|
+|c5_conv_layer2_map_common_we0       |  out|    1|   ap_memory|  c5_conv_layer2_map_common|         array|
+|c5_conv_layer2_map_common_d0        |  out|   64|   ap_memory|  c5_conv_layer2_map_common|         array|
+|size                                |   in|   32|     ap_none|                       size|        scalar|
++------------------------------------+-----+-----+------------+---------------------------+--------------+
 

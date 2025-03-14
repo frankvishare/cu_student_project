@@ -164,8 +164,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>c5_conv_layer_map_common_address0</name>
-<Object>c5_conv_layer_map_common</Object>
+<name>c5_conv_layer2_map_common_address0</name>
+<Object>c5_conv_layer2_map_common</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -175,8 +175,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>c5_conv_layer_map_common_ce0</name>
-<Object>c5_conv_layer_map_common</Object>
+<name>c5_conv_layer2_map_common_ce0</name>
+<Object>c5_conv_layer2_map_common</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -186,8 +186,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>c5_conv_layer_map_common_we0</name>
-<Object>c5_conv_layer_map_common</Object>
+<name>c5_conv_layer2_map_common_we0</name>
+<Object>c5_conv_layer2_map_common</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -197,8 +197,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>c5_conv_layer_map_common_d0</name>
-<Object>c5_conv_layer_map_common</Object>
+<name>c5_conv_layer2_map_common_d0</name>
+<Object>c5_conv_layer2_map_common</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>

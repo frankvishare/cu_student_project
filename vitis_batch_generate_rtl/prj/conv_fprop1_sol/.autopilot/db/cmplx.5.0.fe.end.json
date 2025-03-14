@@ -1,42 +1,21 @@
 {
     "1": {
-        "name": "conv_fprop1_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4",
+        "name": "conv_fprop1_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4",
         "file": "..\/source\/hls.cpp",
-        "fileloc": "126",
+        "fileloc": "104",
         "instructions": "64",
         "total_instructions": "64",
         "calls": "",
         "basicblocks": "4",
         "loads": {
             "L": "5",
-            "T": "1"
+            "T": "2"
         },
         "stores": {
             "L": "8"
         },
         "loops": {
             "L": "1"
-        }
-    },
-    "0": {
-        "name": "conv_fprop1",
-        "file": "..\/source\/hls.cpp",
-        "fileloc": "111",
-        "instructions": "153",
-        "total_instructions": "273",
-        "calls": "2 1 3",
-        "basicblocks": "17",
-        "loads": {
-            "L": "2",
-            "T": "4"
-        },
-        "stores": {
-            "L": "2",
-            "T": "1"
-        },
-        "loops": {
-            "L": "1",
-            "N": "3"
         }
     },
     "2": {
@@ -58,10 +37,31 @@
             "L": "1"
         }
     },
-    "3": {
-        "name": "conv_fprop1_Pipeline_VITIS_LOOP_132_3",
+    "0": {
+        "name": "conv_fprop1",
         "file": "..\/source\/hls.cpp",
-        "fileloc": "132",
+        "fileloc": "83",
+        "instructions": "158",
+        "total_instructions": "278",
+        "calls": "2 1 3",
+        "basicblocks": "17",
+        "loads": {
+            "L": "2",
+            "T": "3"
+        },
+        "stores": {
+            "L": "2",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1",
+            "N": "3"
+        }
+    },
+    "3": {
+        "name": "conv_fprop1_Pipeline_VITIS_LOOP_110_3",
+        "file": "..\/source\/hls.cpp",
+        "fileloc": "110",
         "instructions": "39",
         "total_instructions": "39",
         "calls": "",

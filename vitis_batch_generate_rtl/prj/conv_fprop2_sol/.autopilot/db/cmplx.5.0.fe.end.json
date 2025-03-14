@@ -1,5 +1,45 @@
 {
     "1": {
+        "name": "conv_fprop2_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4",
+        "file": "..\/source\/hls.cpp",
+        "fileloc": "138",
+        "instructions": "64",
+        "total_instructions": "64",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "5",
+            "T": "2"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "conv_fprop2",
+        "file": "..\/source\/hls.cpp",
+        "fileloc": "117",
+        "instructions": "158",
+        "total_instructions": "278",
+        "calls": "2 1 3",
+        "basicblocks": "17",
+        "loads": {
+            "L": "2",
+            "T": "3"
+        },
+        "stores": {
+            "L": "2",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1",
+            "N": "3"
+        }
+    },
+    "2": {
         "name": "conv_fprop2_Pipeline_1",
         "file": "..\/source\/hls.cpp",
         "fileloc": "0",
@@ -18,50 +58,10 @@
             "L": "1"
         }
     },
-    "0": {
-        "name": "conv_fprop2",
-        "file": "..\/source\/hls.cpp",
-        "fileloc": "140",
-        "instructions": "153",
-        "total_instructions": "273",
-        "calls": "1 2 3",
-        "basicblocks": "17",
-        "loads": {
-            "L": "2",
-            "T": "4"
-        },
-        "stores": {
-            "L": "2",
-            "T": "1"
-        },
-        "loops": {
-            "L": "1",
-            "N": "3"
-        }
-    },
-    "2": {
-        "name": "conv_fprop2_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4",
-        "file": "..\/source\/hls.cpp",
-        "fileloc": "155",
-        "instructions": "64",
-        "total_instructions": "64",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "5",
-            "T": "1"
-        },
-        "stores": {
-            "L": "8"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
     "3": {
-        "name": "conv_fprop2_Pipeline_VITIS_LOOP_161_3",
+        "name": "conv_fprop2_Pipeline_VITIS_LOOP_144_3",
         "file": "..\/source\/hls.cpp",
-        "fileloc": "161",
+        "fileloc": "144",
         "instructions": "39",
         "total_instructions": "39",
         "calls": "",

@@ -1,9 +1,9 @@
 {
   "0": {
     "basicblocks": 15,
-    "calls": "1 2",
+    "calls": "2 1",
     "file": "hls.cpp",
-    "fileloc": 168,
+    "fileloc": 151,
     "instructions": 64,
     "loads": {
       "T": 10
@@ -15,10 +15,19 @@
     "total_instructions": 125
   },
   "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls.cpp",
+    "fileloc": 8,
+    "instructions": 7,
+    "name": "tan_h",
+    "total_instructions": 7
+  },
+  "2": {
     "basicblocks": 13,
     "calls": "",
     "file": "hls.cpp",
-    "fileloc": 74,
+    "fileloc": 47,
     "instructions": 54,
     "loads": {
       "L": 3
@@ -28,14 +37,5 @@
       "L": 1
     },
     "total_instructions": 54
-  },
-  "2": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "hls.cpp",
-    "fileloc": 8,
-    "instructions": 7,
-    "name": "tan_h",
-    "total_instructions": 7
   }
 }

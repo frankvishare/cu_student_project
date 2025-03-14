@@ -34,7 +34,7 @@ newFuncRoot:0 %empty = alloca i32 1
 
 <Node id="4" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
 <![CDATA[
-newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c1_conv_layer_map_common, void @empty_1, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
+newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c1_conv_layer2_map_common, void @empty_1, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -139,10 +139,10 @@ memset.loop:2 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 
 
 <Node id="12" bw="10" op_0_bw="64" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-memset.loop:3 %c1_conv_layer_map_common_addr = getelementptr i64 %c1_conv_layer_map_common, i64 0, i64 %p_cast13
+memset.loop:3 %c1_conv_layer2_map_common_addr = getelementptr i64 %c1_conv_layer2_map_common, i64 0, i64 %p_cast13
 
 ]]></Node>
-<StgValue><ssdm name="c1_conv_layer_map_common_addr"/></StgValue>
+<StgValue><ssdm name="c1_conv_layer2_map_common_addr"/></StgValue>
 </operation>
 
 <operation id="13" st_id="1" stage="1" lat="1">
@@ -154,7 +154,7 @@ memset.loop:3 %c1_conv_layer_map_common_addr = getelementptr i64 %c1_conv_layer_
 
 <Node id="13" bw="0" op_0_bw="64" op_1_bw="10">
 <![CDATA[
-memset.loop:4 %store_ln0 = store i64 0, i10 %c1_conv_layer_map_common_addr
+memset.loop:4 %store_ln0 = store i64 0, i10 %c1_conv_layer2_map_common_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -169,10 +169,10 @@ memset.loop:4 %store_ln0 = store i64 0, i10 %c1_conv_layer_map_common_addr
 
 <Node id="14" bw="11" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-memset.loop:5 %empty_16 = add i11 %p_load, i11 1
+memset.loop:5 %empty_17 = add i11 %p_load, i11 1
 
 ]]></Node>
-<StgValue><ssdm name="empty_16"/></StgValue>
+<StgValue><ssdm name="empty_17"/></StgValue>
 </operation>
 
 <operation id="15" st_id="1" stage="1" lat="1">
@@ -184,10 +184,10 @@ memset.loop:5 %empty_16 = add i11 %p_load, i11 1
 
 <Node id="15" bw="32" op_0_bw="11">
 <![CDATA[
-memset.loop:6 %p_cast20 = zext i11 %empty_16
+memset.loop:6 %p_cast21 = zext i11 %empty_17
 
 ]]></Node>
-<StgValue><ssdm name="p_cast20"/></StgValue>
+<StgValue><ssdm name="p_cast21"/></StgValue>
 </operation>
 
 <operation id="16" st_id="1" stage="1" lat="1">
@@ -199,7 +199,7 @@ memset.loop:6 %p_cast20 = zext i11 %empty_16
 
 <Node id="16" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-memset.loop:7 %exitcond = icmp_eq  i32 %p_cast20, i32 %size_read
+memset.loop:7 %exitcond = icmp_eq  i32 %p_cast21, i32 %size_read
 
 ]]></Node>
 <StgValue><ssdm name="exitcond"/></StgValue>
@@ -214,10 +214,10 @@ memset.loop:7 %exitcond = icmp_eq  i32 %p_cast20, i32 %size_read
 
 <Node id="17" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-memset.loop:8 %empty_17 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0
+memset.loop:8 %empty_18 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0
 
 ]]></Node>
-<StgValue><ssdm name="empty_17"/></StgValue>
+<StgValue><ssdm name="empty_18"/></StgValue>
 </operation>
 
 <operation id="18" st_id="1" stage="1" lat="1">
@@ -229,7 +229,7 @@ memset.loop:8 %empty_17 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64
 
 <Node id="18" bw="0" op_0_bw="11" op_1_bw="11" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-memset.loop:9 %store_ln0 = store i11 %empty_16, i11 %empty
+memset.loop:9 %store_ln0 = store i11 %empty_17, i11 %empty
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -244,7 +244,7 @@ memset.loop:9 %store_ln0 = store i11 %empty_16, i11 %empty
 
 <Node id="19" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-memset.loop:10 %br_ln0 = br i1 %exitcond, void %memset.loop, void %VITIS_LOOP_118_2.loopexit.exitStub
+memset.loop:10 %br_ln0 = br i1 %exitcond, void %memset.loop, void %VITIS_LOOP_96_2.loopexit.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -260,7 +260,7 @@ memset.loop:10 %br_ln0 = br i1 %exitcond, void %memset.loop, void %VITIS_LOOP_11
 
 <Node id="21" bw="0">
 <![CDATA[
-VITIS_LOOP_118_2.loopexit.exitStub:0 %ret_ln0 = ret
+VITIS_LOOP_96_2.loopexit.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>
@@ -270,8 +270,8 @@ VITIS_LOOP_118_2.loopexit.exitStub:0 %ret_ln0 = ret
 
 
 <ports>
-<port id="27" name="c1_conv_layer_map_common" dir="1" iftype="1">
-<core>RAM</core><StgValue><ssdm name="c1_conv_layer_map_common"/><MemPortTyVec>0 3 </MemPortTyVec>
+<port id="27" name="c1_conv_layer2_map_common" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="c1_conv_layer2_map_common"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="28" name="size" dir="0" iftype="0">
@@ -285,7 +285,7 @@ VITIS_LOOP_118_2.loopexit.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="32" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="31" toId="5">
 </dataflow>
-<dataflow id="33" from="c1_conv_layer_map_common" to="specinterface_ln0" fromId="27" toId="5">
+<dataflow id="33" from="c1_conv_layer2_map_common" to="specinterface_ln0" fromId="27" toId="5">
 </dataflow>
 <dataflow id="35" from="empty_1" to="specinterface_ln0" fromId="34" toId="5">
 </dataflow>
@@ -347,35 +347,35 @@ VITIS_LOOP_118_2.loopexit.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="70" from="empty_0" to="specpipeline_ln0" fromId="39" toId="11">
 </dataflow>
-<dataflow id="71" from="c1_conv_layer_map_common" to="c1_conv_layer_map_common_addr" fromId="27" toId="12">
+<dataflow id="71" from="c1_conv_layer2_map_common" to="c1_conv_layer2_map_common_addr" fromId="27" toId="12">
 </dataflow>
-<dataflow id="73" from="StgValue_72" to="c1_conv_layer_map_common_addr" fromId="72" toId="12">
+<dataflow id="73" from="StgValue_72" to="c1_conv_layer2_map_common_addr" fromId="72" toId="12">
 </dataflow>
-<dataflow id="74" from="p_cast13" to="c1_conv_layer_map_common_addr" fromId="10" toId="12">
+<dataflow id="74" from="p_cast13" to="c1_conv_layer2_map_common_addr" fromId="10" toId="12">
 </dataflow>
 <dataflow id="75" from="StgValue_72" to="store_ln0" fromId="72" toId="13">
 </dataflow>
-<dataflow id="76" from="c1_conv_layer_map_common_addr" to="store_ln0" fromId="12" toId="13">
+<dataflow id="76" from="c1_conv_layer2_map_common_addr" to="store_ln0" fromId="12" toId="13">
 </dataflow>
-<dataflow id="77" from="p_load" to="empty_16" fromId="9" toId="14">
+<dataflow id="77" from="p_load" to="empty_17" fromId="9" toId="14">
 </dataflow>
-<dataflow id="79" from="StgValue_78" to="empty_16" fromId="78" toId="14">
+<dataflow id="79" from="StgValue_78" to="empty_17" fromId="78" toId="14">
 </dataflow>
-<dataflow id="80" from="empty_16" to="p_cast20" fromId="14" toId="15">
+<dataflow id="80" from="empty_17" to="p_cast21" fromId="14" toId="15">
 </dataflow>
-<dataflow id="81" from="p_cast20" to="exitcond" fromId="15" toId="16">
+<dataflow id="81" from="p_cast21" to="exitcond" fromId="15" toId="16">
 </dataflow>
 <dataflow id="82" from="size_read" to="exitcond" fromId="6" toId="16">
 </dataflow>
-<dataflow id="84" from="_ssdm_op_SpecLoopTripCount" to="empty_17" fromId="83" toId="17">
+<dataflow id="84" from="_ssdm_op_SpecLoopTripCount" to="empty_18" fromId="83" toId="17">
 </dataflow>
-<dataflow id="86" from="StgValue_85" to="empty_17" fromId="85" toId="17">
+<dataflow id="86" from="StgValue_85" to="empty_18" fromId="85" toId="17">
 </dataflow>
-<dataflow id="88" from="StgValue_87" to="empty_17" fromId="87" toId="17">
+<dataflow id="88" from="StgValue_87" to="empty_18" fromId="87" toId="17">
 </dataflow>
-<dataflow id="89" from="StgValue_72" to="empty_17" fromId="72" toId="17">
+<dataflow id="89" from="StgValue_72" to="empty_18" fromId="72" toId="17">
 </dataflow>
-<dataflow id="90" from="empty_16" to="store_ln0" fromId="14" toId="18">
+<dataflow id="90" from="empty_17" to="store_ln0" fromId="14" toId="18">
 </dataflow>
 <dataflow id="91" from="empty" to="store_ln0" fromId="4" toId="18">
 </dataflow>

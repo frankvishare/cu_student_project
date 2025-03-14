@@ -38,121 +38,101 @@ const int height = 32;
 //*-------------------------------------------------------------------------------------------------------/
 
 // 初始化------------------------------------------------------------------------------------------------/
-void init_kernel(double *kernel, int size, double weight_base)
+void init_layer(Layer1 *layer1, Layer2 *layer2, int prevlayer_map_count, int map_count, 
+	int kernel_w, int kernel_h, int map_w, int map_h, bool is_pooling)
 {
-	for (int i = 0; i < size; i++)
-	{
-		kernel[i] = (genrand_real1() - 0.5) * 2 * weight_base;
-	}
+const double scale = 6.0;
+int fan_in = 0;
+int fan_out = 0;
+if (is_pooling)
+{
+fan_in  = 4;
+fan_out = 1;
+}
+else
+{
+fan_in = prevlayer_map_count * kernel_w * kernel_h;
+fan_out = map_count * kernel_w * kernel_h;
+}
+int denominator = fan_in + fan_out;
+double weight_base = (denominator != 0) ? sqrt(scale / (double)denominator) : 0.5;
+
+// Initialize Layer1 (integer parameters)
+layer1->kernel_count = prevlayer_map_count * map_count;
+layer1->kernel_w = kernel_w;
+layer1->kernel_h = kernel_h;
+layer1->map_count = map_count;
+layer1->map_w = map_w;
+layer1->map_h = map_h;
+
+// Check limits
+if (layer1->kernel_count > MAX_KERNEL_COUNT) {
+printf("Error: kernel_count exceeds MAX_KERNEL_COUNT\n");
+return;
 }
 
-/*void init_layer(
-    Layer *layer,              // 要初始化的层
-    int prevlayer_map_count,   // 前一层的特征图数量
-    int map_count,             // 当前层的特征图数量
-    int kernel_w,              // 卷积核宽度
-    int kernel_h,              // 卷积核高度
-    int map_w,                 // 特征图宽度
-    int map_h,                 // 特征图高度
-    bool is_pooling           // 是否是池化层
-);*/
-void init_layer(Layer *layer, int prevlayer_map_count, int map_count, int kernel_w, int kernel_h, int map_w, int map_h, bool is_pooling)
-{
-	const double scale = 6.0;
-	int fan_in = 0;
-	int fan_out = 0;
-	if (is_pooling)
-	{
-		fan_in  = 4;
-		fan_out = 1;
-	}
-	else
-	{
-		fan_in = prevlayer_map_count * kernel_w * kernel_h;
-		fan_out = map_count * kernel_w * kernel_h;
-	}
-	int denominator = fan_in + fan_out;
-	double weight_base = (denominator != 0) ? sqrt(scale / (double)denominator) : 0.5;
-
-	layer->kernel_count = prevlayer_map_count * map_count;
-	layer->kernel_w = kernel_w;
-	layer->kernel_h = kernel_h;
-	
-	// 确保不超过最大限制
-	if (layer->kernel_count > MAX_KERNEL_COUNT) {
-		printf("Error: kernel_count exceeds MAX_KERNEL_COUNT\n");
-		return;
-	}
-	
-	for (int i = 0; i < prevlayer_map_count; i++)
-	{
-		for (int j = 0; j < map_count; j++)
-		{
-			int idx = i*map_count + j;
-			// 初始化权重
-			for (int k = 0; k < kernel_w*kernel_h; k++) {
-				layer->kernel[idx].W[k] = (genrand_real1() - 0.5) * 2 * weight_base;
-				layer->kernel[idx].dW[k] = 0.0;
-			}
-		}
-	}
-
-	layer->map_count = map_count;
-	layer->map_w = map_w;
-	layer->map_h = map_h;
-	
-	// 确保不超过最大限制
-	if (layer->map_count > MAX_MAP_COUNT) {
-		printf("Error: map_count exceeds MAX_MAP_COUNT\n");
-		return;
-	}
-	
-	if (map_w * map_h > MAX_MAP_SIZE) {
-		printf("Error: map size exceeds MAX_MAP_SIZE\n");
-		return;
-	}
-	
-	for (int i = 0; i < layer->map_count; i++)
-	{
-		layer->map[i].b = 0.0;
-		layer->map[i].db = 0.0;
-		
-		// 初始化数据和误差数组
-		for (int k = 0; k < map_w * map_h; k++) {
-			layer->map[i].data[k] = 0.0;
-			layer->map[i].error[k] = 0.0;
-		}
-	}
-	
-	// 初始化共享内存
-	for (int k = 0; k < map_w * map_h; k++) {
-		layer->map_common[k] = 0.0;
-	}
+if (layer1->map_count > MAX_MAP_COUNT) {
+printf("Error: map_count exceeds MAX_MAP_COUNT\n");
+return;
 }
 
-void release_layer(Layer *layer)//释放内存
-{
-	for (int i = 0; i < layer->kernel_count; i++)
-	{
-		for (int k = 0; k < layer->kernel_w * layer->kernel_h; k++) {
-			layer->kernel[i].W[k] = 0.0;
-			layer->kernel[i].dW[k] = 0.0;
-		}
-	}
+if (map_w * map_h > MAX_MAP_SIZE) {
+printf("Error: map size exceeds MAX_MAP_SIZE\n");
+return;
+}
 
-	for (int i = 0; i < layer->map_count; i++)
-	{
-		for (int k = 0; k < layer->map_w * layer->map_h; k++) {
-			layer->map[i].data[k] = 0.0;
-			layer->map[i].error[k] = 0.0;
-		}
-		layer->map[i].b = 0.0;
-		layer->map[i].db = 0.0;
-	}
-	
-	for (int k = 0; k < layer->map_w * layer->map_h; k++) {
-		layer->map_common[k] = 0.0;
-	}
+// Initialize Layer2 (arrays)
+for (int i = 0; i < prevlayer_map_count; i++)
+{
+for (int j = 0; j < map_count; j++)
+{
+ int idx = i*map_count + j;
+ for (int k = 0; k < kernel_w*kernel_h; k++) {
+	 layer2->W[idx][k] = (genrand_real1() - 0.5) * 2 * weight_base;
+	 layer2->dW[idx][k] = 0.0;
+ }
+}
+}
+
+for (int i = 0; i < layer1->map_count; i++)
+{
+layer2->b[i] = 0.0;
+layer2->db[i] = 0.0;
+
+for (int k = 0; k < map_w * map_h; k++) {
+ layer2->data[i][k] = 0.0;
+ layer2->error[i][k] = 0.0;
+}
+}
+
+for (int k = 0; k < map_w * map_h; k++) {
+layer2->map_common[k] = 0.0;
+}
+}
+
+void release_layer(Layer1 *layer1, Layer2 *layer2)
+{
+    for (int i = 0; i < layer1->kernel_count; i++)
+    {
+        for (int k = 0; k < layer1->kernel_w * layer1->kernel_h; k++) {
+            layer2->W[i][k] = 0.0;
+            layer2->dW[i][k] = 0.0;
+        }
+    }
+
+    for (int i = 0; i < layer1->map_count; i++)
+    {
+        for (int k = 0; k < layer1->map_w * layer1->map_h; k++) {
+            layer2->data[i][k] = 0.0;
+            layer2->error[i][k] = 0.0;
+        }
+        layer2->b[i] = 0.0;
+        layer2->db[i] = 0.0;
+    }
+    
+    for (int k = 0; k < layer1->map_w * layer1->map_h; k++) {
+        layer2->map_common[k] = 0.0;
+    }
 }
 //*-------------------------------------------------------------------------------------------------------/
 
@@ -258,14 +238,14 @@ void conv_fprop(Layer *prev_layer, Layer *layer, bool *pconnection)
 			}
 		
 			convn_valid(
-				prev_layer->map[j].data, prev_layer->map_w, prev_layer->map_h, 
-				layer->kernel[index].W, layer->kernel_w, layer->kernel_h, 
+				prev_layer->data[j][0], prev_layer->map_w, prev_layer->map_h, 
+				layer->W[index], layer->kernel_w, layer->kernel_h, 
 				layer->map_common, layer->map_w, layer->map_h);
 		}
 
 		for (int k = 0; k < size; k++)
 		{
-			layer->map[i].data[k] = activation_func::tan_h(layer->map_common[k] + layer->map[i].b);
+			layer->data[i][k] = activation_func::tan_h(layer->map_common[k] + layer->b[i]);
 		}
 	}
 }
@@ -288,13 +268,13 @@ void conv_fprop(Layer *prev_layer, Layer *layer, bool *pconnection)
 				{
 					for (int m = 2*j; m < 2*(j + 1); m++)
 					{
-						sum += prev_layer->map[k].data[n*upmap_w + m] * layer->kernel[k].W[0];
+						sum += prev_layer->data[k][n*upmap_w + m] * layer->W[k][0];
 					}
 				}
 
 				sum *= scale_factor;
-				sum += layer->map[k].b;
-				layer->map[k].data[i*map_w + j] = activation_func::tan_h(sum);
+				sum += layer->b[k];
+				layer->data[k][i*map_w + j] = activation_func::tan_h(sum);
 			}
 		}
 	}
@@ -312,16 +292,16 @@ void max_pooling_fprop(Layer *prev_layer, Layer *layer)
 		{
 			for (int j = 0; j < map_w; j++)
 			{
-				double max_value = prev_layer->map[k].data[2*i*upmap_w + 2*j];
+				double max_value = prev_layer->data[k][2*i*upmap_w + 2*j];
 				for (int n = 2*i; n < 2*(i + 1); n++)
 				{
 					for (int m = 2*j; m < 2*(j + 1); m++)
 					{
-						max_value = MAX(max_value, prev_layer->map[k].data[n*upmap_w + m]);
+						max_value = MAX(max_value, prev_layer->data[k][n*upmap_w + m]);
 					}
 				}
 
-				layer->map[k].data[i*map_w + j] = activation_func::tan_h(max_value);
+				layer->data[k][i*map_w + j] = activation_func::tan_h(max_value);
 			}
 		}
 	}
@@ -334,69 +314,54 @@ void fully_connected_fprop(Layer *prev_layer, Layer *layer)
 		double sum = 0.0;
 		for (int j = 0; j < prev_layer->map_count; j++)
 		{
-			sum += prev_layer->map[j].data[0] * layer->kernel[j*layer->map_count + i].W[0];
+			sum += prev_layer->data[j][0] * layer->W[j*layer->map_count + i][0];
 		}
 
-		sum += layer->map[i].b;
-		layer->map[i].data[0] = activation_func::tan_h(sum);
+		sum += layer->b[i];
+		layer->data[i][0] = activation_func::tan_h(sum);
 	}
 }
 
 #endif
 //到此为止
 
+
 void forward_propagation(xmem_t *xmem)
 {
-	memcpy(xmem->pconnection, connection_table,sizeof(connection_table));
-	// In-->C1
-	conv_fprop1(&xmem->input_layer, &xmem->c1_conv_layer, NULL);
+    memcpy(xmem->pconnection, connection_table, sizeof(connection_table));
+    
+    conv_fprop1(&xmem->input_layer1, &xmem->input_layer2, 
+                &xmem->c1_conv_layer1, &xmem->c1_conv_layer2, NULL);
 
-	// C1-->S2
-	max_pooling_fprop1(&xmem->c1_conv_layer, &xmem->s2_pooling_layer);/*avg_pooling_fprop*/
+    max_pooling_fprop1(&xmem->c1_conv_layer1, &xmem->c1_conv_layer2,
+                      &xmem->s2_pooling_layer1, &xmem->s2_pooling_layer2);
 
-	// S2-->C3
-	conv_fprop2(&xmem->s2_pooling_layer, &xmem->c3_conv_layer, xmem->pconnection);
+    conv_fprop2(&xmem->s2_pooling_layer1, &xmem->s2_pooling_layer2,
+                &xmem->c3_conv_layer1, &xmem->c3_conv_layer2, xmem->pconnection);
 
-	// C3-->S4
-	max_pooling_fprop2(&xmem->c3_conv_layer, &xmem->s4_pooling_layer);/*avg_pooling_fprop*/
+    max_pooling_fprop2(&xmem->c3_conv_layer1, &xmem->c3_conv_layer2,
+                      &xmem->s4_pooling_layer1, &xmem->s4_pooling_layer2);
 
-	// S4-->C5
-	conv_fprop3(&xmem->s4_pooling_layer, &xmem->c5_conv_layer, NULL);
+    conv_fprop3(&xmem->s4_pooling_layer1, &xmem->s4_pooling_layer2,
+                &xmem->c5_conv_layer1, &xmem->c5_conv_layer2, NULL);
 
-	// C5-->Out
-	fully_connected_fprop(&xmem->c5_conv_layer, &xmem->output_layer);
+    fully_connected_fprop(&xmem->c5_conv_layer1, &xmem->c5_conv_layer2,
+                         &xmem->output_layer1, &xmem->output_layer2);
 }
 
-int find_index(double *label) //获取真实标签
-{ 
-	int index = 0;
-	double max_val = label[0];
-	for (int i = 1; i < classes_count; i++)
-	{
-		if (label[i] > max_val)
-		{
-			max_val = label[i];
-			index = i;
-		}
-	}
-
-	return index;
-}
-
-int find_index(Layer *layer)
+int find_index(Layer1 *layer1, Layer2 *layer2)
 {
-	int index = 0;
-	double max_val = *(layer->map[0].data);
-	for (int i = 1; i < layer->map_count; i++)
-	{
-		if (*(layer->map[i].data) > max_val)
-		{
-			max_val = *(layer->map[i].data);
-			index = i;
-		}
-	}
-
-	return index;
+    int index = 0;
+    double max_val = layer2->data[0][0];
+    for (int i = 1; i < layer1->map_count; i++)
+    {
+        if (layer2->data[i][0] > max_val)
+        {
+            max_val = layer2->data[i][0];
+            index = i;
+        }
+    }
+    return index;
 }
 
 /*
@@ -428,7 +393,7 @@ void save_model(const char* filename) {
         // 保存卷积核权重
         for(int i = 0; i < layer->kernel_count; i++) {
             int size = layer->kernel_w * layer->kernel_h;
-            size_t written = fwrite(layer->kernel[i].W, sizeof(double), size, fp);
+            size_t written = fwrite(layer->W[i], sizeof(double), size, fp);
             if(written != size) {
                 printf("Error writing kernel weights for layer %d\n", l);
                 fclose(fp);
@@ -437,7 +402,7 @@ void save_model(const char* filename) {
         }
         // 保存偏置
         for(int i = 0; i < layer->map_count; i++) {
-            fwrite(&layer->map[i].b, sizeof(double), 1, fp);
+            fwrite(&layer->b[i], sizeof(double), 1, fp);
         }
     }
     printf("Model saved successfully to %s\n", filename);
@@ -446,20 +411,19 @@ void save_model(const char* filename) {
 */
 void load_model(xmem_t *xmem, const char* filename) {
     FILE *fp = NULL;
-    fp =fopen(filename, "rb");
+    fp = fopen(filename, "rb");
     if(!fp) {
         printf("Error: Could not open file for reading: %s\n", filename);
         return;
     }
     
-   
     char magic[7] = {0};
     fread(magic, sizeof(char), 6, fp);
     if(strcmp(magic, "LENET5") != 0) {
         printf("Error: Invalid model file format\n");
         fclose(fp);
         return;
-    }//strcmp字符串比较(string compare)函数
+    }
     
     int version;
     fread(&version, sizeof(int), 1, fp);
@@ -469,12 +433,14 @@ void load_model(xmem_t *xmem, const char* filename) {
         return;
     }
     
-    Layer* layers[] = {&xmem->c1_conv_layer, &xmem->s2_pooling_layer, &xmem->c3_conv_layer, 
-                      &xmem->s4_pooling_layer, &xmem->c5_conv_layer, &xmem->output_layer};
+    Layer1* layers1[] = {&xmem->c1_conv_layer1, &xmem->s2_pooling_layer1, &xmem->c3_conv_layer1, 
+                        &xmem->s4_pooling_layer1, &xmem->c5_conv_layer1, &xmem->output_layer1};
+    Layer2* layers2[] = {&xmem->c1_conv_layer2, &xmem->s2_pooling_layer2, &xmem->c3_conv_layer2,
+                        &xmem->s4_pooling_layer2, &xmem->c5_conv_layer2, &xmem->output_layer2};
     
     for(int l = 0; l < 6; l++) {
-        Layer* layer = layers[l];
-        
+        Layer1* layer1 = layers1[l];
+        Layer2* layer2 = layers2[l];
         
         int kernel_count, kernel_w, kernel_h, map_count;
         fread(&kernel_count, sizeof(int), 1, fp);
@@ -482,19 +448,18 @@ void load_model(xmem_t *xmem, const char* filename) {
         fread(&kernel_h, sizeof(int), 1, fp);
         fread(&map_count, sizeof(int), 1, fp);
         
-        if(kernel_count != layer->kernel_count || 
-           kernel_w != layer->kernel_w ||
-           kernel_h != layer->kernel_h ||
-           map_count != layer->map_count) {
+        if(kernel_count != layer1->kernel_count || 
+           kernel_w != layer1->kernel_w ||
+           kernel_h != layer1->kernel_h ||
+           map_count != layer1->map_count) {
             printf("Error: Model architecture mismatch at layer %d\n", l);
             fclose(fp);
             return;
         }
         
-       
-        for(int i = 0; i < layer->kernel_count; i++) {
-            int size = layer->kernel_w * layer->kernel_h;
-            size_t read = fread(layer->kernel[i].W, sizeof(double), size, fp);
+        for(int i = 0; i < layer1->kernel_count; i++) {
+            int size = layer1->kernel_w * layer1->kernel_h;
+            size_t read = fread(layer2->W[i], sizeof(double), size, fp);
             if(read != size) {
                 printf("Error reading kernel weights for layer %d\n", l);
                 fclose(fp);
@@ -502,15 +467,12 @@ void load_model(xmem_t *xmem, const char* filename) {
             }
         }
         
-        for(int i = 0; i < layer->map_count; i++) {
-            fread(&layer->map[i].b, sizeof(double), 1, fp);
+        for(int i = 0; i < layer1->map_count; i++) {
+            fread(&layer2->b[i], sizeof(double), 1, fp);
         }
     }
-    //printf("Model loaded successfully from %s\n", filename);
     fclose(fp);
 }
-
-
 void load_and_preprocess_image(const char* image_path, double* image_data) {
     memset(image_data, 0, width * height * sizeof(double));
 
@@ -543,20 +505,18 @@ void load_and_preprocess_image(const char* image_path, double* image_data) {
     stbi_image_free(img);
 }
 
-
-
 int predict_single_image(xmem_t *xmem, const char* image_path) {
     double* image_data = (double*)malloc(width * height * sizeof(double));
     load_and_preprocess_image(image_path, image_data);
     
-    memcpy(&xmem->input_layer.map[0].data, image_data, width * height * sizeof(double));
+    memcpy(xmem->input_layer2.data[0], image_data, width * height * sizeof(double));
     
     forward_propagation(xmem);
     
     double max_prob = -1;
     int prediction = 0;
     for (int i = 0; i < 10; i++) {
-        double prob = xmem->output_layer.map[i].data[0];
+        double prob = xmem->output_layer2.data[i][0];
         if (prob > max_prob) {
             max_prob = prob;
             prediction = i;
@@ -570,51 +530,53 @@ int predict_single_image(xmem_t *xmem, const char* image_path) {
 void test_custom_image(xmem_t *xmem, const char* model_path, const char* image_path) {
     int kernel_w = 0, kernel_h = 0;
     
-    // 输入层
-    init_layer(&xmem->input_layer, 0, 1, kernel_w, kernel_h, width, height, false);
+    // Input layer
+    init_layer(&xmem->input_layer1, &xmem->input_layer2, 0, 1, kernel_w, kernel_h, width, height, false);
 
-    // 卷积层C1
+    // C1 conv layer
     kernel_w = 5; kernel_h = 5;
-    init_layer(&xmem->c1_conv_layer, 1, 6, kernel_w, kernel_h, 
-		xmem->input_layer.map_w - kernel_w + 1, xmem->input_layer.map_h - kernel_h + 1, false);
+    init_layer(&xmem->c1_conv_layer1, &xmem->c1_conv_layer2, 1, 6, kernel_w, kernel_h, 
+              xmem->input_layer1.map_w - kernel_w + 1, xmem->input_layer1.map_h - kernel_h + 1, false);
 
-    // 采样层S2
+    // S2 pooling layer
     kernel_w = 1; kernel_h = 1;
-    init_layer(&xmem->s2_pooling_layer, 1, 6, kernel_w, kernel_h, 
-		xmem->c1_conv_layer.map_w / 2, xmem->c1_conv_layer.map_h / 2, true);
+    init_layer(&xmem->s2_pooling_layer1, &xmem->s2_pooling_layer2, 1, 6, kernel_w, kernel_h, 
+              xmem->c1_conv_layer1.map_w / 2, xmem->c1_conv_layer1.map_h / 2, true);
 
-    // 卷积层C3
+    // C3 conv layer
     kernel_w = 5; kernel_h = 5;
-    init_layer(&xmem->c3_conv_layer, 6, 16, kernel_w, kernel_h, 
-		xmem->s2_pooling_layer.map_w - kernel_w + 1, xmem->s2_pooling_layer.map_h - kernel_h + 1, false);
+    init_layer(&xmem->c3_conv_layer1, &xmem->c3_conv_layer2, 6, 16, kernel_w, kernel_h, 
+              xmem->s2_pooling_layer1.map_w - kernel_w + 1, xmem->s2_pooling_layer1.map_h - kernel_h + 1, false);
 
-    // 采样层S4
+    // S4 pooling layer
     kernel_w = 1; kernel_h = 1;
-    init_layer(&xmem->s4_pooling_layer, 1, 16, kernel_w, kernel_h, 
-		xmem->c3_conv_layer.map_w / 2, xmem->c3_conv_layer.map_h / 2, true);
+    init_layer(&xmem->s4_pooling_layer1, &xmem->s4_pooling_layer2, 1, 16, kernel_w, kernel_h, 
+              xmem->c3_conv_layer1.map_w / 2, xmem->c3_conv_layer1.map_h / 2, true);
 
-    // 卷积层C5
+    // C5 conv layer
     kernel_w = 5; kernel_h = 5;
-    init_layer(&xmem->c5_conv_layer, 16, 120, kernel_w, kernel_h, 
-		xmem->s4_pooling_layer.map_w - kernel_w + 1, xmem->s4_pooling_layer.map_h - kernel_h + 1, false);
+    init_layer(&xmem->c5_conv_layer1, &xmem->c5_conv_layer2, 16, 120, kernel_w, kernel_h, 
+              xmem->s4_pooling_layer1.map_w - kernel_w + 1, xmem->s4_pooling_layer1.map_h - kernel_h + 1, false);
 
-    // 输出层
+    // Output layer
     kernel_w = 1; kernel_h = 1;
-    init_layer(&xmem->output_layer, 120, 10, kernel_w, kernel_h, 1, 1, false);
+    init_layer(&xmem->output_layer1, &xmem->output_layer2, 120, 10, kernel_w, kernel_h, 1, 1, false);
 
     load_model(xmem, model_path);
   
-    int prediction = predict_single_image(xmem,image_path);
+    int prediction = predict_single_image(xmem, image_path);
     printf("Predicted digit: %d\n", prediction);
 
-    release_layer(&xmem->input_layer);
-    release_layer(&xmem->c1_conv_layer);
-    release_layer(&xmem->c3_conv_layer);
-    release_layer(&xmem->c5_conv_layer);
-    release_layer(&xmem->s2_pooling_layer);
-    release_layer(&xmem->s4_pooling_layer);
-    release_layer(&xmem->output_layer);
+    release_layer(&xmem->input_layer1, &xmem->input_layer2);
+    release_layer(&xmem->c1_conv_layer1, &xmem->c1_conv_layer2);
+    release_layer(&xmem->c3_conv_layer1, &xmem->c3_conv_layer2);
+    release_layer(&xmem->c5_conv_layer1, &xmem->c5_conv_layer2);
+    release_layer(&xmem->s2_pooling_layer1, &xmem->s2_pooling_layer2);
+    release_layer(&xmem->s4_pooling_layer1, &xmem->s4_pooling_layer2);
+    release_layer(&xmem->output_layer1, &xmem->output_layer2);
 }
+
+
 
 
 int main(int argc, char* argv[])

@@ -14,10 +14,10 @@ module conv_fprop2_conv_fprop2_Pipeline_1 (
         ap_idle,
         ap_ready,
         ap_ce,
-        c3_conv_layer_map_common_address0,
-        c3_conv_layer_map_common_ce0,
-        c3_conv_layer_map_common_we0,
-        c3_conv_layer_map_common_d0,
+        c3_conv_layer2_map_common_address0,
+        c3_conv_layer2_map_common_ce0,
+        c3_conv_layer2_map_common_we0,
+        c3_conv_layer2_map_common_d0,
         size
 );
 
@@ -30,10 +30,10 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input   ap_ce;
-output  [9:0] c3_conv_layer_map_common_address0;
-output   c3_conv_layer_map_common_ce0;
-output   c3_conv_layer_map_common_we0;
-output  [63:0] c3_conv_layer_map_common_d0;
+output  [9:0] c3_conv_layer2_map_common_address0;
+output   c3_conv_layer2_map_common_ce0;
+output   c3_conv_layer2_map_common_we0;
+output  [63:0] c3_conv_layer2_map_common_d0;
 input  [31:0] size;
 
 reg ap_idle;
@@ -47,12 +47,12 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire   [63:0] p_cast13_fu_64_p1;
 reg   [10:0] empty_fu_32;
-wire   [10:0] empty_16_fu_69_p2;
+wire   [10:0] empty_17_fu_69_p2;
 wire    ap_loop_init;
 reg   [10:0] ap_sig_allocacmp_p_load;
-reg    c3_conv_layer_map_common_we0_local;
-reg    c3_conv_layer_map_common_ce0_local;
-wire   [31:0] p_cast20_fu_75_p1;
+reg    c3_conv_layer2_map_common_we0_local;
+reg    c3_conv_layer2_map_common_ce0_local;
+wire   [31:0] p_cast21_fu_75_p1;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -110,7 +110,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_condition_55)) begin
-        empty_fu_32 <= empty_16_fu_69_p2;
+        empty_fu_32 <= empty_17_fu_69_p2;
     end
 end
 
@@ -164,17 +164,17 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_state1_pp0_stage0_iter0) & (1'b1 == ap_ce) & (1'b1 == ap_CS_fsm_state1))) begin
-        c3_conv_layer_map_common_ce0_local = 1'b1;
+        c3_conv_layer2_map_common_ce0_local = 1'b1;
     end else begin
-        c3_conv_layer_map_common_ce0_local = 1'b0;
+        c3_conv_layer2_map_common_ce0_local = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_state1_pp0_stage0_iter0) & (1'b1 == ap_ce) & (1'b1 == ap_CS_fsm_state1))) begin
-        c3_conv_layer_map_common_we0_local = 1'b1;
+        c3_conv_layer2_map_common_we0_local = 1'b1;
     end else begin
-        c3_conv_layer_map_common_we0_local = 1'b0;
+        c3_conv_layer2_map_common_we0_local = 1'b0;
     end
 end
 
@@ -205,20 +205,20 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign ap_ready = ap_ready_sig;
 
-assign c3_conv_layer_map_common_address0 = p_cast13_fu_64_p1;
+assign c3_conv_layer2_map_common_address0 = p_cast13_fu_64_p1;
 
-assign c3_conv_layer_map_common_ce0 = c3_conv_layer_map_common_ce0_local;
+assign c3_conv_layer2_map_common_ce0 = c3_conv_layer2_map_common_ce0_local;
 
-assign c3_conv_layer_map_common_d0 = 64'd0;
+assign c3_conv_layer2_map_common_d0 = 64'd0;
 
-assign c3_conv_layer_map_common_we0 = c3_conv_layer_map_common_we0_local;
+assign c3_conv_layer2_map_common_we0 = c3_conv_layer2_map_common_we0_local;
 
-assign empty_16_fu_69_p2 = (ap_sig_allocacmp_p_load + 11'd1);
+assign empty_17_fu_69_p2 = (ap_sig_allocacmp_p_load + 11'd1);
 
-assign exitcond_fu_79_p2 = ((p_cast20_fu_75_p1 == size) ? 1'b1 : 1'b0);
+assign exitcond_fu_79_p2 = ((p_cast21_fu_75_p1 == size) ? 1'b1 : 1'b0);
 
 assign p_cast13_fu_64_p1 = ap_sig_allocacmp_p_load;
 
-assign p_cast20_fu_75_p1 = empty_16_fu_69_p2;
+assign p_cast21_fu_75_p1 = empty_17_fu_69_p2;
 
 endmodule //conv_fprop2_conv_fprop2_Pipeline_1

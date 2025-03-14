@@ -1,2 +1,6 @@
 <pragmas>
+<pragma file="../source/hls.cpp" line="188" pragmaType="disaggregate" parentfunction="max_pooling_fprop1" variable="c1_conv_layer1"/>
+<pragma file="../source/hls.cpp" line="189" pragmaType="disaggregate" parentfunction="max_pooling_fprop1" variable="c1_conv_layer2"/>
+<pragma file="../source/hls.cpp" line="190" pragmaType="disaggregate" parentfunction="max_pooling_fprop1" variable="s2_pooling_layer1"/>
+<pragma file="../source/hls.cpp" line="191" pragmaType="disaggregate" parentfunction="max_pooling_fprop1" variable="s2_pooling_layer2"/>
 </pragmas>

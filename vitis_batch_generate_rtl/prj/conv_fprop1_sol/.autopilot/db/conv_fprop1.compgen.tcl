@@ -18,6 +18,12 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
+set name conv_fprop1_mul_11ns_6ns_16_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
 set name conv_fprop1_mul_10s_10s_10_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
@@ -41,74 +47,17 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 46 \
-    name input_layer_map_data \
+    id 49 \
+    name input_layer2_data \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename input_layer_map_data \
+    corename input_layer2_data \
     op interface \
-    ports { input_layer_map_data_address0 { O 17 vector } input_layer_map_data_ce0 { O 1 bit } input_layer_map_data_q0 { I 64 vector } } \
+    ports { input_layer2_data_address0 { O 17 vector } input_layer2_data_ce0 { O 1 bit } input_layer2_data_q0 { I 64 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_layer_map_data'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 50 \
-    name c1_conv_layer_map_data \
-    reset_level 1 \
-    sync_rst true \
-    dir O \
-    corename c1_conv_layer_map_data \
-    op interface \
-    ports { c1_conv_layer_map_data_address0 { O 17 vector } c1_conv_layer_map_data_ce0 { O 1 bit } c1_conv_layer_map_data_we0 { O 1 bit } c1_conv_layer_map_data_d0 { O 64 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c1_conv_layer_map_data'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 51 \
-    name c1_conv_layer_map_b \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename c1_conv_layer_map_b \
-    op interface \
-    ports { c1_conv_layer_map_b_address0 { O 7 vector } c1_conv_layer_map_b_ce0 { O 1 bit } c1_conv_layer_map_b_q0 { I 64 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c1_conv_layer_map_b'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 54 \
-    name c1_conv_layer_kernel \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename c1_conv_layer_kernel \
-    op interface \
-    ports { c1_conv_layer_kernel_address0 { O 11 vector } c1_conv_layer_kernel_ce0 { O 1 bit } c1_conv_layer_kernel_q0 { I 3200 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c1_conv_layer_kernel'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_layer2_data'"
 }
 }
 
@@ -118,16 +67,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 55 \
-    name c1_conv_layer_map_common \
+    name c1_conv_layer2_data \
     reset_level 1 \
     sync_rst true \
-    dir IO \
-    corename c1_conv_layer_map_common \
+    dir O \
+    corename c1_conv_layer2_data \
     op interface \
-    ports { c1_conv_layer_map_common_address0 { O 10 vector } c1_conv_layer_map_common_ce0 { O 1 bit } c1_conv_layer_map_common_we0 { O 1 bit } c1_conv_layer_map_common_d0 { O 64 vector } c1_conv_layer_map_common_q0 { I 64 vector } } \
+    ports { c1_conv_layer2_data_address0 { O 17 vector } c1_conv_layer2_data_ce0 { O 1 bit } c1_conv_layer2_data_we0 { O 1 bit } c1_conv_layer2_data_d0 { O 64 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c1_conv_layer_map_common'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c1_conv_layer2_data'"
 }
 }
 
@@ -137,6 +86,63 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 56 \
+    name c1_conv_layer2_b \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename c1_conv_layer2_b \
+    op interface \
+    ports { c1_conv_layer2_b_address0 { O 7 vector } c1_conv_layer2_b_ce0 { O 1 bit } c1_conv_layer2_b_q0 { I 64 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c1_conv_layer2_b'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 57 \
+    name c1_conv_layer2_W \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename c1_conv_layer2_W \
+    op interface \
+    ports { c1_conv_layer2_W_address0 { O 16 vector } c1_conv_layer2_W_ce0 { O 1 bit } c1_conv_layer2_W_q0 { I 64 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c1_conv_layer2_W'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 58 \
+    name c1_conv_layer2_map_common \
+    reset_level 1 \
+    sync_rst true \
+    dir IO \
+    corename c1_conv_layer2_map_common \
+    op interface \
+    ports { c1_conv_layer2_map_common_address0 { O 10 vector } c1_conv_layer2_map_common_ce0 { O 1 bit } c1_conv_layer2_map_common_we0 { O 1 bit } c1_conv_layer2_map_common_d0 { O 64 vector } c1_conv_layer2_map_common_q0 { I 64 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'c1_conv_layer2_map_common'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 59 \
     name pconnection \
     reset_level 1 \
     sync_rst true \
@@ -154,45 +160,15 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 44 \
-    name input_layer_map_w \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_input_layer_map_w \
-    op interface \
-    ports { input_layer_map_w { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 45 \
-    name input_layer_map_count \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_input_layer_map_count \
-    op interface \
-    ports { input_layer_map_count { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
     id 47 \
-    name c1_conv_layer_map_w \
+    name input_layer1_map_w \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_c1_conv_layer_map_w \
+    corename dc_input_layer1_map_w \
     op interface \
-    ports { c1_conv_layer_map_w { I 32 vector } } \
+    ports { input_layer1_map_w { I 32 vector } } \
 } "
 }
 
@@ -200,29 +176,44 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 48 \
-    name c1_conv_layer_map_h \
+    name input_layer1_map_count \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_c1_conv_layer_map_h \
+    corename dc_input_layer1_map_count \
     op interface \
-    ports { c1_conv_layer_map_h { I 32 vector } } \
+    ports { input_layer1_map_count { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 49 \
-    name c1_conv_layer_map_count \
+    id 50 \
+    name c1_conv_layer1_map_w \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_c1_conv_layer_map_count \
+    corename dc_c1_conv_layer1_map_w \
     op interface \
-    ports { c1_conv_layer_map_count { I 32 vector } } \
+    ports { c1_conv_layer1_map_w { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 51 \
+    name c1_conv_layer1_map_h \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_c1_conv_layer1_map_h \
+    op interface \
+    ports { c1_conv_layer1_map_h { I 32 vector } } \
 } "
 }
 
@@ -230,14 +221,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 52 \
-    name c1_conv_layer_kernel_w \
+    name c1_conv_layer1_map_count \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_c1_conv_layer_kernel_w \
+    corename dc_c1_conv_layer1_map_count \
     op interface \
-    ports { c1_conv_layer_kernel_w { I 32 vector } } \
+    ports { c1_conv_layer1_map_count { I 32 vector } } \
 } "
 }
 
@@ -245,14 +236,29 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 53 \
-    name c1_conv_layer_kernel_h \
+    name c1_conv_layer1_kernel_w \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_c1_conv_layer_kernel_h \
+    corename dc_c1_conv_layer1_kernel_w \
     op interface \
-    ports { c1_conv_layer_kernel_h { I 32 vector } } \
+    ports { c1_conv_layer1_kernel_w { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 54 \
+    name c1_conv_layer1_kernel_h \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_c1_conv_layer1_kernel_h \
+    op interface \
+    ports { c1_conv_layer1_kernel_h { I 32 vector } } \
 } "
 }
 

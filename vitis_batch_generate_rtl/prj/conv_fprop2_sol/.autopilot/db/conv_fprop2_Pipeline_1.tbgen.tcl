@@ -17,16 +17,16 @@ set cdfgNum 6
 set C_modelName {conv_fprop2_Pipeline_1}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
-dict set ap_memory_interface_dict c3_conv_layer_map_common { MEM_WIDTH 64 MEM_SIZE 8192 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
+dict set ap_memory_interface_dict c3_conv_layer2_map_common { MEM_WIDTH 64 MEM_SIZE 8192 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
 set C_modelArgList {
-	{ c3_conv_layer_map_common int 64 regular {array 1024 { 0 3 } 0 1 }  }
+	{ c3_conv_layer2_map_common int 64 regular {array 1024 { 0 3 } 0 1 }  }
 	{ size int 32 regular  }
 }
 set hasAXIMCache 0
 set l_AXIML2Cache [list]
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
-	{ "Name" : "c3_conv_layer_map_common", "interface" : "memory", "bitwidth" : 64, "direction" : "WRITEONLY"} , 
+	{ "Name" : "c3_conv_layer2_map_common", "interface" : "memory", "bitwidth" : 64, "direction" : "WRITEONLY"} , 
  	{ "Name" : "size", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} ]}
 # RTL Port declarations: 
 set portNum 12
@@ -38,10 +38,10 @@ set portList {
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ ap_ce sc_in sc_logic 1 ce -1 } 
-	{ c3_conv_layer_map_common_address0 sc_out sc_lv 10 signal 0 } 
-	{ c3_conv_layer_map_common_ce0 sc_out sc_logic 1 signal 0 } 
-	{ c3_conv_layer_map_common_we0 sc_out sc_logic 1 signal 0 } 
-	{ c3_conv_layer_map_common_d0 sc_out sc_lv 64 signal 0 } 
+	{ c3_conv_layer2_map_common_address0 sc_out sc_lv 10 signal 0 } 
+	{ c3_conv_layer2_map_common_ce0 sc_out sc_logic 1 signal 0 } 
+	{ c3_conv_layer2_map_common_we0 sc_out sc_logic 1 signal 0 } 
+	{ c3_conv_layer2_map_common_d0 sc_out sc_lv 64 signal 0 } 
 	{ size sc_in sc_lv 32 signal 1 } 
 }
 set NewPortList {[ 
@@ -52,10 +52,10 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "ap_ce", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "ce", "bundle":{"name": "ap_ce", "role": "default" }} , 
- 	{ "name": "c3_conv_layer_map_common_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "c3_conv_layer_map_common", "role": "address0" }} , 
- 	{ "name": "c3_conv_layer_map_common_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "c3_conv_layer_map_common", "role": "ce0" }} , 
- 	{ "name": "c3_conv_layer_map_common_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "c3_conv_layer_map_common", "role": "we0" }} , 
- 	{ "name": "c3_conv_layer_map_common_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "c3_conv_layer_map_common", "role": "d0" }} , 
+ 	{ "name": "c3_conv_layer2_map_common_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "c3_conv_layer2_map_common", "role": "address0" }} , 
+ 	{ "name": "c3_conv_layer2_map_common_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "c3_conv_layer2_map_common", "role": "ce0" }} , 
+ 	{ "name": "c3_conv_layer2_map_common_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "c3_conv_layer2_map_common", "role": "we0" }} , 
+ 	{ "name": "c3_conv_layer2_map_common_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "c3_conv_layer2_map_common", "role": "d0" }} , 
  	{ "name": "size", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "size", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
@@ -74,7 +74,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "c3_conv_layer_map_common", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "c3_conv_layer2_map_common", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "size", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "Loop 1", "PipelineType" : "UPC",
@@ -84,7 +84,7 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	conv_fprop2_Pipeline_1 {
-		c3_conv_layer_map_common {Type O LastRead -1 FirstWrite 0}
+		c3_conv_layer2_map_common {Type O LastRead -1 FirstWrite 0}
 		size {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
@@ -98,6 +98,6 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	c3_conv_layer_map_common { ap_memory {  { c3_conv_layer_map_common_address0 mem_address 1 10 }  { c3_conv_layer_map_common_ce0 mem_ce 1 1 }  { c3_conv_layer_map_common_we0 mem_we 1 1 }  { c3_conv_layer_map_common_d0 mem_din 1 64 } } }
+	c3_conv_layer2_map_common { ap_memory {  { c3_conv_layer2_map_common_address0 mem_address 1 10 }  { c3_conv_layer2_map_common_ce0 mem_ce 1 1 }  { c3_conv_layer2_map_common_we0 mem_we 1 1 }  { c3_conv_layer2_map_common_d0 mem_din 1 64 } } }
 	size { ap_none {  { size in_data 0 32 } } }
 }

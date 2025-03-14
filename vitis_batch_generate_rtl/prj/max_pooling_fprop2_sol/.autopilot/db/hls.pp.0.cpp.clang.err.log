@@ -1,66 +1,138 @@
 In file included from ../source/hls.cpp:1:
 In file included from ../source/hls.h:10:
-../source/xmem.h:46:35: warning: declaration does not declare anything [-Wmissing-declarations]
+../source/xmem.h:54:35: warning: declaration does not declare anything [-Wmissing-declarations]
     uint8_t xxxxx_paddingA[1976]; __attribute__((aligned(4)));
                                   ^
-../source/hls.cpp:74:54: warning: unused parameter 'in_h' [-Wunused-parameter]
+../source/hls.cpp:47:54: warning: unused parameter 'in_h' [-Wunused-parameter]
 void convn_valid(double in_data[1024], int in_w, int in_h,
                                                      ^
-../source/hls.cpp:111:26: warning: unused parameter 'ap_core' [-Wunused-parameter]
-void conv_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *input_layer, Layer *c1_conv_layer, bool pconnection[96])
+../source/hls.cpp:86:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop1_XLX_SEP_ PragmaOptions=variable=input_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=input_layer1
+        ^
+../source/hls.cpp:87:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop1_XLX_SEP_ PragmaOptions=variable=input_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=input_layer2
+        ^
+../source/hls.cpp:88:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop1_XLX_SEP_ PragmaOptions=variable=c1_conv_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c1_conv_layer1
+        ^
+../source/hls.cpp:89:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop1_XLX_SEP_ PragmaOptions=variable=c1_conv_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c1_conv_layer2
+        ^
+../source/hls.cpp:83:26: warning: unused parameter 'ap_core' [-Wunused-parameter]
+void conv_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *input_layer1, Layer2 *input_layer2,
                          ^
-../source/hls.cpp:111:43: warning: unused parameter 'ap_part' [-Wunused-parameter]
-void conv_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *input_layer, Layer *c1_conv_layer, bool pconnection[96])
+../source/hls.cpp:83:43: warning: unused parameter 'ap_part' [-Wunused-parameter]
+void conv_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *input_layer1, Layer2 *input_layer2,
                                           ^
-../source/hls.cpp:111:60: warning: unused parameter 'ap_parent' [-Wunused-parameter]
-void conv_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *input_layer, Layer *c1_conv_layer, bool pconnection[96])
+../source/hls.cpp:83:60: warning: unused parameter 'ap_parent' [-Wunused-parameter]
+void conv_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *input_layer1, Layer2 *input_layer2,
                                                            ^
-../source/hls.cpp:140:26: warning: unused parameter 'ap_core' [-Wunused-parameter]
-void conv_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *s2_pooling_la, Layer *c3_conv_layer, bool pconnection[96])
+../source/hls.cpp:120:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop2_XLX_SEP_ PragmaOptions=variable=s2_pooling_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=s2_pooling_layer1
+        ^
+../source/hls.cpp:121:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop2_XLX_SEP_ PragmaOptions=variable=s2_pooling_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=s2_pooling_layer2
+        ^
+../source/hls.cpp:122:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop2_XLX_SEP_ PragmaOptions=variable=c3_conv_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c3_conv_layer1
+        ^
+../source/hls.cpp:123:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop2_XLX_SEP_ PragmaOptions=variable=c3_conv_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c3_conv_layer2
+        ^
+../source/hls.cpp:117:26: warning: unused parameter 'ap_core' [-Wunused-parameter]
+void conv_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *s2_pooling_layer1, Layer2 *s2_pooling_layer2,
                          ^
-../source/hls.cpp:140:43: warning: unused parameter 'ap_part' [-Wunused-parameter]
-void conv_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *s2_pooling_la, Layer *c3_conv_layer, bool pconnection[96])
+../source/hls.cpp:117:43: warning: unused parameter 'ap_part' [-Wunused-parameter]
+void conv_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *s2_pooling_layer1, Layer2 *s2_pooling_layer2,
                                           ^
-../source/hls.cpp:140:60: warning: unused parameter 'ap_parent' [-Wunused-parameter]
-void conv_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *s2_pooling_la, Layer *c3_conv_layer, bool pconnection[96])
+../source/hls.cpp:117:60: warning: unused parameter 'ap_parent' [-Wunused-parameter]
+void conv_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *s2_pooling_layer1, Layer2 *s2_pooling_layer2,
                                                            ^
-../source/hls.cpp:168:26: warning: unused parameter 'ap_core' [-Wunused-parameter]
-void conv_fprop3(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *s4_pooling_layer, Layer *c5_conv_layer, bool pconnection[96])
+../source/hls.cpp:154:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop3_XLX_SEP_ PragmaOptions=variable=s4_pooling_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=s4_pooling_layer1
+        ^
+../source/hls.cpp:155:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop3_XLX_SEP_ PragmaOptions=variable=s4_pooling_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=s4_pooling_layer2
+        ^
+../source/hls.cpp:156:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop3_XLX_SEP_ PragmaOptions=variable=c5_conv_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c5_conv_layer1
+        ^
+../source/hls.cpp:157:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop3_XLX_SEP_ PragmaOptions=variable=c5_conv_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c5_conv_layer2
+        ^
+../source/hls.cpp:151:26: warning: unused parameter 'ap_core' [-Wunused-parameter]
+void conv_fprop3(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *s4_pooling_layer1, Layer2 *s4_pooling_layer2,
                          ^
-../source/hls.cpp:168:43: warning: unused parameter 'ap_part' [-Wunused-parameter]
-void conv_fprop3(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *s4_pooling_layer, Layer *c5_conv_layer, bool pconnection[96])
+../source/hls.cpp:151:43: warning: unused parameter 'ap_part' [-Wunused-parameter]
+void conv_fprop3(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *s4_pooling_layer1, Layer2 *s4_pooling_layer2,
                                           ^
-../source/hls.cpp:168:60: warning: unused parameter 'ap_parent' [-Wunused-parameter]
-void conv_fprop3(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *s4_pooling_layer, Layer *c5_conv_layer, bool pconnection[96])
+../source/hls.cpp:151:60: warning: unused parameter 'ap_parent' [-Wunused-parameter]
+void conv_fprop3(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *s4_pooling_layer1, Layer2 *s4_pooling_layer2,
                                                            ^
-../source/hls.cpp:227:33: warning: unused parameter 'ap_core' [-Wunused-parameter]
-void max_pooling_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c1_conv_layer, Layer *s2_pooling_layer)
+../source/hls.cpp:188:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop1_XLX_SEP_ PragmaOptions=variable=c1_conv_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c1_conv_layer1
+        ^
+../source/hls.cpp:189:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop1_XLX_SEP_ PragmaOptions=variable=c1_conv_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c1_conv_layer2
+        ^
+../source/hls.cpp:190:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop1_XLX_SEP_ PragmaOptions=variable=s2_pooling_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=s2_pooling_layer1
+        ^
+../source/hls.cpp:191:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop1_XLX_SEP_ PragmaOptions=variable=s2_pooling_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=s2_pooling_layer2
+        ^
+../source/hls.cpp:185:33: warning: unused parameter 'ap_core' [-Wunused-parameter]
+void max_pooling_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *c1_conv_layer1, Layer2 *c1_conv_layer2,
                                 ^
-../source/hls.cpp:227:50: warning: unused parameter 'ap_part' [-Wunused-parameter]
-void max_pooling_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c1_conv_layer, Layer *s2_pooling_layer)
+../source/hls.cpp:185:50: warning: unused parameter 'ap_part' [-Wunused-parameter]
+void max_pooling_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *c1_conv_layer1, Layer2 *c1_conv_layer2,
                                                  ^
-../source/hls.cpp:227:67: warning: unused parameter 'ap_parent' [-Wunused-parameter]
-void max_pooling_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c1_conv_layer, Layer *s2_pooling_layer)
+../source/hls.cpp:185:67: warning: unused parameter 'ap_parent' [-Wunused-parameter]
+void max_pooling_fprop1(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *c1_conv_layer1, Layer2 *c1_conv_layer2,
                                                                   ^
 /home/duludulu/Documents/hls/vitis_batch_generate_rtl/hls.tcl:68:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=max_pooling_fprop2_XLX_SEP_ PragmaOptions=name=max_pooling_fprop2_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=max_pooling_fprop2
         ^
-../source/hls.cpp:255:86: warning: unused parameter 'ap_core' [-Wunused-parameter]
-__attribute__((sdx_kernel("max_pooling_fprop2", 0))) void max_pooling_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c3_conv_layer, Layer *s4_pooling_layer)
+../source/hls.cpp:221:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop2_XLX_SEP_ PragmaOptions=variable=c3_conv_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c3_conv_layer1
+        ^
+../source/hls.cpp:222:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop2_XLX_SEP_ PragmaOptions=variable=c3_conv_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c3_conv_layer2
+        ^
+../source/hls.cpp:223:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop2_XLX_SEP_ PragmaOptions=variable=s4_pooling_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=s4_pooling_layer1
+        ^
+../source/hls.cpp:224:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop2_XLX_SEP_ PragmaOptions=variable=s4_pooling_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=s4_pooling_layer2
+        ^
+../source/hls.cpp:218:86: warning: unused parameter 'ap_core' [-Wunused-parameter]
+__attribute__((sdx_kernel("max_pooling_fprop2", 0))) void max_pooling_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *c3_conv_layer1, Layer2 *c3_conv_layer2,
                                                                                      ^
-../source/hls.cpp:255:103: warning: unused parameter 'ap_part' [-Wunused-parameter]
-__attribute__((sdx_kernel("max_pooling_fprop2", 0))) void max_pooling_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c3_conv_layer, Layer *s4_pooling_layer)
+../source/hls.cpp:218:103: warning: unused parameter 'ap_part' [-Wunused-parameter]
+__attribute__((sdx_kernel("max_pooling_fprop2", 0))) void max_pooling_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *c3_conv_layer1, Layer2 *c3_conv_layer2,
                                                                                                       ^
-../source/hls.cpp:255:120: warning: unused parameter 'ap_parent' [-Wunused-parameter]
-__attribute__((sdx_kernel("max_pooling_fprop2", 0))) void max_pooling_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c3_conv_layer, Layer *s4_pooling_layer)
+../source/hls.cpp:218:120: warning: unused parameter 'ap_parent' [-Wunused-parameter]
+__attribute__((sdx_kernel("max_pooling_fprop2", 0))) void max_pooling_fprop2(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *c3_conv_layer1, Layer2 *c3_conv_layer2,
                                                                                                                        ^
-../source/hls.cpp:285:36: warning: unused parameter 'ap_core' [-Wunused-parameter]
-void fully_connected_fprop(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c5_conv_layer, Layer *output_layer)
+../source/hls.cpp:254:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fully_connected_fprop_XLX_SEP_ PragmaOptions=variable=c5_conv_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c5_conv_layer1
+        ^
+../source/hls.cpp:255:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fully_connected_fprop_XLX_SEP_ PragmaOptions=variable=c5_conv_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=c5_conv_layer2
+        ^
+../source/hls.cpp:256:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fully_connected_fprop_XLX_SEP_ PragmaOptions=variable=output_layer1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=output_layer1
+        ^
+../source/hls.cpp:257:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fully_connected_fprop_XLX_SEP_ PragmaOptions=variable=output_layer2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS disaggregate variable=output_layer2
+        ^
+../source/hls.cpp:251:36: warning: unused parameter 'ap_core' [-Wunused-parameter]
+void fully_connected_fprop(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *c5_conv_layer1, Layer2 *c5_conv_layer2,
                                    ^
-../source/hls.cpp:285:53: warning: unused parameter 'ap_part' [-Wunused-parameter]
-void fully_connected_fprop(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c5_conv_layer, Layer *output_layer)
+../source/hls.cpp:251:53: warning: unused parameter 'ap_part' [-Wunused-parameter]
+void fully_connected_fprop(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *c5_conv_layer1, Layer2 *c5_conv_layer2,
                                                     ^
-../source/hls.cpp:285:70: warning: unused parameter 'ap_parent' [-Wunused-parameter]
-void fully_connected_fprop(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer *c5_conv_layer, Layer *output_layer)
+../source/hls.cpp:251:70: warning: unused parameter 'ap_parent' [-Wunused-parameter]
+void fully_connected_fprop(uint8_t ap_core, uint8_t ap_part, uint8_t ap_parent, Layer1 *c5_conv_layer1, Layer2 *c5_conv_layer2,
                                                                      ^
-21 warnings generated.
+45 warnings generated.

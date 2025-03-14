@@ -26,61 +26,65 @@ using namespace std;
 #define AUTOTB_TVOUT_ap_part "../tv/cdatafile/c.conv_fprop2.autotvout_ap_part.dat"
 #define AUTOTB_TVIN_ap_parent "../tv/cdatafile/c.conv_fprop2.autotvin_ap_parent.dat"
 #define AUTOTB_TVOUT_ap_parent "../tv/cdatafile/c.conv_fprop2.autotvout_ap_parent.dat"
-#define AUTOTB_TVIN_s2_pooling_la_map_w "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_map_w.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_map_w "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_map_w.dat"
-#define AUTOTB_TVIN_s2_pooling_la_map_h "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_map_h.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_map_h "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_map_h.dat"
-#define AUTOTB_TVIN_s2_pooling_la_map_count "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_map_count.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_map_count "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_map_count.dat"
-#define AUTOTB_TVIN_s2_pooling_la_map_data "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_map_data.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_map_data "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_map_data.dat"
-#define AUTOTB_TVIN_s2_pooling_la_map_error "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_map_error.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_map_error "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_map_error.dat"
-#define AUTOTB_TVIN_s2_pooling_la_map_b "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_map_b.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_map_b "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_map_b.dat"
-#define AUTOTB_TVIN_s2_pooling_la_map_db "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_map_db.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_map_db "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_map_db.dat"
-#define AUTOTB_TVIN_s2_pooling_la_kernel_w "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_kernel_w.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_kernel_w "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_kernel_w.dat"
-#define AUTOTB_TVIN_s2_pooling_la_kernel_h "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_kernel_h.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_kernel_h "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_kernel_h.dat"
-#define AUTOTB_TVIN_s2_pooling_la_kernel_count "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_kernel_count.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_kernel_count "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_kernel_count.dat"
-#define AUTOTB_TVIN_s2_pooling_la_kernel "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_kernel.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_kernel "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_kernel.dat"
-#define AUTOTB_TVIN_s2_pooling_la_map_common "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_la_map_common.dat"
-#define AUTOTB_TVOUT_s2_pooling_la_map_common "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_la_map_common.dat"
-#define AUTOTB_TVIN_c3_conv_layer_map_w "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_map_w.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_map_w "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_map_w.dat"
-#define AUTOTB_TVIN_c3_conv_layer_map_h "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_map_h.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_map_h "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_map_h.dat"
-#define AUTOTB_TVIN_c3_conv_layer_map_count "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_map_count.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_map_count "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_map_count.dat"
-#define AUTOTB_TVIN_c3_conv_layer_map_data "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_map_data.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_map_data "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_map_data.dat"
-#define AUTOTB_TVIN_c3_conv_layer_map_error "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_map_error.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_map_error "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_map_error.dat"
-#define AUTOTB_TVIN_c3_conv_layer_map_b "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_map_b.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_map_b "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_map_b.dat"
-#define AUTOTB_TVIN_c3_conv_layer_map_db "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_map_db.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_map_db "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_map_db.dat"
-#define AUTOTB_TVIN_c3_conv_layer_kernel_w "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_kernel_w.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_kernel_w "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_kernel_w.dat"
-#define AUTOTB_TVIN_c3_conv_layer_kernel_h "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_kernel_h.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_kernel_h "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_kernel_h.dat"
-#define AUTOTB_TVIN_c3_conv_layer_kernel_count "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_kernel_count.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_kernel_count "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_kernel_count.dat"
-#define AUTOTB_TVIN_c3_conv_layer_kernel "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_kernel.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_kernel "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_kernel.dat"
-#define AUTOTB_TVIN_c3_conv_layer_map_common "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer_map_common.dat"
-#define AUTOTB_TVOUT_c3_conv_layer_map_common "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer_map_common.dat"
+#define AUTOTB_TVIN_s2_pooling_layer1_map_w "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer1_map_w.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer1_map_w "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer1_map_w.dat"
+#define AUTOTB_TVIN_s2_pooling_layer1_map_h "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer1_map_h.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer1_map_h "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer1_map_h.dat"
+#define AUTOTB_TVIN_s2_pooling_layer1_map_count "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer1_map_count.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer1_map_count "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer1_map_count.dat"
+#define AUTOTB_TVIN_s2_pooling_layer1_kernel_w "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer1_kernel_w.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer1_kernel_w "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer1_kernel_w.dat"
+#define AUTOTB_TVIN_s2_pooling_layer1_kernel_h "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer1_kernel_h.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer1_kernel_h "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer1_kernel_h.dat"
+#define AUTOTB_TVIN_s2_pooling_layer1_kernel_count "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer1_kernel_count.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer1_kernel_count "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer1_kernel_count.dat"
+#define AUTOTB_TVIN_s2_pooling_layer2_data "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer2_data.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer2_data "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer2_data.dat"
+#define AUTOTB_TVIN_s2_pooling_layer2_error "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer2_error.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer2_error "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer2_error.dat"
+#define AUTOTB_TVIN_s2_pooling_layer2_b "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer2_b.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer2_b "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer2_b.dat"
+#define AUTOTB_TVIN_s2_pooling_layer2_db "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer2_db.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer2_db "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer2_db.dat"
+#define AUTOTB_TVIN_s2_pooling_layer2_W "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer2_W.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer2_W "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer2_W.dat"
+#define AUTOTB_TVIN_s2_pooling_layer2_dW "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer2_dW.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer2_dW "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer2_dW.dat"
+#define AUTOTB_TVIN_s2_pooling_layer2_map_common "../tv/cdatafile/c.conv_fprop2.autotvin_s2_pooling_layer2_map_common.dat"
+#define AUTOTB_TVOUT_s2_pooling_layer2_map_common "../tv/cdatafile/c.conv_fprop2.autotvout_s2_pooling_layer2_map_common.dat"
+#define AUTOTB_TVIN_c3_conv_layer1_map_w "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer1_map_w.dat"
+#define AUTOTB_TVOUT_c3_conv_layer1_map_w "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer1_map_w.dat"
+#define AUTOTB_TVIN_c3_conv_layer1_map_h "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer1_map_h.dat"
+#define AUTOTB_TVOUT_c3_conv_layer1_map_h "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer1_map_h.dat"
+#define AUTOTB_TVIN_c3_conv_layer1_map_count "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer1_map_count.dat"
+#define AUTOTB_TVOUT_c3_conv_layer1_map_count "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer1_map_count.dat"
+#define AUTOTB_TVIN_c3_conv_layer1_kernel_w "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer1_kernel_w.dat"
+#define AUTOTB_TVOUT_c3_conv_layer1_kernel_w "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer1_kernel_w.dat"
+#define AUTOTB_TVIN_c3_conv_layer1_kernel_h "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer1_kernel_h.dat"
+#define AUTOTB_TVOUT_c3_conv_layer1_kernel_h "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer1_kernel_h.dat"
+#define AUTOTB_TVIN_c3_conv_layer1_kernel_count "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer1_kernel_count.dat"
+#define AUTOTB_TVOUT_c3_conv_layer1_kernel_count "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer1_kernel_count.dat"
+#define AUTOTB_TVIN_c3_conv_layer2_data "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer2_data.dat"
+#define AUTOTB_TVOUT_c3_conv_layer2_data "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer2_data.dat"
+#define AUTOTB_TVIN_c3_conv_layer2_error "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer2_error.dat"
+#define AUTOTB_TVOUT_c3_conv_layer2_error "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer2_error.dat"
+#define AUTOTB_TVIN_c3_conv_layer2_b "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer2_b.dat"
+#define AUTOTB_TVOUT_c3_conv_layer2_b "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer2_b.dat"
+#define AUTOTB_TVIN_c3_conv_layer2_db "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer2_db.dat"
+#define AUTOTB_TVOUT_c3_conv_layer2_db "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer2_db.dat"
+#define AUTOTB_TVIN_c3_conv_layer2_W "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer2_W.dat"
+#define AUTOTB_TVOUT_c3_conv_layer2_W "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer2_W.dat"
+#define AUTOTB_TVIN_c3_conv_layer2_dW "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer2_dW.dat"
+#define AUTOTB_TVOUT_c3_conv_layer2_dW "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer2_dW.dat"
+#define AUTOTB_TVIN_c3_conv_layer2_map_common "../tv/cdatafile/c.conv_fprop2.autotvin_c3_conv_layer2_map_common.dat"
+#define AUTOTB_TVOUT_c3_conv_layer2_map_common "../tv/cdatafile/c.conv_fprop2.autotvout_c3_conv_layer2_map_common.dat"
 #define AUTOTB_TVIN_pconnection "../tv/cdatafile/c.conv_fprop2.autotvin_pconnection.dat"
 #define AUTOTB_TVOUT_pconnection "../tv/cdatafile/c.conv_fprop2.autotvout_pconnection.dat"
 
 
 // tvout file define:
-#define AUTOTB_TVOUT_PC_c3_conv_layer_map_data "../tv/rtldatafile/rtl.conv_fprop2.autotvout_c3_conv_layer_map_data.dat"
-#define AUTOTB_TVOUT_PC_c3_conv_layer_map_common "../tv/rtldatafile/rtl.conv_fprop2.autotvout_c3_conv_layer_map_common.dat"
+#define AUTOTB_TVOUT_PC_c3_conv_layer2_data "../tv/rtldatafile/rtl.conv_fprop2.autotvout_c3_conv_layer2_data.dat"
+#define AUTOTB_TVOUT_PC_c3_conv_layer2_map_common "../tv/rtldatafile/rtl.conv_fprop2.autotvout_c3_conv_layer2_map_common.dat"
 
 
 namespace hls::sim
@@ -1274,10 +1278,10 @@ namespace hls::sim
 
 
 extern "C"
-void conv_fprop2_hw_stub_wrapper(hls::sim::Byte<1>, hls::sim::Byte<1>, hls::sim::Byte<1>, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
+void conv_fprop2_hw_stub_wrapper(hls::sim::Byte<1>, hls::sim::Byte<1>, hls::sim::Byte<1>, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
 
 extern "C"
-void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim::Byte<1> __xlx_apatb_param_ap_part, hls::sim::Byte<1> __xlx_apatb_param_ap_parent, void* __xlx_apatb_param_s2_pooling_la_map_w, void* __xlx_apatb_param_s2_pooling_la_map_h, void* __xlx_apatb_param_s2_pooling_la_map_count, void* __xlx_apatb_param_s2_pooling_la_map_data, void* __xlx_apatb_param_s2_pooling_la_map_error, void* __xlx_apatb_param_s2_pooling_la_map_b, void* __xlx_apatb_param_s2_pooling_la_map_db, void* __xlx_apatb_param_s2_pooling_la_kernel_w, void* __xlx_apatb_param_s2_pooling_la_kernel_h, void* __xlx_apatb_param_s2_pooling_la_kernel_count, void* __xlx_apatb_param_s2_pooling_la_kernel, void* __xlx_apatb_param_s2_pooling_la_map_common, void* __xlx_apatb_param_c3_conv_layer_map_w, void* __xlx_apatb_param_c3_conv_layer_map_h, void* __xlx_apatb_param_c3_conv_layer_map_count, void* __xlx_apatb_param_c3_conv_layer_map_data, void* __xlx_apatb_param_c3_conv_layer_map_error, void* __xlx_apatb_param_c3_conv_layer_map_b, void* __xlx_apatb_param_c3_conv_layer_map_db, void* __xlx_apatb_param_c3_conv_layer_kernel_w, void* __xlx_apatb_param_c3_conv_layer_kernel_h, void* __xlx_apatb_param_c3_conv_layer_kernel_count, void* __xlx_apatb_param_c3_conv_layer_kernel, void* __xlx_apatb_param_c3_conv_layer_map_common, void* __xlx_apatb_param_pconnection)
+void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim::Byte<1> __xlx_apatb_param_ap_part, hls::sim::Byte<1> __xlx_apatb_param_ap_parent, void* __xlx_apatb_param_s2_pooling_layer1_map_w, void* __xlx_apatb_param_s2_pooling_layer1_map_h, void* __xlx_apatb_param_s2_pooling_layer1_map_count, void* __xlx_apatb_param_s2_pooling_layer1_kernel_w, void* __xlx_apatb_param_s2_pooling_layer1_kernel_h, void* __xlx_apatb_param_s2_pooling_layer1_kernel_count, void* __xlx_apatb_param_s2_pooling_layer2_data, void* __xlx_apatb_param_s2_pooling_layer2_error, void* __xlx_apatb_param_s2_pooling_layer2_b, void* __xlx_apatb_param_s2_pooling_layer2_db, void* __xlx_apatb_param_s2_pooling_layer2_W, void* __xlx_apatb_param_s2_pooling_layer2_dW, void* __xlx_apatb_param_s2_pooling_layer2_map_common, void* __xlx_apatb_param_c3_conv_layer1_map_w, void* __xlx_apatb_param_c3_conv_layer1_map_h, void* __xlx_apatb_param_c3_conv_layer1_map_count, void* __xlx_apatb_param_c3_conv_layer1_kernel_w, void* __xlx_apatb_param_c3_conv_layer1_kernel_h, void* __xlx_apatb_param_c3_conv_layer1_kernel_count, void* __xlx_apatb_param_c3_conv_layer2_data, void* __xlx_apatb_param_c3_conv_layer2_error, void* __xlx_apatb_param_c3_conv_layer2_b, void* __xlx_apatb_param_c3_conv_layer2_db, void* __xlx_apatb_param_c3_conv_layer2_W, void* __xlx_apatb_param_c3_conv_layer2_dW, void* __xlx_apatb_param_c3_conv_layer2_map_common, void* __xlx_apatb_param_pconnection)
 {
   static hls::sim::Register port0 {
     .name = "ap_core",
@@ -1313,136 +1317,136 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
   port2.param = &__xlx_apatb_param_ap_parent;
 
   static hls::sim::Register port3 {
-    .name = "s2_pooling_la_map_w",
+    .name = "s2_pooling_layer1_map_w",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_map_w),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer1_map_w),
 #endif
   };
-  port3.param = __xlx_apatb_param_s2_pooling_la_map_w;
+  port3.param = __xlx_apatb_param_s2_pooling_layer1_map_w;
 
   static hls::sim::Register port4 {
-    .name = "s2_pooling_la_map_h",
+    .name = "s2_pooling_layer1_map_h",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_map_h),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer1_map_h),
 #endif
   };
-  port4.param = __xlx_apatb_param_s2_pooling_la_map_h;
+  port4.param = __xlx_apatb_param_s2_pooling_layer1_map_h;
 
   static hls::sim::Register port5 {
-    .name = "s2_pooling_la_map_count",
+    .name = "s2_pooling_layer1_map_count",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_map_count),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer1_map_count),
 #endif
   };
-  port5.param = __xlx_apatb_param_s2_pooling_la_map_count;
+  port5.param = __xlx_apatb_param_s2_pooling_layer1_map_count;
 
   static hls::sim::Register port6 {
-    .name = "s2_pooling_la_kernel_w",
+    .name = "s2_pooling_layer1_kernel_w",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_kernel_w),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer1_kernel_w),
 #endif
   };
-  port6.param = __xlx_apatb_param_s2_pooling_la_kernel_w;
+  port6.param = __xlx_apatb_param_s2_pooling_layer1_kernel_w;
 
   static hls::sim::Register port7 {
-    .name = "s2_pooling_la_kernel_h",
+    .name = "s2_pooling_layer1_kernel_h",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_kernel_h),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer1_kernel_h),
 #endif
   };
-  port7.param = __xlx_apatb_param_s2_pooling_la_kernel_h;
+  port7.param = __xlx_apatb_param_s2_pooling_layer1_kernel_h;
 
   static hls::sim::Register port8 {
-    .name = "s2_pooling_la_kernel_count",
+    .name = "s2_pooling_layer1_kernel_count",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_kernel_count),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer1_kernel_count),
 #endif
   };
-  port8.param = __xlx_apatb_param_s2_pooling_la_kernel_count;
+  port8.param = __xlx_apatb_param_s2_pooling_layer1_kernel_count;
 
   static hls::sim::Register port9 {
-    .name = "c3_conv_layer_map_w",
+    .name = "c3_conv_layer1_map_w",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_map_w),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer1_map_w),
 #endif
   };
-  port9.param = __xlx_apatb_param_c3_conv_layer_map_w;
+  port9.param = __xlx_apatb_param_c3_conv_layer1_map_w;
 
   static hls::sim::Register port10 {
-    .name = "c3_conv_layer_map_h",
+    .name = "c3_conv_layer1_map_h",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_map_h),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer1_map_h),
 #endif
   };
-  port10.param = __xlx_apatb_param_c3_conv_layer_map_h;
+  port10.param = __xlx_apatb_param_c3_conv_layer1_map_h;
 
   static hls::sim::Register port11 {
-    .name = "c3_conv_layer_map_count",
+    .name = "c3_conv_layer1_map_count",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_map_count),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer1_map_count),
 #endif
   };
-  port11.param = __xlx_apatb_param_c3_conv_layer_map_count;
+  port11.param = __xlx_apatb_param_c3_conv_layer1_map_count;
 
   static hls::sim::Register port12 {
-    .name = "c3_conv_layer_kernel_w",
+    .name = "c3_conv_layer1_kernel_w",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_kernel_w),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer1_kernel_w),
 #endif
   };
-  port12.param = __xlx_apatb_param_c3_conv_layer_kernel_w;
+  port12.param = __xlx_apatb_param_c3_conv_layer1_kernel_w;
 
   static hls::sim::Register port13 {
-    .name = "c3_conv_layer_kernel_h",
+    .name = "c3_conv_layer1_kernel_h",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_kernel_h),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer1_kernel_h),
 #endif
   };
-  port13.param = __xlx_apatb_param_c3_conv_layer_kernel_h;
+  port13.param = __xlx_apatb_param_c3_conv_layer1_kernel_h;
 
   static hls::sim::Register port14 {
-    .name = "c3_conv_layer_kernel_count",
+    .name = "c3_conv_layer1_kernel_count",
     .width = 32,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_kernel_count),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer1_kernel_count),
 #endif
   };
-  port14.param = __xlx_apatb_param_c3_conv_layer_kernel_count;
+  port14.param = __xlx_apatb_param_c3_conv_layer1_kernel_count;
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port15 {
@@ -1452,20 +1456,20 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     .width = 64,
     .asize = 8,
     .hbm = false,
-    .name = { "s2_pooling_la_map_data" },
+    .name = { "s2_pooling_layer2_data" },
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_la_map_data),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_layer2_data),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_map_data),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer2_data),
 #endif
 #endif
     .hasWrite = { false },
   };
-  port15.param = { __xlx_apatb_param_s2_pooling_la_map_data };
-  port15.mname = { "s2_pooling_la_map_data" };
+  port15.param = { __xlx_apatb_param_s2_pooling_layer2_data };
+  port15.mname = { "s2_pooling_layer2_data" };
   port15.nbytes = { 983040 };
 
 #ifdef USE_BINARY_TV_FILE
@@ -1476,20 +1480,20 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     .width = 64,
     .asize = 8,
     .hbm = false,
-    .name = { "s2_pooling_la_map_error" },
+    .name = { "s2_pooling_layer2_error" },
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_la_map_error),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_layer2_error),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_map_error),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer2_error),
 #endif
 #endif
     .hasWrite = { false },
   };
-  port16.param = { __xlx_apatb_param_s2_pooling_la_map_error };
-  port16.mname = { "s2_pooling_la_map_error" };
+  port16.param = { __xlx_apatb_param_s2_pooling_layer2_error };
+  port16.mname = { "s2_pooling_layer2_error" };
   port16.nbytes = { 983040 };
 
 #ifdef USE_BINARY_TV_FILE
@@ -1500,20 +1504,20 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     .width = 64,
     .asize = 8,
     .hbm = false,
-    .name = { "s2_pooling_la_map_b" },
+    .name = { "s2_pooling_layer2_b" },
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_la_map_b),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_layer2_b),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_map_b),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer2_b),
 #endif
 #endif
     .hasWrite = { false },
   };
-  port17.param = { __xlx_apatb_param_s2_pooling_la_map_b };
-  port17.mname = { "s2_pooling_la_map_b" };
+  port17.param = { __xlx_apatb_param_s2_pooling_layer2_b };
+  port17.mname = { "s2_pooling_layer2_b" };
   port17.nbytes = { 960 };
 
 #ifdef USE_BINARY_TV_FILE
@@ -1524,20 +1528,20 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     .width = 64,
     .asize = 8,
     .hbm = false,
-    .name = { "s2_pooling_la_map_db" },
+    .name = { "s2_pooling_layer2_db" },
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_la_map_db),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_layer2_db),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_map_db),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer2_db),
 #endif
 #endif
     .hasWrite = { false },
   };
-  port18.param = { __xlx_apatb_param_s2_pooling_la_map_db };
-  port18.mname = { "s2_pooling_la_map_db" };
+  port18.param = { __xlx_apatb_param_s2_pooling_layer2_db };
+  port18.mname = { "s2_pooling_layer2_db" };
   port18.nbytes = { 960 };
 
 #ifdef USE_BINARY_TV_FILE
@@ -1545,24 +1549,24 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port19 {
 #endif
-    .width = 3200,
-    .asize = 512,
+    .width = 64,
+    .asize = 8,
     .hbm = false,
-    .name = { "s2_pooling_la_kernel" },
+    .name = { "s2_pooling_layer2_W" },
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_la_kernel),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_layer2_W),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_kernel),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer2_W),
 #endif
 #endif
     .hasWrite = { false },
   };
-  port19.param = { __xlx_apatb_param_s2_pooling_la_kernel };
-  port19.mname = { "s2_pooling_la_kernel" };
-  port19.nbytes = { 983040 };
+  port19.param = { __xlx_apatb_param_s2_pooling_layer2_W };
+  port19.mname = { "s2_pooling_layer2_W" };
+  port19.nbytes = { 384000 };
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port20 {
@@ -1572,21 +1576,21 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     .width = 64,
     .asize = 8,
     .hbm = false,
-    .name = { "s2_pooling_la_map_common" },
+    .name = { "s2_pooling_layer2_dW" },
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_la_map_common),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_layer2_dW),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_la_map_common),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer2_dW),
 #endif
 #endif
     .hasWrite = { false },
   };
-  port20.param = { __xlx_apatb_param_s2_pooling_la_map_common };
-  port20.mname = { "s2_pooling_la_map_common" };
-  port20.nbytes = { 8192 };
+  port20.param = { __xlx_apatb_param_s2_pooling_layer2_dW };
+  port20.mname = { "s2_pooling_layer2_dW" };
+  port20.nbytes = { 384000 };
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port21 {
@@ -1596,30 +1600,21 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     .width = 64,
     .asize = 8,
     .hbm = false,
-    .name = { "c3_conv_layer_map_data" },
+    .name = { "s2_pooling_layer2_map_common" },
 #ifdef POST_CHECK
+#else
+    .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_c3_conv_layer_map_data),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_s2_pooling_layer2_map_common),
 #else
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_c3_conv_layer_map_data),
-#endif
-#else
-#ifdef USE_BINARY_TV_FILE
-    .owriter = new hls::sim::Output(AUTOTB_TVOUT_c3_conv_layer_map_data),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_c3_conv_layer_map_data),
-#endif
-#ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer_map_data),
-#else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_map_data),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_s2_pooling_layer2_map_common),
 #endif
 #endif
-    .hasWrite = { true },
+    .hasWrite = { false },
   };
-  port21.param = { __xlx_apatb_param_c3_conv_layer_map_data };
-  port21.mname = { "c3_conv_layer_map_data" };
-  port21.nbytes = { 983040 };
+  port21.param = { __xlx_apatb_param_s2_pooling_layer2_map_common };
+  port21.mname = { "s2_pooling_layer2_map_common" };
+  port21.nbytes = { 8192 };
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port22 {
@@ -1629,20 +1624,29 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     .width = 64,
     .asize = 8,
     .hbm = false,
-    .name = { "c3_conv_layer_map_error" },
+    .name = { "c3_conv_layer2_data" },
 #ifdef POST_CHECK
-#else
-    .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer_map_error),
+    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_c3_conv_layer2_data),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_map_error),
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_c3_conv_layer2_data),
+#endif
+#else
+#ifdef USE_BINARY_TV_FILE
+    .owriter = new hls::sim::Output(AUTOTB_TVOUT_c3_conv_layer2_data),
+#else
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_c3_conv_layer2_data),
+#endif
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer2_data),
+#else
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer2_data),
 #endif
 #endif
-    .hasWrite = { false },
+    .hasWrite = { true },
   };
-  port22.param = { __xlx_apatb_param_c3_conv_layer_map_error };
-  port22.mname = { "c3_conv_layer_map_error" };
+  port22.param = { __xlx_apatb_param_c3_conv_layer2_data };
+  port22.mname = { "c3_conv_layer2_data" };
   port22.nbytes = { 983040 };
 
 #ifdef USE_BINARY_TV_FILE
@@ -1653,21 +1657,21 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     .width = 64,
     .asize = 8,
     .hbm = false,
-    .name = { "c3_conv_layer_map_b" },
+    .name = { "c3_conv_layer2_error" },
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer_map_b),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer2_error),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_map_b),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer2_error),
 #endif
 #endif
     .hasWrite = { false },
   };
-  port23.param = { __xlx_apatb_param_c3_conv_layer_map_b };
-  port23.mname = { "c3_conv_layer_map_b" };
-  port23.nbytes = { 960 };
+  port23.param = { __xlx_apatb_param_c3_conv_layer2_error };
+  port23.mname = { "c3_conv_layer2_error" };
+  port23.nbytes = { 983040 };
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port24 {
@@ -1677,20 +1681,20 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     .width = 64,
     .asize = 8,
     .hbm = false,
-    .name = { "c3_conv_layer_map_db" },
+    .name = { "c3_conv_layer2_b" },
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer_map_db),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer2_b),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_map_db),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer2_b),
 #endif
 #endif
     .hasWrite = { false },
   };
-  port24.param = { __xlx_apatb_param_c3_conv_layer_map_db };
-  port24.mname = { "c3_conv_layer_map_db" };
+  port24.param = { __xlx_apatb_param_c3_conv_layer2_b };
+  port24.mname = { "c3_conv_layer2_b" };
   port24.nbytes = { 960 };
 
 #ifdef USE_BINARY_TV_FILE
@@ -1698,24 +1702,24 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port25 {
 #endif
-    .width = 3200,
-    .asize = 512,
+    .width = 64,
+    .asize = 8,
     .hbm = false,
-    .name = { "c3_conv_layer_kernel" },
+    .name = { "c3_conv_layer2_db" },
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer_kernel),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer2_db),
 #else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_kernel),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer2_db),
 #endif
 #endif
     .hasWrite = { false },
   };
-  port25.param = { __xlx_apatb_param_c3_conv_layer_kernel };
-  port25.mname = { "c3_conv_layer_kernel" };
-  port25.nbytes = { 983040 };
+  port25.param = { __xlx_apatb_param_c3_conv_layer2_db };
+  port25.mname = { "c3_conv_layer2_db" };
+  port25.nbytes = { 960 };
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port26 {
@@ -1725,35 +1729,83 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     .width = 64,
     .asize = 8,
     .hbm = false,
-    .name = { "c3_conv_layer_map_common" },
+    .name = { "c3_conv_layer2_W" },
 #ifdef POST_CHECK
+#else
+    .owriter = nullptr,
 #ifdef USE_BINARY_TV_FILE
-    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_c3_conv_layer_map_common),
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer2_W),
 #else
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_c3_conv_layer_map_common),
-#endif
-#else
-#ifdef USE_BINARY_TV_FILE
-    .owriter = new hls::sim::Output(AUTOTB_TVOUT_c3_conv_layer_map_common),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_c3_conv_layer_map_common),
-#endif
-#ifdef USE_BINARY_TV_FILE
-    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer_map_common),
-#else
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer_map_common),
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer2_W),
 #endif
 #endif
-    .hasWrite = { true },
+    .hasWrite = { false },
   };
-  port26.param = { __xlx_apatb_param_c3_conv_layer_map_common };
-  port26.mname = { "c3_conv_layer_map_common" };
-  port26.nbytes = { 8192 };
+  port26.param = { __xlx_apatb_param_c3_conv_layer2_W };
+  port26.mname = { "c3_conv_layer2_W" };
+  port26.nbytes = { 384000 };
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port27 {
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port27 {
+#endif
+    .width = 64,
+    .asize = 8,
+    .hbm = false,
+    .name = { "c3_conv_layer2_dW" },
+#ifdef POST_CHECK
+#else
+    .owriter = nullptr,
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer2_dW),
+#else
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer2_dW),
+#endif
+#endif
+    .hasWrite = { false },
+  };
+  port27.param = { __xlx_apatb_param_c3_conv_layer2_dW };
+  port27.mname = { "c3_conv_layer2_dW" };
+  port27.nbytes = { 384000 };
+
+#ifdef USE_BINARY_TV_FILE
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port28 {
+#else
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port28 {
+#endif
+    .width = 64,
+    .asize = 8,
+    .hbm = false,
+    .name = { "c3_conv_layer2_map_common" },
+#ifdef POST_CHECK
+#ifdef USE_BINARY_TV_FILE
+    .reader = new hls::sim::Input(AUTOTB_TVOUT_PC_c3_conv_layer2_map_common),
+#else
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_c3_conv_layer2_map_common),
+#endif
+#else
+#ifdef USE_BINARY_TV_FILE
+    .owriter = new hls::sim::Output(AUTOTB_TVOUT_c3_conv_layer2_map_common),
+#else
+    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_c3_conv_layer2_map_common),
+#endif
+#ifdef USE_BINARY_TV_FILE
+    .iwriter = new hls::sim::Output(AUTOTB_TVIN_c3_conv_layer2_map_common),
+#else
+    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_c3_conv_layer2_map_common),
+#endif
+#endif
+    .hasWrite = { true },
+  };
+  port28.param = { __xlx_apatb_param_c3_conv_layer2_map_common };
+  port28.mname = { "c3_conv_layer2_map_common" };
+  port28.nbytes = { 8192 };
+
+#ifdef USE_BINARY_TV_FILE
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port29 {
+#else
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port29 {
 #endif
     .width = 1,
     .asize = 1,
@@ -1770,15 +1822,15 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
 #endif
     .hasWrite = { false },
   };
-  port27.param = { __xlx_apatb_param_pconnection };
-  port27.mname = { "pconnection" };
-  port27.nbytes = { 96 };
+  port29.param = { __xlx_apatb_param_pconnection };
+  port29.mname = { "pconnection" };
+  port29.nbytes = { 96 };
 
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
-    check(port21);
-    check(port26);
+    check(port22);
+    check(port28);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     tcl.containsVLA = 0;
@@ -1811,6 +1863,8 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     dump(port25, port25.iwriter, tcl.AESL_transaction);
     dump(port26, port26.iwriter, tcl.AESL_transaction);
     dump(port27, port27.iwriter, tcl.AESL_transaction);
+    dump(port28, port28.iwriter, tcl.AESL_transaction);
+    dump(port29, port29.iwriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
@@ -1839,11 +1893,13 @@ void apatb_conv_fprop2_hw(hls::sim::Byte<1> __xlx_apatb_param_ap_core, hls::sim:
     port25.doTCL(tcl);
     port26.doTCL(tcl);
     port27.doTCL(tcl);
+    port28.doTCL(tcl);
+    port29.doTCL(tcl);
     CodeState = CALL_C_DUT;
-    conv_fprop2_hw_stub_wrapper(__xlx_apatb_param_ap_core, __xlx_apatb_param_ap_part, __xlx_apatb_param_ap_parent, __xlx_apatb_param_s2_pooling_la_map_w, __xlx_apatb_param_s2_pooling_la_map_h, __xlx_apatb_param_s2_pooling_la_map_count, __xlx_apatb_param_s2_pooling_la_map_data, __xlx_apatb_param_s2_pooling_la_map_error, __xlx_apatb_param_s2_pooling_la_map_b, __xlx_apatb_param_s2_pooling_la_map_db, __xlx_apatb_param_s2_pooling_la_kernel_w, __xlx_apatb_param_s2_pooling_la_kernel_h, __xlx_apatb_param_s2_pooling_la_kernel_count, __xlx_apatb_param_s2_pooling_la_kernel, __xlx_apatb_param_s2_pooling_la_map_common, __xlx_apatb_param_c3_conv_layer_map_w, __xlx_apatb_param_c3_conv_layer_map_h, __xlx_apatb_param_c3_conv_layer_map_count, __xlx_apatb_param_c3_conv_layer_map_data, __xlx_apatb_param_c3_conv_layer_map_error, __xlx_apatb_param_c3_conv_layer_map_b, __xlx_apatb_param_c3_conv_layer_map_db, __xlx_apatb_param_c3_conv_layer_kernel_w, __xlx_apatb_param_c3_conv_layer_kernel_h, __xlx_apatb_param_c3_conv_layer_kernel_count, __xlx_apatb_param_c3_conv_layer_kernel, __xlx_apatb_param_c3_conv_layer_map_common, __xlx_apatb_param_pconnection);
+    conv_fprop2_hw_stub_wrapper(__xlx_apatb_param_ap_core, __xlx_apatb_param_ap_part, __xlx_apatb_param_ap_parent, __xlx_apatb_param_s2_pooling_layer1_map_w, __xlx_apatb_param_s2_pooling_layer1_map_h, __xlx_apatb_param_s2_pooling_layer1_map_count, __xlx_apatb_param_s2_pooling_layer1_kernel_w, __xlx_apatb_param_s2_pooling_layer1_kernel_h, __xlx_apatb_param_s2_pooling_layer1_kernel_count, __xlx_apatb_param_s2_pooling_layer2_data, __xlx_apatb_param_s2_pooling_layer2_error, __xlx_apatb_param_s2_pooling_layer2_b, __xlx_apatb_param_s2_pooling_layer2_db, __xlx_apatb_param_s2_pooling_layer2_W, __xlx_apatb_param_s2_pooling_layer2_dW, __xlx_apatb_param_s2_pooling_layer2_map_common, __xlx_apatb_param_c3_conv_layer1_map_w, __xlx_apatb_param_c3_conv_layer1_map_h, __xlx_apatb_param_c3_conv_layer1_map_count, __xlx_apatb_param_c3_conv_layer1_kernel_w, __xlx_apatb_param_c3_conv_layer1_kernel_h, __xlx_apatb_param_c3_conv_layer1_kernel_count, __xlx_apatb_param_c3_conv_layer2_data, __xlx_apatb_param_c3_conv_layer2_error, __xlx_apatb_param_c3_conv_layer2_b, __xlx_apatb_param_c3_conv_layer2_db, __xlx_apatb_param_c3_conv_layer2_W, __xlx_apatb_param_c3_conv_layer2_dW, __xlx_apatb_param_c3_conv_layer2_map_common, __xlx_apatb_param_pconnection);
     CodeState = DUMP_OUTPUTS;
-    dump(port21, port21.owriter, tcl.AESL_transaction);
-    dump(port26, port26.owriter, tcl.AESL_transaction);
+    dump(port22, port22.owriter, tcl.AESL_transaction);
+    dump(port28, port28.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {

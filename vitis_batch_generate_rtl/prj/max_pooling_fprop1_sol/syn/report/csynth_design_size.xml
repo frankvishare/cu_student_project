@@ -24,15 +24,15 @@
             <column name="">(4) simplification,  82, simplification of design after performance transformations</column>
             <column name="">, , </column>
             <column name="HW Transforms">, , After hardware transfomations</column>
-            <column name="">(1) lowering, 140, initial conversion to HW specific instructions</column>
-            <column name="">(2) optimizations, 149, high level synthesis optimizations</column>
+            <column name="">(1) lowering, 144, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 153, high level synthesis optimizations</column>
         </table>
     </item>
     <item name="Instructions per Function for each Compilation Phase">
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="max_pooling_fprop1" col1="hls.cpp:227" col2="113" col3="88" col4="90" col5="82" col6="149">
+                <row id="0" col0="max_pooling_fprop1" col1="hls.cpp:185" col2="113" col3="88" col4="90" col5="82" col6="153">
                     <row id="1" col0="tan_h" col1="hls.cpp:8" col2="7" col3="" col4="" col5="" col6=""/>
                 </row>
             </rows>

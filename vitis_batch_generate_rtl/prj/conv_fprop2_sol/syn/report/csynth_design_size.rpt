@@ -17,18 +17,18 @@
 | Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
 |               | (1) array partition         | 122          | user array partition pragmas are applied                                               |
 |               | (2) simplification          | 122          | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
-|               | (3) aggregate/disaggregate  | 129          | user struct aggregate/disaggregate pragmas are applied                                 |
-|               | (4) array reshape           | 129          | apply array reshape pragmas                                                            |
-|               | (5) access patterns         | 139          | array access pattern optmizations                                                      |
+|               | (3) aggregate/disaggregate  | 122          | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           | 122          | apply array reshape pragmas                                                            |
+|               | (5) access patterns         | 132          | array access pattern optmizations                                                      |
 |               |                             |              |                                                                                        |
 | Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
-|               | (1) loop simplification     | 139          | loop and instruction simplification                                                    |
-|               | (2) parallelization         | 137          | loops are unrolled or pipelined to meet performance targets                            |
-|               | (3) array partition         | 129          | arrays are partitioned to meet performance targets                                     |
-|               | (4) simplification          | 129          | simplification of design after performance transformations                             |
+|               | (1) loop simplification     | 132          | loop and instruction simplification                                                    |
+|               | (2) parallelization         | 130          | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         | 122          | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          | 122          | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                | 191          | initial conversion to HW specific instructions                                         |
+|               | (1) lowering                | 189          | initial conversion to HW specific instructions                                         |
 |               | (2) optimizations           | 188          | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
@@ -36,8 +36,8 @@
 +----------------+-------------+--------------+---------------+--------------+-------------+---------------+
 | Function       | Location    | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +----------------+-------------+--------------+---------------+--------------+-------------+---------------+
-| + conv_fprop2  | hls.cpp:140 | 164          | 130           | 139          | 129         | 188           |
-|    convn_valid | hls.cpp:74  |  60          |               |              |             |               |
+| + conv_fprop2  | hls.cpp:117 | 164          | 130           | 132          | 122         | 188           |
+|    convn_valid | hls.cpp:47  |  60          |               |              |             |               |
 |    tan_h       | hls.cpp:8   |   7          |               |              |             |               |
 +----------------+-------------+--------------+---------------+--------------+-------------+---------------+
 

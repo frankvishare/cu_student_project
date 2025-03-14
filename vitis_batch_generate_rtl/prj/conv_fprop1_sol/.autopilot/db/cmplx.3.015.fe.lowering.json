@@ -3,7 +3,7 @@
     "basicblocks": 27,
     "calls": "",
     "file": "hls.cpp",
-    "fileloc": 111,
+    "fileloc": 83,
     "instructions": 189,
     "loads": {
       "T": 13
@@ -12,6 +12,6 @@
     "stores": {
       "T": 3
     },
-    "total_instructions": 191
+    "total_instructions": 189
   }
 }

@@ -16,7 +16,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>c3_conv_layer_map_common</name>
+						<name>c3_conv_layer2_map_common</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -347,7 +347,7 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>c3_conv_layer_map_common_addr</name>
+						<name>c3_conv_layer2_map_common_addr</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -391,7 +391,7 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>c3_conv_layer_map_common_addr_write_ln0</name>
+						<name>c3_conv_layer2_map_common_addr_write_ln0</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -434,7 +434,7 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>empty_16</name>
+						<name>empty_17</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -477,7 +477,7 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>p_cast20</name>
+						<name>p_cast21</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -896,7 +896,7 @@
 				<Obj>
 					<type>3</type>
 					<id>22</id>
-					<name>VITIS_LOOP_147_2.loopexit.exitStub</name>
+					<name>VITIS_LOOP_130_2.loopexit.exitStub</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1573,7 +1573,7 @@
 		<count>6</count>
 		<item_version>0</item_version>
 		<item class_id="40" tracking_level="0" version="0">
-			<first>c3_conv_layer_map_common_addr_gep_fu_42</first>
+			<first>c3_conv_layer2_map_common_addr_gep_fu_42</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1581,7 +1581,7 @@
 			</second>
 		</item>
 		<item>
-			<first>empty_16_fu_69</first>
+			<first>empty_17_fu_69</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1613,7 +1613,7 @@
 			</second>
 		</item>
 		<item>
-			<first>p_cast20_fu_75</first>
+			<first>p_cast21_fu_75</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1670,7 +1670,7 @@
 		<item_version>0</item_version>
 		<item class_id="42" tracking_level="0" version="0">
 			<first class_id="43" tracking_level="0" version="0">
-				<first>c3_conv_layer_map_common</first>
+				<first>c3_conv_layer2_map_common</first>
 				<second>0</second>
 			</first>
 			<second>
@@ -1716,7 +1716,7 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item class_id="45" tracking_level="0" version="0">
-			<first>c3_conv_layer_map_common(p0)</first>
+			<first>c3_conv_layer2_map_common(p0)</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

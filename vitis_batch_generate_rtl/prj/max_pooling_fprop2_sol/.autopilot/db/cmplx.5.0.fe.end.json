@@ -1,29 +1,8 @@
 {
-    "0": {
-        "name": "max_pooling_fprop2",
-        "file": "..\/source\/hls.cpp",
-        "fileloc": "255",
-        "instructions": "138",
-        "total_instructions": "211",
-        "calls": "1",
-        "basicblocks": "10",
-        "loads": {
-            "L": "2",
-            "T": "1"
-        },
-        "stores": {
-            "L": "2",
-            "T": "1"
-        },
-        "loops": {
-            "L": "1",
-            "N": "2"
-        }
-    },
     "1": {
-        "name": "max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4",
+        "name": "max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4",
         "file": "..\/source\/hls.cpp",
-        "fileloc": "267",
+        "fileloc": "236",
         "instructions": "73",
         "total_instructions": "73",
         "calls": "",
@@ -37,6 +16,27 @@
         },
         "loops": {
             "L": "1"
+        }
+    },
+    "0": {
+        "name": "max_pooling_fprop2",
+        "file": "..\/source\/hls.cpp",
+        "fileloc": "218",
+        "instructions": "142",
+        "total_instructions": "215",
+        "calls": "1",
+        "basicblocks": "10",
+        "loads": {
+            "L": "2",
+            "T": "1"
+        },
+        "stores": {
+            "L": "2",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1",
+            "N": "2"
         }
     }
 }

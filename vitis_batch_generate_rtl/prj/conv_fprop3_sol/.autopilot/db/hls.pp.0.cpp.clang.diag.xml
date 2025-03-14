@@ -9,7 +9,7 @@
       <key>filename</key>
       <string>../source/xmem.h</string>
       <key>line</key>
-      <integer>46</integer>
+      <integer>54</integer>
       <key>column</key>
       <integer>35</integer>
       <key>message</key>
@@ -25,7 +25,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>74</integer>
+      <integer>47</integer>
       <key>column</key>
       <integer>54</integer>
       <key>message</key>
@@ -41,7 +41,71 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>111</integer>
+      <integer>86</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop1_XLX_SEP_ PragmaOptions=variable=input_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>87</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop1_XLX_SEP_ PragmaOptions=variable=input_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>88</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop1_XLX_SEP_ PragmaOptions=variable=c1_conv_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>89</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop1_XLX_SEP_ PragmaOptions=variable=c1_conv_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>83</integer>
       <key>column</key>
       <integer>26</integer>
       <key>message</key>
@@ -57,7 +121,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>111</integer>
+      <integer>83</integer>
       <key>column</key>
       <integer>43</integer>
       <key>message</key>
@@ -73,7 +137,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>111</integer>
+      <integer>83</integer>
       <key>column</key>
       <integer>60</integer>
       <key>message</key>
@@ -89,7 +153,71 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>140</integer>
+      <integer>120</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop2_XLX_SEP_ PragmaOptions=variable=s2_pooling_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>121</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop2_XLX_SEP_ PragmaOptions=variable=s2_pooling_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>122</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop2_XLX_SEP_ PragmaOptions=variable=c3_conv_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>123</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop2_XLX_SEP_ PragmaOptions=variable=c3_conv_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>117</integer>
       <key>column</key>
       <integer>26</integer>
       <key>message</key>
@@ -105,7 +233,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>140</integer>
+      <integer>117</integer>
       <key>column</key>
       <integer>43</integer>
       <key>message</key>
@@ -121,7 +249,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>140</integer>
+      <integer>117</integer>
       <key>column</key>
       <integer>60</integer>
       <key>message</key>
@@ -153,7 +281,71 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>168</integer>
+      <integer>154</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop3_XLX_SEP_ PragmaOptions=variable=s4_pooling_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>155</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop3_XLX_SEP_ PragmaOptions=variable=s4_pooling_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>156</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop3_XLX_SEP_ PragmaOptions=variable=c5_conv_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>157</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv_fprop3_XLX_SEP_ PragmaOptions=variable=c5_conv_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>151</integer>
       <key>column</key>
       <integer>72</integer>
       <key>message</key>
@@ -169,7 +361,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>168</integer>
+      <integer>151</integer>
       <key>column</key>
       <integer>89</integer>
       <key>message</key>
@@ -185,7 +377,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>168</integer>
+      <integer>151</integer>
       <key>column</key>
       <integer>106</integer>
       <key>message</key>
@@ -201,7 +393,71 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>227</integer>
+      <integer>188</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop1_XLX_SEP_ PragmaOptions=variable=c1_conv_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>189</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop1_XLX_SEP_ PragmaOptions=variable=c1_conv_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>190</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop1_XLX_SEP_ PragmaOptions=variable=s2_pooling_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>191</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop1_XLX_SEP_ PragmaOptions=variable=s2_pooling_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>185</integer>
       <key>column</key>
       <integer>33</integer>
       <key>message</key>
@@ -217,7 +473,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>227</integer>
+      <integer>185</integer>
       <key>column</key>
       <integer>50</integer>
       <key>message</key>
@@ -233,7 +489,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>227</integer>
+      <integer>185</integer>
       <key>column</key>
       <integer>67</integer>
       <key>message</key>
@@ -249,7 +505,71 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>255</integer>
+      <integer>221</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop2_XLX_SEP_ PragmaOptions=variable=c3_conv_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>222</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop2_XLX_SEP_ PragmaOptions=variable=c3_conv_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>223</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop2_XLX_SEP_ PragmaOptions=variable=s4_pooling_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>224</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=max_pooling_fprop2_XLX_SEP_ PragmaOptions=variable=s4_pooling_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>218</integer>
       <key>column</key>
       <integer>33</integer>
       <key>message</key>
@@ -265,7 +585,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>255</integer>
+      <integer>218</integer>
       <key>column</key>
       <integer>50</integer>
       <key>message</key>
@@ -281,7 +601,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>255</integer>
+      <integer>218</integer>
       <key>column</key>
       <integer>67</integer>
       <key>message</key>
@@ -297,7 +617,71 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>285</integer>
+      <integer>254</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fully_connected_fprop_XLX_SEP_ PragmaOptions=variable=c5_conv_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>255</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fully_connected_fprop_XLX_SEP_ PragmaOptions=variable=c5_conv_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>256</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fully_connected_fprop_XLX_SEP_ PragmaOptions=variable=output_layer1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>257</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=disaggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fully_connected_fprop_XLX_SEP_ PragmaOptions=variable=output_layer2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../source/hls.cpp</string>
+      <key>line</key>
+      <integer>251</integer>
       <key>column</key>
       <integer>36</integer>
       <key>message</key>
@@ -313,7 +697,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>285</integer>
+      <integer>251</integer>
       <key>column</key>
       <integer>53</integer>
       <key>message</key>
@@ -329,7 +713,7 @@
       <key>filename</key>
       <string>../source/hls.cpp</string>
       <key>line</key>
-      <integer>285</integer>
+      <integer>251</integer>
       <key>column</key>
       <integer>70</integer>
       <key>message</key>

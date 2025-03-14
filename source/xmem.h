@@ -29,21 +29,29 @@ typedef struct xmem_t {
     double out_data[MAX_MAP_SIZE]                     _ALIGN; 
     int out_w                                         _ALIGN; 
     int out_h                                         _ALIGN; */
+    Layer1 input_layer1                                _ALIGN; //scalar offs:0 size:24
+    Layer1 c1_conv_layer1                              _ALIGN; //scalar offs:24 size:24
+    Layer1 s2_pooling_layer1                           _ALIGN; //scalar offs:48 size:24
+    Layer1 c3_conv_layer1                              _ALIGN; //scalar offs:72 size:24
+    Layer1 s4_pooling_layer1                           _ALIGN; //scalar offs:96 size:24
+    Layer1 c5_conv_layer1                              _ALIGN; //scalar offs:120 size:24
+    Layer1 output_layer1                               _ALIGN; //scalar offs:144 size:24
 
-   
-    Layer input_layer                                 _ALIGN; 
-    Layer c1_conv_layer                               _ALIGN;
-    Layer s2_pooling_layer                            _ALIGN;
-    Layer c3_conv_layer                               _ALIGN;
-    Layer s4_pooling_layer                            _ALIGN;
-    Layer c5_conv_layer                               _ALIGN;
-    Layer output_layer                                _ALIGN; 
-    
-    // Connection table for conv_fprop
-    bool pconnection[96]                                 _ALIGN;
-    //bool connection_table[6*16]                      
-    
-    uint8_t xxxxx_paddingA[1976];                            _ALIGN; 
+uint8_t xxxxx_paddingA[1880];
+
+    Layer2 input_layer2                                _ALIGN; //array offs:2048 size:2744192
+    Layer2 c1_conv_layer2                              _ALIGN; //array offs:2746240 size:2744192
+    Layer2 s2_pooling_layer2                           _ALIGN; //array offs:5490432 size:2744192
+    Layer2 c3_conv_layer2                              _ALIGN; //array offs:8234624 size:2744192
+    Layer2 s4_pooling_layer2                           _ALIGN; //array offs:10978816 size:2744192
+    Layer2 c5_conv_layer2                              _ALIGN; //array offs:13723008 size:2744192
+    Layer2 output_layer2                               _ALIGN; //array offs:16467200 size:2744192
+    bool pconnection[96]                               _ALIGN; //array offs:19211392 size:96
+
+// Total scalar size: 168
+// Total array size: 19209440
+// Total cyclic size: 0
+;                            _ALIGN; 
 
 } xmem_t;
 

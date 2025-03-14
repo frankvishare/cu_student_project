@@ -1,0 +1,400 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv_fprop2_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4'
+================================================================
+* Date:           Fri Mar 14 16:55:04 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prj
+* Solution:       conv_fprop2_sol (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu19p-fsvb3824-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.30 ns|  2.983 ns|     0.89 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_57_3_VITIS_LOOP_59_4  |        ?|        ?|        24|          7|          1|     ?|       yes|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 7, depth = 25
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 25
+* Pipeline : 1
+  Pipeline-0 : II = 7, D = 25, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.38>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%sum = alloca i32 1" [../source/hls.cpp:51->../source/hls.cpp:138]   --->   Operation 27 'alloca' 'sum' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%m = alloca i32 1" [../source/hls.cpp:59->../source/hls.cpp:138]   --->   Operation 28 'alloca' 'm' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%n = alloca i32 1" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 29 'alloca' 'n' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 30 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c3_conv_layer2_W, void @empty_1, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %s2_pooling_layer2_data, void @empty_1, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%mul_ln61_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %mul_ln61"   --->   Operation 33 'read' 'mul_ln61_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln61_2_read = read i17 @_ssdm_op_Read.ap_auto.i17, i17 %zext_ln61_2"   --->   Operation 34 'read' 'zext_ln61_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%tmp = read i17 @_ssdm_op_Read.ap_auto.i17, i17 %empty"   --->   Operation 35 'read' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_1 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %empty_13"   --->   Operation 36 'read' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_2 = read i17 @_ssdm_op_Read.ap_auto.i17, i17 %empty_12"   --->   Operation 37 'read' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_3 = read i17 @_ssdm_op_Read.ap_auto.i17, i17 %empty_11"   --->   Operation 38 'read' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%mul_ln139_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %mul_ln139"   --->   Operation 39 'read' 'mul_ln139_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%c3_conv_layer1_kernel_w_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %c3_conv_layer1_kernel_w_load"   --->   Operation 40 'read' 'c3_conv_layer1_kernel_w_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.38ns)   --->   "%store_ln0 = store i62 0, i62 %indvar_flatten"   --->   Operation 41 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 42 [1/1] (0.38ns)   --->   "%store_ln57 = store i31 0, i31 %n" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 42 'store' 'store_ln57' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 43 [1/1] (0.38ns)   --->   "%store_ln59 = store i31 0, i31 %m" [../source/hls.cpp:59->../source/hls.cpp:138]   --->   Operation 43 'store' 'store_ln59' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 44 [1/1] (0.38ns)   --->   "%store_ln51 = store i64 0, i64 %sum" [../source/hls.cpp:51->../source/hls.cpp:138]   --->   Operation 44 'store' 'store_ln51' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 45 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.51>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%m_1 = load i31 %m" [../source/hls.cpp:59->../source/hls.cpp:138]   --->   Operation 46 'load' 'm_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i62 %indvar_flatten" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 47 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln59 = zext i31 %m_1" [../source/hls.cpp:59->../source/hls.cpp:138]   --->   Operation 48 'zext' 'zext_ln59' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.88ns)   --->   "%icmp_ln59 = icmp_slt  i32 %zext_ln59, i32 %c3_conv_layer1_kernel_w_load_read" [../source/hls.cpp:59->../source/hls.cpp:138]   --->   Operation 49 'icmp' 'icmp_ln59' <Predicate = true> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 50 [1/1] (1.12ns)   --->   "%icmp_ln57 = icmp_eq  i62 %indvar_flatten_load, i62 %mul_ln139_read" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 50 'icmp' 'icmp_ln57' <Predicate = true> <Delay = 1.12> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 51 [1/1] (1.12ns)   --->   "%add_ln57_1 = add i62 %indvar_flatten_load, i62 1" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 51 'add' 'add_ln57_1' <Predicate = true> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln57 = br i1 %icmp_ln57, void %for.inc21.i.loopexit, void %for.inc29.i.loopexit.exitStub" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 52 'br' 'br_ln57' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%n_load = load i31 %n" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 53 'load' 'n_load' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.87ns)   --->   "%add_ln57 = add i31 %n_load, i31 1" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 54 'add' 'add_ln57' <Predicate = (!icmp_ln57)> <Delay = 0.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.25ns)   --->   "%select_ln57_1 = select i1 %icmp_ln59, i31 %n_load, i31 %add_ln57" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 55 'select' 'select_ln57_1' <Predicate = (!icmp_ln57)> <Delay = 0.25> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%trunc_ln57 = trunc i31 %select_ln57_1" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 56 'trunc' 'trunc_ln57' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%trunc_ln57_1 = trunc i31 %select_ln57_1" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 57 'trunc' 'trunc_ln57_1' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.38ns)   --->   "%store_ln57 = store i62 %add_ln57_1, i62 %indvar_flatten" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 58 'store' 'store_ln57' <Predicate = (!icmp_ln57)> <Delay = 0.38>
+ST_2 : Operation 59 [1/1] (0.38ns)   --->   "%store_ln57 = store i31 %select_ln57_1, i31 %n" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 59 'store' 'store_ln57' <Predicate = (!icmp_ln57)> <Delay = 0.38>
+
+State 3 <SV = 2> <Delay = 2.69>
+ST_3 : Operation 60 [1/1] (0.25ns)   --->   "%select_ln57 = select i1 %icmp_ln59, i31 %m_1, i31 0" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 60 'select' 'select_ln57' <Predicate = (!icmp_ln57)> <Delay = 0.25> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 61 [1/1] (1.69ns) (grouped into DSP with root node add_ln61)   --->   "%empty_14 = add i17 %trunc_ln57_1, i17 %tmp_3" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 61 'add' 'empty_14' <Predicate = (!icmp_ln57)> <Delay = 1.69> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 62 [3/3] (0.99ns) (grouped into DSP with root node add_ln61)   --->   "%empty_15 = mul i17 %empty_14, i17 %tmp_2" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 62 'mul' 'empty_15' <Predicate = (!icmp_ln57)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%trunc_ln59 = trunc i31 %select_ln57" [../source/hls.cpp:59->../source/hls.cpp:138]   --->   Operation 63 'trunc' 'trunc_ln59' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%trunc_ln59_1 = trunc i31 %select_ln57" [../source/hls.cpp:59->../source/hls.cpp:138]   --->   Operation 64 'trunc' 'trunc_ln59_1' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.79ns)   --->   "%add_ln61_2 = add i17 %tmp, i17 %trunc_ln59_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 65 'add' 'add_ln61_2' <Predicate = (!icmp_ln57)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 66 [1/1] (0.87ns)   --->   "%add_ln59 = add i31 %select_ln57, i31 1" [../source/hls.cpp:59->../source/hls.cpp:138]   --->   Operation 66 'add' 'add_ln59' <Predicate = (!icmp_ln57)> <Delay = 0.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 67 [1/1] (0.38ns)   --->   "%store_ln59 = store i31 %add_ln59, i31 %m" [../source/hls.cpp:59->../source/hls.cpp:138]   --->   Operation 67 'store' 'store_ln59' <Predicate = (!icmp_ln57)> <Delay = 0.38>
+
+State 4 <SV = 3> <Delay = 0.99>
+ST_4 : Operation 68 [2/3] (0.99ns) (grouped into DSP with root node add_ln61)   --->   "%empty_15 = mul i17 %empty_14, i17 %tmp_2" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 68 'mul' 'empty_15' <Predicate = (!icmp_ln57)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 69 [3/3] (0.99ns) (grouped into DSP with root node add_ln61_1)   --->   "%empty_16 = mul i16 %trunc_ln57, i16 %tmp_1" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 69 'mul' 'empty_16' <Predicate = (!icmp_ln57)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 0.99>
+ST_5 : Operation 70 [1/3] (0.00ns) (grouped into DSP with root node add_ln61)   --->   "%empty_15 = mul i17 %empty_14, i17 %tmp_2" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 70 'mul' 'empty_15' <Predicate = (!icmp_ln57)> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 71 [2/3] (0.99ns) (grouped into DSP with root node add_ln61_1)   --->   "%empty_16 = mul i16 %trunc_ln57, i16 %tmp_1" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 71 'mul' 'empty_16' <Predicate = (!icmp_ln57)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 72 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln61 = add i17 %add_ln61_2, i17 %empty_15" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 72 'add' 'add_ln61' <Predicate = (!icmp_ln57)> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 1.43>
+ST_6 : Operation 73 [1/3] (0.00ns) (grouped into DSP with root node add_ln61_1)   --->   "%empty_16 = mul i16 %trunc_ln57, i16 %tmp_1" [../source/hls.cpp:57->../source/hls.cpp:138]   --->   Operation 73 'mul' 'empty_16' <Predicate = (!icmp_ln57)> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 74 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln61 = add i17 %add_ln61_2, i17 %empty_15" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 74 'add' 'add_ln61' <Predicate = (!icmp_ln57)> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 75 [1/1] (0.79ns)   --->   "%add_ln61_3 = add i17 %zext_ln61_2_read, i17 %add_ln61" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 75 'add' 'add_ln61_3' <Predicate = (!icmp_ln57)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 76 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln61_1 = add i16 %trunc_ln59, i16 %empty_16" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 76 'add' 'add_ln61_1' <Predicate = (!icmp_ln57)> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 7 <SV = 6> <Delay = 2.98>
+ST_7 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln61 = zext i17 %add_ln61_3" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 77 'zext' 'zext_ln61' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_7 : Operation 78 [1/1] (0.00ns)   --->   "%s2_pooling_layer2_data_addr = getelementptr i64 %s2_pooling_layer2_data, i64 0, i64 %zext_ln61" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 78 'getelementptr' 's2_pooling_layer2_data_addr' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_7 : Operation 79 [2/2] (2.98ns)   --->   "%s2_pooling_layer2_data_load = load i17 %s2_pooling_layer2_data_addr" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 79 'load' 's2_pooling_layer2_data_load' <Predicate = (!icmp_ln57)> <Delay = 2.98> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.98> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 122880> <RAM>
+ST_7 : Operation 80 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln61_1 = add i16 %trunc_ln59, i16 %empty_16" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 80 'add' 'add_ln61_1' <Predicate = (!icmp_ln57)> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 81 [1/1] (0.78ns)   --->   "%add_ln61_4 = add i16 %mul_ln61_read, i16 %add_ln61_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 81 'add' 'add_ln61_4' <Predicate = (!icmp_ln57)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.98>
+ST_8 : Operation 82 [1/2] ( I:2.98ns O:2.98ns )   --->   "%s2_pooling_layer2_data_load = load i17 %s2_pooling_layer2_data_addr" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 82 'load' 's2_pooling_layer2_data_load' <Predicate = (!icmp_ln57)> <Delay = 2.98> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.98> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 122880> <RAM>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "%zext_ln61_1 = zext i16 %add_ln61_4" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 83 'zext' 'zext_ln61_1' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_8 : Operation 84 [1/1] (0.00ns)   --->   "%c3_conv_layer2_W_addr = getelementptr i64 %c3_conv_layer2_W, i64 0, i64 %zext_ln61_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 84 'getelementptr' 'c3_conv_layer2_W_addr' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_8 : Operation 85 [2/2] (2.98ns)   --->   "%c3_conv_layer2_W_load = load i16 %c3_conv_layer2_W_addr" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 85 'load' 'c3_conv_layer2_W_load' <Predicate = (!icmp_ln57)> <Delay = 2.98> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.98> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 48000> <RAM>
+
+State 9 <SV = 8> <Delay = 2.98>
+ST_9 : Operation 86 [1/2] ( I:2.98ns O:2.98ns )   --->   "%c3_conv_layer2_W_load = load i16 %c3_conv_layer2_W_addr" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 86 'load' 'c3_conv_layer2_W_load' <Predicate = true> <Delay = 2.98> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.98> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 48000> <RAM>
+
+State 10 <SV = 9> <Delay = 2.32>
+ST_10 : Operation 87 [1/1] (0.00ns)   --->   "%bitcast_ln61 = bitcast i64 %s2_pooling_layer2_data_load" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 87 'bitcast' 'bitcast_ln61' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 88 [1/1] (0.00ns)   --->   "%bitcast_ln61_1 = bitcast i64 %c3_conv_layer2_W_load" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 88 'bitcast' 'bitcast_ln61_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 89 [8/8] (2.32ns)   --->   "%mul19_i = dmul i64 %bitcast_ln61, i64 %bitcast_ln61_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 89 'dmul' 'mul19_i' <Predicate = true> <Delay = 2.32> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 7> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.32>
+ST_11 : Operation 90 [7/8] (2.32ns)   --->   "%mul19_i = dmul i64 %bitcast_ln61, i64 %bitcast_ln61_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 90 'dmul' 'mul19_i' <Predicate = true> <Delay = 2.32> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 7> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 2.32>
+ST_12 : Operation 91 [6/8] (2.32ns)   --->   "%mul19_i = dmul i64 %bitcast_ln61, i64 %bitcast_ln61_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 91 'dmul' 'mul19_i' <Predicate = true> <Delay = 2.32> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 7> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 2.32>
+ST_13 : Operation 92 [5/8] (2.32ns)   --->   "%mul19_i = dmul i64 %bitcast_ln61, i64 %bitcast_ln61_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 92 'dmul' 'mul19_i' <Predicate = true> <Delay = 2.32> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 7> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 2.32>
+ST_14 : Operation 93 [4/8] (2.32ns)   --->   "%mul19_i = dmul i64 %bitcast_ln61, i64 %bitcast_ln61_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 93 'dmul' 'mul19_i' <Predicate = true> <Delay = 2.32> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 7> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 2.32>
+ST_15 : Operation 94 [3/8] (2.32ns)   --->   "%mul19_i = dmul i64 %bitcast_ln61, i64 %bitcast_ln61_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 94 'dmul' 'mul19_i' <Predicate = true> <Delay = 2.32> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 7> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 2.32>
+ST_16 : Operation 95 [2/8] (2.32ns)   --->   "%mul19_i = dmul i64 %bitcast_ln61, i64 %bitcast_ln61_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 95 'dmul' 'mul19_i' <Predicate = true> <Delay = 2.32> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 7> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 2.32>
+ST_17 : Operation 96 [1/8] (2.32ns)   --->   "%mul19_i = dmul i64 %bitcast_ln61, i64 %bitcast_ln61_1" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 96 'dmul' 'mul19_i' <Predicate = true> <Delay = 2.32> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 7> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 1.90>
+ST_18 : Operation 97 [1/1] (0.00ns)   --->   "%sum_load = load i64 %sum" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 97 'load' 'sum_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 98 [8/8] (1.90ns)   --->   "%sum_1 = dadd i64 %sum_load, i64 %mul19_i" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 98 'dadd' 'sum_1' <Predicate = true> <Delay = 1.90> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 1.90> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 110 [1/1] (0.00ns)   --->   "%sum_load_1 = load i64 %sum"   --->   Operation 110 'load' 'sum_load_1' <Predicate = (icmp_ln57)> <Delay = 0.00>
+ST_18 : Operation 111 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.doubleP0A, i64 %sum_out, i64 %sum_load_1"   --->   Operation 111 'write' 'write_ln0' <Predicate = (icmp_ln57)> <Delay = 0.00>
+ST_18 : Operation 112 [1/1] (0.38ns)   --->   "%ret_ln0 = ret"   --->   Operation 112 'ret' 'ret_ln0' <Predicate = (icmp_ln57)> <Delay = 0.38>
+
+State 19 <SV = 18> <Delay = 1.90>
+ST_19 : Operation 99 [7/8] (1.90ns)   --->   "%sum_1 = dadd i64 %sum_load, i64 %mul19_i" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 99 'dadd' 'sum_1' <Predicate = true> <Delay = 1.90> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 1.90> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 1.90>
+ST_20 : Operation 100 [6/8] (1.90ns)   --->   "%sum_1 = dadd i64 %sum_load, i64 %mul19_i" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 100 'dadd' 'sum_1' <Predicate = true> <Delay = 1.90> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 1.90> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 1.90>
+ST_21 : Operation 101 [5/8] (1.90ns)   --->   "%sum_1 = dadd i64 %sum_load, i64 %mul19_i" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 101 'dadd' 'sum_1' <Predicate = true> <Delay = 1.90> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 1.90> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 1.90>
+ST_22 : Operation 102 [4/8] (1.90ns)   --->   "%sum_1 = dadd i64 %sum_load, i64 %mul19_i" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 102 'dadd' 'sum_1' <Predicate = true> <Delay = 1.90> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 1.90> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 1.90>
+ST_23 : Operation 103 [3/8] (1.90ns)   --->   "%sum_1 = dadd i64 %sum_load, i64 %mul19_i" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 103 'dadd' 'sum_1' <Predicate = true> <Delay = 1.90> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 1.90> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 1.90>
+ST_24 : Operation 104 [2/8] (1.90ns)   --->   "%sum_1 = dadd i64 %sum_load, i64 %mul19_i" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 104 'dadd' 'sum_1' <Predicate = true> <Delay = 1.90> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 1.90> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 2.29>
+ST_25 : Operation 105 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_57_3_VITIS_LOOP_59_4_str"   --->   Operation 105 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 106 [1/1] (0.00ns)   --->   "%specpipeline_ln51 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [../source/hls.cpp:51->../source/hls.cpp:138]   --->   Operation 106 'specpipeline' 'specpipeline_ln51' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 107 [1/8] (1.90ns)   --->   "%sum_1 = dadd i64 %sum_load, i64 %mul19_i" [../source/hls.cpp:61->../source/hls.cpp:138]   --->   Operation 107 'dadd' 'sum_1' <Predicate = true> <Delay = 1.90> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 1.90> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 108 [1/1] (0.38ns)   --->   "%store_ln51 = store i64 %sum_1, i64 %sum" [../source/hls.cpp:51->../source/hls.cpp:138]   --->   Operation 108 'store' 'store_ln51' <Predicate = true> <Delay = 0.38>
+ST_25 : Operation 109 [1/1] (0.00ns)   --->   "%br_ln59 = br void %for.inc.i" [../source/hls.cpp:59->../source/hls.cpp:138]   --->   Operation 109 'br' 'br_ln59' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.300ns, clock uncertainty: 0.891ns.
+
+ <State 1>: 0.387ns
+The critical path consists of the following:
+	'alloca' operation 62 bit ('indvar_flatten') [15]  (0.000 ns)
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'indvar_flatten' [26]  (0.387 ns)
+
+ <State 2>: 1.518ns
+The critical path consists of the following:
+	'load' operation 31 bit ('m', ../source/hls.cpp:59->../source/hls.cpp:138) on local variable 'm', ../source/hls.cpp:59->../source/hls.cpp:138 [32]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln59', ../source/hls.cpp:59->../source/hls.cpp:138) [35]  (0.880 ns)
+	'select' operation 31 bit ('select_ln57_1', ../source/hls.cpp:57->../source/hls.cpp:138) [45]  (0.251 ns)
+	'store' operation 0 bit ('store_ln57', ../source/hls.cpp:57->../source/hls.cpp:138) of variable 'select_ln57_1', ../source/hls.cpp:57->../source/hls.cpp:138 on local variable 'n', ../source/hls.cpp:57->../source/hls.cpp:138 [71]  (0.387 ns)
+
+ <State 3>: 2.692ns
+The critical path consists of the following:
+	'add' operation 17 bit of DSP[55] ('empty_14', ../source/hls.cpp:57->../source/hls.cpp:138) [48]  (1.696 ns)
+	'mul' operation 17 bit of DSP[55] ('empty_15', ../source/hls.cpp:57->../source/hls.cpp:138) [49]  (0.996 ns)
+
+ <State 4>: 0.996ns
+The critical path consists of the following:
+	'mul' operation 17 bit of DSP[55] ('empty_15', ../source/hls.cpp:57->../source/hls.cpp:138) [49]  (0.996 ns)
+
+ <State 5>: 0.996ns
+The critical path consists of the following:
+	'mul' operation 16 bit of DSP[61] ('empty_16', ../source/hls.cpp:57->../source/hls.cpp:138) [50]  (0.996 ns)
+
+ <State 6>: 1.436ns
+The critical path consists of the following:
+	'add' operation 17 bit of DSP[55] ('add_ln61', ../source/hls.cpp:61->../source/hls.cpp:138) [55]  (0.645 ns)
+	'add' operation 17 bit ('add_ln61_3', ../source/hls.cpp:61->../source/hls.cpp:138) [56]  (0.791 ns)
+
+ <State 7>: 2.983ns
+The critical path consists of the following:
+	'getelementptr' operation 17 bit ('s2_pooling_layer2_data_addr', ../source/hls.cpp:61->../source/hls.cpp:138) [58]  (0.000 ns)
+	'load' operation 64 bit ('s2_pooling_layer2_data_load', ../source/hls.cpp:61->../source/hls.cpp:138) on array 's2_pooling_layer2_data' [59]  (2.983 ns)
+
+ <State 8>: 2.983ns
+The critical path consists of the following:
+	'load' operation 64 bit ('s2_pooling_layer2_data_load', ../source/hls.cpp:61->../source/hls.cpp:138) on array 's2_pooling_layer2_data' [59]  (2.983 ns)
+
+ <State 9>: 2.983ns
+The critical path consists of the following:
+	'load' operation 64 bit ('c3_conv_layer2_W_load', ../source/hls.cpp:61->../source/hls.cpp:138) on array 'c3_conv_layer2_W' [65]  (2.983 ns)
+
+ <State 10>: 2.323ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('mul19_i', ../source/hls.cpp:61->../source/hls.cpp:138) [67]  (2.323 ns)
+
+ <State 11>: 2.323ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('mul19_i', ../source/hls.cpp:61->../source/hls.cpp:138) [67]  (2.323 ns)
+
+ <State 12>: 2.323ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('mul19_i', ../source/hls.cpp:61->../source/hls.cpp:138) [67]  (2.323 ns)
+
+ <State 13>: 2.323ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('mul19_i', ../source/hls.cpp:61->../source/hls.cpp:138) [67]  (2.323 ns)
+
+ <State 14>: 2.323ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('mul19_i', ../source/hls.cpp:61->../source/hls.cpp:138) [67]  (2.323 ns)
+
+ <State 15>: 2.323ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('mul19_i', ../source/hls.cpp:61->../source/hls.cpp:138) [67]  (2.323 ns)
+
+ <State 16>: 2.323ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('mul19_i', ../source/hls.cpp:61->../source/hls.cpp:138) [67]  (2.323 ns)
+
+ <State 17>: 2.323ns
+The critical path consists of the following:
+	'dmul' operation 64 bit ('mul19_i', ../source/hls.cpp:61->../source/hls.cpp:138) [67]  (2.323 ns)
+
+ <State 18>: 1.905ns
+The critical path consists of the following:
+	'load' operation 64 bit ('sum_load', ../source/hls.cpp:61->../source/hls.cpp:138) on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:138 [40]  (0.000 ns)
+	'dadd' operation 64 bit ('sum', ../source/hls.cpp:61->../source/hls.cpp:138) [68]  (1.905 ns)
+
+ <State 19>: 1.905ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('sum', ../source/hls.cpp:61->../source/hls.cpp:138) [68]  (1.905 ns)
+
+ <State 20>: 1.905ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('sum', ../source/hls.cpp:61->../source/hls.cpp:138) [68]  (1.905 ns)
+
+ <State 21>: 1.905ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('sum', ../source/hls.cpp:61->../source/hls.cpp:138) [68]  (1.905 ns)
+
+ <State 22>: 1.905ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('sum', ../source/hls.cpp:61->../source/hls.cpp:138) [68]  (1.905 ns)
+
+ <State 23>: 1.905ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('sum', ../source/hls.cpp:61->../source/hls.cpp:138) [68]  (1.905 ns)
+
+ <State 24>: 1.905ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('sum', ../source/hls.cpp:61->../source/hls.cpp:138) [68]  (1.905 ns)
+
+ <State 25>: 2.292ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('sum', ../source/hls.cpp:61->../source/hls.cpp:138) [68]  (1.905 ns)
+	'store' operation 0 bit ('store_ln51', ../source/hls.cpp:51->../source/hls.cpp:138) of variable 'sum', ../source/hls.cpp:61->../source/hls.cpp:138 on local variable 'sum', ../source/hls.cpp:51->../source/hls.cpp:138 [73]  (0.387 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

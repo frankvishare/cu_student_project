@@ -20,12 +20,12 @@ module max_pooling_fprop1_max_pooling_fprop1_Pipeline_VITIS_LOOP_240_4 (
         empty_7,
         empty,
         zext_ln239,
-        c1_conv_layer_map_data_address0,
-        c1_conv_layer_map_data_ce0,
-        c1_conv_layer_map_data_q0,
-        c1_conv_layer_map_data_address1,
-        c1_conv_layer_map_data_ce1,
-        c1_conv_layer_map_data_q1,
+        c1_conv_layer_data_address0,
+        c1_conv_layer_data_ce0,
+        c1_conv_layer_data_q0,
+        c1_conv_layer_data_address1,
+        c1_conv_layer_data_ce1,
+        c1_conv_layer_data_q1,
         m_1,
         max_value_1_out,
         max_value_1_out_ap_vld
@@ -51,12 +51,12 @@ input  [31:0] sext_ln237;
 input  [16:0] empty_7;
 input  [16:0] empty;
 input  [16:0] zext_ln239;
-output  [16:0] c1_conv_layer_map_data_address0;
-output   c1_conv_layer_map_data_ce0;
-input  [63:0] c1_conv_layer_map_data_q0;
-output  [16:0] c1_conv_layer_map_data_address1;
-output   c1_conv_layer_map_data_ce1;
-input  [63:0] c1_conv_layer_map_data_q1;
+output  [16:0] c1_conv_layer_data_address0;
+output   c1_conv_layer_data_ce0;
+input  [63:0] c1_conv_layer_data_q0;
+output  [16:0] c1_conv_layer_data_address1;
+output   c1_conv_layer_data_ce1;
+input  [63:0] c1_conv_layer_data_q1;
 input  [16:0] m_1;
 output  [63:0] max_value_1_out;
 output   max_value_1_out_ap_vld;
@@ -95,12 +95,12 @@ wire   [16:0] add_ln244_3_fu_196_p2;
 reg   [16:0] add_ln244_3_reg_460;
 wire    ap_CS_fsm_pp0_stage3;
 wire    ap_block_pp0_stage3_11001;
-reg   [63:0] c1_conv_layer_map_data_load_reg_475;
+reg   [63:0] c1_conv_layer_data_load_reg_475;
 wire    ap_block_pp0_stage4_11001;
 reg   [10:0] tmp_1_reg_480;
 wire   [51:0] trunc_ln244_1_fu_219_p1;
 reg   [51:0] trunc_ln244_1_reg_485;
-reg   [63:0] c1_conv_layer_map_data_load_1_reg_490;
+reg   [63:0] c1_conv_layer_data_load_1_reg_490;
 reg   [10:0] tmp_4_reg_495;
 wire   [51:0] trunc_ln244_3_fu_233_p1;
 reg   [51:0] trunc_ln244_3_reg_500;
@@ -140,8 +140,8 @@ wire   [63:0] add_ln240_fu_295_p2;
 wire  signed [63:0] indvars_iv19_cast_cast_fu_152_p1;
 wire    ap_block_pp0_stage1;
 wire    ap_block_pp0_stage4_01001;
-reg    c1_conv_layer_map_data_ce1_local;
-reg    c1_conv_layer_map_data_ce0_local;
+reg    c1_conv_layer_data_ce1_local;
+reg    c1_conv_layer_data_ce0_local;
 reg   [63:0] grp_fu_144_p0;
 reg   [63:0] grp_fu_144_p1;
 wire    ap_block_pp0_stage2;
@@ -328,8 +328,8 @@ end
 
 always @ (posedge ap_clk) begin
     if (((ap_enable_reg_pp0_iter0_reg == 1'b1) & (1'b0 == ap_block_pp0_stage4_11001) & (1'b1 == ap_ce) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-        c1_conv_layer_map_data_load_1_reg_490 <= c1_conv_layer_map_data_q0;
-        c1_conv_layer_map_data_load_reg_475 <= c1_conv_layer_map_data_q1;
+        c1_conv_layer_data_load_1_reg_490 <= c1_conv_layer_data_q0;
+        c1_conv_layer_data_load_reg_475 <= c1_conv_layer_data_q1;
     end
 end
 
@@ -350,8 +350,8 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage4_11001) & (1'b1 == ap_ce) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-        tmp_1_reg_480 <= {{c1_conv_layer_map_data_q1[62:52]}};
-        tmp_4_reg_495 <= {{c1_conv_layer_map_data_q0[62:52]}};
+        tmp_1_reg_480 <= {{c1_conv_layer_data_q1[62:52]}};
+        tmp_4_reg_495 <= {{c1_conv_layer_data_q0[62:52]}};
         trunc_ln244_1_reg_485 <= trunc_ln244_1_fu_219_p1;
         trunc_ln244_3_reg_500 <= trunc_ln244_3_fu_233_p1;
     end
@@ -427,17 +427,17 @@ end
 
 always @ (*) begin
     if (((ap_enable_reg_pp0_iter0_reg == 1'b1) & (1'b0 == ap_block_pp0_stage3_11001) & (1'b1 == ap_ce) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-        c1_conv_layer_map_data_ce0_local = 1'b1;
+        c1_conv_layer_data_ce0_local = 1'b1;
     end else begin
-        c1_conv_layer_map_data_ce0_local = 1'b0;
+        c1_conv_layer_data_ce0_local = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((ap_enable_reg_pp0_iter0_reg == 1'b1) & (1'b0 == ap_block_pp0_stage3_11001) & (1'b1 == ap_ce) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-        c1_conv_layer_map_data_ce1_local = 1'b1;
+        c1_conv_layer_data_ce1_local = 1'b1;
     end else begin
-        c1_conv_layer_map_data_ce1_local = 1'b0;
+        c1_conv_layer_data_ce1_local = 1'b0;
     end
 end
 
@@ -633,21 +633,21 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage4;
 
 assign ap_ready = ap_ready_sig;
 
-assign bitcast_ln244_1_fu_330_p1 = c1_conv_layer_map_data_load_1_reg_490;
+assign bitcast_ln244_1_fu_330_p1 = c1_conv_layer_data_load_1_reg_490;
 
 assign bitcast_ln244_2_fu_245_p1 = max_value_1_fu_62;
 
 assign bitcast_ln244_3_fu_334_p1 = max_value_2_reg_552;
 
-assign bitcast_ln244_fu_241_p1 = c1_conv_layer_map_data_load_reg_475;
+assign bitcast_ln244_fu_241_p1 = c1_conv_layer_data_load_reg_475;
 
-assign c1_conv_layer_map_data_address0 = zext_ln244_1_fu_205_p1;
+assign c1_conv_layer_data_address0 = zext_ln244_1_fu_205_p1;
 
-assign c1_conv_layer_map_data_address1 = zext_ln244_fu_201_p1;
+assign c1_conv_layer_data_address1 = zext_ln244_fu_201_p1;
 
-assign c1_conv_layer_map_data_ce0 = c1_conv_layer_map_data_ce0_local;
+assign c1_conv_layer_data_ce0 = c1_conv_layer_data_ce0_local;
 
-assign c1_conv_layer_map_data_ce1 = c1_conv_layer_map_data_ce1_local;
+assign c1_conv_layer_data_ce1 = c1_conv_layer_data_ce1_local;
 
 assign empty_15_fu_178_p0 = n_fu_66[16:0];
 
@@ -691,11 +691,11 @@ assign tmp_3_fu_337_p4 = {{bitcast_ln244_3_fu_334_p1[62:52]}};
 
 assign tmp_fu_249_p4 = {{bitcast_ln244_2_fu_245_p1[62:52]}};
 
-assign trunc_ln244_1_fu_219_p1 = c1_conv_layer_map_data_q1[51:0];
+assign trunc_ln244_1_fu_219_p1 = c1_conv_layer_data_q1[51:0];
 
 assign trunc_ln244_2_fu_347_p1 = bitcast_ln244_3_fu_334_p1[51:0];
 
-assign trunc_ln244_3_fu_233_p1 = c1_conv_layer_map_data_q0[51:0];
+assign trunc_ln244_3_fu_233_p1 = c1_conv_layer_data_q0[51:0];
 
 assign trunc_ln244_fu_259_p1 = bitcast_ln244_2_fu_245_p1[51:0];
 

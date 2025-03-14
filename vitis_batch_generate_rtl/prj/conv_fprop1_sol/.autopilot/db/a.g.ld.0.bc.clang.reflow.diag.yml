@@ -1,36 +1,37 @@
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../source/hls.cpp, Line: 126, Column: 4 }
+DebugLoc:        { File: ../source/hls.cpp, Line: 104, Column: 13 }
 Function:        conv_fprop1
 Args:            
   - Callee:          convn_valid
-    DebugLoc:        { File: ../source/hls.cpp, Line: 77, Column: 0 }
+    DebugLoc:        { File: ../source/hls.cpp, Line: 50, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          conv_fprop1
-    DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 0 }
+    DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../source/hls.cpp, Line: 134, Column: 36 }
+DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 42 }
 Function:        conv_fprop1
 Args:            
   - Callee:          'activation_func::tan_h(double)'
     DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          conv_fprop1
-    DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 0 }
+    DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Passed
 Pass:            reflow-disaggr
 Name:            DisaggrSucc
-Function:        apatb_conv_fprop1_ir
+DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
+Function:        conv_fprop1
 Args:            
   - String:          'Disaggregating variable '''
-  - Name:            c1_conv_layer
+  - Name:            input_layer1
   - String:          ''''
 ...
 --- !Passed
@@ -39,7 +40,17 @@ Name:            DisaggrSucc
 Function:        apatb_conv_fprop1_ir
 Args:            
   - String:          'Disaggregating variable '''
-  - Name:            c1_conv_layer_map
+  - Name:            input_layer2
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
+Function:        conv_fprop1
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            c1_conv_layer1
   - String:          ''''
 ...
 --- !Passed
@@ -48,42 +59,33 @@ Name:            DisaggrSucc
 Function:        apatb_conv_fprop1_ir
 Args:            
   - String:          'Disaggregating variable '''
-  - Name:            input_layer
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-disaggr
-Name:            DisaggrSucc
-Function:        apatb_conv_fprop1_ir
-Args:            
-  - String:          'Disaggregating variable '''
-  - Name:            input_layer_map
+  - Name:            c1_conv_layer2
   - String:          ''''
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../source/hls.cpp, Line: 126, Column: 4 }
+DebugLoc:        { File: ../source/hls.cpp, Line: 104, Column: 13 }
 Function:        conv_fprop1
 Args:            
   - Callee:          convn_valid
-    DebugLoc:        { File: ../source/hls.cpp, Line: 77, Column: 0 }
+    DebugLoc:        { File: ../source/hls.cpp, Line: 50, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          conv_fprop1
-    DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 0 }
+    DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../source/hls.cpp, Line: 134, Column: 36 }
+DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 42 }
 Function:        conv_fprop1
 Args:            
   - Callee:          'activation_func::tan_h(double)'
     DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          conv_fprop1
-    DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 0 }
+    DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
@@ -92,7 +94,7 @@ Name:            NeverInline
 Function:        apatb_conv_fprop1_ir
 Args:            
   - Callee:          conv_fprop1
-    DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 0 }
+    DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          apatb_conv_fprop1_ir
   - String:          ' because it should never be inlined (cost=never)'
@@ -100,21 +102,21 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            Inline
-DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 0 }
+DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
 Function:        conv_fprop1
 Args:            
   - String:          'Inlining function '''
   - Callee:          convn_valid
-    DebugLoc:        { File: ../source/hls.cpp, Line: 77, Column: 0 }
+    DebugLoc:        { File: ../source/hls.cpp, Line: 50, Column: 0 }
   - String:          ''' into '''
   - Caller:          conv_fprop1
-    DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 0 }
+    DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            Inline
-DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 0 }
+DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
 Function:        conv_fprop1
 Args:            
   - String:          'Inlining function '''
@@ -122,47 +124,17 @@ Args:
     DebugLoc:        { File: ../source/hls.cpp, Line: 9, Column: 0 }
   - String:          ''' into '''
   - Caller:          conv_fprop1
-    DebugLoc:        { File: ../source/hls.cpp, Line: 112, Column: 0 }
+    DebugLoc:        { File: ../source/hls.cpp, Line: 85, Column: 0 }
   - String:          ''''
-...
---- !Passed
-Pass:            reflow-aggr
-Name:            AggrSucc
-Function:        apatb_conv_fprop1_ir
-Args:            
-  - String:          'Aggregating '
-  - HwTyName:        bram
-  - String:          ' variable '''
-  - Name:            c1_conv_layer_kernel
-  - String:          ''' with '
-  - AggregateTypeName: 'compact=bit'
-  - String:          ' mode in '
-  - Bitwidth:        '3200'
-  - String:          '-bits'
-...
---- !Passed
-Pass:            reflow-aggr
-Name:            AggrSucc
-Function:        apatb_conv_fprop1_ir
-Args:            
-  - String:          'Aggregating '
-  - HwTyName:        bram
-  - String:          ' variable '''
-  - Name:            input_layer_kernel
-  - String:          ''' with '
-  - AggregateTypeName: 'compact=bit'
-  - String:          ' mode in '
-  - Bitwidth:        '3200'
-  - String:          '-bits'
 ...
 --- !HLSReportInfo
 Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_132_3
+  - LoopName:        VITIS_LOOP_110_3
   - String:          '> at '
-  - LoopLoc:         '../source/hls.cpp:132:21'
+  - LoopLoc:         '../source/hls.cpp:110:27'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -170,9 +142,9 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_86_4
+  - LoopName:        VITIS_LOOP_59_4
   - String:          '> at '
-  - LoopLoc:         '../source/hls.cpp:86:19'
+  - LoopLoc:         '../source/hls.cpp:59:34'
   - String:          ' '
 ...
 --- !HLSReportInfo

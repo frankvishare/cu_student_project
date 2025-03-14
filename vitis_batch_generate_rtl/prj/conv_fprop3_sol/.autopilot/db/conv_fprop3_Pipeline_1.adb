@@ -16,7 +16,7 @@
             <Obj class_id="5" tracking_level="0" version="0">
               <type>1</type>
               <id>1</id>
-              <name>c5_conv_layer_map_common</name>
+              <name>c5_conv_layer2_map_common</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -347,7 +347,7 @@
             <Obj>
               <type>0</type>
               <id>12</id>
-              <name>c5_conv_layer_map_common_addr</name>
+              <name>c5_conv_layer2_map_common_addr</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -391,7 +391,7 @@
             <Obj>
               <type>0</type>
               <id>13</id>
-              <name>c5_conv_layer_map_common_addr_write_ln0</name>
+              <name>c5_conv_layer2_map_common_addr_write_ln0</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -434,7 +434,7 @@
             <Obj>
               <type>0</type>
               <id>14</id>
-              <name>empty_16</name>
+              <name>empty_17</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -445,7 +445,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_16_fu_69_p2</rtlName>
+              <rtlName>empty_17_fu_69_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -477,7 +477,7 @@
             <Obj>
               <type>0</type>
               <id>15</id>
-              <name>p_cast20</name>
+              <name>p_cast21</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -488,7 +488,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_cast20_fu_75_p1</rtlName>
+              <rtlName>p_cast21_fu_75_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -896,7 +896,7 @@
           <Obj>
             <type>3</type>
             <id>22</id>
-            <name>VITIS_LOOP_175_2.loopexit.exitStub</name>
+            <name>VITIS_LOOP_164_2.loopexit.exitStub</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -1364,7 +1364,7 @@
           </second>
         </item>
         <item>
-          <first>empty_16_fu_69_p2 ( + ) </first>
+          <first>empty_17_fu_69_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -1583,7 +1583,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="32" tracking_level="0" version="0">
-          <first>empty_16_fu_69_p2 ( + ) </first>
+          <first>empty_17_fu_69_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -1855,7 +1855,7 @@
       <count>6</count>
       <item_version>0</item_version>
       <item class_id="46" tracking_level="0" version="0">
-        <first>c5_conv_layer_map_common_addr_gep_fu_42</first>
+        <first>c5_conv_layer2_map_common_addr_gep_fu_42</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -1863,7 +1863,7 @@
         </second>
       </item>
       <item>
-        <first>empty_16_fu_69</first>
+        <first>empty_17_fu_69</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -1895,7 +1895,7 @@
         </second>
       </item>
       <item>
-        <first>p_cast20_fu_75</first>
+        <first>p_cast21_fu_75</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -1952,7 +1952,7 @@
       <item_version>0</item_version>
       <item class_id="48" tracking_level="0" version="0">
         <first class_id="49" tracking_level="0" version="0">
-          <first>c5_conv_layer_map_common</first>
+          <first>c5_conv_layer2_map_common</first>
           <second>0</second>
         </first>
         <second>
@@ -1998,7 +1998,7 @@
       <count>2</count>
       <item_version>0</item_version>
       <item class_id="51" tracking_level="0" version="0">
-        <first>c5_conv_layer_map_common(p0)</first>
+        <first>c5_conv_layer2_map_common(p0)</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

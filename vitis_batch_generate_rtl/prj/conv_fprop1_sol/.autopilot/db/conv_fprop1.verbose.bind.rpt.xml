@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv_fprop1'" level="0">
-<item name = "Date">Wed Mar 12 17:42:03 2025
+<item name = "Date">Fri Mar 14 16:54:52 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">prj</item>
@@ -31,17 +31,17 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv_fprop1_Pipeline_1_fu_241">conv_fprop1_Pipeline_1, 2, ?, 6.600 ns, ?, 1, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_conv_fprop1_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4_fu_248">conv_fprop1_Pipeline_VITIS_LOOP_84_3_VITIS_LOOP_86_4, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_conv_fprop1_Pipeline_VITIS_LOOP_132_3_fu_263">conv_fprop1_Pipeline_VITIS_LOOP_132_3, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_conv_fprop1_Pipeline_1_fu_234">conv_fprop1_Pipeline_1, 2, ?, 6.600 ns, ?, 1, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_conv_fprop1_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4_fu_241">conv_fprop1_Pipeline_VITIS_LOOP_57_3_VITIS_LOOP_59_4, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_conv_fprop1_Pipeline_VITIS_LOOP_110_3_fu_258">conv_fprop1_Pipeline_VITIS_LOOP_110_3, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_115_1">?, ?, ?, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_118_2">?, ?, ?, -, -, ?, no</column>
-<column name="  ++ VITIS_LOOP_79_1">?, ?, ?, -, -, ?, no</column>
-<column name="   +++ VITIS_LOOP_81_2">?, ?, ?, -, -, ?, no</column>
+<column name="- VITIS_LOOP_93_1">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_96_2">?, ?, ?, -, -, ?, no</column>
+<column name="  ++ VITIS_LOOP_52_1">?, ?, ?, -, -, ?, no</column>
+<column name="   +++ VITIS_LOOP_54_2">?, ?, ?, -, -, ?, no</column>
 </table>
 </item>
 </section>

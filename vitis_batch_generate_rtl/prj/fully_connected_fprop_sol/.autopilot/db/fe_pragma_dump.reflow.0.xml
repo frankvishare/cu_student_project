@@ -1,2 +1,6 @@
 <pragmas>
+<pragma file="../source/hls.cpp" line="254" pragmaType="disaggregate" parentfunction="fully_connected_fprop" variable="c5_conv_layer1"/>
+<pragma file="../source/hls.cpp" line="255" pragmaType="disaggregate" parentfunction="fully_connected_fprop" variable="c5_conv_layer2"/>
+<pragma file="../source/hls.cpp" line="256" pragmaType="disaggregate" parentfunction="fully_connected_fprop" variable="output_layer1"/>
+<pragma file="../source/hls.cpp" line="257" pragmaType="disaggregate" parentfunction="fully_connected_fprop" variable="output_layer2"/>
 </pragmas>

@@ -17,10 +17,10 @@ port (
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     ap_ce : IN STD_LOGIC;
-    c3_conv_layer_map_common_address0 : OUT STD_LOGIC_VECTOR (9 downto 0);
-    c3_conv_layer_map_common_ce0 : OUT STD_LOGIC;
-    c3_conv_layer_map_common_we0 : OUT STD_LOGIC;
-    c3_conv_layer_map_common_d0 : OUT STD_LOGIC_VECTOR (63 downto 0);
+    c3_conv_layer2_map_common_address0 : OUT STD_LOGIC_VECTOR (9 downto 0);
+    c3_conv_layer2_map_common_ce0 : OUT STD_LOGIC;
+    c3_conv_layer2_map_common_we0 : OUT STD_LOGIC;
+    c3_conv_layer2_map_common_d0 : OUT STD_LOGIC_VECTOR (63 downto 0);
     size : IN STD_LOGIC_VECTOR (31 downto 0) );
 end;
 
@@ -50,12 +50,12 @@ attribute shreg_extract : string;
     signal ap_ready_int : STD_LOGIC;
     signal p_cast13_fu_64_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal empty_fu_32 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
-    signal empty_16_fu_69_p2 : STD_LOGIC_VECTOR (10 downto 0);
+    signal empty_17_fu_69_p2 : STD_LOGIC_VECTOR (10 downto 0);
     signal ap_loop_init : STD_LOGIC;
     signal ap_sig_allocacmp_p_load : STD_LOGIC_VECTOR (10 downto 0);
-    signal c3_conv_layer_map_common_we0_local : STD_LOGIC;
-    signal c3_conv_layer_map_common_ce0_local : STD_LOGIC;
-    signal p_cast20_fu_75_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal c3_conv_layer2_map_common_we0_local : STD_LOGIC;
+    signal c3_conv_layer2_map_common_ce0_local : STD_LOGIC;
+    signal p_cast21_fu_75_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -139,7 +139,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_boolean_1 = ap_condition_55)) then
-                empty_fu_32 <= empty_16_fu_69_p2;
+                empty_fu_32 <= empty_17_fu_69_p2;
             end if;
         end if;
     end process;
@@ -229,32 +229,32 @@ begin
         end if; 
     end process;
 
-    c3_conv_layer_map_common_address0 <= p_cast13_fu_64_p1(10 - 1 downto 0);
-    c3_conv_layer_map_common_ce0 <= c3_conv_layer_map_common_ce0_local;
+    c3_conv_layer2_map_common_address0 <= p_cast13_fu_64_p1(10 - 1 downto 0);
+    c3_conv_layer2_map_common_ce0 <= c3_conv_layer2_map_common_ce0_local;
 
-    c3_conv_layer_map_common_ce0_local_assign_proc : process(ap_CS_fsm_state1, ap_block_state1_pp0_stage0_iter0, ap_ce)
+    c3_conv_layer2_map_common_ce0_local_assign_proc : process(ap_CS_fsm_state1, ap_block_state1_pp0_stage0_iter0, ap_ce)
     begin
         if (((ap_const_boolean_0 = ap_block_state1_pp0_stage0_iter0) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            c3_conv_layer_map_common_ce0_local <= ap_const_logic_1;
+            c3_conv_layer2_map_common_ce0_local <= ap_const_logic_1;
         else 
-            c3_conv_layer_map_common_ce0_local <= ap_const_logic_0;
+            c3_conv_layer2_map_common_ce0_local <= ap_const_logic_0;
         end if; 
     end process;
 
-    c3_conv_layer_map_common_d0 <= ap_const_lv64_0;
-    c3_conv_layer_map_common_we0 <= c3_conv_layer_map_common_we0_local;
+    c3_conv_layer2_map_common_d0 <= ap_const_lv64_0;
+    c3_conv_layer2_map_common_we0 <= c3_conv_layer2_map_common_we0_local;
 
-    c3_conv_layer_map_common_we0_local_assign_proc : process(ap_CS_fsm_state1, ap_block_state1_pp0_stage0_iter0, ap_ce)
+    c3_conv_layer2_map_common_we0_local_assign_proc : process(ap_CS_fsm_state1, ap_block_state1_pp0_stage0_iter0, ap_ce)
     begin
         if (((ap_const_boolean_0 = ap_block_state1_pp0_stage0_iter0) and (ap_const_logic_1 = ap_ce) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            c3_conv_layer_map_common_we0_local <= ap_const_logic_1;
+            c3_conv_layer2_map_common_we0_local <= ap_const_logic_1;
         else 
-            c3_conv_layer_map_common_we0_local <= ap_const_logic_0;
+            c3_conv_layer2_map_common_we0_local <= ap_const_logic_0;
         end if; 
     end process;
 
-    empty_16_fu_69_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_p_load) + unsigned(ap_const_lv11_1));
-    exitcond_fu_79_p2 <= "1" when (p_cast20_fu_75_p1 = size) else "0";
+    empty_17_fu_69_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_p_load) + unsigned(ap_const_lv11_1));
+    exitcond_fu_79_p2 <= "1" when (p_cast21_fu_75_p1 = size) else "0";
     p_cast13_fu_64_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_p_load),64));
-    p_cast20_fu_75_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(empty_16_fu_69_p2),32));
+    p_cast21_fu_75_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(empty_17_fu_69_p2),32));
 end behav;

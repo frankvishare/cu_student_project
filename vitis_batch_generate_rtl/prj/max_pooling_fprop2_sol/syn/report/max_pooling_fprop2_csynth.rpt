@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'max_pooling_fprop2'
 ================================================================
-* Date:           Wed Mar 12 17:43:04 2025
+* Date:           Fri Mar 14 16:55:44 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        prj
@@ -38,7 +38,7 @@
         |                                                         |                                              |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
         |                         Instance                        |                    Module                    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
         +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-        |grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4_fu_240  |max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4  |       17|       17|  56.100 ns|  56.100 ns|   16|   16|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4_fu_244  |max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4  |       17|       17|  56.100 ns|  56.100 ns|   16|   16|  loop auto-rewind stp (delay=0 clock cycles(s))|
         +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
 
         * Loop: 
@@ -46,9 +46,9 @@
         |                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_261_1     |        ?|        ?|         ?|          -|          -|     ?|        no|
-        | + VITIS_LOOP_263_2    |        ?|        ?|         ?|          -|          -|     ?|        no|
-        |  ++ VITIS_LOOP_265_3  |        ?|        ?|        92|          -|          -|     ?|        no|
+        |- VITIS_LOOP_230_1     |        ?|        ?|         ?|          -|          -|     ?|        no|
+        | + VITIS_LOOP_232_2    |        ?|        ?|         ?|          -|          -|     ?|        no|
+        |  ++ VITIS_LOOP_234_3  |        ?|        ?|        92|          -|          -|     ?|        no|
         +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -89,7 +89,7 @@
     |dexp_64ns_64ns_64_30_full_dsp_1_U17                      |dexp_64ns_64ns_64_30_full_dsp_1               |        0|  26|  1289|  1910|    0|
     |dexp_64ns_64ns_64_30_full_dsp_1_U18                      |dexp_64ns_64ns_64_30_full_dsp_1               |        0|  26|  1289|  1910|    0|
     |dsub_64ns_64ns_64_8_full_dsp_1_U14                       |dsub_64ns_64ns_64_8_full_dsp_1                |        0|   3|   685|   635|    0|
-    |grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4_fu_240  |max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4  |        0|   1|   835|   792|    0|
+    |grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4_fu_244  |max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4  |        0|   1|   835|   792|    0|
     |mul_16s_16s_16_1_1_U19                                   |mul_16s_16s_16_1_1                            |        0|   1|     0|     5|    0|
     |mul_17s_17s_17_1_1_U20                                   |mul_17s_17s_17_1_1                            |        0|   1|     0|     5|    0|
     +---------------------------------------------------------+----------------------------------------------+---------+----+------+------+-----+
@@ -109,81 +109,81 @@
     +-----------------------------+----------+----+---+----+------------+------------+
     |        Variable Name        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-----------------------------+----------+----+---+----+------------+------------+
-    |add_ln261_fu_306_p2          |         +|   0|  0|  38|          31|           1|
-    |add_ln263_1_fu_456_p2        |         +|   0|  0|  39|          32|           2|
-    |add_ln263_fu_450_p2          |         +|   0|  0|  39|          32|           2|
-    |add_ln265_fu_444_p2          |         +|   0|  0|  39|          32|           2|
-    |add_ln267_1_fu_429_p2        |         +|   0|  0|  24|          17|          17|
-    |add_ln267_fu_416_p2          |         +|   0|  0|  23|          16|          16|
-    |add_ln276_1_fu_439_p2        |         +|   0|  0|  17|          17|          17|
-    |add_ln276_fu_434_p2          |         +|   0|  0|  17|          17|          17|
-    |indvars_iv_next31_fu_402_p2  |         +|   0|  0|  38|          31|           1|
-    |indvars_iv_next39_fu_333_p2  |         +|   0|  0|  38|          31|           1|
-    |icmp_ln261_fu_301_p2         |      icmp|   0|  0|  39|          32|          32|
-    |icmp_ln263_fu_328_p2         |      icmp|   0|  0|  39|          32|          32|
-    |icmp_ln265_fu_397_p2         |      icmp|   0|  0|  39|          32|          32|
-    |icmp_ln268_fu_357_p2         |      icmp|   0|  0|  39|          32|          32|
-    |select_ln268_fu_381_p3       |    select|   0|  0|  32|           1|          32|
-    |xor_ln11_fu_510_p2           |       xor|   0|  0|   2|           1|           2|
+    |add_ln230_fu_310_p2          |         +|   0|  0|  38|          31|           1|
+    |add_ln232_1_fu_460_p2        |         +|   0|  0|  39|          32|           2|
+    |add_ln232_fu_454_p2          |         +|   0|  0|  39|          32|           2|
+    |add_ln234_fu_448_p2          |         +|   0|  0|  39|          32|           2|
+    |add_ln236_1_fu_433_p2        |         +|   0|  0|  24|          17|          17|
+    |add_ln236_fu_420_p2          |         +|   0|  0|  23|          16|          16|
+    |add_ln245_1_fu_443_p2        |         +|   0|  0|  17|          17|          17|
+    |add_ln245_fu_438_p2          |         +|   0|  0|  17|          17|          17|
+    |indvars_iv_next31_fu_406_p2  |         +|   0|  0|  38|          31|           1|
+    |indvars_iv_next39_fu_337_p2  |         +|   0|  0|  38|          31|           1|
+    |icmp_ln230_fu_305_p2         |      icmp|   0|  0|  39|          32|          32|
+    |icmp_ln232_fu_332_p2         |      icmp|   0|  0|  39|          32|          32|
+    |icmp_ln234_fu_401_p2         |      icmp|   0|  0|  39|          32|          32|
+    |icmp_ln237_fu_361_p2         |      icmp|   0|  0|  39|          32|          32|
+    |select_ln237_fu_385_p3       |    select|   0|  0|  32|           1|          32|
+    |xor_ln11_fu_514_p2           |       xor|   0|  0|   2|           1|           2|
     +-----------------------------+----------+----+---+----+------------+------------+
     |Total                        |          |   0|  0| 502|         386|         238|
     +-----------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +---------------------------------+-----+-----------+-----+-----------+
-    |               Name              | LUT | Input Size| Bits| Total Bits|
-    +---------------------------------+-----+-----------+-----+-----------+
-    |ap_NS_fsm                        |  370|         79|    1|         79|
-    |c3_conv_layer_map_data_address0  |    9|          2|   17|         34|
-    |c3_conv_layer_map_data_ce0       |    9|          2|    1|          2|
-    |c3_conv_layer_map_data_ce1       |    9|          2|    1|          2|
-    |i_reg_182                        |    9|          2|   31|         62|
-    |indvars_iv19_reg_205             |    9|          2|   32|         64|
-    |indvars_iv24_reg_193             |    9|          2|   32|         64|
-    |j_reg_217                        |    9|          2|   31|         62|
-    |k_fu_124                         |    9|          2|   31|         62|
-    |m_reg_228                        |    9|          2|   32|         64|
-    +---------------------------------+-----+-----------+-----+-----------+
-    |Total                            |  451|         97|  209|        495|
-    +---------------------------------+-----+-----------+-----+-----------+
+    +------------------------------+-----+-----------+-----+-----------+
+    |             Name             | LUT | Input Size| Bits| Total Bits|
+    +------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                     |  370|         79|    1|         79|
+    |c3_conv_layer2_data_address0  |    9|          2|   17|         34|
+    |c3_conv_layer2_data_ce0       |    9|          2|    1|          2|
+    |c3_conv_layer2_data_ce1       |    9|          2|    1|          2|
+    |i_reg_186                     |    9|          2|   31|         62|
+    |indvars_iv19_reg_209          |    9|          2|   32|         64|
+    |indvars_iv24_reg_197          |    9|          2|   32|         64|
+    |j_reg_221                     |    9|          2|   31|         62|
+    |k_fu_128                      |    9|          2|   31|         62|
+    |m_reg_232                     |    9|          2|   32|         64|
+    +------------------------------+-----+-----------+-----+-----------+
+    |Total                         |  451|         97|  209|        495|
+    +------------------------------+-----+-----------+-----+-----------+
 
     * Register: 
     +----------------------------------------------------------------------+----+----+-----+-----------+
     |                                 Name                                 | FF | LUT| Bits| Const Bits|
     +----------------------------------------------------------------------+----+----+-----+-----------+
-    |add_i_reg_705                                                         |  64|   0|   64|          0|
-    |add_ln261_reg_587                                                     |  31|   0|   31|          0|
-    |add_ln265_reg_640                                                     |  32|   0|   32|          0|
-    |add_ln267_1_reg_630                                                   |  16|   0|   17|          1|
-    |add_ln276_1_reg_635                                                   |  17|   0|   17|          0|
+    |add_i_reg_709                                                         |  64|   0|   64|          0|
+    |add_ln230_reg_591                                                     |  31|   0|   31|          0|
+    |add_ln234_reg_644                                                     |  32|   0|   32|          0|
+    |add_ln236_1_reg_634                                                   |  16|   0|   17|          1|
+    |add_ln245_1_reg_639                                                   |  17|   0|   17|          0|
     |ap_CS_fsm                                                             |  78|   0|   78|          0|
-    |c3_conv_layer_map_data_load_reg_660                                   |  64|   0|   64|          0|
-    |div_i_reg_710                                                         |  64|   0|   64|          0|
-    |em_reg_694                                                            |  64|   0|   64|          0|
-    |empty_16_reg_612                                                      |  17|   0|   17|          0|
-    |empty_reg_607                                                         |  16|   0|   16|          0|
-    |ep_reg_688                                                            |  64|   0|   64|          0|
-    |grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4_fu_240_ap_start_reg  |   1|   0|    1|          0|
-    |i_reg_182                                                             |  31|   0|   31|          0|
-    |indvars_iv19_reg_205                                                  |  32|   0|   32|          0|
-    |indvars_iv24_reg_193                                                  |  32|   0|   32|          0|
-    |indvars_iv_next31_reg_625                                             |  31|   0|   31|          0|
-    |indvars_iv_next39_reg_602                                             |  31|   0|   31|          0|
-    |j_reg_217                                                             |  31|   0|   31|          0|
-    |k_fu_124                                                              |  31|   0|   31|          0|
-    |m_1_reg_675                                                           |  16|   0|   17|          1|
-    |m_reg_228                                                             |  32|   0|   32|          0|
-    |max_value_reg_670                                                     |  64|   0|   64|          0|
-    |s4_map_h_reg_559                                                      |  32|   0|   32|          0|
-    |s4_map_w_reg_554                                                      |  32|   0|   32|          0|
-    |s4_pooling_layer_map_count_read_reg_564                               |  32|   0|   32|          0|
-    |select_ln268_reg_617                                                  |  32|   0|   32|          0|
-    |sub1_i_reg_700                                                        |  64|   0|   64|          0|
-    |tmp_6_reg_592                                                         |   7|   0|   17|         10|
-    |trunc_ln261_1_reg_574                                                 |  16|   0|   16|          0|
-    |trunc_ln261_2_reg_579                                                 |  17|   0|   17|          0|
-    |trunc_ln261_reg_569                                                   |  17|   0|   17|          0|
-    |trunc_ln265_1_reg_665                                                 |  17|   0|   17|          0|
+    |c3_conv_layer2_data_load_reg_664                                      |  64|   0|   64|          0|
+    |div_i_reg_714                                                         |  64|   0|   64|          0|
+    |em_reg_698                                                            |  64|   0|   64|          0|
+    |empty_16_reg_616                                                      |  17|   0|   17|          0|
+    |empty_reg_611                                                         |  16|   0|   16|          0|
+    |ep_reg_692                                                            |  64|   0|   64|          0|
+    |grp_max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4_fu_244_ap_start_reg  |   1|   0|    1|          0|
+    |i_reg_186                                                             |  31|   0|   31|          0|
+    |indvars_iv19_reg_209                                                  |  32|   0|   32|          0|
+    |indvars_iv24_reg_197                                                  |  32|   0|   32|          0|
+    |indvars_iv_next31_reg_629                                             |  31|   0|   31|          0|
+    |indvars_iv_next39_reg_606                                             |  31|   0|   31|          0|
+    |j_reg_221                                                             |  31|   0|   31|          0|
+    |k_fu_128                                                              |  31|   0|   31|          0|
+    |m_1_reg_679                                                           |  16|   0|   17|          1|
+    |m_reg_232                                                             |  32|   0|   32|          0|
+    |max_value_reg_674                                                     |  64|   0|   64|          0|
+    |s4_map_h_reg_563                                                      |  32|   0|   32|          0|
+    |s4_map_w_reg_558                                                      |  32|   0|   32|          0|
+    |s4_pooling_layer1_map_count_read_reg_568                              |  32|   0|   32|          0|
+    |select_ln237_reg_621                                                  |  32|   0|   32|          0|
+    |sub1_i_reg_704                                                        |  64|   0|   64|          0|
+    |tmp_6_reg_596                                                         |   7|   0|   17|         10|
+    |trunc_ln230_1_reg_578                                                 |  16|   0|   16|          0|
+    |trunc_ln230_2_reg_583                                                 |  17|   0|   17|          0|
+    |trunc_ln230_reg_573                                                   |  17|   0|   17|          0|
+    |trunc_ln234_1_reg_669                                                 |  17|   0|   17|          0|
     +----------------------------------------------------------------------+----+----+-----+-----------+
     |Total                                                                 |1125|   0| 1137|         12|
     +----------------------------------------------------------------------+----+----+-----+-----------+
@@ -194,140 +194,160 @@
 == Interface
 ================================================================
 * Summary: 
-+--------------------------------------+-----+------+------------+-------------------------------+--------------+
-|               RTL Ports              | Dir | Bits |  Protocol  |         Source Object         |    C Type    |
-+--------------------------------------+-----+------+------------+-------------------------------+--------------+
-|ap_clk                                |   in|     1|  ap_ctrl_hs|             max_pooling_fprop2|  return value|
-|ap_rst                                |   in|     1|  ap_ctrl_hs|             max_pooling_fprop2|  return value|
-|ap_start                              |   in|     1|  ap_ctrl_hs|             max_pooling_fprop2|  return value|
-|ap_done                               |  out|     1|  ap_ctrl_hs|             max_pooling_fprop2|  return value|
-|ap_idle                               |  out|     1|  ap_ctrl_hs|             max_pooling_fprop2|  return value|
-|ap_ready                              |  out|     1|  ap_ctrl_hs|             max_pooling_fprop2|  return value|
-|ap_ce                                 |   in|     1|  ap_ctrl_hs|             max_pooling_fprop2|  return value|
-|ap_core                               |   in|     8|     ap_none|                        ap_core|        scalar|
-|ap_part                               |   in|     8|     ap_none|                        ap_part|        scalar|
-|ap_parent                             |   in|     8|     ap_none|                      ap_parent|        scalar|
-|c3_conv_layer_map_w                   |   in|    32|     ap_none|            c3_conv_layer_map_w|       pointer|
-|c3_conv_layer_map_h                   |   in|    32|     ap_none|            c3_conv_layer_map_h|       pointer|
-|c3_conv_layer_map_count               |   in|    32|     ap_none|        c3_conv_layer_map_count|       pointer|
-|c3_conv_layer_map_data_address0       |  out|    17|   ap_memory|         c3_conv_layer_map_data|         array|
-|c3_conv_layer_map_data_ce0            |  out|     1|   ap_memory|         c3_conv_layer_map_data|         array|
-|c3_conv_layer_map_data_q0             |   in|    64|   ap_memory|         c3_conv_layer_map_data|         array|
-|c3_conv_layer_map_data_address1       |  out|    17|   ap_memory|         c3_conv_layer_map_data|         array|
-|c3_conv_layer_map_data_ce1            |  out|     1|   ap_memory|         c3_conv_layer_map_data|         array|
-|c3_conv_layer_map_data_q1             |   in|    64|   ap_memory|         c3_conv_layer_map_data|         array|
-|c3_conv_layer_map_error_address0      |  out|    17|   ap_memory|        c3_conv_layer_map_error|         array|
-|c3_conv_layer_map_error_ce0           |  out|     1|   ap_memory|        c3_conv_layer_map_error|         array|
-|c3_conv_layer_map_error_we0           |  out|     1|   ap_memory|        c3_conv_layer_map_error|         array|
-|c3_conv_layer_map_error_d0            |  out|    64|   ap_memory|        c3_conv_layer_map_error|         array|
-|c3_conv_layer_map_error_q0            |   in|    64|   ap_memory|        c3_conv_layer_map_error|         array|
-|c3_conv_layer_map_error_address1      |  out|    17|   ap_memory|        c3_conv_layer_map_error|         array|
-|c3_conv_layer_map_error_ce1           |  out|     1|   ap_memory|        c3_conv_layer_map_error|         array|
-|c3_conv_layer_map_error_we1           |  out|     1|   ap_memory|        c3_conv_layer_map_error|         array|
-|c3_conv_layer_map_error_d1            |  out|    64|   ap_memory|        c3_conv_layer_map_error|         array|
-|c3_conv_layer_map_error_q1            |   in|    64|   ap_memory|        c3_conv_layer_map_error|         array|
-|c3_conv_layer_map_b_address0          |  out|     7|   ap_memory|            c3_conv_layer_map_b|         array|
-|c3_conv_layer_map_b_ce0               |  out|     1|   ap_memory|            c3_conv_layer_map_b|         array|
-|c3_conv_layer_map_b_we0               |  out|     1|   ap_memory|            c3_conv_layer_map_b|         array|
-|c3_conv_layer_map_b_d0                |  out|    64|   ap_memory|            c3_conv_layer_map_b|         array|
-|c3_conv_layer_map_b_q0                |   in|    64|   ap_memory|            c3_conv_layer_map_b|         array|
-|c3_conv_layer_map_b_address1          |  out|     7|   ap_memory|            c3_conv_layer_map_b|         array|
-|c3_conv_layer_map_b_ce1               |  out|     1|   ap_memory|            c3_conv_layer_map_b|         array|
-|c3_conv_layer_map_b_we1               |  out|     1|   ap_memory|            c3_conv_layer_map_b|         array|
-|c3_conv_layer_map_b_d1                |  out|    64|   ap_memory|            c3_conv_layer_map_b|         array|
-|c3_conv_layer_map_b_q1                |   in|    64|   ap_memory|            c3_conv_layer_map_b|         array|
-|c3_conv_layer_map_db_address0         |  out|     7|   ap_memory|           c3_conv_layer_map_db|         array|
-|c3_conv_layer_map_db_ce0              |  out|     1|   ap_memory|           c3_conv_layer_map_db|         array|
-|c3_conv_layer_map_db_we0              |  out|     1|   ap_memory|           c3_conv_layer_map_db|         array|
-|c3_conv_layer_map_db_d0               |  out|    64|   ap_memory|           c3_conv_layer_map_db|         array|
-|c3_conv_layer_map_db_q0               |   in|    64|   ap_memory|           c3_conv_layer_map_db|         array|
-|c3_conv_layer_map_db_address1         |  out|     7|   ap_memory|           c3_conv_layer_map_db|         array|
-|c3_conv_layer_map_db_ce1              |  out|     1|   ap_memory|           c3_conv_layer_map_db|         array|
-|c3_conv_layer_map_db_we1              |  out|     1|   ap_memory|           c3_conv_layer_map_db|         array|
-|c3_conv_layer_map_db_d1               |  out|    64|   ap_memory|           c3_conv_layer_map_db|         array|
-|c3_conv_layer_map_db_q1               |   in|    64|   ap_memory|           c3_conv_layer_map_db|         array|
-|c3_conv_layer_kernel_w                |   in|    32|     ap_none|         c3_conv_layer_kernel_w|       pointer|
-|c3_conv_layer_kernel_h                |   in|    32|     ap_none|         c3_conv_layer_kernel_h|       pointer|
-|c3_conv_layer_kernel_count            |   in|    32|     ap_none|     c3_conv_layer_kernel_count|       pointer|
-|c3_conv_layer_kernel_address0         |  out|    11|   ap_memory|           c3_conv_layer_kernel|         array|
-|c3_conv_layer_kernel_ce0              |  out|     1|   ap_memory|           c3_conv_layer_kernel|         array|
-|c3_conv_layer_kernel_we0              |  out|     1|   ap_memory|           c3_conv_layer_kernel|         array|
-|c3_conv_layer_kernel_d0               |  out|  3200|   ap_memory|           c3_conv_layer_kernel|         array|
-|c3_conv_layer_kernel_q0               |   in|  3200|   ap_memory|           c3_conv_layer_kernel|         array|
-|c3_conv_layer_kernel_address1         |  out|    11|   ap_memory|           c3_conv_layer_kernel|         array|
-|c3_conv_layer_kernel_ce1              |  out|     1|   ap_memory|           c3_conv_layer_kernel|         array|
-|c3_conv_layer_kernel_we1              |  out|     1|   ap_memory|           c3_conv_layer_kernel|         array|
-|c3_conv_layer_kernel_d1               |  out|  3200|   ap_memory|           c3_conv_layer_kernel|         array|
-|c3_conv_layer_kernel_q1               |   in|  3200|   ap_memory|           c3_conv_layer_kernel|         array|
-|c3_conv_layer_map_common_address0     |  out|    10|   ap_memory|       c3_conv_layer_map_common|         array|
-|c3_conv_layer_map_common_ce0          |  out|     1|   ap_memory|       c3_conv_layer_map_common|         array|
-|c3_conv_layer_map_common_we0          |  out|     1|   ap_memory|       c3_conv_layer_map_common|         array|
-|c3_conv_layer_map_common_d0           |  out|    64|   ap_memory|       c3_conv_layer_map_common|         array|
-|c3_conv_layer_map_common_q0           |   in|    64|   ap_memory|       c3_conv_layer_map_common|         array|
-|c3_conv_layer_map_common_address1     |  out|    10|   ap_memory|       c3_conv_layer_map_common|         array|
-|c3_conv_layer_map_common_ce1          |  out|     1|   ap_memory|       c3_conv_layer_map_common|         array|
-|c3_conv_layer_map_common_we1          |  out|     1|   ap_memory|       c3_conv_layer_map_common|         array|
-|c3_conv_layer_map_common_d1           |  out|    64|   ap_memory|       c3_conv_layer_map_common|         array|
-|c3_conv_layer_map_common_q1           |   in|    64|   ap_memory|       c3_conv_layer_map_common|         array|
-|s4_pooling_layer_map_w                |   in|    32|     ap_none|         s4_pooling_layer_map_w|       pointer|
-|s4_pooling_layer_map_h                |   in|    32|     ap_none|         s4_pooling_layer_map_h|       pointer|
-|s4_pooling_layer_map_count            |   in|    32|     ap_none|     s4_pooling_layer_map_count|       pointer|
-|s4_pooling_layer_map_data_address0    |  out|    17|   ap_memory|      s4_pooling_layer_map_data|         array|
-|s4_pooling_layer_map_data_ce0         |  out|     1|   ap_memory|      s4_pooling_layer_map_data|         array|
-|s4_pooling_layer_map_data_we0         |  out|     1|   ap_memory|      s4_pooling_layer_map_data|         array|
-|s4_pooling_layer_map_data_d0          |  out|    64|   ap_memory|      s4_pooling_layer_map_data|         array|
-|s4_pooling_layer_map_error_address0   |  out|    17|   ap_memory|     s4_pooling_layer_map_error|         array|
-|s4_pooling_layer_map_error_ce0        |  out|     1|   ap_memory|     s4_pooling_layer_map_error|         array|
-|s4_pooling_layer_map_error_we0        |  out|     1|   ap_memory|     s4_pooling_layer_map_error|         array|
-|s4_pooling_layer_map_error_d0         |  out|    64|   ap_memory|     s4_pooling_layer_map_error|         array|
-|s4_pooling_layer_map_error_q0         |   in|    64|   ap_memory|     s4_pooling_layer_map_error|         array|
-|s4_pooling_layer_map_error_address1   |  out|    17|   ap_memory|     s4_pooling_layer_map_error|         array|
-|s4_pooling_layer_map_error_ce1        |  out|     1|   ap_memory|     s4_pooling_layer_map_error|         array|
-|s4_pooling_layer_map_error_we1        |  out|     1|   ap_memory|     s4_pooling_layer_map_error|         array|
-|s4_pooling_layer_map_error_d1         |  out|    64|   ap_memory|     s4_pooling_layer_map_error|         array|
-|s4_pooling_layer_map_error_q1         |   in|    64|   ap_memory|     s4_pooling_layer_map_error|         array|
-|s4_pooling_layer_map_b_address0       |  out|     7|   ap_memory|         s4_pooling_layer_map_b|         array|
-|s4_pooling_layer_map_b_ce0            |  out|     1|   ap_memory|         s4_pooling_layer_map_b|         array|
-|s4_pooling_layer_map_b_we0            |  out|     1|   ap_memory|         s4_pooling_layer_map_b|         array|
-|s4_pooling_layer_map_b_d0             |  out|    64|   ap_memory|         s4_pooling_layer_map_b|         array|
-|s4_pooling_layer_map_b_q0             |   in|    64|   ap_memory|         s4_pooling_layer_map_b|         array|
-|s4_pooling_layer_map_b_address1       |  out|     7|   ap_memory|         s4_pooling_layer_map_b|         array|
-|s4_pooling_layer_map_b_ce1            |  out|     1|   ap_memory|         s4_pooling_layer_map_b|         array|
-|s4_pooling_layer_map_b_we1            |  out|     1|   ap_memory|         s4_pooling_layer_map_b|         array|
-|s4_pooling_layer_map_b_d1             |  out|    64|   ap_memory|         s4_pooling_layer_map_b|         array|
-|s4_pooling_layer_map_b_q1             |   in|    64|   ap_memory|         s4_pooling_layer_map_b|         array|
-|s4_pooling_layer_map_db_address0      |  out|     7|   ap_memory|        s4_pooling_layer_map_db|         array|
-|s4_pooling_layer_map_db_ce0           |  out|     1|   ap_memory|        s4_pooling_layer_map_db|         array|
-|s4_pooling_layer_map_db_we0           |  out|     1|   ap_memory|        s4_pooling_layer_map_db|         array|
-|s4_pooling_layer_map_db_d0            |  out|    64|   ap_memory|        s4_pooling_layer_map_db|         array|
-|s4_pooling_layer_map_db_q0            |   in|    64|   ap_memory|        s4_pooling_layer_map_db|         array|
-|s4_pooling_layer_map_db_address1      |  out|     7|   ap_memory|        s4_pooling_layer_map_db|         array|
-|s4_pooling_layer_map_db_ce1           |  out|     1|   ap_memory|        s4_pooling_layer_map_db|         array|
-|s4_pooling_layer_map_db_we1           |  out|     1|   ap_memory|        s4_pooling_layer_map_db|         array|
-|s4_pooling_layer_map_db_d1            |  out|    64|   ap_memory|        s4_pooling_layer_map_db|         array|
-|s4_pooling_layer_map_db_q1            |   in|    64|   ap_memory|        s4_pooling_layer_map_db|         array|
-|s4_pooling_layer_kernel_w             |   in|    32|     ap_none|      s4_pooling_layer_kernel_w|       pointer|
-|s4_pooling_layer_kernel_h             |   in|    32|     ap_none|      s4_pooling_layer_kernel_h|       pointer|
-|s4_pooling_layer_kernel_count         |   in|    32|     ap_none|  s4_pooling_layer_kernel_count|       pointer|
-|s4_pooling_layer_kernel_address0      |  out|    11|   ap_memory|        s4_pooling_layer_kernel|         array|
-|s4_pooling_layer_kernel_ce0           |  out|     1|   ap_memory|        s4_pooling_layer_kernel|         array|
-|s4_pooling_layer_kernel_we0           |  out|     1|   ap_memory|        s4_pooling_layer_kernel|         array|
-|s4_pooling_layer_kernel_d0            |  out|  3200|   ap_memory|        s4_pooling_layer_kernel|         array|
-|s4_pooling_layer_kernel_q0            |   in|  3200|   ap_memory|        s4_pooling_layer_kernel|         array|
-|s4_pooling_layer_kernel_address1      |  out|    11|   ap_memory|        s4_pooling_layer_kernel|         array|
-|s4_pooling_layer_kernel_ce1           |  out|     1|   ap_memory|        s4_pooling_layer_kernel|         array|
-|s4_pooling_layer_kernel_we1           |  out|     1|   ap_memory|        s4_pooling_layer_kernel|         array|
-|s4_pooling_layer_kernel_d1            |  out|  3200|   ap_memory|        s4_pooling_layer_kernel|         array|
-|s4_pooling_layer_kernel_q1            |   in|  3200|   ap_memory|        s4_pooling_layer_kernel|         array|
-|s4_pooling_layer_map_common_address0  |  out|    10|   ap_memory|    s4_pooling_layer_map_common|         array|
-|s4_pooling_layer_map_common_ce0       |  out|     1|   ap_memory|    s4_pooling_layer_map_common|         array|
-|s4_pooling_layer_map_common_we0       |  out|     1|   ap_memory|    s4_pooling_layer_map_common|         array|
-|s4_pooling_layer_map_common_d0        |  out|    64|   ap_memory|    s4_pooling_layer_map_common|         array|
-|s4_pooling_layer_map_common_q0        |   in|    64|   ap_memory|    s4_pooling_layer_map_common|         array|
-|s4_pooling_layer_map_common_address1  |  out|    10|   ap_memory|    s4_pooling_layer_map_common|         array|
-|s4_pooling_layer_map_common_ce1       |  out|     1|   ap_memory|    s4_pooling_layer_map_common|         array|
-|s4_pooling_layer_map_common_we1       |  out|     1|   ap_memory|    s4_pooling_layer_map_common|         array|
-|s4_pooling_layer_map_common_d1        |  out|    64|   ap_memory|    s4_pooling_layer_map_common|         array|
-|s4_pooling_layer_map_common_q1        |   in|    64|   ap_memory|    s4_pooling_layer_map_common|         array|
-+--------------------------------------+-----+------+------------+-------------------------------+--------------+
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|               RTL Ports               | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                                 |   in|    1|  ap_ctrl_hs|              max_pooling_fprop2|  return value|
+|ap_rst                                 |   in|    1|  ap_ctrl_hs|              max_pooling_fprop2|  return value|
+|ap_start                               |   in|    1|  ap_ctrl_hs|              max_pooling_fprop2|  return value|
+|ap_done                                |  out|    1|  ap_ctrl_hs|              max_pooling_fprop2|  return value|
+|ap_idle                                |  out|    1|  ap_ctrl_hs|              max_pooling_fprop2|  return value|
+|ap_ready                               |  out|    1|  ap_ctrl_hs|              max_pooling_fprop2|  return value|
+|ap_ce                                  |   in|    1|  ap_ctrl_hs|              max_pooling_fprop2|  return value|
+|ap_core                                |   in|    8|     ap_none|                         ap_core|        scalar|
+|ap_part                                |   in|    8|     ap_none|                         ap_part|        scalar|
+|ap_parent                              |   in|    8|     ap_none|                       ap_parent|        scalar|
+|c3_conv_layer1_map_w                   |   in|   32|     ap_none|            c3_conv_layer1_map_w|       pointer|
+|c3_conv_layer1_map_h                   |   in|   32|     ap_none|            c3_conv_layer1_map_h|       pointer|
+|c3_conv_layer1_map_count               |   in|   32|     ap_none|        c3_conv_layer1_map_count|       pointer|
+|c3_conv_layer1_kernel_w                |   in|   32|     ap_none|         c3_conv_layer1_kernel_w|       pointer|
+|c3_conv_layer1_kernel_h                |   in|   32|     ap_none|         c3_conv_layer1_kernel_h|       pointer|
+|c3_conv_layer1_kernel_count            |   in|   32|     ap_none|     c3_conv_layer1_kernel_count|       pointer|
+|c3_conv_layer2_data_address0           |  out|   17|   ap_memory|             c3_conv_layer2_data|         array|
+|c3_conv_layer2_data_ce0                |  out|    1|   ap_memory|             c3_conv_layer2_data|         array|
+|c3_conv_layer2_data_q0                 |   in|   64|   ap_memory|             c3_conv_layer2_data|         array|
+|c3_conv_layer2_data_address1           |  out|   17|   ap_memory|             c3_conv_layer2_data|         array|
+|c3_conv_layer2_data_ce1                |  out|    1|   ap_memory|             c3_conv_layer2_data|         array|
+|c3_conv_layer2_data_q1                 |   in|   64|   ap_memory|             c3_conv_layer2_data|         array|
+|c3_conv_layer2_error_address0          |  out|   17|   ap_memory|            c3_conv_layer2_error|         array|
+|c3_conv_layer2_error_ce0               |  out|    1|   ap_memory|            c3_conv_layer2_error|         array|
+|c3_conv_layer2_error_we0               |  out|    1|   ap_memory|            c3_conv_layer2_error|         array|
+|c3_conv_layer2_error_d0                |  out|   64|   ap_memory|            c3_conv_layer2_error|         array|
+|c3_conv_layer2_error_q0                |   in|   64|   ap_memory|            c3_conv_layer2_error|         array|
+|c3_conv_layer2_error_address1          |  out|   17|   ap_memory|            c3_conv_layer2_error|         array|
+|c3_conv_layer2_error_ce1               |  out|    1|   ap_memory|            c3_conv_layer2_error|         array|
+|c3_conv_layer2_error_we1               |  out|    1|   ap_memory|            c3_conv_layer2_error|         array|
+|c3_conv_layer2_error_d1                |  out|   64|   ap_memory|            c3_conv_layer2_error|         array|
+|c3_conv_layer2_error_q1                |   in|   64|   ap_memory|            c3_conv_layer2_error|         array|
+|c3_conv_layer2_b_address0              |  out|    7|   ap_memory|                c3_conv_layer2_b|         array|
+|c3_conv_layer2_b_ce0                   |  out|    1|   ap_memory|                c3_conv_layer2_b|         array|
+|c3_conv_layer2_b_we0                   |  out|    1|   ap_memory|                c3_conv_layer2_b|         array|
+|c3_conv_layer2_b_d0                    |  out|   64|   ap_memory|                c3_conv_layer2_b|         array|
+|c3_conv_layer2_b_q0                    |   in|   64|   ap_memory|                c3_conv_layer2_b|         array|
+|c3_conv_layer2_b_address1              |  out|    7|   ap_memory|                c3_conv_layer2_b|         array|
+|c3_conv_layer2_b_ce1                   |  out|    1|   ap_memory|                c3_conv_layer2_b|         array|
+|c3_conv_layer2_b_we1                   |  out|    1|   ap_memory|                c3_conv_layer2_b|         array|
+|c3_conv_layer2_b_d1                    |  out|   64|   ap_memory|                c3_conv_layer2_b|         array|
+|c3_conv_layer2_b_q1                    |   in|   64|   ap_memory|                c3_conv_layer2_b|         array|
+|c3_conv_layer2_db_address0             |  out|    7|   ap_memory|               c3_conv_layer2_db|         array|
+|c3_conv_layer2_db_ce0                  |  out|    1|   ap_memory|               c3_conv_layer2_db|         array|
+|c3_conv_layer2_db_we0                  |  out|    1|   ap_memory|               c3_conv_layer2_db|         array|
+|c3_conv_layer2_db_d0                   |  out|   64|   ap_memory|               c3_conv_layer2_db|         array|
+|c3_conv_layer2_db_q0                   |   in|   64|   ap_memory|               c3_conv_layer2_db|         array|
+|c3_conv_layer2_db_address1             |  out|    7|   ap_memory|               c3_conv_layer2_db|         array|
+|c3_conv_layer2_db_ce1                  |  out|    1|   ap_memory|               c3_conv_layer2_db|         array|
+|c3_conv_layer2_db_we1                  |  out|    1|   ap_memory|               c3_conv_layer2_db|         array|
+|c3_conv_layer2_db_d1                   |  out|   64|   ap_memory|               c3_conv_layer2_db|         array|
+|c3_conv_layer2_db_q1                   |   in|   64|   ap_memory|               c3_conv_layer2_db|         array|
+|c3_conv_layer2_W_address0              |  out|   16|   ap_memory|                c3_conv_layer2_W|         array|
+|c3_conv_layer2_W_ce0                   |  out|    1|   ap_memory|                c3_conv_layer2_W|         array|
+|c3_conv_layer2_W_we0                   |  out|    1|   ap_memory|                c3_conv_layer2_W|         array|
+|c3_conv_layer2_W_d0                    |  out|   64|   ap_memory|                c3_conv_layer2_W|         array|
+|c3_conv_layer2_W_q0                    |   in|   64|   ap_memory|                c3_conv_layer2_W|         array|
+|c3_conv_layer2_W_address1              |  out|   16|   ap_memory|                c3_conv_layer2_W|         array|
+|c3_conv_layer2_W_ce1                   |  out|    1|   ap_memory|                c3_conv_layer2_W|         array|
+|c3_conv_layer2_W_we1                   |  out|    1|   ap_memory|                c3_conv_layer2_W|         array|
+|c3_conv_layer2_W_d1                    |  out|   64|   ap_memory|                c3_conv_layer2_W|         array|
+|c3_conv_layer2_W_q1                    |   in|   64|   ap_memory|                c3_conv_layer2_W|         array|
+|c3_conv_layer2_dW_address0             |  out|   16|   ap_memory|               c3_conv_layer2_dW|         array|
+|c3_conv_layer2_dW_ce0                  |  out|    1|   ap_memory|               c3_conv_layer2_dW|         array|
+|c3_conv_layer2_dW_we0                  |  out|    1|   ap_memory|               c3_conv_layer2_dW|         array|
+|c3_conv_layer2_dW_d0                   |  out|   64|   ap_memory|               c3_conv_layer2_dW|         array|
+|c3_conv_layer2_dW_q0                   |   in|   64|   ap_memory|               c3_conv_layer2_dW|         array|
+|c3_conv_layer2_dW_address1             |  out|   16|   ap_memory|               c3_conv_layer2_dW|         array|
+|c3_conv_layer2_dW_ce1                  |  out|    1|   ap_memory|               c3_conv_layer2_dW|         array|
+|c3_conv_layer2_dW_we1                  |  out|    1|   ap_memory|               c3_conv_layer2_dW|         array|
+|c3_conv_layer2_dW_d1                   |  out|   64|   ap_memory|               c3_conv_layer2_dW|         array|
+|c3_conv_layer2_dW_q1                   |   in|   64|   ap_memory|               c3_conv_layer2_dW|         array|
+|c3_conv_layer2_map_common_address0     |  out|   10|   ap_memory|       c3_conv_layer2_map_common|         array|
+|c3_conv_layer2_map_common_ce0          |  out|    1|   ap_memory|       c3_conv_layer2_map_common|         array|
+|c3_conv_layer2_map_common_we0          |  out|    1|   ap_memory|       c3_conv_layer2_map_common|         array|
+|c3_conv_layer2_map_common_d0           |  out|   64|   ap_memory|       c3_conv_layer2_map_common|         array|
+|c3_conv_layer2_map_common_q0           |   in|   64|   ap_memory|       c3_conv_layer2_map_common|         array|
+|c3_conv_layer2_map_common_address1     |  out|   10|   ap_memory|       c3_conv_layer2_map_common|         array|
+|c3_conv_layer2_map_common_ce1          |  out|    1|   ap_memory|       c3_conv_layer2_map_common|         array|
+|c3_conv_layer2_map_common_we1          |  out|    1|   ap_memory|       c3_conv_layer2_map_common|         array|
+|c3_conv_layer2_map_common_d1           |  out|   64|   ap_memory|       c3_conv_layer2_map_common|         array|
+|c3_conv_layer2_map_common_q1           |   in|   64|   ap_memory|       c3_conv_layer2_map_common|         array|
+|s4_pooling_layer1_map_w                |   in|   32|     ap_none|         s4_pooling_layer1_map_w|       pointer|
+|s4_pooling_layer1_map_h                |   in|   32|     ap_none|         s4_pooling_layer1_map_h|       pointer|
+|s4_pooling_layer1_map_count            |   in|   32|     ap_none|     s4_pooling_layer1_map_count|       pointer|
+|s4_pooling_layer1_kernel_w             |   in|   32|     ap_none|      s4_pooling_layer1_kernel_w|       pointer|
+|s4_pooling_layer1_kernel_h             |   in|   32|     ap_none|      s4_pooling_layer1_kernel_h|       pointer|
+|s4_pooling_layer1_kernel_count         |   in|   32|     ap_none|  s4_pooling_layer1_kernel_count|       pointer|
+|s4_pooling_layer2_data_address0        |  out|   17|   ap_memory|          s4_pooling_layer2_data|         array|
+|s4_pooling_layer2_data_ce0             |  out|    1|   ap_memory|          s4_pooling_layer2_data|         array|
+|s4_pooling_layer2_data_we0             |  out|    1|   ap_memory|          s4_pooling_layer2_data|         array|
+|s4_pooling_layer2_data_d0              |  out|   64|   ap_memory|          s4_pooling_layer2_data|         array|
+|s4_pooling_layer2_error_address0       |  out|   17|   ap_memory|         s4_pooling_layer2_error|         array|
+|s4_pooling_layer2_error_ce0            |  out|    1|   ap_memory|         s4_pooling_layer2_error|         array|
+|s4_pooling_layer2_error_we0            |  out|    1|   ap_memory|         s4_pooling_layer2_error|         array|
+|s4_pooling_layer2_error_d0             |  out|   64|   ap_memory|         s4_pooling_layer2_error|         array|
+|s4_pooling_layer2_error_q0             |   in|   64|   ap_memory|         s4_pooling_layer2_error|         array|
+|s4_pooling_layer2_error_address1       |  out|   17|   ap_memory|         s4_pooling_layer2_error|         array|
+|s4_pooling_layer2_error_ce1            |  out|    1|   ap_memory|         s4_pooling_layer2_error|         array|
+|s4_pooling_layer2_error_we1            |  out|    1|   ap_memory|         s4_pooling_layer2_error|         array|
+|s4_pooling_layer2_error_d1             |  out|   64|   ap_memory|         s4_pooling_layer2_error|         array|
+|s4_pooling_layer2_error_q1             |   in|   64|   ap_memory|         s4_pooling_layer2_error|         array|
+|s4_pooling_layer2_b_address0           |  out|    7|   ap_memory|             s4_pooling_layer2_b|         array|
+|s4_pooling_layer2_b_ce0                |  out|    1|   ap_memory|             s4_pooling_layer2_b|         array|
+|s4_pooling_layer2_b_we0                |  out|    1|   ap_memory|             s4_pooling_layer2_b|         array|
+|s4_pooling_layer2_b_d0                 |  out|   64|   ap_memory|             s4_pooling_layer2_b|         array|
+|s4_pooling_layer2_b_q0                 |   in|   64|   ap_memory|             s4_pooling_layer2_b|         array|
+|s4_pooling_layer2_b_address1           |  out|    7|   ap_memory|             s4_pooling_layer2_b|         array|
+|s4_pooling_layer2_b_ce1                |  out|    1|   ap_memory|             s4_pooling_layer2_b|         array|
+|s4_pooling_layer2_b_we1                |  out|    1|   ap_memory|             s4_pooling_layer2_b|         array|
+|s4_pooling_layer2_b_d1                 |  out|   64|   ap_memory|             s4_pooling_layer2_b|         array|
+|s4_pooling_layer2_b_q1                 |   in|   64|   ap_memory|             s4_pooling_layer2_b|         array|
+|s4_pooling_layer2_db_address0          |  out|    7|   ap_memory|            s4_pooling_layer2_db|         array|
+|s4_pooling_layer2_db_ce0               |  out|    1|   ap_memory|            s4_pooling_layer2_db|         array|
+|s4_pooling_layer2_db_we0               |  out|    1|   ap_memory|            s4_pooling_layer2_db|         array|
+|s4_pooling_layer2_db_d0                |  out|   64|   ap_memory|            s4_pooling_layer2_db|         array|
+|s4_pooling_layer2_db_q0                |   in|   64|   ap_memory|            s4_pooling_layer2_db|         array|
+|s4_pooling_layer2_db_address1          |  out|    7|   ap_memory|            s4_pooling_layer2_db|         array|
+|s4_pooling_layer2_db_ce1               |  out|    1|   ap_memory|            s4_pooling_layer2_db|         array|
+|s4_pooling_layer2_db_we1               |  out|    1|   ap_memory|            s4_pooling_layer2_db|         array|
+|s4_pooling_layer2_db_d1                |  out|   64|   ap_memory|            s4_pooling_layer2_db|         array|
+|s4_pooling_layer2_db_q1                |   in|   64|   ap_memory|            s4_pooling_layer2_db|         array|
+|s4_pooling_layer2_W_address0           |  out|   16|   ap_memory|             s4_pooling_layer2_W|         array|
+|s4_pooling_layer2_W_ce0                |  out|    1|   ap_memory|             s4_pooling_layer2_W|         array|
+|s4_pooling_layer2_W_we0                |  out|    1|   ap_memory|             s4_pooling_layer2_W|         array|
+|s4_pooling_layer2_W_d0                 |  out|   64|   ap_memory|             s4_pooling_layer2_W|         array|
+|s4_pooling_layer2_W_q0                 |   in|   64|   ap_memory|             s4_pooling_layer2_W|         array|
+|s4_pooling_layer2_W_address1           |  out|   16|   ap_memory|             s4_pooling_layer2_W|         array|
+|s4_pooling_layer2_W_ce1                |  out|    1|   ap_memory|             s4_pooling_layer2_W|         array|
+|s4_pooling_layer2_W_we1                |  out|    1|   ap_memory|             s4_pooling_layer2_W|         array|
+|s4_pooling_layer2_W_d1                 |  out|   64|   ap_memory|             s4_pooling_layer2_W|         array|
+|s4_pooling_layer2_W_q1                 |   in|   64|   ap_memory|             s4_pooling_layer2_W|         array|
+|s4_pooling_layer2_dW_address0          |  out|   16|   ap_memory|            s4_pooling_layer2_dW|         array|
+|s4_pooling_layer2_dW_ce0               |  out|    1|   ap_memory|            s4_pooling_layer2_dW|         array|
+|s4_pooling_layer2_dW_we0               |  out|    1|   ap_memory|            s4_pooling_layer2_dW|         array|
+|s4_pooling_layer2_dW_d0                |  out|   64|   ap_memory|            s4_pooling_layer2_dW|         array|
+|s4_pooling_layer2_dW_q0                |   in|   64|   ap_memory|            s4_pooling_layer2_dW|         array|
+|s4_pooling_layer2_dW_address1          |  out|   16|   ap_memory|            s4_pooling_layer2_dW|         array|
+|s4_pooling_layer2_dW_ce1               |  out|    1|   ap_memory|            s4_pooling_layer2_dW|         array|
+|s4_pooling_layer2_dW_we1               |  out|    1|   ap_memory|            s4_pooling_layer2_dW|         array|
+|s4_pooling_layer2_dW_d1                |  out|   64|   ap_memory|            s4_pooling_layer2_dW|         array|
+|s4_pooling_layer2_dW_q1                |   in|   64|   ap_memory|            s4_pooling_layer2_dW|         array|
+|s4_pooling_layer2_map_common_address0  |  out|   10|   ap_memory|    s4_pooling_layer2_map_common|         array|
+|s4_pooling_layer2_map_common_ce0       |  out|    1|   ap_memory|    s4_pooling_layer2_map_common|         array|
+|s4_pooling_layer2_map_common_we0       |  out|    1|   ap_memory|    s4_pooling_layer2_map_common|         array|
+|s4_pooling_layer2_map_common_d0        |  out|   64|   ap_memory|    s4_pooling_layer2_map_common|         array|
+|s4_pooling_layer2_map_common_q0        |   in|   64|   ap_memory|    s4_pooling_layer2_map_common|         array|
+|s4_pooling_layer2_map_common_address1  |  out|   10|   ap_memory|    s4_pooling_layer2_map_common|         array|
+|s4_pooling_layer2_map_common_ce1       |  out|    1|   ap_memory|    s4_pooling_layer2_map_common|         array|
+|s4_pooling_layer2_map_common_we1       |  out|    1|   ap_memory|    s4_pooling_layer2_map_common|         array|
+|s4_pooling_layer2_map_common_d1        |  out|   64|   ap_memory|    s4_pooling_layer2_map_common|         array|
+|s4_pooling_layer2_map_common_q1        |   in|   64|   ap_memory|    s4_pooling_layer2_map_common|         array|
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
 

@@ -28,15 +28,15 @@
 |               | (4) simplification          |  82          | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                | 140          | initial conversion to HW specific instructions                                         |
-|               | (2) optimizations           | 149          | high level synthesis optimizations                                                     |
+|               | (1) lowering                | 144          | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           | 153          | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
 +----------------------+-------------+--------------+---------------+--------------+-------------+---------------+
 | Function             | Location    | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +----------------------+-------------+--------------+---------------+--------------+-------------+---------------+
-| + max_pooling_fprop1 | hls.cpp:227 | 113          | 88            | 90           | 82          | 149           |
+| + max_pooling_fprop1 | hls.cpp:185 | 113          | 88            | 90           | 82          | 153           |
 |    tan_h             | hls.cpp:8   |   7          |               |              |             |               |
 +----------------------+-------------+--------------+---------------+--------------+-------------+---------------+
 

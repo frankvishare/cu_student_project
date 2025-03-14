@@ -30,33 +30,27 @@ typedef struct _Sample
 	int sample_count;
 } Sample;
 
-typedef struct _Kernel
+// 第一个结构体包含所有整数参数
+typedef struct _Layer1
 {
-	double W[MAX_KERNEL_SIZE];
-	double dW[MAX_KERNEL_SIZE];
-} Kernel;
+    int map_w;
+    int map_h;
+    int map_count;
+    int kernel_w;
+    int kernel_h;
+    int kernel_count;
+} Layer1;
 
-typedef struct _Map
+// 第二个结构体包含所有数组数据
+typedef struct _Layer2
 {
-	double data[MAX_MAP_SIZE];
-	double error[MAX_MAP_SIZE];
-	double b;
-	double db;
-} Map;
-
-typedef struct _Layer
-{
-	int map_w;
-	int map_h;
-	int map_count;
-	Map map[MAX_MAP_COUNT];
-
-	int kernel_w;
-	int kernel_h;
-	int kernel_count;
-	Kernel kernel[MAX_KERNEL_COUNT];
-
-	double map_common[MAX_MAP_SIZE];
-} Layer;
+    double data[MAX_MAP_COUNT][MAX_MAP_SIZE];    // 原Map.data
+    double error[MAX_MAP_COUNT][MAX_MAP_SIZE];   // 原Map.error
+    double b[MAX_MAP_COUNT];                     // 原Map.b
+    double db[MAX_MAP_COUNT];                    // 原Map.db
+    double W[MAX_KERNEL_COUNT][MAX_KERNEL_SIZE];   // 原Kernel.W
+    double dW[MAX_KERNEL_COUNT][MAX_KERNEL_SIZE];  // 原Kernel.dW
+    double map_common[MAX_MAP_SIZE];
+} Layer2;
 
 #endif // COMMON_H  

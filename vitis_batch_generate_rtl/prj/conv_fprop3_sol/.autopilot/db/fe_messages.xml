@@ -1,72 +1,150 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="" msg_id="207-3993" msg_severity="WARNING" msg_loc="../source/xmem.h:46:35" msg_body="declaration does not declare anything">
+    <msg msg_groups="" msg_id="207-3993" msg_severity="WARNING" msg_loc="../source/xmem.h:54:35" msg_body="declaration does not declare anything">
         <args ClangWarningOption="missing-declarations"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:74:54" msg_body="unused parameter 'in_h'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:47:54" msg_body="unused parameter 'in_h'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:111:26" msg_body="unused parameter 'ap_core'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:83:26" msg_body="unused parameter 'ap_core'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:111:43" msg_body="unused parameter 'ap_part'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:83:43" msg_body="unused parameter 'ap_part'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:111:60" msg_body="unused parameter 'ap_parent'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:83:60" msg_body="unused parameter 'ap_parent'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:140:26" msg_body="unused parameter 'ap_core'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:117:26" msg_body="unused parameter 'ap_core'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:140:43" msg_body="unused parameter 'ap_part'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:117:43" msg_body="unused parameter 'ap_part'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:140:60" msg_body="unused parameter 'ap_parent'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:117:60" msg_body="unused parameter 'ap_parent'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:168:72" msg_body="unused parameter 'ap_core'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:151:72" msg_body="unused parameter 'ap_core'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:168:89" msg_body="unused parameter 'ap_part'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:151:89" msg_body="unused parameter 'ap_part'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:168:106" msg_body="unused parameter 'ap_parent'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:151:106" msg_body="unused parameter 'ap_parent'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:227:33" msg_body="unused parameter 'ap_core'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:185:33" msg_body="unused parameter 'ap_core'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:227:50" msg_body="unused parameter 'ap_part'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:185:50" msg_body="unused parameter 'ap_part'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:227:67" msg_body="unused parameter 'ap_parent'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:185:67" msg_body="unused parameter 'ap_parent'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:255:33" msg_body="unused parameter 'ap_core'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:218:33" msg_body="unused parameter 'ap_core'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:255:50" msg_body="unused parameter 'ap_part'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:218:50" msg_body="unused parameter 'ap_part'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:255:67" msg_body="unused parameter 'ap_parent'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:218:67" msg_body="unused parameter 'ap_parent'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:285:36" msg_body="unused parameter 'ap_core'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:251:36" msg_body="unused parameter 'ap_core'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:285:53" msg_body="unused parameter 'ap_part'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:251:53" msg_body="unused parameter 'ap_part'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:285:70" msg_body="unused parameter 'ap_parent'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="../source/hls.cpp:251:70" msg_body="unused parameter 'ap_parent'">
         <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:86:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:87:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c1_conv_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:89:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c1_conv_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:120:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s2_pooling_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:121:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s2_pooling_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:122:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c3_conv_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:123:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c3_conv_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/duludulu/Documents/hls/vitis_batch_generate_rtl/hls.tcl:68:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="conv_fprop3" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=conv_fprop3" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../source/hls.cpp:169:0" msg_body="Inlining function 'convn_valid' into 'conv_fprop3'">
-        <args Callee="convn_valid" Callee-DebugLoc="File ../source/hls.cpp Line 77 Column 0" Caller="conv_fprop3" Caller-DebugLoc="File ../source/hls.cpp Line 169 Column 0"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:154:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s4_pooling_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../source/hls.cpp:169:0" msg_body="Inlining function 'activation_func::tan_h(double)' into 'conv_fprop3'">
-        <args Callee="activation_func::tan_h(double)" Callee-DebugLoc="File ../source/hls.cpp Line 9 Column 0" Caller="conv_fprop3" Caller-DebugLoc="File ../source/hls.cpp Line 169 Column 0"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:155:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s4_pooling_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:156:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c5_conv_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:157:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv_fprop3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c5_conv_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:188:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="max_pooling_fprop1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c1_conv_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:189:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="max_pooling_fprop1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c1_conv_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:190:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="max_pooling_fprop1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s2_pooling_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:191:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="max_pooling_fprop1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s2_pooling_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:221:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="max_pooling_fprop2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c3_conv_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="max_pooling_fprop2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c3_conv_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:223:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="max_pooling_fprop2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s4_pooling_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:224:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="max_pooling_fprop2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s4_pooling_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:254:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fully_connected_fprop" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c5_conv_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:255:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fully_connected_fprop" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c5_conv_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:256:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fully_connected_fprop" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=output_layer1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../source/hls.cpp:257:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fully_connected_fprop" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=output_layer2" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="../source/hls.cpp:153:0" msg_body="Disaggregating variable 's4_pooling_layer1'">
+        <args Name="s4_pooling_layer1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="../source/hls.cpp:153:0" msg_body="Disaggregating variable 'c5_conv_layer1'">
+        <args Name="c5_conv_layer1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../source/hls.cpp:153:0" msg_body="Inlining function 'convn_valid' into 'conv_fprop3'">
+        <args Callee="convn_valid" Callee-DebugLoc="File ../source/hls.cpp Line 50 Column 0" Caller="conv_fprop3" Caller-DebugLoc="File ../source/hls.cpp Line 153 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../source/hls.cpp:153:0" msg_body="Inlining function 'activation_func::tan_h(double)' into 'conv_fprop3'">
+        <args Callee="activation_func::tan_h(double)" Callee-DebugLoc="File ../source/hls.cpp Line 9 Column 0" Caller="conv_fprop3" Caller-DebugLoc="File ../source/hls.cpp Line 153 Column 0"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

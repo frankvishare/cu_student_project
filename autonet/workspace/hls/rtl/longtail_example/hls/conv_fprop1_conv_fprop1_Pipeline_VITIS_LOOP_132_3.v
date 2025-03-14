@@ -16,19 +16,19 @@ module conv_fprop1_conv_fprop1_Pipeline_VITIS_LOOP_132_3 (
         ap_ce,
         size,
         zext_ln134,
-        c1_conv_layer_map_data_address0,
-        c1_conv_layer_map_data_ce0,
-        c1_conv_layer_map_data_we0,
-        c1_conv_layer_map_data_d0,
+        c1_conv_layer_data_address0,
+        c1_conv_layer_data_ce0,
+        c1_conv_layer_data_we0,
+        c1_conv_layer_data_d0,
         c1_conv_layer_map_common_address0,
         c1_conv_layer_map_common_ce0,
         c1_conv_layer_map_common_q0,
         empty,
-        grp_fu_274_p_din0,
-        grp_fu_274_p_din1,
-        grp_fu_274_p_opcode,
-        grp_fu_274_p_dout0,
-        grp_fu_274_p_ce
+        grp_fu_269_p_din0,
+        grp_fu_269_p_din1,
+        grp_fu_269_p_opcode,
+        grp_fu_269_p_dout0,
+        grp_fu_269_p_ce
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -42,19 +42,19 @@ output   ap_ready;
 input   ap_ce;
 input  [31:0] size;
 input  [16:0] zext_ln134;
-output  [16:0] c1_conv_layer_map_data_address0;
-output   c1_conv_layer_map_data_ce0;
-output   c1_conv_layer_map_data_we0;
-output  [63:0] c1_conv_layer_map_data_d0;
+output  [16:0] c1_conv_layer_data_address0;
+output   c1_conv_layer_data_ce0;
+output   c1_conv_layer_data_we0;
+output  [63:0] c1_conv_layer_data_d0;
 output  [9:0] c1_conv_layer_map_common_address0;
 output   c1_conv_layer_map_common_ce0;
 input  [63:0] c1_conv_layer_map_common_q0;
 input  [63:0] empty;
-output  [63:0] grp_fu_274_p_din0;
-output  [63:0] grp_fu_274_p_din1;
-output  [0:0] grp_fu_274_p_opcode;
-input  [63:0] grp_fu_274_p_dout0;
-output   grp_fu_274_p_ce;
+output  [63:0] grp_fu_269_p_din0;
+output  [63:0] grp_fu_269_p_din1;
+output  [0:0] grp_fu_269_p_opcode;
+input  [63:0] grp_fu_269_p_dout0;
+output   grp_fu_269_p_ce;
 
 reg ap_idle;
 
@@ -247,9 +247,9 @@ wire   [16:0] add_ln132_fu_142_p2;
 wire    ap_loop_init;
 reg   [16:0] ap_sig_allocacmp_k_1;
 reg    c1_conv_layer_map_common_ce0_local;
-reg    c1_conv_layer_map_data_we0_local;
+reg    c1_conv_layer_data_we0_local;
 wire   [63:0] bitcast_ln134_1_fu_206_p1;
-reg    c1_conv_layer_map_data_ce0_local;
+reg    c1_conv_layer_data_ce0_local;
 wire   [63:0] grp_fu_98_p0;
 wire   [63:0] grp_fu_119_p1;
 wire   [31:0] zext_ln132_1_fu_132_p1;
@@ -446,7 +446,7 @@ conv_fprop1_dadd_64ns_64ns_64_8_full_dsp_1 #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-dadd_64ns_64ns_64_8_full_dsp_1_U20(
+dadd_64ns_64ns_64_8_full_dsp_1_U21(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_98_p0),
@@ -461,7 +461,7 @@ conv_fprop1_dadd_64ns_64ns_64_8_full_dsp_1 #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-dadd_64ns_64ns_64_8_full_dsp_1_U22(
+dadd_64ns_64ns_64_8_full_dsp_1_U23(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(ep_reg_257),
@@ -476,7 +476,7 @@ conv_fprop1_ddiv_64ns_64ns_64_31_no_dsp_1 #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-ddiv_64ns_64ns_64_31_no_dsp_1_U23(
+ddiv_64ns_64ns_64_31_no_dsp_1_U24(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(sub1_i_reg_269),
@@ -491,7 +491,7 @@ conv_fprop1_dexp_64ns_64ns_64_30_full_dsp_1 #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-dexp_64ns_64ns_64_30_full_dsp_1_U24(
+dexp_64ns_64ns_64_30_full_dsp_1_U25(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(64'd0),
@@ -506,7 +506,7 @@ conv_fprop1_dexp_64ns_64ns_64_30_full_dsp_1 #(
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-dexp_64ns_64ns_64_30_full_dsp_1_U25(
+dexp_64ns_64ns_64_30_full_dsp_1_U26(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(64'd0),
@@ -1513,7 +1513,7 @@ always @ (posedge ap_clk) begin
         div_i_reg_279 <= grp_fu_110_p2;
         em_reg_263 <= grp_fu_119_p2;
         ep_reg_257 <= grp_fu_114_p2;
-        sub1_i_reg_269 <= grp_fu_274_p_dout0;
+        sub1_i_reg_269 <= grp_fu_269_p_dout0;
         val_assign_reg_246 <= grp_fu_98_p2;
     end
 end
@@ -1579,26 +1579,26 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter79 == 1'b1) & (1'b1 == ap_ce))) begin
+        c1_conv_layer_data_ce0_local = 1'b1;
+    end else begin
+        c1_conv_layer_data_ce0_local = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter79 == 1'b1) & (1'b1 == ap_ce))) begin
+        c1_conv_layer_data_we0_local = 1'b1;
+    end else begin
+        c1_conv_layer_data_we0_local = 1'b0;
+    end
+end
+
+always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_ce) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         c1_conv_layer_map_common_ce0_local = 1'b1;
     end else begin
         c1_conv_layer_map_common_ce0_local = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter79 == 1'b1) & (1'b1 == ap_ce))) begin
-        c1_conv_layer_map_data_ce0_local = 1'b1;
-    end else begin
-        c1_conv_layer_map_data_ce0_local = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter79 == 1'b1) & (1'b1 == ap_ce))) begin
-        c1_conv_layer_map_data_we0_local = 1'b1;
-    end else begin
-        c1_conv_layer_map_data_we0_local = 1'b0;
     end
 end
 
@@ -1697,27 +1697,27 @@ assign bitcast_ln11_fu_168_p1 = val_assign_reg_246;
 
 assign bitcast_ln134_1_fu_206_p1 = div_i_reg_279;
 
+assign c1_conv_layer_data_address0 = zext_ln134_1_fu_202_p1;
+
+assign c1_conv_layer_data_ce0 = c1_conv_layer_data_ce0_local;
+
+assign c1_conv_layer_data_d0 = bitcast_ln134_1_fu_206_p1;
+
+assign c1_conv_layer_data_we0 = c1_conv_layer_data_we0_local;
+
 assign c1_conv_layer_map_common_address0 = zext_ln132_fu_148_p1;
 
 assign c1_conv_layer_map_common_ce0 = c1_conv_layer_map_common_ce0_local;
 
-assign c1_conv_layer_map_data_address0 = zext_ln134_1_fu_202_p1;
-
-assign c1_conv_layer_map_data_ce0 = c1_conv_layer_map_data_ce0_local;
-
-assign c1_conv_layer_map_data_d0 = bitcast_ln134_1_fu_206_p1;
-
-assign c1_conv_layer_map_data_we0 = c1_conv_layer_map_data_we0_local;
-
 assign grp_fu_119_p1 = xor_ln_fu_189_p3;
 
-assign grp_fu_274_p_ce = grp_fu_102_ce;
+assign grp_fu_269_p_ce = grp_fu_102_ce;
 
-assign grp_fu_274_p_din0 = ep_reg_257;
+assign grp_fu_269_p_din0 = ep_reg_257;
 
-assign grp_fu_274_p_din1 = em_reg_263;
+assign grp_fu_269_p_din1 = em_reg_263;
 
-assign grp_fu_274_p_opcode = 2'd1;
+assign grp_fu_269_p_opcode = 2'd1;
 
 assign grp_fu_98_p0 = c1_conv_layer_map_common_load_reg_236;
 

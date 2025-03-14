@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'max_pooling_fprop2'" level="0">
-<item name = "Date">Wed Mar 12 17:43:02 2025
+<item name = "Date">Fri Mar 14 16:55:43 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">prj</item>
@@ -35,9 +35,9 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_261_1">?, ?, ?, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_263_2">?, ?, ?, -, -, ?, no</column>
-<column name="  ++ VITIS_LOOP_265_3">?, ?, 92, -, -, ?, no</column>
+<column name="- VITIS_LOOP_230_1">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_232_2">?, ?, ?, -, -, ?, no</column>
+<column name="  ++ VITIS_LOOP_234_3">?, ?, 92, -, -, ?, no</column>
 </table>
 </item>
 </section>

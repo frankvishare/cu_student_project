@@ -1,5 +1,5 @@
 set SynModuleInfo {
-  {SRCNAME max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4 MODELNAME max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4 RTLNAME max_pooling_fprop2_max_pooling_fprop2_Pipeline_VITIS_LOOP_268_4
+  {SRCNAME max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4 MODELNAME max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4 RTLNAME max_pooling_fprop2_max_pooling_fprop2_Pipeline_VITIS_LOOP_237_4
     SUBMODULES {
       {MODELNAME max_pooling_fprop2_dcmp_64ns_64ns_1_2_no_dsp_1 RTLNAME max_pooling_fprop2_dcmp_64ns_64ns_1_2_no_dsp_1 BINDTYPE op TYPE dcmp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
       {MODELNAME max_pooling_fprop2_mul_17s_17s_17_1_1 RTLNAME max_pooling_fprop2_mul_17s_17s_17_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}

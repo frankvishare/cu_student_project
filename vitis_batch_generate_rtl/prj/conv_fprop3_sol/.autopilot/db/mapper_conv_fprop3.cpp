@@ -243,107 +243,121 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-struct __cosim_s400__ { char data[400]; };
-struct __cosim_s512__ { char data[512]; };
-extern "C" void conv_fprop3(char, char, char, volatile void *, volatile void *, volatile void *, Byte<8>*, Byte<8>*, Byte<8>*, Byte<8>*, volatile void *, volatile void *, volatile void *, Byte<512>*, Byte<8>*, volatile void *, volatile void *, volatile void *, Byte<8>*, Byte<8>*, Byte<8>*, Byte<8>*, volatile void *, volatile void *, volatile void *, Byte<512>*, Byte<8>*, Byte<1>*);
-extern "C" void apatb_conv_fprop3_hw(char __xlx_apatb_param_ap_core, char __xlx_apatb_param_ap_part, char __xlx_apatb_param_ap_parent, volatile void * __xlx_apatb_param_s4_pooling_layer_map_w, volatile void * __xlx_apatb_param_s4_pooling_layer_map_h, volatile void * __xlx_apatb_param_s4_pooling_layer_map_count, volatile void * __xlx_apatb_param_s4_pooling_layer_map_data, volatile void * __xlx_apatb_param_s4_pooling_layer_map_error, volatile void * __xlx_apatb_param_s4_pooling_layer_map_b, volatile void * __xlx_apatb_param_s4_pooling_layer_map_db, volatile void * __xlx_apatb_param_s4_pooling_layer_kernel_w, volatile void * __xlx_apatb_param_s4_pooling_layer_kernel_h, volatile void * __xlx_apatb_param_s4_pooling_layer_kernel_count, volatile void * __xlx_apatb_param_s4_pooling_layer_kernel, volatile void * __xlx_apatb_param_s4_pooling_layer_map_common, volatile void * __xlx_apatb_param_c5_conv_layer_map_w, volatile void * __xlx_apatb_param_c5_conv_layer_map_h, volatile void * __xlx_apatb_param_c5_conv_layer_map_count, volatile void * __xlx_apatb_param_c5_conv_layer_map_data, volatile void * __xlx_apatb_param_c5_conv_layer_map_error, volatile void * __xlx_apatb_param_c5_conv_layer_map_b, volatile void * __xlx_apatb_param_c5_conv_layer_map_db, volatile void * __xlx_apatb_param_c5_conv_layer_kernel_w, volatile void * __xlx_apatb_param_c5_conv_layer_kernel_h, volatile void * __xlx_apatb_param_c5_conv_layer_kernel_count, volatile void * __xlx_apatb_param_c5_conv_layer_kernel, volatile void * __xlx_apatb_param_c5_conv_layer_map_common, volatile void * __xlx_apatb_param_pconnection) {
+extern "C" void conv_fprop3(char, char, char, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, Byte<8>*, Byte<8>*, Byte<8>*, Byte<8>*, Byte<8>*, Byte<8>*, Byte<8>*, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, Byte<8>*, Byte<8>*, Byte<8>*, Byte<8>*, Byte<8>*, Byte<8>*, Byte<8>*, Byte<1>*);
+extern "C" void apatb_conv_fprop3_hw(char __xlx_apatb_param_ap_core, char __xlx_apatb_param_ap_part, char __xlx_apatb_param_ap_parent, volatile void * __xlx_apatb_param_s4_pooling_layer1_map_w, volatile void * __xlx_apatb_param_s4_pooling_layer1_map_h, volatile void * __xlx_apatb_param_s4_pooling_layer1_map_count, volatile void * __xlx_apatb_param_s4_pooling_layer1_kernel_w, volatile void * __xlx_apatb_param_s4_pooling_layer1_kernel_h, volatile void * __xlx_apatb_param_s4_pooling_layer1_kernel_count, volatile void * __xlx_apatb_param_s4_pooling_layer2_data, volatile void * __xlx_apatb_param_s4_pooling_layer2_error, volatile void * __xlx_apatb_param_s4_pooling_layer2_b, volatile void * __xlx_apatb_param_s4_pooling_layer2_db, volatile void * __xlx_apatb_param_s4_pooling_layer2_W, volatile void * __xlx_apatb_param_s4_pooling_layer2_dW, volatile void * __xlx_apatb_param_s4_pooling_layer2_map_common, volatile void * __xlx_apatb_param_c5_conv_layer1_map_w, volatile void * __xlx_apatb_param_c5_conv_layer1_map_h, volatile void * __xlx_apatb_param_c5_conv_layer1_map_count, volatile void * __xlx_apatb_param_c5_conv_layer1_kernel_w, volatile void * __xlx_apatb_param_c5_conv_layer1_kernel_h, volatile void * __xlx_apatb_param_c5_conv_layer1_kernel_count, volatile void * __xlx_apatb_param_c5_conv_layer2_data, volatile void * __xlx_apatb_param_c5_conv_layer2_error, volatile void * __xlx_apatb_param_c5_conv_layer2_b, volatile void * __xlx_apatb_param_c5_conv_layer2_db, volatile void * __xlx_apatb_param_c5_conv_layer2_W, volatile void * __xlx_apatb_param_c5_conv_layer2_dW, volatile void * __xlx_apatb_param_c5_conv_layer2_map_common, volatile void * __xlx_apatb_param_pconnection) {
 using hls::sim::createStream;
-  // Collect __xlx_s4_pooling_layer_map_data__tmp_vec
-std::vector<Byte<8>> __xlx_s4_pooling_layer_map_data__tmp_vec;
+  // Collect __xlx_s4_pooling_layer2_data__tmp_vec
+std::vector<Byte<8>> __xlx_s4_pooling_layer2_data__tmp_vec;
 for (size_t i = 0; i < 122880; ++i){
-__xlx_s4_pooling_layer_map_data__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer_map_data)[i]);
+__xlx_s4_pooling_layer2_data__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_data)[i]);
 }
-  int __xlx_size_param_s4_pooling_layer_map_data = 122880;
-  int __xlx_offset_param_s4_pooling_layer_map_data = 0;
-  int __xlx_offset_byte_param_s4_pooling_layer_map_data = 0*8;
-  // Collect __xlx_s4_pooling_layer_map_error__tmp_vec
-std::vector<Byte<8>> __xlx_s4_pooling_layer_map_error__tmp_vec;
+  int __xlx_size_param_s4_pooling_layer2_data = 122880;
+  int __xlx_offset_param_s4_pooling_layer2_data = 0;
+  int __xlx_offset_byte_param_s4_pooling_layer2_data = 0*8;
+  // Collect __xlx_s4_pooling_layer2_error__tmp_vec
+std::vector<Byte<8>> __xlx_s4_pooling_layer2_error__tmp_vec;
 for (size_t i = 0; i < 122880; ++i){
-__xlx_s4_pooling_layer_map_error__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer_map_error)[i]);
+__xlx_s4_pooling_layer2_error__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_error)[i]);
 }
-  int __xlx_size_param_s4_pooling_layer_map_error = 122880;
-  int __xlx_offset_param_s4_pooling_layer_map_error = 0;
-  int __xlx_offset_byte_param_s4_pooling_layer_map_error = 0*8;
-  // Collect __xlx_s4_pooling_layer_map_b__tmp_vec
-std::vector<Byte<8>> __xlx_s4_pooling_layer_map_b__tmp_vec;
+  int __xlx_size_param_s4_pooling_layer2_error = 122880;
+  int __xlx_offset_param_s4_pooling_layer2_error = 0;
+  int __xlx_offset_byte_param_s4_pooling_layer2_error = 0*8;
+  // Collect __xlx_s4_pooling_layer2_b__tmp_vec
+std::vector<Byte<8>> __xlx_s4_pooling_layer2_b__tmp_vec;
 for (size_t i = 0; i < 120; ++i){
-__xlx_s4_pooling_layer_map_b__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer_map_b)[i]);
+__xlx_s4_pooling_layer2_b__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_b)[i]);
 }
-  int __xlx_size_param_s4_pooling_layer_map_b = 120;
-  int __xlx_offset_param_s4_pooling_layer_map_b = 0;
-  int __xlx_offset_byte_param_s4_pooling_layer_map_b = 0*8;
-  // Collect __xlx_s4_pooling_layer_map_db__tmp_vec
-std::vector<Byte<8>> __xlx_s4_pooling_layer_map_db__tmp_vec;
+  int __xlx_size_param_s4_pooling_layer2_b = 120;
+  int __xlx_offset_param_s4_pooling_layer2_b = 0;
+  int __xlx_offset_byte_param_s4_pooling_layer2_b = 0*8;
+  // Collect __xlx_s4_pooling_layer2_db__tmp_vec
+std::vector<Byte<8>> __xlx_s4_pooling_layer2_db__tmp_vec;
 for (size_t i = 0; i < 120; ++i){
-__xlx_s4_pooling_layer_map_db__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer_map_db)[i]);
+__xlx_s4_pooling_layer2_db__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_db)[i]);
 }
-  int __xlx_size_param_s4_pooling_layer_map_db = 120;
-  int __xlx_offset_param_s4_pooling_layer_map_db = 0;
-  int __xlx_offset_byte_param_s4_pooling_layer_map_db = 0*8;
-  // Collect __xlx_s4_pooling_layer_kernel__tmp_vec
-std::vector<Byte<512>> __xlx_s4_pooling_layer_kernel__tmp_vec;
-for (size_t i = 0; i < 1920; ++i){
-__xlx_s4_pooling_layer_kernel__tmp_vec.push_back(((Byte<512>*)__xlx_apatb_param_s4_pooling_layer_kernel)[i]);
+  int __xlx_size_param_s4_pooling_layer2_db = 120;
+  int __xlx_offset_param_s4_pooling_layer2_db = 0;
+  int __xlx_offset_byte_param_s4_pooling_layer2_db = 0*8;
+  // Collect __xlx_s4_pooling_layer2_W__tmp_vec
+std::vector<Byte<8>> __xlx_s4_pooling_layer2_W__tmp_vec;
+for (size_t i = 0; i < 48000; ++i){
+__xlx_s4_pooling_layer2_W__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_W)[i]);
 }
-  int __xlx_size_param_s4_pooling_layer_kernel = 1920;
-  int __xlx_offset_param_s4_pooling_layer_kernel = 0;
-  int __xlx_offset_byte_param_s4_pooling_layer_kernel = 0*512;
-  // Collect __xlx_s4_pooling_layer_map_common__tmp_vec
-std::vector<Byte<8>> __xlx_s4_pooling_layer_map_common__tmp_vec;
+  int __xlx_size_param_s4_pooling_layer2_W = 48000;
+  int __xlx_offset_param_s4_pooling_layer2_W = 0;
+  int __xlx_offset_byte_param_s4_pooling_layer2_W = 0*8;
+  // Collect __xlx_s4_pooling_layer2_dW__tmp_vec
+std::vector<Byte<8>> __xlx_s4_pooling_layer2_dW__tmp_vec;
+for (size_t i = 0; i < 48000; ++i){
+__xlx_s4_pooling_layer2_dW__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_dW)[i]);
+}
+  int __xlx_size_param_s4_pooling_layer2_dW = 48000;
+  int __xlx_offset_param_s4_pooling_layer2_dW = 0;
+  int __xlx_offset_byte_param_s4_pooling_layer2_dW = 0*8;
+  // Collect __xlx_s4_pooling_layer2_map_common__tmp_vec
+std::vector<Byte<8>> __xlx_s4_pooling_layer2_map_common__tmp_vec;
 for (size_t i = 0; i < 1024; ++i){
-__xlx_s4_pooling_layer_map_common__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer_map_common)[i]);
+__xlx_s4_pooling_layer2_map_common__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_map_common)[i]);
 }
-  int __xlx_size_param_s4_pooling_layer_map_common = 1024;
-  int __xlx_offset_param_s4_pooling_layer_map_common = 0;
-  int __xlx_offset_byte_param_s4_pooling_layer_map_common = 0*8;
-  // Collect __xlx_c5_conv_layer_map_data__tmp_vec
-std::vector<Byte<8>> __xlx_c5_conv_layer_map_data__tmp_vec;
+  int __xlx_size_param_s4_pooling_layer2_map_common = 1024;
+  int __xlx_offset_param_s4_pooling_layer2_map_common = 0;
+  int __xlx_offset_byte_param_s4_pooling_layer2_map_common = 0*8;
+  // Collect __xlx_c5_conv_layer2_data__tmp_vec
+std::vector<Byte<8>> __xlx_c5_conv_layer2_data__tmp_vec;
 for (size_t i = 0; i < 122880; ++i){
-__xlx_c5_conv_layer_map_data__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer_map_data)[i]);
+__xlx_c5_conv_layer2_data__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_data)[i]);
 }
-  int __xlx_size_param_c5_conv_layer_map_data = 122880;
-  int __xlx_offset_param_c5_conv_layer_map_data = 0;
-  int __xlx_offset_byte_param_c5_conv_layer_map_data = 0*8;
-  // Collect __xlx_c5_conv_layer_map_error__tmp_vec
-std::vector<Byte<8>> __xlx_c5_conv_layer_map_error__tmp_vec;
+  int __xlx_size_param_c5_conv_layer2_data = 122880;
+  int __xlx_offset_param_c5_conv_layer2_data = 0;
+  int __xlx_offset_byte_param_c5_conv_layer2_data = 0*8;
+  // Collect __xlx_c5_conv_layer2_error__tmp_vec
+std::vector<Byte<8>> __xlx_c5_conv_layer2_error__tmp_vec;
 for (size_t i = 0; i < 122880; ++i){
-__xlx_c5_conv_layer_map_error__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer_map_error)[i]);
+__xlx_c5_conv_layer2_error__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_error)[i]);
 }
-  int __xlx_size_param_c5_conv_layer_map_error = 122880;
-  int __xlx_offset_param_c5_conv_layer_map_error = 0;
-  int __xlx_offset_byte_param_c5_conv_layer_map_error = 0*8;
-  // Collect __xlx_c5_conv_layer_map_b__tmp_vec
-std::vector<Byte<8>> __xlx_c5_conv_layer_map_b__tmp_vec;
+  int __xlx_size_param_c5_conv_layer2_error = 122880;
+  int __xlx_offset_param_c5_conv_layer2_error = 0;
+  int __xlx_offset_byte_param_c5_conv_layer2_error = 0*8;
+  // Collect __xlx_c5_conv_layer2_b__tmp_vec
+std::vector<Byte<8>> __xlx_c5_conv_layer2_b__tmp_vec;
 for (size_t i = 0; i < 120; ++i){
-__xlx_c5_conv_layer_map_b__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer_map_b)[i]);
+__xlx_c5_conv_layer2_b__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_b)[i]);
 }
-  int __xlx_size_param_c5_conv_layer_map_b = 120;
-  int __xlx_offset_param_c5_conv_layer_map_b = 0;
-  int __xlx_offset_byte_param_c5_conv_layer_map_b = 0*8;
-  // Collect __xlx_c5_conv_layer_map_db__tmp_vec
-std::vector<Byte<8>> __xlx_c5_conv_layer_map_db__tmp_vec;
+  int __xlx_size_param_c5_conv_layer2_b = 120;
+  int __xlx_offset_param_c5_conv_layer2_b = 0;
+  int __xlx_offset_byte_param_c5_conv_layer2_b = 0*8;
+  // Collect __xlx_c5_conv_layer2_db__tmp_vec
+std::vector<Byte<8>> __xlx_c5_conv_layer2_db__tmp_vec;
 for (size_t i = 0; i < 120; ++i){
-__xlx_c5_conv_layer_map_db__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer_map_db)[i]);
+__xlx_c5_conv_layer2_db__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_db)[i]);
 }
-  int __xlx_size_param_c5_conv_layer_map_db = 120;
-  int __xlx_offset_param_c5_conv_layer_map_db = 0;
-  int __xlx_offset_byte_param_c5_conv_layer_map_db = 0*8;
-  // Collect __xlx_c5_conv_layer_kernel__tmp_vec
-std::vector<Byte<512>> __xlx_c5_conv_layer_kernel__tmp_vec;
-for (size_t i = 0; i < 1920; ++i){
-__xlx_c5_conv_layer_kernel__tmp_vec.push_back(((Byte<512>*)__xlx_apatb_param_c5_conv_layer_kernel)[i]);
+  int __xlx_size_param_c5_conv_layer2_db = 120;
+  int __xlx_offset_param_c5_conv_layer2_db = 0;
+  int __xlx_offset_byte_param_c5_conv_layer2_db = 0*8;
+  // Collect __xlx_c5_conv_layer2_W__tmp_vec
+std::vector<Byte<8>> __xlx_c5_conv_layer2_W__tmp_vec;
+for (size_t i = 0; i < 48000; ++i){
+__xlx_c5_conv_layer2_W__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_W)[i]);
 }
-  int __xlx_size_param_c5_conv_layer_kernel = 1920;
-  int __xlx_offset_param_c5_conv_layer_kernel = 0;
-  int __xlx_offset_byte_param_c5_conv_layer_kernel = 0*512;
-  // Collect __xlx_c5_conv_layer_map_common__tmp_vec
-std::vector<Byte<8>> __xlx_c5_conv_layer_map_common__tmp_vec;
+  int __xlx_size_param_c5_conv_layer2_W = 48000;
+  int __xlx_offset_param_c5_conv_layer2_W = 0;
+  int __xlx_offset_byte_param_c5_conv_layer2_W = 0*8;
+  // Collect __xlx_c5_conv_layer2_dW__tmp_vec
+std::vector<Byte<8>> __xlx_c5_conv_layer2_dW__tmp_vec;
+for (size_t i = 0; i < 48000; ++i){
+__xlx_c5_conv_layer2_dW__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_dW)[i]);
+}
+  int __xlx_size_param_c5_conv_layer2_dW = 48000;
+  int __xlx_offset_param_c5_conv_layer2_dW = 0;
+  int __xlx_offset_byte_param_c5_conv_layer2_dW = 0*8;
+  // Collect __xlx_c5_conv_layer2_map_common__tmp_vec
+std::vector<Byte<8>> __xlx_c5_conv_layer2_map_common__tmp_vec;
 for (size_t i = 0; i < 1024; ++i){
-__xlx_c5_conv_layer_map_common__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer_map_common)[i]);
+__xlx_c5_conv_layer2_map_common__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_map_common)[i]);
 }
-  int __xlx_size_param_c5_conv_layer_map_common = 1024;
-  int __xlx_offset_param_c5_conv_layer_map_common = 0;
-  int __xlx_offset_byte_param_c5_conv_layer_map_common = 0*8;
+  int __xlx_size_param_c5_conv_layer2_map_common = 1024;
+  int __xlx_offset_param_c5_conv_layer2_map_common = 0;
+  int __xlx_offset_byte_param_c5_conv_layer2_map_common = 0*8;
   // Collect __xlx_pconnection__tmp_vec
 std::vector<Byte<1>> __xlx_pconnection__tmp_vec;
 for (size_t i = 0; i < 96; ++i){
@@ -353,54 +367,62 @@ __xlx_pconnection__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_pconnection)[i
   int __xlx_offset_param_pconnection = 0;
   int __xlx_offset_byte_param_pconnection = 0*1;
   // DUT call
-  conv_fprop3(__xlx_apatb_param_ap_core, __xlx_apatb_param_ap_part, __xlx_apatb_param_ap_parent, __xlx_apatb_param_s4_pooling_layer_map_w, __xlx_apatb_param_s4_pooling_layer_map_h, __xlx_apatb_param_s4_pooling_layer_map_count, __xlx_s4_pooling_layer_map_data__tmp_vec.data(), __xlx_s4_pooling_layer_map_error__tmp_vec.data(), __xlx_s4_pooling_layer_map_b__tmp_vec.data(), __xlx_s4_pooling_layer_map_db__tmp_vec.data(), __xlx_apatb_param_s4_pooling_layer_kernel_w, __xlx_apatb_param_s4_pooling_layer_kernel_h, __xlx_apatb_param_s4_pooling_layer_kernel_count, __xlx_s4_pooling_layer_kernel__tmp_vec.data(), __xlx_s4_pooling_layer_map_common__tmp_vec.data(), __xlx_apatb_param_c5_conv_layer_map_w, __xlx_apatb_param_c5_conv_layer_map_h, __xlx_apatb_param_c5_conv_layer_map_count, __xlx_c5_conv_layer_map_data__tmp_vec.data(), __xlx_c5_conv_layer_map_error__tmp_vec.data(), __xlx_c5_conv_layer_map_b__tmp_vec.data(), __xlx_c5_conv_layer_map_db__tmp_vec.data(), __xlx_apatb_param_c5_conv_layer_kernel_w, __xlx_apatb_param_c5_conv_layer_kernel_h, __xlx_apatb_param_c5_conv_layer_kernel_count, __xlx_c5_conv_layer_kernel__tmp_vec.data(), __xlx_c5_conv_layer_map_common__tmp_vec.data(), __xlx_pconnection__tmp_vec.data());
-// print __xlx_apatb_param_s4_pooling_layer_map_data
-for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer_map_data; ++i) {
-((Byte<8>*)__xlx_apatb_param_s4_pooling_layer_map_data)[i] = __xlx_s4_pooling_layer_map_data__tmp_vec[__xlx_offset_param_s4_pooling_layer_map_data+i];
+  conv_fprop3(__xlx_apatb_param_ap_core, __xlx_apatb_param_ap_part, __xlx_apatb_param_ap_parent, __xlx_apatb_param_s4_pooling_layer1_map_w, __xlx_apatb_param_s4_pooling_layer1_map_h, __xlx_apatb_param_s4_pooling_layer1_map_count, __xlx_apatb_param_s4_pooling_layer1_kernel_w, __xlx_apatb_param_s4_pooling_layer1_kernel_h, __xlx_apatb_param_s4_pooling_layer1_kernel_count, __xlx_s4_pooling_layer2_data__tmp_vec.data(), __xlx_s4_pooling_layer2_error__tmp_vec.data(), __xlx_s4_pooling_layer2_b__tmp_vec.data(), __xlx_s4_pooling_layer2_db__tmp_vec.data(), __xlx_s4_pooling_layer2_W__tmp_vec.data(), __xlx_s4_pooling_layer2_dW__tmp_vec.data(), __xlx_s4_pooling_layer2_map_common__tmp_vec.data(), __xlx_apatb_param_c5_conv_layer1_map_w, __xlx_apatb_param_c5_conv_layer1_map_h, __xlx_apatb_param_c5_conv_layer1_map_count, __xlx_apatb_param_c5_conv_layer1_kernel_w, __xlx_apatb_param_c5_conv_layer1_kernel_h, __xlx_apatb_param_c5_conv_layer1_kernel_count, __xlx_c5_conv_layer2_data__tmp_vec.data(), __xlx_c5_conv_layer2_error__tmp_vec.data(), __xlx_c5_conv_layer2_b__tmp_vec.data(), __xlx_c5_conv_layer2_db__tmp_vec.data(), __xlx_c5_conv_layer2_W__tmp_vec.data(), __xlx_c5_conv_layer2_dW__tmp_vec.data(), __xlx_c5_conv_layer2_map_common__tmp_vec.data(), __xlx_pconnection__tmp_vec.data());
+// print __xlx_apatb_param_s4_pooling_layer2_data
+for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer2_data; ++i) {
+((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_data)[i] = __xlx_s4_pooling_layer2_data__tmp_vec[__xlx_offset_param_s4_pooling_layer2_data+i];
 }
-// print __xlx_apatb_param_s4_pooling_layer_map_error
-for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer_map_error; ++i) {
-((Byte<8>*)__xlx_apatb_param_s4_pooling_layer_map_error)[i] = __xlx_s4_pooling_layer_map_error__tmp_vec[__xlx_offset_param_s4_pooling_layer_map_error+i];
+// print __xlx_apatb_param_s4_pooling_layer2_error
+for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer2_error; ++i) {
+((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_error)[i] = __xlx_s4_pooling_layer2_error__tmp_vec[__xlx_offset_param_s4_pooling_layer2_error+i];
 }
-// print __xlx_apatb_param_s4_pooling_layer_map_b
-for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer_map_b; ++i) {
-((Byte<8>*)__xlx_apatb_param_s4_pooling_layer_map_b)[i] = __xlx_s4_pooling_layer_map_b__tmp_vec[__xlx_offset_param_s4_pooling_layer_map_b+i];
+// print __xlx_apatb_param_s4_pooling_layer2_b
+for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer2_b; ++i) {
+((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_b)[i] = __xlx_s4_pooling_layer2_b__tmp_vec[__xlx_offset_param_s4_pooling_layer2_b+i];
 }
-// print __xlx_apatb_param_s4_pooling_layer_map_db
-for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer_map_db; ++i) {
-((Byte<8>*)__xlx_apatb_param_s4_pooling_layer_map_db)[i] = __xlx_s4_pooling_layer_map_db__tmp_vec[__xlx_offset_param_s4_pooling_layer_map_db+i];
+// print __xlx_apatb_param_s4_pooling_layer2_db
+for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer2_db; ++i) {
+((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_db)[i] = __xlx_s4_pooling_layer2_db__tmp_vec[__xlx_offset_param_s4_pooling_layer2_db+i];
 }
-// print __xlx_apatb_param_s4_pooling_layer_kernel
-for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer_kernel; ++i) {
-((Byte<512>*)__xlx_apatb_param_s4_pooling_layer_kernel)[i] = __xlx_s4_pooling_layer_kernel__tmp_vec[__xlx_offset_param_s4_pooling_layer_kernel+i];
+// print __xlx_apatb_param_s4_pooling_layer2_W
+for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer2_W; ++i) {
+((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_W)[i] = __xlx_s4_pooling_layer2_W__tmp_vec[__xlx_offset_param_s4_pooling_layer2_W+i];
 }
-// print __xlx_apatb_param_s4_pooling_layer_map_common
-for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer_map_common; ++i) {
-((Byte<8>*)__xlx_apatb_param_s4_pooling_layer_map_common)[i] = __xlx_s4_pooling_layer_map_common__tmp_vec[__xlx_offset_param_s4_pooling_layer_map_common+i];
+// print __xlx_apatb_param_s4_pooling_layer2_dW
+for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer2_dW; ++i) {
+((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_dW)[i] = __xlx_s4_pooling_layer2_dW__tmp_vec[__xlx_offset_param_s4_pooling_layer2_dW+i];
 }
-// print __xlx_apatb_param_c5_conv_layer_map_data
-for (size_t i = 0; i < __xlx_size_param_c5_conv_layer_map_data; ++i) {
-((Byte<8>*)__xlx_apatb_param_c5_conv_layer_map_data)[i] = __xlx_c5_conv_layer_map_data__tmp_vec[__xlx_offset_param_c5_conv_layer_map_data+i];
+// print __xlx_apatb_param_s4_pooling_layer2_map_common
+for (size_t i = 0; i < __xlx_size_param_s4_pooling_layer2_map_common; ++i) {
+((Byte<8>*)__xlx_apatb_param_s4_pooling_layer2_map_common)[i] = __xlx_s4_pooling_layer2_map_common__tmp_vec[__xlx_offset_param_s4_pooling_layer2_map_common+i];
 }
-// print __xlx_apatb_param_c5_conv_layer_map_error
-for (size_t i = 0; i < __xlx_size_param_c5_conv_layer_map_error; ++i) {
-((Byte<8>*)__xlx_apatb_param_c5_conv_layer_map_error)[i] = __xlx_c5_conv_layer_map_error__tmp_vec[__xlx_offset_param_c5_conv_layer_map_error+i];
+// print __xlx_apatb_param_c5_conv_layer2_data
+for (size_t i = 0; i < __xlx_size_param_c5_conv_layer2_data; ++i) {
+((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_data)[i] = __xlx_c5_conv_layer2_data__tmp_vec[__xlx_offset_param_c5_conv_layer2_data+i];
 }
-// print __xlx_apatb_param_c5_conv_layer_map_b
-for (size_t i = 0; i < __xlx_size_param_c5_conv_layer_map_b; ++i) {
-((Byte<8>*)__xlx_apatb_param_c5_conv_layer_map_b)[i] = __xlx_c5_conv_layer_map_b__tmp_vec[__xlx_offset_param_c5_conv_layer_map_b+i];
+// print __xlx_apatb_param_c5_conv_layer2_error
+for (size_t i = 0; i < __xlx_size_param_c5_conv_layer2_error; ++i) {
+((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_error)[i] = __xlx_c5_conv_layer2_error__tmp_vec[__xlx_offset_param_c5_conv_layer2_error+i];
 }
-// print __xlx_apatb_param_c5_conv_layer_map_db
-for (size_t i = 0; i < __xlx_size_param_c5_conv_layer_map_db; ++i) {
-((Byte<8>*)__xlx_apatb_param_c5_conv_layer_map_db)[i] = __xlx_c5_conv_layer_map_db__tmp_vec[__xlx_offset_param_c5_conv_layer_map_db+i];
+// print __xlx_apatb_param_c5_conv_layer2_b
+for (size_t i = 0; i < __xlx_size_param_c5_conv_layer2_b; ++i) {
+((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_b)[i] = __xlx_c5_conv_layer2_b__tmp_vec[__xlx_offset_param_c5_conv_layer2_b+i];
 }
-// print __xlx_apatb_param_c5_conv_layer_kernel
-for (size_t i = 0; i < __xlx_size_param_c5_conv_layer_kernel; ++i) {
-((Byte<512>*)__xlx_apatb_param_c5_conv_layer_kernel)[i] = __xlx_c5_conv_layer_kernel__tmp_vec[__xlx_offset_param_c5_conv_layer_kernel+i];
+// print __xlx_apatb_param_c5_conv_layer2_db
+for (size_t i = 0; i < __xlx_size_param_c5_conv_layer2_db; ++i) {
+((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_db)[i] = __xlx_c5_conv_layer2_db__tmp_vec[__xlx_offset_param_c5_conv_layer2_db+i];
 }
-// print __xlx_apatb_param_c5_conv_layer_map_common
-for (size_t i = 0; i < __xlx_size_param_c5_conv_layer_map_common; ++i) {
-((Byte<8>*)__xlx_apatb_param_c5_conv_layer_map_common)[i] = __xlx_c5_conv_layer_map_common__tmp_vec[__xlx_offset_param_c5_conv_layer_map_common+i];
+// print __xlx_apatb_param_c5_conv_layer2_W
+for (size_t i = 0; i < __xlx_size_param_c5_conv_layer2_W; ++i) {
+((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_W)[i] = __xlx_c5_conv_layer2_W__tmp_vec[__xlx_offset_param_c5_conv_layer2_W+i];
+}
+// print __xlx_apatb_param_c5_conv_layer2_dW
+for (size_t i = 0; i < __xlx_size_param_c5_conv_layer2_dW; ++i) {
+((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_dW)[i] = __xlx_c5_conv_layer2_dW__tmp_vec[__xlx_offset_param_c5_conv_layer2_dW+i];
+}
+// print __xlx_apatb_param_c5_conv_layer2_map_common
+for (size_t i = 0; i < __xlx_size_param_c5_conv_layer2_map_common; ++i) {
+((Byte<8>*)__xlx_apatb_param_c5_conv_layer2_map_common)[i] = __xlx_c5_conv_layer2_map_common__tmp_vec[__xlx_offset_param_c5_conv_layer2_map_common+i];
 }
 // print __xlx_apatb_param_pconnection
 for (size_t i = 0; i < __xlx_size_param_pconnection; ++i) {

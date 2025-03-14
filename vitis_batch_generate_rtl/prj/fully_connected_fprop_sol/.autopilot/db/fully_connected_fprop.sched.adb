@@ -9,7 +9,7 @@
 		<module_structure>Sequential</module_structure>
 		<ret_bitwidth>0</ret_bitwidth>
 		<ports class_id="2" tracking_level="0" version="0">
-			<count>27</count>
+			<count>29</count>
 			<item_version>0</item_version>
 			<item class_id="3" tracking_level="1" version="0" object_id="_1">
 				<Value class_id="4" tracking_level="0" version="0">
@@ -124,7 +124,7 @@
 					<Obj>
 						<type>1</type>
 						<id>4</id>
-						<name>c5_conv_layer_map_w</name>
+						<name>c5_conv_layer1_map_w</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -134,7 +134,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>c5_conv_layer.map_w</originalName>
+						<originalName>c5_conv_layer1.map_w</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -160,7 +160,7 @@
 					<Obj>
 						<type>1</type>
 						<id>5</id>
-						<name>c5_conv_layer_map_h</name>
+						<name>c5_conv_layer1_map_h</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -170,7 +170,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>c5_conv_layer.map_h</originalName>
+						<originalName>c5_conv_layer1.map_h</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -196,7 +196,7 @@
 					<Obj>
 						<type>1</type>
 						<id>6</id>
-						<name>c5_conv_layer_map_count</name>
+						<name>c5_conv_layer1_map_count</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -206,7 +206,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>c5_conv_layer.map_count</originalName>
+						<originalName>c5_conv_layer1.map_count</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -232,7 +232,7 @@
 					<Obj>
 						<type>1</type>
 						<id>7</id>
-						<name>c5_conv_layer_map_data</name>
+						<name>c5_conv_layer1_kernel_w</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -242,7 +242,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>c5_conv_layer.map.data</originalName>
+						<originalName>c5_conv_layer1.kernel_w</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -253,11 +253,11 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
-				<if_type>1</if_type>
-				<array_size>122880</array_size>
+				<if_type>0</if_type>
+				<array_size>0</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -268,7 +268,7 @@
 					<Obj>
 						<type>1</type>
 						<id>8</id>
-						<name>c5_conv_layer_map_error</name>
+						<name>c5_conv_layer1_kernel_h</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -278,7 +278,115 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>c5_conv_layer.map.error</originalName>
+						<originalName>c5_conv_layer1.kernel_h</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<direction>0</direction>
+				<if_type>0</if_type>
+				<array_size>0</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_9">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>9</id>
+						<name>c5_conv_layer1_kernel_count</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>c5_conv_layer1.kernel_count</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<direction>0</direction>
+				<if_type>0</if_type>
+				<array_size>0</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_10">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>10</id>
+						<name>c5_conv_layer2_data</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>c5_conv_layer2.data</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>64</bitwidth>
+				</Value>
+				<direction>0</direction>
+				<if_type>1</if_type>
+				<array_size>122880</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_11">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>11</id>
+						<name>c5_conv_layer2_error</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>c5_conv_layer2.error</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -299,120 +407,12 @@
 					<item_version>0</item_version>
 				</bit_vecs>
 			</item>
-			<item class_id_reference="3" object_id="_9">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>9</id>
-						<name>c5_conv_layer_map_b</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>64</bitwidth>
-				</Value>
-				<direction>3</direction>
-				<if_type>1</if_type>
-				<array_size>120</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
-			<item class_id_reference="3" object_id="_10">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>10</id>
-						<name>c5_conv_layer_map_db</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>64</bitwidth>
-				</Value>
-				<direction>3</direction>
-				<if_type>1</if_type>
-				<array_size>120</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
-			<item class_id_reference="3" object_id="_11">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>11</id>
-						<name>c5_conv_layer_kernel_w</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName>c5_conv_layer.kernel_w</originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<direction>0</direction>
-				<if_type>0</if_type>
-				<array_size>0</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
 			<item class_id_reference="3" object_id="_12">
 				<Value>
 					<Obj>
 						<type>1</type>
 						<id>12</id>
-						<name>c5_conv_layer_kernel_h</name>
+						<name>c5_conv_layer2_b</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -422,7 +422,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>c5_conv_layer.kernel_h</originalName>
+						<originalName></originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -433,11 +433,11 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>64</bitwidth>
 				</Value>
-				<direction>0</direction>
-				<if_type>0</if_type>
-				<array_size>0</array_size>
+				<direction>3</direction>
+				<if_type>1</if_type>
+				<array_size>120</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -448,43 +448,7 @@
 					<Obj>
 						<type>1</type>
 						<id>13</id>
-						<name>c5_conv_layer_kernel_count</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName>c5_conv_layer.kernel_count</originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<direction>0</direction>
-				<if_type>0</if_type>
-				<array_size>0</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
-			<item class_id_reference="3" object_id="_14">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>14</id>
-						<name>c5_conv_layer_kernel</name>
+						<name>c5_conv_layer2_db</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -505,11 +469,47 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>3200</bitwidth>
+					<bitwidth>64</bitwidth>
 				</Value>
 				<direction>3</direction>
 				<if_type>1</if_type>
-				<array_size>1920</array_size>
+				<array_size>120</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_14">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>14</id>
+						<name>c5_conv_layer2_W</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>c5_conv_layer2.W</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>64</bitwidth>
+				</Value>
+				<direction>3</direction>
+				<if_type>1</if_type>
+				<array_size>48000</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -520,7 +520,43 @@
 					<Obj>
 						<type>1</type>
 						<id>15</id>
-						<name>c5_conv_layer_map_common</name>
+						<name>c5_conv_layer2_dW</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>c5_conv_layer2.dW</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>64</bitwidth>
+				</Value>
+				<direction>3</direction>
+				<if_type>1</if_type>
+				<array_size>48000</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_16">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>16</id>
+						<name>c5_conv_layer2_map_common</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -551,48 +587,12 @@
 					<item_version>0</item_version>
 				</bit_vecs>
 			</item>
-			<item class_id_reference="3" object_id="_16">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>16</id>
-						<name>output_layer_map_w</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName>output_layer.map_w</originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<direction>0</direction>
-				<if_type>0</if_type>
-				<array_size>0</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
 			<item class_id_reference="3" object_id="_17">
 				<Value>
 					<Obj>
 						<type>1</type>
 						<id>17</id>
-						<name>output_layer_map_h</name>
+						<name>output_layer1_map_w</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -602,7 +602,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>output_layer.map_h</originalName>
+						<originalName>output_layer1.map_w</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -628,7 +628,7 @@
 					<Obj>
 						<type>1</type>
 						<id>18</id>
-						<name>output_layer_map_count</name>
+						<name>output_layer1_map_h</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -638,7 +638,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>output_layer.map_count</originalName>
+						<originalName>output_layer1.map_h</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -664,7 +664,7 @@
 					<Obj>
 						<type>1</type>
 						<id>19</id>
-						<name>output_layer_map_data</name>
+						<name>output_layer1_map_count</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -674,7 +674,151 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>output_layer.map.data</originalName>
+						<originalName>output_layer1.map_count</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<direction>0</direction>
+				<if_type>0</if_type>
+				<array_size>0</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_20">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>20</id>
+						<name>output_layer1_kernel_w</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>output_layer1.kernel_w</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<direction>0</direction>
+				<if_type>0</if_type>
+				<array_size>0</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_21">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>21</id>
+						<name>output_layer1_kernel_h</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>output_layer1.kernel_h</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<direction>0</direction>
+				<if_type>0</if_type>
+				<array_size>0</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_22">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>22</id>
+						<name>output_layer1_kernel_count</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>output_layer1.kernel_count</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<direction>0</direction>
+				<if_type>0</if_type>
+				<array_size>0</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_23">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>23</id>
+						<name>output_layer2_data</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>output_layer2.data</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -695,12 +839,12 @@
 					<item_version>0</item_version>
 				</bit_vecs>
 			</item>
-			<item class_id_reference="3" object_id="_20">
+			<item class_id_reference="3" object_id="_24">
 				<Value>
 					<Obj>
 						<type>1</type>
-						<id>20</id>
-						<name>output_layer_map_error</name>
+						<id>24</id>
+						<name>output_layer2_error</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -710,7 +854,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>output_layer.map.error</originalName>
+						<originalName>output_layer2.error</originalName>
 						<rtlName></rtlName>
 						<control></control>
 						<opType></opType>
@@ -731,12 +875,12 @@
 					<item_version>0</item_version>
 				</bit_vecs>
 			</item>
-			<item class_id_reference="3" object_id="_21">
+			<item class_id_reference="3" object_id="_25">
 				<Value>
 					<Obj>
 						<type>1</type>
-						<id>21</id>
-						<name>output_layer_map_b</name>
+						<id>25</id>
+						<name>output_layer2_b</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -767,12 +911,12 @@
 					<item_version>0</item_version>
 				</bit_vecs>
 			</item>
-			<item class_id_reference="3" object_id="_22">
+			<item class_id_reference="3" object_id="_26">
 				<Value>
 					<Obj>
 						<type>1</type>
-						<id>22</id>
-						<name>output_layer_map_db</name>
+						<id>26</id>
+						<name>output_layer2_db</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -803,156 +947,84 @@
 					<item_version>0</item_version>
 				</bit_vecs>
 			</item>
-			<item class_id_reference="3" object_id="_23">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>23</id>
-						<name>output_layer_kernel_w</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName>output_layer.kernel_w</originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<direction>0</direction>
-				<if_type>0</if_type>
-				<array_size>0</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
-			<item class_id_reference="3" object_id="_24">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>24</id>
-						<name>output_layer_kernel_h</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName>output_layer.kernel_h</originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<direction>0</direction>
-				<if_type>0</if_type>
-				<array_size>0</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
-			<item class_id_reference="3" object_id="_25">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>25</id>
-						<name>output_layer_kernel_count</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName>output_layer.kernel_count</originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<direction>0</direction>
-				<if_type>0</if_type>
-				<array_size>0</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
-			<item class_id_reference="3" object_id="_26">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>26</id>
-						<name>output_layer_kernel</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>3200</bitwidth>
-				</Value>
-				<direction>0</direction>
-				<if_type>1</if_type>
-				<array_size>1920</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
 			<item class_id_reference="3" object_id="_27">
 				<Value>
 					<Obj>
 						<type>1</type>
 						<id>27</id>
-						<name>output_layer_map_common</name>
+						<name>output_layer2_W</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>output_layer2.W</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>64</bitwidth>
+				</Value>
+				<direction>0</direction>
+				<if_type>1</if_type>
+				<array_size>48000</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_28">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>28</id>
+						<name>output_layer2_dW</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName>output_layer2.dW</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>64</bitwidth>
+				</Value>
+				<direction>3</direction>
+				<if_type>1</if_type>
+				<array_size>48000</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_29">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>29</id>
+						<name>output_layer2_map_common</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -987,15 +1059,15 @@
 		<nodes class_id="8" tracking_level="0" version="0">
 			<count>39</count>
 			<item_version>0</item_version>
-			<item class_id="9" tracking_level="1" version="0" object_id="_28">
+			<item class_id="9" tracking_level="1" version="0" object_id="_30">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>28</id>
+						<id>30</id>
 						<name>i</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1011,7 +1083,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1032,7 +1104,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>128</item>
+					<item>134</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -1043,11 +1115,11 @@
 				<m_topoIndex>1</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_29">
+			<item class_id_reference="9" object_id="_31">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>29</id>
+						<id>31</id>
 						<name>sum_loc</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1074,7 +1146,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>130</item>
+					<item>136</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -1085,12 +1157,12 @@
 				<m_topoIndex>2</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_30">
+			<item class_id_reference="9" object_id="_32">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>85</id>
-						<name>output_layer_map_count_read</name>
+						<id>91</id>
+						<name>output_layer1_map_count_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1116,8 +1188,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>132</item>
-					<item>133</item>
+					<item>138</item>
+					<item>139</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -1128,12 +1200,12 @@
 				<m_topoIndex>3</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_31">
+			<item class_id_reference="9" object_id="_33">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>86</id>
-						<name>c5_conv_layer_map_count_read</name>
+						<id>92</id>
+						<name>c5_conv_layer1_map_count_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1159,8 +1231,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>134</item>
-					<item>135</item>
+					<item>140</item>
+					<item>141</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -1171,15 +1243,15 @@
 				<m_topoIndex>4</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_32">
+			<item class_id_reference="9" object_id="_34">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>87</id>
-						<name>trunc_ln287</name>
+						<id>93</id>
+						<name>trunc_ln259</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1195,7 +1267,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1216,7 +1288,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>136</item>
+					<item>142</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -1227,15 +1299,15 @@
 				<m_topoIndex>5</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_33">
+			<item class_id_reference="9" object_id="_35">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>88</id>
-						<name>i_write_ln287</name>
+						<id>94</id>
+						<name>i_write_ln259</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1251,7 +1323,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1272,8 +1344,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>138</item>
-					<item>139</item>
+					<item>144</item>
+					<item>145</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -1284,15 +1356,15 @@
 				<m_topoIndex>6</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_34">
+			<item class_id_reference="9" object_id="_36">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>89</id>
-						<name>br_ln287</name>
+						<id>95</id>
+						<name>br_ln259</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1308,7 +1380,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1329,7 +1401,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>140</item>
+					<item>146</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -1340,15 +1412,15 @@
 				<m_topoIndex>7</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_35">
+			<item class_id_reference="9" object_id="_37">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>91</id>
+						<id>97</id>
 						<name>i_1</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1364,7 +1436,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1385,8 +1457,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>141</item>
-					<item>823</item>
+					<item>147</item>
+					<item>873</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -1397,15 +1469,15 @@
 				<m_topoIndex>8</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_36">
+			<item class_id_reference="9" object_id="_38">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>92</id>
-						<name>zext_ln287_1</name>
+						<id>98</id>
+						<name>zext_ln259_1</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1421,7 +1493,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1442,7 +1514,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>142</item>
+					<item>148</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -1453,15 +1525,15 @@
 				<m_topoIndex>9</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_37">
+			<item class_id_reference="9" object_id="_39">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>93</id>
-						<name>icmp_ln287</name>
+						<id>99</id>
+						<name>icmp_ln259</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1477,7 +1549,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1498,8 +1570,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>143</item>
-					<item>144</item>
+					<item>149</item>
+					<item>150</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -1510,15 +1582,15 @@
 				<m_topoIndex>10</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_38">
+			<item class_id_reference="9" object_id="_40">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>94</id>
-						<name>add_ln287</name>
+						<id>100</id>
+						<name>add_ln259</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1534,7 +1606,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1555,8 +1627,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>145</item>
-					<item>147</item>
+					<item>151</item>
+					<item>153</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -1567,15 +1639,15 @@
 				<m_topoIndex>11</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_39">
+			<item class_id_reference="9" object_id="_41">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>95</id>
-						<name>br_ln287</name>
+						<id>101</id>
+						<name>br_ln259</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1591,7 +1663,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1612,9 +1684,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>148</item>
-					<item>149</item>
-					<item>150</item>
+					<item>154</item>
+					<item>155</item>
+					<item>156</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -1625,15 +1697,15 @@
 				<m_topoIndex>12</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_40">
+			<item class_id_reference="9" object_id="_42">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>97</id>
-						<name>zext_ln287</name>
+						<id>103</id>
+						<name>zext_ln259</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1649,7 +1721,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1670,7 +1742,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>151</item>
+					<item>157</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -1681,15 +1753,15 @@
 				<m_topoIndex>13</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_41">
+			<item class_id_reference="9" object_id="_43">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>98</id>
-						<name>shl_ln296</name>
+						<id>104</id>
+						<name>shl_ln268</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>296</lineNumber>
+						<lineNumber>268</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1705,7 +1777,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 								</second>
 							</item>
@@ -1726,8 +1798,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>152</item>
-					<item>154</item>
+					<item>158</item>
+					<item>160</item>
 				</oprand_edges>
 				<opcode>shl</opcode>
 				<m_Display>0</m_Display>
@@ -1738,15 +1810,15 @@
 				<m_topoIndex>34</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_42">
+			<item class_id_reference="9" object_id="_44">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>99</id>
-						<name>zext_ln296</name>
+						<id>105</id>
+						<name>zext_ln268</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>296</lineNumber>
+						<lineNumber>268</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1762,7 +1834,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 								</second>
 							</item>
@@ -1783,7 +1855,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>155</item>
+					<item>161</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -1794,15 +1866,15 @@
 				<m_topoIndex>35</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_43">
+			<item class_id_reference="9" object_id="_45">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>100</id>
-						<name>output_layer_map_data_addr</name>
+						<id>106</id>
+						<name>output_layer2_data_addr</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>296</lineNumber>
+						<lineNumber>268</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1818,7 +1890,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 								</second>
 							</item>
@@ -1839,9 +1911,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>156</item>
-					<item>158</item>
-					<item>159</item>
+					<item>162</item>
+					<item>164</item>
+					<item>165</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -1852,15 +1924,15 @@
 				<m_topoIndex>36</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_44">
+			<item class_id_reference="9" object_id="_46">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>101</id>
-						<name>trunc_ln287_1</name>
+						<id>107</id>
+						<name>trunc_ln259_1</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1876,7 +1948,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1897,7 +1969,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>160</item>
+					<item>166</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -1908,15 +1980,15 @@
 				<m_topoIndex>14</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_45">
+			<item class_id_reference="9" object_id="_47">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>103</id>
-						<name>_ln287</name>
+						<id>109</id>
+						<name>_ln259</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -1932,7 +2004,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -1953,28 +2025,28 @@
 				<oprand_edges>
 					<count>7</count>
 					<item_version>0</item_version>
-					<item>162</item>
-					<item>163</item>
-					<item>164</item>
-					<item>165</item>
-					<item>166</item>
-					<item>167</item>
 					<item>168</item>
+					<item>169</item>
+					<item>170</item>
+					<item>171</item>
+					<item>172</item>
+					<item>173</item>
+					<item>174</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.26</m_delay>
+				<m_delay>0.00</m_delay>
 				<m_topoIndex>15</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_46">
+			<item class_id_reference="9" object_id="_48">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>104</id>
+						<id>110</id>
 						<name>sum_loc_load</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2001,8 +2073,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>169</item>
-					<item>822</item>
+					<item>175</item>
+					<item>872</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -2013,15 +2085,15 @@
 				<m_topoIndex>20</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_47">
+			<item class_id_reference="9" object_id="_49">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>105</id>
-						<name>output_layer_map_b_addr</name>
+						<id>111</id>
+						<name>output_layer2_b_addr</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>295</lineNumber>
+						<lineNumber>267</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -2037,7 +2109,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>295</second>
+										<second>267</second>
 									</item>
 								</second>
 							</item>
@@ -2058,9 +2130,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>170</item>
-					<item>171</item>
-					<item>172</item>
+					<item>176</item>
+					<item>177</item>
+					<item>178</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -2071,15 +2143,15 @@
 				<m_topoIndex>16</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_48">
+			<item class_id_reference="9" object_id="_50">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>106</id>
-						<name>output_layer_map_b_load</name>
+						<id>112</id>
+						<name>output_layer2_b_load</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>295</lineNumber>
+						<lineNumber>267</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -2095,7 +2167,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>295</second>
+										<second>267</second>
 									</item>
 								</second>
 							</item>
@@ -2116,7 +2188,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>173</item>
+					<item>179</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -2127,215 +2199,31 @@
 				<m_topoIndex>17</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_49">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>107</id>
-						<name>bitcast_ln295</name>
-						<fileName>../source/hls.cpp</fileName>
-						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>295</lineNumber>
-						<contextFuncName>fully_connected_fprop</contextFuncName>
-						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../source/hls.cpp</first>
-											<second>fully_connected_fprop</second>
-										</first>
-										<second>295</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>64</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>174</item>
-				</oprand_edges>
-				<opcode>bitcast</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>21</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_50">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>108</id>
-						<name>sum</name>
-						<fileName>../source/hls.cpp</fileName>
-						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>295</lineNumber>
-						<contextFuncName>fully_connected_fprop</contextFuncName>
-						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../source/hls.cpp</first>
-											<second>fully_connected_fprop</second>
-										</first>
-										<second>295</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName>sum</originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>64</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>175</item>
-					<item>176</item>
-				</oprand_edges>
-				<opcode>dadd</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.90</m_delay>
-				<m_topoIndex>22</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
 			<item class_id_reference="9" object_id="_51">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>109</id>
-						<name>ep</name>
+						<id>113</id>
+						<name>bitcast_ln267</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>10</lineNumber>
-						<contextFuncName>tan_h</contextFuncName>
-						<contextNormFuncName>tan_h</contextNormFuncName>
+						<lineNumber>267</lineNumber>
+						<contextFuncName>fully_connected_fprop</contextFuncName>
+						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
 								<first>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</first>
 								<second>
-									<count>2</count>
+									<count>1</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
-									</item>
-									<item>
-										<first>
-											<first>../source/hls.cpp</first>
-											<second>tan_h</second>
-										</first>
-										<second>10</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName>ep</originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>64</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>178</item>
-					<item>179</item>
-				</oprand_edges>
-				<opcode>dexp</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.95</m_delay>
-				<m_topoIndex>23</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_52">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>110</id>
-						<name>bitcast_ln11</name>
-						<fileName>../source/hls.cpp</fileName>
-						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>11</lineNumber>
-						<contextFuncName>tan_h</contextFuncName>
-						<contextNormFuncName>tan_h</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</first>
-								<second>
-									<count>2</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../source/hls.cpp</first>
-											<second>fully_connected_fprop</second>
-										</first>
-										<second>296</second>
-									</item>
-									<item>
-										<first>
-											<first>../source/hls.cpp</first>
-											<second>tan_h</second>
-										</first>
-										<second>11</second>
+										<second>267</second>
 									</item>
 								</second>
 							</item>
@@ -2364,14 +2252,198 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>24</m_topoIndex>
+				<m_topoIndex>21</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_52">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>114</id>
+						<name>sum</name>
+						<fileName>../source/hls.cpp</fileName>
+						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
+						<lineNumber>267</lineNumber>
+						<contextFuncName>fully_connected_fprop</contextFuncName>
+						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../source/hls.cpp</first>
+											<second>fully_connected_fprop</second>
+										</first>
+										<second>267</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>sum</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>64</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>181</item>
+					<item>182</item>
+				</oprand_edges>
+				<opcode>dadd</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.90</m_delay>
+				<m_topoIndex>22</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_53">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>111</id>
+						<id>115</id>
+						<name>ep</name>
+						<fileName>../source/hls.cpp</fileName>
+						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
+						<lineNumber>10</lineNumber>
+						<contextFuncName>tan_h</contextFuncName>
+						<contextNormFuncName>tan_h</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</first>
+								<second>
+									<count>2</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../source/hls.cpp</first>
+											<second>fully_connected_fprop</second>
+										</first>
+										<second>268</second>
+									</item>
+									<item>
+										<first>
+											<first>../source/hls.cpp</first>
+											<second>tan_h</second>
+										</first>
+										<second>10</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>ep</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>64</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>184</item>
+					<item>185</item>
+				</oprand_edges>
+				<opcode>dexp</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>1.95</m_delay>
+				<m_topoIndex>23</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_54">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>116</id>
+						<name>bitcast_ln11</name>
+						<fileName>../source/hls.cpp</fileName>
+						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
+						<lineNumber>11</lineNumber>
+						<contextFuncName>tan_h</contextFuncName>
+						<contextNormFuncName>tan_h</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</first>
+								<second>
+									<count>2</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../source/hls.cpp</first>
+											<second>fully_connected_fprop</second>
+										</first>
+										<second>268</second>
+									</item>
+									<item>
+										<first>
+											<first>../source/hls.cpp</first>
+											<second>tan_h</second>
+										</first>
+										<second>11</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>64</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>186</item>
+				</oprand_edges>
+				<opcode>bitcast</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>24</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_55">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>117</id>
 						<name>bit_sel</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
@@ -2391,7 +2463,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 									<item>
 										<first>
@@ -2419,9 +2491,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>182</item>
-					<item>183</item>
-					<item>185</item>
+					<item>188</item>
+					<item>189</item>
+					<item>191</item>
 				</oprand_edges>
 				<opcode>bitselect</opcode>
 				<m_Display>0</m_Display>
@@ -2432,11 +2504,11 @@
 				<m_topoIndex>25</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_54">
+			<item class_id_reference="9" object_id="_56">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>112</id>
+						<id>118</id>
 						<name>xor_ln11</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
@@ -2456,7 +2528,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 									<item>
 										<first>
@@ -2484,8 +2556,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>186</item>
-					<item>188</item>
+					<item>192</item>
+					<item>194</item>
 				</oprand_edges>
 				<opcode>xor</opcode>
 				<m_Display>0</m_Display>
@@ -2496,11 +2568,11 @@
 				<m_topoIndex>26</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_55">
+			<item class_id_reference="9" object_id="_57">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>113</id>
+						<id>119</id>
 						<name>trunc_ln11</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
@@ -2520,7 +2592,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 									<item>
 										<first>
@@ -2548,7 +2620,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>189</item>
+					<item>195</item>
 				</oprand_edges>
 				<opcode>trunc</opcode>
 				<m_Display>0</m_Display>
@@ -2559,11 +2631,11 @@
 				<m_topoIndex>27</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_56">
+			<item class_id_reference="9" object_id="_58">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>114</id>
+						<id>120</id>
 						<name>xor_ln</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
@@ -2583,7 +2655,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 									<item>
 										<first>
@@ -2611,9 +2683,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>191</item>
-					<item>192</item>
-					<item>193</item>
+					<item>197</item>
+					<item>198</item>
+					<item>199</item>
 				</oprand_edges>
 				<opcode>bitconcatenate</opcode>
 				<m_Display>0</m_Display>
@@ -2624,11 +2696,11 @@
 				<m_topoIndex>28</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_57">
+			<item class_id_reference="9" object_id="_59">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>115</id>
+						<id>121</id>
 						<name>bitcast_ln11_1</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
@@ -2648,7 +2720,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 									<item>
 										<first>
@@ -2676,7 +2748,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>194</item>
+					<item>200</item>
 				</oprand_edges>
 				<opcode>bitcast</opcode>
 				<m_Display>0</m_Display>
@@ -2687,11 +2759,11 @@
 				<m_topoIndex>29</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_58">
+			<item class_id_reference="9" object_id="_60">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>116</id>
+						<id>122</id>
 						<name>em</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
@@ -2711,7 +2783,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 									<item>
 										<first>
@@ -2739,8 +2811,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>195</item>
-					<item>196</item>
+					<item>201</item>
+					<item>202</item>
 				</oprand_edges>
 				<opcode>dexp</opcode>
 				<m_Display>0</m_Display>
@@ -2751,15 +2823,15 @@
 				<m_topoIndex>30</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_59">
+			<item class_id_reference="9" object_id="_61">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>117</id>
+						<id>123</id>
 						<name>sub1_i</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>tan_h</contextFuncName>
 						<contextNormFuncName>tan_h</contextNormFuncName>
 						<inlineStackInfo>
@@ -2775,14 +2847,14 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 									<item>
 										<first>
 											<first>../source/hls.cpp</first>
 											<second>tan_h</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -2803,8 +2875,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>197</item>
-					<item>198</item>
+					<item>203</item>
+					<item>204</item>
 				</oprand_edges>
 				<opcode>dsub</opcode>
 				<m_Display>0</m_Display>
@@ -2815,15 +2887,15 @@
 				<m_topoIndex>31</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_60">
+			<item class_id_reference="9" object_id="_62">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>118</id>
+						<id>124</id>
 						<name>add_i</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>tan_h</contextFuncName>
 						<contextNormFuncName>tan_h</contextNormFuncName>
 						<inlineStackInfo>
@@ -2839,14 +2911,14 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 									<item>
 										<first>
 											<first>../source/hls.cpp</first>
 											<second>tan_h</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -2867,8 +2939,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>199</item>
-					<item>200</item>
+					<item>205</item>
+					<item>206</item>
 				</oprand_edges>
 				<opcode>dadd</opcode>
 				<m_Display>0</m_Display>
@@ -2879,15 +2951,15 @@
 				<m_topoIndex>32</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_61">
+			<item class_id_reference="9" object_id="_63">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>119</id>
+						<id>125</id>
 						<name>div_i</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>tan_h</contextFuncName>
 						<contextNormFuncName>tan_h</contextNormFuncName>
 						<inlineStackInfo>
@@ -2903,14 +2975,14 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 									<item>
 										<first>
 											<first>../source/hls.cpp</first>
 											<second>tan_h</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -2931,8 +3003,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>201</item>
-					<item>202</item>
+					<item>207</item>
+					<item>208</item>
 				</oprand_edges>
 				<opcode>ddiv</opcode>
 				<m_Display>0</m_Display>
@@ -2943,15 +3015,15 @@
 				<m_topoIndex>33</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_62">
+			<item class_id_reference="9" object_id="_64">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>120</id>
-						<name>bitcast_ln296</name>
+						<id>126</id>
+						<name>bitcast_ln268</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>296</lineNumber>
+						<lineNumber>268</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -2967,7 +3039,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 								</second>
 							</item>
@@ -2988,7 +3060,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>203</item>
+					<item>209</item>
 				</oprand_edges>
 				<opcode>bitcast</opcode>
 				<m_Display>0</m_Display>
@@ -2999,15 +3071,15 @@
 				<m_topoIndex>37</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_63">
+			<item class_id_reference="9" object_id="_65">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>121</id>
-						<name>output_layer_map_data_addr_write_ln296</name>
+						<id>127</id>
+						<name>output_layer2_data_addr_write_ln268</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>296</lineNumber>
+						<lineNumber>268</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -3023,7 +3095,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>296</second>
+										<second>268</second>
 									</item>
 								</second>
 							</item>
@@ -3044,8 +3116,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>204</item>
-					<item>205</item>
+					<item>210</item>
+					<item>211</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -3056,15 +3128,15 @@
 				<m_topoIndex>38</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_64">
+			<item class_id_reference="9" object_id="_66">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>122</id>
-						<name>i_write_ln287</name>
+						<id>128</id>
+						<name>i_write_ln259</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -3080,7 +3152,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -3101,10 +3173,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>206</item>
-					<item>207</item>
-					<item>824</item>
-					<item>825</item>
+					<item>212</item>
+					<item>213</item>
+					<item>874</item>
+					<item>875</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -3115,15 +3187,15 @@
 				<m_topoIndex>18</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_65">
+			<item class_id_reference="9" object_id="_67">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>123</id>
-						<name>br_ln287</name>
+						<id>129</id>
+						<name>br_ln259</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>287</lineNumber>
+						<lineNumber>259</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -3139,7 +3211,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>287</second>
+										<second>259</second>
 									</item>
 								</second>
 							</item>
@@ -3160,7 +3232,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>208</item>
+					<item>214</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -3171,15 +3243,15 @@
 				<m_topoIndex>39</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_66">
+			<item class_id_reference="9" object_id="_68">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>125</id>
-						<name>_ln298</name>
+						<id>131</id>
+						<name>_ln270</name>
 						<fileName>../source/hls.cpp</fileName>
 						<fileDirectory>/home/duludulu/Documents/hls/vitis_batch_generate_rtl</fileDirectory>
-						<lineNumber>298</lineNumber>
+						<lineNumber>270</lineNumber>
 						<contextFuncName>fully_connected_fprop</contextFuncName>
 						<contextNormFuncName>fully_connected_fprop</contextNormFuncName>
 						<inlineStackInfo>
@@ -3195,7 +3267,7 @@
 											<first>../source/hls.cpp</first>
 											<second>fully_connected_fprop</second>
 										</first>
-										<second>298</second>
+										<second>270</second>
 									</item>
 								</second>
 							</item>
@@ -3230,11 +3302,11 @@
 		<consts class_id="15" tracking_level="0" version="0">
 			<count>9</count>
 			<item_version>0</item_version>
-			<item class_id="16" tracking_level="1" version="0" object_id="_67">
+			<item class_id="16" tracking_level="1" version="0" object_id="_69">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>127</id>
+						<id>133</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -3261,11 +3333,11 @@
 				<const_type>0</const_type>
 				<content>1</content>
 			</item>
-			<item class_id_reference="16" object_id="_68">
+			<item class_id_reference="16" object_id="_70">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>129</id>
+						<id>135</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -3292,11 +3364,11 @@
 				<const_type>0</const_type>
 				<content>1</content>
 			</item>
-			<item class_id_reference="16" object_id="_69">
+			<item class_id_reference="16" object_id="_71">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>137</id>
+						<id>143</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -3323,11 +3395,11 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_70">
+			<item class_id_reference="16" object_id="_72">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>146</id>
+						<id>152</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -3354,11 +3426,11 @@
 				<const_type>0</const_type>
 				<content>1</content>
 			</item>
-			<item class_id_reference="16" object_id="_71">
+			<item class_id_reference="16" object_id="_73">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>153</id>
+						<id>159</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -3385,11 +3457,11 @@
 				<const_type>0</const_type>
 				<content>10</content>
 			</item>
-			<item class_id_reference="16" object_id="_72">
+			<item class_id_reference="16" object_id="_74">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>157</id>
+						<id>163</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -3416,12 +3488,12 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_73">
+			<item class_id_reference="16" object_id="_75">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>161</id>
-						<name>fully_connected_fprop_Pipeline_VITIS_LOOP_290_2</name>
+						<id>167</id>
+						<name>fully_connected_fprop_Pipeline_VITIS_LOOP_262_2</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -3445,13 +3517,13 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:fully_connected_fprop_Pipeline_VITIS_LOOP_290_2&gt;</content>
+				<content>&lt;constant:fully_connected_fprop_Pipeline_VITIS_LOOP_262_2&gt;</content>
 			</item>
-			<item class_id_reference="16" object_id="_74">
+			<item class_id_reference="16" object_id="_76">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>184</id>
+						<id>190</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -3478,11 +3550,11 @@
 				<const_type>0</const_type>
 				<content>63</content>
 			</item>
-			<item class_id_reference="16" object_id="_75">
+			<item class_id_reference="16" object_id="_77">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>187</id>
+						<id>193</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -3513,10 +3585,10 @@
 		<blocks class_id="17" tracking_level="0" version="0">
 			<count>4</count>
 			<item_version>0</item_version>
-			<item class_id="18" tracking_level="1" version="0" object_id="_76">
+			<item class_id="18" tracking_level="1" version="0" object_id="_78">
 				<Obj>
 					<type>3</type>
-					<id>90</id>
+					<id>96</id>
 					<name>entry</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -3541,20 +3613,20 @@
 				<node_objs>
 					<count>7</count>
 					<item_version>0</item_version>
-					<item>28</item>
-					<item>29</item>
-					<item>85</item>
-					<item>86</item>
-					<item>87</item>
-					<item>88</item>
-					<item>89</item>
+					<item>30</item>
+					<item>31</item>
+					<item>91</item>
+					<item>92</item>
+					<item>93</item>
+					<item>94</item>
+					<item>95</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_77">
+			<item class_id_reference="18" object_id="_79">
 				<Obj>
 					<type>3</type>
-					<id>96</id>
-					<name>VITIS_LOOP_290_2</name>
+					<id>102</id>
+					<name>VITIS_LOOP_262_2</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -3578,18 +3650,18 @@
 				<node_objs>
 					<count>5</count>
 					<item_version>0</item_version>
-					<item>91</item>
-					<item>92</item>
-					<item>93</item>
-					<item>94</item>
-					<item>95</item>
+					<item>97</item>
+					<item>98</item>
+					<item>99</item>
+					<item>100</item>
+					<item>101</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_78">
+			<item class_id_reference="18" object_id="_80">
 				<Obj>
 					<type>3</type>
-					<id>124</id>
-					<name>VITIS_LOOP_290_2.split</name>
+					<id>130</id>
+					<name>VITIS_LOOP_262_2.split</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -3613,17 +3685,11 @@
 				<node_objs>
 					<count>26</count>
 					<item_version>0</item_version>
-					<item>97</item>
-					<item>98</item>
-					<item>99</item>
-					<item>100</item>
-					<item>101</item>
 					<item>103</item>
 					<item>104</item>
 					<item>105</item>
 					<item>106</item>
 					<item>107</item>
-					<item>108</item>
 					<item>109</item>
 					<item>110</item>
 					<item>111</item>
@@ -3639,13 +3705,19 @@
 					<item>121</item>
 					<item>122</item>
 					<item>123</item>
+					<item>124</item>
+					<item>125</item>
+					<item>126</item>
+					<item>127</item>
+					<item>128</item>
+					<item>129</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_79">
+			<item class_id_reference="18" object_id="_81">
 				<Obj>
 					<type>3</type>
-					<id>126</id>
-					<name>for.end24.loopexit</name>
+					<id>132</id>
+					<name>for.end22.loopexit</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -3669,508 +3741,508 @@
 				<node_objs>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>125</item>
+					<item>131</item>
 				</node_objs>
 			</item>
 		</blocks>
 		<edges class_id="19" tracking_level="0" version="0">
 			<count>71</count>
 			<item_version>0</item_version>
-			<item class_id="20" tracking_level="1" version="0" object_id="_80">
-				<id>128</id>
+			<item class_id="20" tracking_level="1" version="0" object_id="_82">
+				<id>134</id>
 				<edge_type>1</edge_type>
-				<source_obj>127</source_obj>
-				<sink_obj>28</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_81">
-				<id>130</id>
-				<edge_type>1</edge_type>
-				<source_obj>129</source_obj>
-				<sink_obj>29</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_82">
-				<id>133</id>
-				<edge_type>1</edge_type>
-				<source_obj>18</source_obj>
-				<sink_obj>85</sink_obj>
+				<source_obj>133</source_obj>
+				<sink_obj>30</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_83">
-				<id>135</id>
+				<id>136</id>
 				<edge_type>1</edge_type>
-				<source_obj>6</source_obj>
-				<sink_obj>86</sink_obj>
+				<source_obj>135</source_obj>
+				<sink_obj>31</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_84">
-				<id>136</id>
-				<edge_type>1</edge_type>
-				<source_obj>85</source_obj>
-				<sink_obj>87</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_85">
-				<id>138</id>
-				<edge_type>1</edge_type>
-				<source_obj>137</source_obj>
-				<sink_obj>88</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_86">
 				<id>139</id>
 				<edge_type>1</edge_type>
-				<source_obj>28</source_obj>
-				<sink_obj>88</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_87">
-				<id>140</id>
-				<edge_type>2</edge_type>
-				<source_obj>96</source_obj>
-				<sink_obj>89</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_88">
-				<id>141</id>
-				<edge_type>1</edge_type>
-				<source_obj>28</source_obj>
+				<source_obj>19</source_obj>
 				<sink_obj>91</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_89">
-				<id>142</id>
+			<item class_id_reference="20" object_id="_85">
+				<id>141</id>
 				<edge_type>1</edge_type>
-				<source_obj>91</source_obj>
+				<source_obj>6</source_obj>
 				<sink_obj>92</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_90">
-				<id>143</id>
+			<item class_id_reference="20" object_id="_86">
+				<id>142</id>
 				<edge_type>1</edge_type>
-				<source_obj>92</source_obj>
+				<source_obj>91</source_obj>
 				<sink_obj>93</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_91">
+			<item class_id_reference="20" object_id="_87">
 				<id>144</id>
 				<edge_type>1</edge_type>
-				<source_obj>85</source_obj>
-				<sink_obj>93</sink_obj>
+				<source_obj>143</source_obj>
+				<sink_obj>94</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_92">
+			<item class_id_reference="20" object_id="_88">
 				<id>145</id>
 				<edge_type>1</edge_type>
-				<source_obj>91</source_obj>
+				<source_obj>30</source_obj>
 				<sink_obj>94</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_93">
+			<item class_id_reference="20" object_id="_89">
+				<id>146</id>
+				<edge_type>2</edge_type>
+				<source_obj>102</source_obj>
+				<sink_obj>95</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_90">
 				<id>147</id>
 				<edge_type>1</edge_type>
-				<source_obj>146</source_obj>
-				<sink_obj>94</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_94">
-				<id>148</id>
-				<edge_type>1</edge_type>
-				<source_obj>93</source_obj>
-				<sink_obj>95</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_95">
-				<id>149</id>
-				<edge_type>2</edge_type>
-				<source_obj>126</source_obj>
-				<sink_obj>95</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_96">
-				<id>150</id>
-				<edge_type>2</edge_type>
-				<source_obj>124</source_obj>
-				<sink_obj>95</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_97">
-				<id>151</id>
-				<edge_type>1</edge_type>
-				<source_obj>91</source_obj>
+				<source_obj>30</source_obj>
 				<sink_obj>97</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_98">
-				<id>152</id>
+			<item class_id_reference="20" object_id="_91">
+				<id>148</id>
 				<edge_type>1</edge_type>
-				<source_obj>91</source_obj>
+				<source_obj>97</source_obj>
 				<sink_obj>98</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_99">
-				<id>154</id>
-				<edge_type>1</edge_type>
-				<source_obj>153</source_obj>
-				<sink_obj>98</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_100">
-				<id>155</id>
+			<item class_id_reference="20" object_id="_92">
+				<id>149</id>
 				<edge_type>1</edge_type>
 				<source_obj>98</source_obj>
 				<sink_obj>99</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_101">
-				<id>156</id>
-				<edge_type>1</edge_type>
-				<source_obj>19</source_obj>
-				<sink_obj>100</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_102">
-				<id>158</id>
-				<edge_type>1</edge_type>
-				<source_obj>157</source_obj>
-				<sink_obj>100</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_103">
-				<id>159</id>
-				<edge_type>1</edge_type>
-				<source_obj>99</source_obj>
-				<sink_obj>100</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_104">
-				<id>160</id>
+			<item class_id_reference="20" object_id="_93">
+				<id>150</id>
 				<edge_type>1</edge_type>
 				<source_obj>91</source_obj>
+				<sink_obj>99</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_94">
+				<id>151</id>
+				<edge_type>1</edge_type>
+				<source_obj>97</source_obj>
+				<sink_obj>100</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_95">
+				<id>153</id>
+				<edge_type>1</edge_type>
+				<source_obj>152</source_obj>
+				<sink_obj>100</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_96">
+				<id>154</id>
+				<edge_type>1</edge_type>
+				<source_obj>99</source_obj>
 				<sink_obj>101</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_105">
-				<id>162</id>
+			<item class_id_reference="20" object_id="_97">
+				<id>155</id>
+				<edge_type>2</edge_type>
+				<source_obj>132</source_obj>
+				<sink_obj>101</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_98">
+				<id>156</id>
+				<edge_type>2</edge_type>
+				<source_obj>130</source_obj>
+				<sink_obj>101</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_99">
+				<id>157</id>
 				<edge_type>1</edge_type>
-				<source_obj>161</source_obj>
+				<source_obj>97</source_obj>
 				<sink_obj>103</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_106">
-				<id>163</id>
+			<item class_id_reference="20" object_id="_100">
+				<id>158</id>
 				<edge_type>1</edge_type>
-				<source_obj>86</source_obj>
-				<sink_obj>103</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_107">
-				<id>164</id>
-				<edge_type>1</edge_type>
-				<source_obj>7</source_obj>
-				<sink_obj>103</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_108">
-				<id>165</id>
-				<edge_type>1</edge_type>
-				<source_obj>87</source_obj>
-				<sink_obj>103</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_109">
-				<id>166</id>
-				<edge_type>1</edge_type>
-				<source_obj>101</source_obj>
-				<sink_obj>103</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_110">
-				<id>167</id>
-				<edge_type>1</edge_type>
-				<source_obj>26</source_obj>
-				<sink_obj>103</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_111">
-				<id>168</id>
-				<edge_type>1</edge_type>
-				<source_obj>29</source_obj>
-				<sink_obj>103</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_112">
-				<id>169</id>
-				<edge_type>1</edge_type>
-				<source_obj>29</source_obj>
+				<source_obj>97</source_obj>
 				<sink_obj>104</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_113">
-				<id>170</id>
+			<item class_id_reference="20" object_id="_101">
+				<id>160</id>
 				<edge_type>1</edge_type>
-				<source_obj>21</source_obj>
+				<source_obj>159</source_obj>
+				<sink_obj>104</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_102">
+				<id>161</id>
+				<edge_type>1</edge_type>
+				<source_obj>104</source_obj>
 				<sink_obj>105</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_114">
-				<id>171</id>
+			<item class_id_reference="20" object_id="_103">
+				<id>162</id>
 				<edge_type>1</edge_type>
-				<source_obj>157</source_obj>
-				<sink_obj>105</sink_obj>
+				<source_obj>23</source_obj>
+				<sink_obj>106</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_115">
-				<id>172</id>
+			<item class_id_reference="20" object_id="_104">
+				<id>164</id>
 				<edge_type>1</edge_type>
-				<source_obj>97</source_obj>
-				<sink_obj>105</sink_obj>
+				<source_obj>163</source_obj>
+				<sink_obj>106</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_116">
-				<id>173</id>
+			<item class_id_reference="20" object_id="_105">
+				<id>165</id>
 				<edge_type>1</edge_type>
 				<source_obj>105</source_obj>
 				<sink_obj>106</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_117">
-				<id>174</id>
+			<item class_id_reference="20" object_id="_106">
+				<id>166</id>
 				<edge_type>1</edge_type>
-				<source_obj>106</source_obj>
+				<source_obj>97</source_obj>
 				<sink_obj>107</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_118">
-				<id>175</id>
+			<item class_id_reference="20" object_id="_107">
+				<id>168</id>
 				<edge_type>1</edge_type>
-				<source_obj>104</source_obj>
-				<sink_obj>108</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_119">
-				<id>176</id>
-				<edge_type>1</edge_type>
-				<source_obj>107</source_obj>
-				<sink_obj>108</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_120">
-				<id>179</id>
-				<edge_type>1</edge_type>
-				<source_obj>108</source_obj>
+				<source_obj>167</source_obj>
 				<sink_obj>109</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_121">
-				<id>180</id>
+			<item class_id_reference="20" object_id="_108">
+				<id>169</id>
 				<edge_type>1</edge_type>
-				<source_obj>108</source_obj>
+				<source_obj>92</source_obj>
+				<sink_obj>109</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_109">
+				<id>170</id>
+				<edge_type>1</edge_type>
+				<source_obj>10</source_obj>
+				<sink_obj>109</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_110">
+				<id>171</id>
+				<edge_type>1</edge_type>
+				<source_obj>93</source_obj>
+				<sink_obj>109</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_111">
+				<id>172</id>
+				<edge_type>1</edge_type>
+				<source_obj>107</source_obj>
+				<sink_obj>109</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_112">
+				<id>173</id>
+				<edge_type>1</edge_type>
+				<source_obj>27</source_obj>
+				<sink_obj>109</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_113">
+				<id>174</id>
+				<edge_type>1</edge_type>
+				<source_obj>31</source_obj>
+				<sink_obj>109</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_114">
+				<id>175</id>
+				<edge_type>1</edge_type>
+				<source_obj>31</source_obj>
 				<sink_obj>110</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_122">
-				<id>183</id>
+			<item class_id_reference="20" object_id="_115">
+				<id>176</id>
 				<edge_type>1</edge_type>
-				<source_obj>110</source_obj>
+				<source_obj>25</source_obj>
 				<sink_obj>111</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_123">
-				<id>185</id>
+			<item class_id_reference="20" object_id="_116">
+				<id>177</id>
 				<edge_type>1</edge_type>
-				<source_obj>184</source_obj>
+				<source_obj>163</source_obj>
 				<sink_obj>111</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_124">
-				<id>186</id>
+			<item class_id_reference="20" object_id="_117">
+				<id>178</id>
+				<edge_type>1</edge_type>
+				<source_obj>103</source_obj>
+				<sink_obj>111</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_118">
+				<id>179</id>
 				<edge_type>1</edge_type>
 				<source_obj>111</source_obj>
 				<sink_obj>112</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_125">
-				<id>188</id>
+			<item class_id_reference="20" object_id="_119">
+				<id>180</id>
 				<edge_type>1</edge_type>
-				<source_obj>187</source_obj>
-				<sink_obj>112</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_126">
-				<id>189</id>
-				<edge_type>1</edge_type>
-				<source_obj>110</source_obj>
+				<source_obj>112</source_obj>
 				<sink_obj>113</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_127">
-				<id>192</id>
+			<item class_id_reference="20" object_id="_120">
+				<id>181</id>
 				<edge_type>1</edge_type>
-				<source_obj>112</source_obj>
+				<source_obj>110</source_obj>
 				<sink_obj>114</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_128">
-				<id>193</id>
+			<item class_id_reference="20" object_id="_121">
+				<id>182</id>
 				<edge_type>1</edge_type>
 				<source_obj>113</source_obj>
 				<sink_obj>114</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_129">
-				<id>194</id>
+			<item class_id_reference="20" object_id="_122">
+				<id>185</id>
 				<edge_type>1</edge_type>
 				<source_obj>114</source_obj>
 				<sink_obj>115</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_130">
-				<id>196</id>
+			<item class_id_reference="20" object_id="_123">
+				<id>186</id>
 				<edge_type>1</edge_type>
-				<source_obj>115</source_obj>
+				<source_obj>114</source_obj>
 				<sink_obj>116</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_131">
-				<id>197</id>
-				<edge_type>1</edge_type>
-				<source_obj>109</source_obj>
-				<sink_obj>117</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_132">
-				<id>198</id>
+			<item class_id_reference="20" object_id="_124">
+				<id>189</id>
 				<edge_type>1</edge_type>
 				<source_obj>116</source_obj>
 				<sink_obj>117</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_133">
-				<id>199</id>
+			<item class_id_reference="20" object_id="_125">
+				<id>191</id>
 				<edge_type>1</edge_type>
-				<source_obj>109</source_obj>
-				<sink_obj>118</sink_obj>
+				<source_obj>190</source_obj>
+				<sink_obj>117</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_134">
-				<id>200</id>
-				<edge_type>1</edge_type>
-				<source_obj>116</source_obj>
-				<sink_obj>118</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_135">
-				<id>201</id>
+			<item class_id_reference="20" object_id="_126">
+				<id>192</id>
 				<edge_type>1</edge_type>
 				<source_obj>117</source_obj>
+				<sink_obj>118</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_127">
+				<id>194</id>
+				<edge_type>1</edge_type>
+				<source_obj>193</source_obj>
+				<sink_obj>118</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_128">
+				<id>195</id>
+				<edge_type>1</edge_type>
+				<source_obj>116</source_obj>
 				<sink_obj>119</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_136">
-				<id>202</id>
+			<item class_id_reference="20" object_id="_129">
+				<id>198</id>
 				<edge_type>1</edge_type>
 				<source_obj>118</source_obj>
-				<sink_obj>119</sink_obj>
+				<sink_obj>120</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_137">
-				<id>203</id>
+			<item class_id_reference="20" object_id="_130">
+				<id>199</id>
 				<edge_type>1</edge_type>
 				<source_obj>119</source_obj>
 				<sink_obj>120</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_138">
-				<id>204</id>
+			<item class_id_reference="20" object_id="_131">
+				<id>200</id>
 				<edge_type>1</edge_type>
 				<source_obj>120</source_obj>
 				<sink_obj>121</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_139">
-				<id>205</id>
+			<item class_id_reference="20" object_id="_132">
+				<id>202</id>
 				<edge_type>1</edge_type>
-				<source_obj>100</source_obj>
-				<sink_obj>121</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_140">
-				<id>206</id>
-				<edge_type>1</edge_type>
-				<source_obj>94</source_obj>
+				<source_obj>121</source_obj>
 				<sink_obj>122</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_141">
-				<id>207</id>
+			<item class_id_reference="20" object_id="_133">
+				<id>203</id>
 				<edge_type>1</edge_type>
-				<source_obj>28</source_obj>
-				<sink_obj>122</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_142">
-				<id>208</id>
-				<edge_type>2</edge_type>
-				<source_obj>96</source_obj>
+				<source_obj>115</source_obj>
 				<sink_obj>123</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_143">
-				<id>818</id>
-				<edge_type>2</edge_type>
-				<source_obj>90</source_obj>
-				<sink_obj>96</sink_obj>
+			<item class_id_reference="20" object_id="_134">
+				<id>204</id>
+				<edge_type>1</edge_type>
+				<source_obj>122</source_obj>
+				<sink_obj>123</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_144">
-				<id>819</id>
-				<edge_type>2</edge_type>
-				<source_obj>96</source_obj>
+			<item class_id_reference="20" object_id="_135">
+				<id>205</id>
+				<edge_type>1</edge_type>
+				<source_obj>115</source_obj>
 				<sink_obj>124</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_145">
-				<id>820</id>
-				<edge_type>2</edge_type>
-				<source_obj>96</source_obj>
+			<item class_id_reference="20" object_id="_136">
+				<id>206</id>
+				<edge_type>1</edge_type>
+				<source_obj>122</source_obj>
+				<sink_obj>124</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_137">
+				<id>207</id>
+				<edge_type>1</edge_type>
+				<source_obj>123</source_obj>
+				<sink_obj>125</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_138">
+				<id>208</id>
+				<edge_type>1</edge_type>
+				<source_obj>124</source_obj>
+				<sink_obj>125</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_139">
+				<id>209</id>
+				<edge_type>1</edge_type>
+				<source_obj>125</source_obj>
 				<sink_obj>126</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_146">
-				<id>821</id>
+			<item class_id_reference="20" object_id="_140">
+				<id>210</id>
+				<edge_type>1</edge_type>
+				<source_obj>126</source_obj>
+				<sink_obj>127</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_141">
+				<id>211</id>
+				<edge_type>1</edge_type>
+				<source_obj>106</source_obj>
+				<sink_obj>127</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_142">
+				<id>212</id>
+				<edge_type>1</edge_type>
+				<source_obj>100</source_obj>
+				<sink_obj>128</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_143">
+				<id>213</id>
+				<edge_type>1</edge_type>
+				<source_obj>30</source_obj>
+				<sink_obj>128</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_144">
+				<id>214</id>
 				<edge_type>2</edge_type>
-				<source_obj>124</source_obj>
-				<sink_obj>96</sink_obj>
-				<is_back_edge>1</is_back_edge>
+				<source_obj>102</source_obj>
+				<sink_obj>129</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_145">
+				<id>868</id>
+				<edge_type>2</edge_type>
+				<source_obj>96</source_obj>
+				<sink_obj>102</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_146">
+				<id>869</id>
+				<edge_type>2</edge_type>
+				<source_obj>102</source_obj>
+				<sink_obj>130</sink_obj>
+				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_147">
-				<id>822</id>
-				<edge_type>4</edge_type>
-				<source_obj>103</source_obj>
-				<sink_obj>104</sink_obj>
+				<id>870</id>
+				<edge_type>2</edge_type>
+				<source_obj>102</source_obj>
+				<sink_obj>132</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_148">
-				<id>823</id>
-				<edge_type>4</edge_type>
-				<source_obj>88</source_obj>
-				<sink_obj>91</sink_obj>
-				<is_back_edge>0</is_back_edge>
+				<id>871</id>
+				<edge_type>2</edge_type>
+				<source_obj>130</source_obj>
+				<sink_obj>102</sink_obj>
+				<is_back_edge>1</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_149">
-				<id>824</id>
+				<id>872</id>
 				<edge_type>4</edge_type>
-				<source_obj>88</source_obj>
-				<sink_obj>122</sink_obj>
+				<source_obj>109</source_obj>
+				<sink_obj>110</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_150">
-				<id>825</id>
+				<id>873</id>
 				<edge_type>4</edge_type>
-				<source_obj>91</source_obj>
-				<sink_obj>122</sink_obj>
+				<source_obj>94</source_obj>
+				<sink_obj>97</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_151">
+				<id>874</id>
+				<edge_type>4</edge_type>
+				<source_obj>94</source_obj>
+				<sink_obj>128</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_152">
+				<id>875</id>
+				<edge_type>4</edge_type>
+				<source_obj>97</source_obj>
+				<sink_obj>128</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 		</edges>
@@ -4178,7 +4250,7 @@
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>4</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_151">
+		<item class_id="22" tracking_level="1" version="0" object_id="_153">
 			<mId>1</mId>
 			<mTag>fully_connected_fprop</mTag>
 			<mNormTag>fully_connected_fprop</mNormTag>
@@ -4203,7 +4275,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_152">
+		<item class_id_reference="22" object_id="_154">
 			<mId>2</mId>
 			<mTag>Entry</mTag>
 			<mNormTag>Entry</mNormTag>
@@ -4215,7 +4287,7 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>90</item>
+				<item>96</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -4226,10 +4298,10 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_153">
+		<item class_id_reference="22" object_id="_155">
 			<mId>3</mId>
-			<mTag>VITIS_LOOP_287_1</mTag>
-			<mNormTag>VITIS_LOOP_287_1</mNormTag>
+			<mTag>VITIS_LOOP_259_1</mTag>
+			<mNormTag>VITIS_LOOP_259_1</mNormTag>
 			<mType>1</mType>
 			<sub_regions>
 				<count>0</count>
@@ -4238,8 +4310,8 @@
 			<basic_blocks>
 				<count>2</count>
 				<item_version>0</item_version>
-				<item>96</item>
-				<item>124</item>
+				<item>102</item>
+				<item>130</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -4250,7 +4322,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_154">
+		<item class_id_reference="22" object_id="_156">
 			<mId>4</mId>
 			<mTag>Return</mTag>
 			<mNormTag>Return</mNormTag>
@@ -4262,7 +4334,7 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>126</item>
+				<item>132</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -4280,49 +4352,14 @@
 		<count>39</count>
 		<item_version>0</item_version>
 		<item class_id="27" tracking_level="0" version="0">
-			<first>28</first>
+			<first>30</first>
 			<second class_id="28" tracking_level="0" version="0">
 				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
-			<first>29</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>85</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>86</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>87</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>88</first>
-			<second>
-				<first>0</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>89</first>
+			<first>31</first>
 			<second>
 				<first>0</first>
 				<second>0</second>
@@ -4331,35 +4368,35 @@
 		<item>
 			<first>91</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>92</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>93</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>94</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>95</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -4373,21 +4410,21 @@
 		<item>
 			<first>98</first>
 			<second>
-				<first>80</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>99</first>
 			<second>
-				<first>80</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>100</first>
 			<second>
-				<first>80</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -4402,151 +4439,186 @@
 			<first>103</first>
 			<second>
 				<first>1</first>
-				<second>1</second>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>104</first>
 			<second>
-				<first>3</first>
+				<first>80</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>105</first>
 			<second>
-				<first>1</first>
+				<first>80</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>106</first>
 			<second>
-				<first>1</first>
-				<second>1</second>
+				<first>80</first>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>107</first>
 			<second>
-				<first>3</first>
+				<first>1</first>
 				<second>0</second>
-			</second>
-		</item>
-		<item>
-			<first>108</first>
-			<second>
-				<first>3</first>
-				<second>7</second>
 			</second>
 		</item>
 		<item>
 			<first>109</first>
 			<second>
-				<first>11</first>
-				<second>29</second>
+				<first>1</first>
+				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>110</first>
 			<second>
-				<first>11</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>111</first>
 			<second>
-				<first>11</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>112</first>
 			<second>
-				<first>11</first>
-				<second>0</second>
+				<first>1</first>
+				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>113</first>
 			<second>
-				<first>11</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>114</first>
 			<second>
-				<first>11</first>
-				<second>0</second>
+				<first>3</first>
+				<second>7</second>
 			</second>
 		</item>
 		<item>
 			<first>115</first>
 			<second>
 				<first>11</first>
-				<second>0</second>
+				<second>29</second>
 			</second>
 		</item>
 		<item>
 			<first>116</first>
 			<second>
 				<first>11</first>
-				<second>29</second>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>117</first>
 			<second>
-				<first>41</first>
-				<second>7</second>
+				<first>11</first>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>118</first>
 			<second>
-				<first>41</first>
-				<second>7</second>
+				<first>11</first>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>119</first>
 			<second>
-				<first>49</first>
-				<second>30</second>
+				<first>11</first>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>120</first>
 			<second>
-				<first>80</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>121</first>
 			<second>
-				<first>80</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>122</first>
 			<second>
-				<first>1</first>
-				<second>0</second>
+				<first>11</first>
+				<second>29</second>
 			</second>
 		</item>
 		<item>
 			<first>123</first>
+			<second>
+				<first>41</first>
+				<second>7</second>
+			</second>
+		</item>
+		<item>
+			<first>124</first>
+			<second>
+				<first>41</first>
+				<second>7</second>
+			</second>
+		</item>
+		<item>
+			<first>125</first>
+			<second>
+				<first>49</first>
+				<second>30</second>
+			</second>
+		</item>
+		<item>
+			<first>126</first>
 			<second>
 				<first>80</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
-			<first>125</first>
+			<first>127</first>
+			<second>
+				<first>80</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>128</first>
+			<second>
+				<first>1</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>129</first>
+			<second>
+				<first>80</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>131</first>
 			<second>
 				<first>1</first>
 				<second>0</second>
@@ -4557,28 +4629,28 @@
 		<count>4</count>
 		<item_version>0</item_version>
 		<item class_id="30" tracking_level="0" version="0">
-			<first>90</first>
+			<first>96</first>
 			<second class_id="31" tracking_level="0" version="0">
 				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
-			<first>96</first>
+			<first>102</first>
 			<second>
 				<first>1</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
-			<first>124</first>
+			<first>130</first>
 			<second>
 				<first>1</first>
 				<second>80</second>
 			</second>
 		</item>
 		<item>
-			<first>126</first>
+			<first>132</first>
 			<second>
 				<first>1</first>
 				<second>1</second>
