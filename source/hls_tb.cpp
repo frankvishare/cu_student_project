@@ -77,7 +77,7 @@ bool test_conv_fprop1(){
     // define input variables 
 
     // define arrays
-    bool pconnection [96];
+    uint8_t pconnection [96];
 
     // define temp variables
     Layer1 input_layer1;
@@ -120,7 +120,7 @@ bool test_conv_fprop2(){
     // define input variables 
 
     // define arrays
-    bool pconnection [96];
+    uint8_t pconnection [96];
 
     // define temp variables
     Layer1 s2_pooling_layer1;
@@ -163,7 +163,7 @@ bool test_conv_fprop3(){
     // define input variables 
 
     // define arrays
-    bool pconnection [96];
+    uint8_t pconnection [96];
 
     // define temp variables
     Layer1 s4_pooling_layer1;

@@ -22,8 +22,8 @@
 
 typedef struct _Sample
 {
-	double data[MAX_SAMPLE_SIZE];
-	double label[MAX_LABEL_SIZE];
+	float data[MAX_SAMPLE_SIZE];
+	float label[MAX_LABEL_SIZE];
 
 	int sample_w;
 	int sample_h;
@@ -44,13 +44,13 @@ typedef struct _Layer1
 // 第二个结构体包含所有数组数据
 typedef struct _Layer2
 {
-    double data[MAX_MAP_COUNT][MAX_MAP_SIZE];    // 原Map.data
-    double error[MAX_MAP_COUNT][MAX_MAP_SIZE];   // 原Map.error
-    double b[MAX_MAP_COUNT];                     // 原Map.b
-    double db[MAX_MAP_COUNT];                    // 原Map.db
-    double W[MAX_KERNEL_COUNT][MAX_KERNEL_SIZE];   // 原Kernel.W
-    double dW[MAX_KERNEL_COUNT][MAX_KERNEL_SIZE];  // 原Kernel.dW
-    double map_common[MAX_MAP_SIZE];
+    float data[MAX_MAP_COUNT][MAX_MAP_SIZE];    // 原Map.data
+    float error[MAX_MAP_COUNT][MAX_MAP_SIZE];   // 原Map.error
+    float b[MAX_MAP_COUNT];                     // 原Map.b
+    float db[MAX_MAP_COUNT];                    // 原Map.db
+    float W[MAX_KERNEL_COUNT][MAX_KERNEL_SIZE];   // 原Kernel.W
+    float dW[MAX_KERNEL_COUNT][MAX_KERNEL_SIZE];  // 原Kernel.dW
+    float map_common[MAX_MAP_SIZE];
 } Layer2;
 
 #endif // COMMON_H  

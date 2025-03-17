@@ -46,12 +46,11 @@ uint8_t xxxxx_paddingA[1880];
     Layer2 s4_pooling_layer2                           _ALIGN; //array offs:10978816 size:2744192
     Layer2 c5_conv_layer2                              _ALIGN; //array offs:13723008 size:2744192
     Layer2 output_layer2                               _ALIGN; //array offs:16467200 size:2744192
-    bool pconnection[96]                               _ALIGN; //array offs:19211392 size:96
+    uint8_t pconnection[96]                            _ALIGN; //array offs:19211392 size:96
 
 // Total scalar size: 168
 // Total array size: 19209440
 // Total cyclic size: 0
-;                            _ALIGN; 
 
 } xmem_t;
 

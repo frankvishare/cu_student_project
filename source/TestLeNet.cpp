@@ -41,7 +41,7 @@ const int height = 32;
 void init_layer(Layer1 *layer1, Layer2 *layer2, int prevlayer_map_count, int map_count, 
 	int kernel_w, int kernel_h, int map_w, int map_h, bool is_pooling)
 {
-const double scale = 6.0;
+const float scale = 6.0;
 int fan_in = 0;
 int fan_out = 0;
 if (is_pooling)
@@ -55,7 +55,7 @@ fan_in = prevlayer_map_count * kernel_w * kernel_h;
 fan_out = map_count * kernel_w * kernel_h;
 }
 int denominator = fan_in + fan_out;
-double weight_base = (denominator != 0) ? sqrt(scale / (double)denominator) : 0.5;
+float weight_base = (denominator != 0) ? sqrt(scale / (float)denominator) : 0.5;
 
 // Initialize Layer1 (integer parameters)
 layer1->kernel_count = prevlayer_map_count * map_count;
@@ -145,37 +145,37 @@ void release_layer(Layer1 *layer1, Layer2 *layer2)
 struct activation_func
 {
 	/* scale: -0.8 ~ 0.8 和label初始值对应 */
-	inline static double tan_h(double val)
+	inline static float tan_h(float val)
 	{
-		double ep = exp(val);
-		double em = exp(-val);
+		float ep = exp(val);
+		float em = exp(-val);
 
 		return (ep - em) / (ep + em);
 	}
 
-	inline static double dtan_h(double val)
+	inline static float dtan_h(float val)
 	{
 		return 1.0 - val*val;
 	}
 
 	/* scale: 0.1 ~ 0.9 和label初始值对应 */
-	inline static double relu(double val)
+	inline static float relu(float val)
 	{
 		return val > 0.0 ? val : 0.0;
 	}
 
-	inline static double drelu(double val)
+	inline static float drelu(float val)
 	{
 		return val > 0.0 ? 1.0 : 0.0;
 	}
 
 	/* scale: 0.1 ~ 0.9 和label初始值对应 */
-	inline double sigmoid(double val) 
+	inline float sigmoid(float val) 
 	{ 
 		return 1.0 / (1.0 + exp(-val)); 
 	}
 
-	double dsigmoid(double val)
+	float dsigmoid(float val)
 	{ 
 		return val * (1.0 - val); 
 	}
@@ -184,11 +184,11 @@ struct activation_func
 
 
 // 卷积--------------------------------------------------------------------------------------------------/
-void convn_valid(double in_data[MAX_MAP_SIZE], int in_w, int in_h, 
-                double kernel[MAX_KERNEL_SIZE], int kernel_w, int kernel_h, 
-                double out_data[MAX_MAP_SIZE], int out_w, int out_h)
+void convn_valid(float in_data[MAX_MAP_SIZE], int in_w, int in_h, 
+                float kernel[MAX_KERNEL_SIZE], int kernel_w, int kernel_h, 
+                float out_data[MAX_MAP_SIZE], int out_w, int out_h)
 {
-    double sum = 0.0;
+    float sum = 0.0;
     for (int i = 0; i < out_h; i++)
     {
         for (int j = 0; j < out_w; j++)
@@ -222,13 +222,13 @@ bool connection_table[6*16] =
 #undef O
 #undef X
 
-void conv_fprop(Layer *prev_layer, Layer *layer, bool *pconnection)
+void conv_fprop(Layer *prev_layer, Layer *layer, uint8_t *pconnection)
 {
 	int index = 0;
 	int size = layer->map_w * layer->map_h;
 	for (int i = 0; i < layer->map_count; i++)
 	{
-		memset(layer->map_common, 0, size*sizeof(double));
+		memset(layer->map_common, 0, size*sizeof(float));
 		for (int j = 0; j < prev_layer->map_count; j++)
 		{
 			index = j*layer->map_count + i;
@@ -255,7 +255,7 @@ void conv_fprop(Layer *prev_layer, Layer *layer, bool *pconnection)
 	int map_w = layer->map_w;
 	int map_h = layer->map_h;
 	int upmap_w = prev_layer->map_w;
-	const double scale_factor = 0.25;
+	const float scale_factor = 0.25;
 
 	for (int k = 0; k < layer->map_count; k++)
 	{
@@ -263,7 +263,7 @@ void conv_fprop(Layer *prev_layer, Layer *layer, bool *pconnection)
 		{
 			for (int j = 0; j < map_w; j++)
 			{
-				double sum = 0.0;
+				float sum = 0.0;
 				for (int n = 2*i; n < 2*(i + 1); n++)
 				{
 					for (int m = 2*j; m < 2*(j + 1); m++)
@@ -292,7 +292,7 @@ void max_pooling_fprop(Layer *prev_layer, Layer *layer)
 		{
 			for (int j = 0; j < map_w; j++)
 			{
-				double max_value = prev_layer->data[k][2*i*upmap_w + 2*j];
+				float max_value = prev_layer->data[k][2*i*upmap_w + 2*j];
 				for (int n = 2*i; n < 2*(i + 1); n++)
 				{
 					for (int m = 2*j; m < 2*(j + 1); m++)
@@ -311,7 +311,7 @@ void fully_connected_fprop(Layer *prev_layer, Layer *layer)
 {
 	for (int i = 0; i < layer->map_count; i++) 
 	{
-		double sum = 0.0;
+		float sum = 0.0;
 		for (int j = 0; j < prev_layer->map_count; j++)
 		{
 			sum += prev_layer->data[j][0] * layer->W[j*layer->map_count + i][0];
@@ -352,7 +352,7 @@ void forward_propagation(xmem_t *xmem)
 int find_index(Layer1 *layer1, Layer2 *layer2)
 {
     int index = 0;
-    double max_val = layer2->data[0][0];
+    float max_val = layer2->data[0][0];
     for (int i = 1; i < layer1->map_count; i++)
     {
         if (layer2->data[i][0] > max_val)
@@ -393,7 +393,7 @@ void save_model(const char* filename) {
         // 保存卷积核权重
         for(int i = 0; i < layer->kernel_count; i++) {
             int size = layer->kernel_w * layer->kernel_h;
-            size_t written = fwrite(layer->W[i], sizeof(double), size, fp);
+            size_t written = fwrite(layer->W[i], sizeof(float), size, fp);
             if(written != size) {
                 printf("Error writing kernel weights for layer %d\n", l);
                 fclose(fp);
@@ -402,7 +402,7 @@ void save_model(const char* filename) {
         }
         // 保存偏置
         for(int i = 0; i < layer->map_count; i++) {
-            fwrite(&layer->b[i], sizeof(double), 1, fp);
+            fwrite(&layer->b[i], sizeof(float), 1, fp);
         }
     }
     printf("Model saved successfully to %s\n", filename);
@@ -459,7 +459,7 @@ void load_model(xmem_t *xmem, const char* filename) {
         
         for(int i = 0; i < layer1->kernel_count; i++) {
             int size = layer1->kernel_w * layer1->kernel_h;
-            size_t read = fread(layer2->W[i], sizeof(double), size, fp);
+            size_t read = fread(layer2->W[i], sizeof(float), size, fp);
             if(read != size) {
                 printf("Error reading kernel weights for layer %d\n", l);
                 fclose(fp);
@@ -468,13 +468,13 @@ void load_model(xmem_t *xmem, const char* filename) {
         }
         
         for(int i = 0; i < layer1->map_count; i++) {
-            fread(&layer2->b[i], sizeof(double), 1, fp);
+            fread(&layer2->b[i], sizeof(float), 1, fp);
         }
     }
     fclose(fp);
 }
-void load_and_preprocess_image(const char* image_path, double* image_data) {
-    memset(image_data, 0, width * height * sizeof(double));
+void load_and_preprocess_image(const char* image_path, float* image_data) {
+    memset(image_data, 0, width * height * sizeof(float));
 
     int img_width, img_height, channels;
     unsigned char* img = stbi_load(image_path, &img_width, &img_height, &channels, 1);
@@ -484,8 +484,8 @@ void load_and_preprocess_image(const char* image_path, double* image_data) {
         return;
     }
 
-    double scale_max =  1.0;
-    double scale_min = -1.0;
+    float scale_max =  1.0;
+    float scale_min = -1.0;
     int padding = 2;
 
     for (int i = 0; i < width * height; i++) {
@@ -496,7 +496,7 @@ void load_and_preprocess_image(const char* image_path, double* image_data) {
         for (int j = 0; j < 28; j++) {
             if (i < img_height && j < img_width) {
                 unsigned char pixel = img[i * img_width + j];
-                double normalized = ((double)pixel / 255.0) * (scale_max - scale_min) + scale_min;
+                float normalized = ((float)pixel / 255.0) * (scale_max - scale_min) + scale_min;
                 image_data[(i + padding)*width + j + padding] = normalized;
             }
         }
@@ -506,17 +506,17 @@ void load_and_preprocess_image(const char* image_path, double* image_data) {
 }
 
 int predict_single_image(xmem_t *xmem, const char* image_path) {
-    double* image_data = (double*)malloc(width * height * sizeof(double));
+    float* image_data = (float*)malloc(width * height * sizeof(float));
     load_and_preprocess_image(image_path, image_data);
     
-    memcpy(xmem->input_layer2.data[0], image_data, width * height * sizeof(double));
+    memcpy(xmem->input_layer2.data[0], image_data, width * height * sizeof(float));
     
     forward_propagation(xmem);
     
-    double max_prob = -1;
+    float max_prob = -1;
     int prediction = 0;
     for (int i = 0; i < 10; i++) {
-        double prob = xmem->output_layer2.data[i][0];
+        float prob = xmem->output_layer2.data[i][0];
         if (prob > max_prob) {
             max_prob = prob;
             prediction = i;

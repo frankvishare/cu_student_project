@@ -27,3 +27,9 @@
 /build/riscv-sim/testlenet.elf
 /build/riscv-sim/testlenet.elf.map
 /build/riscv-sim/testlenet.img
+/source/*.gch
+/source/*.bak
+/cosim_code_generator/function_list.json
+/autonet/result.log
+/autonet/pyarmor_runtime_000000/__pycache__
+/xgen/pyarmor_runtime_000000/__pycache__

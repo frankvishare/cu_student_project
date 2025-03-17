@@ -195,7 +195,7 @@ void inline xmem_copy(T *dest, const T *src, size_t num){
 #define inline __attribute__((noinline))
 #endif
 
-static inline void APCALL(conv_fprop1)(HLS_COMMON_ARG  Layer1 * input_layer1, Layer2 * input_layer2, Layer1 * c1_conv_layer1, Layer2 * c1_conv_layer2, bool pconnection[96]){
+static inline void APCALL(conv_fprop1)(HLS_COMMON_ARG  Layer1 * input_layer1, Layer2 * input_layer2, Layer1 * c1_conv_layer1, Layer2 * c1_conv_layer2, uint8_t pconnection[96]){
     //TRACE(input_layer1, input_layer2, c1_conv_layer1, c1_conv_layer2, pconnection);
 #if (riscv_conv_fprop1 == 1u)  // apcall
     APCALL_PROFILE_START();
@@ -220,7 +220,7 @@ static inline void conv_fprop1_ret(void){
 }
 
 
-static inline void APCALL(conv_fprop2)(HLS_COMMON_ARG  Layer1 * s2_pooling_layer1, Layer2 * s2_pooling_layer2, Layer1 * c3_conv_layer1, Layer2 * c3_conv_layer2, bool pconnection[96]){
+static inline void APCALL(conv_fprop2)(HLS_COMMON_ARG  Layer1 * s2_pooling_layer1, Layer2 * s2_pooling_layer2, Layer1 * c3_conv_layer1, Layer2 * c3_conv_layer2, uint8_t pconnection[96]){
     //TRACE(s2_pooling_layer1, s2_pooling_layer2, c3_conv_layer1, c3_conv_layer2, pconnection);
 #if (riscv_conv_fprop2 == 1u)  // apcall
     APCALL_PROFILE_START();
@@ -245,7 +245,7 @@ static inline void conv_fprop2_ret(void){
 }
 
 
-static inline void APCALL(conv_fprop3)(HLS_COMMON_ARG  Layer1 * s4_pooling_layer1, Layer2 * s4_pooling_layer2, Layer1 * c5_conv_layer1, Layer2 * c5_conv_layer2, bool pconnection[96]){
+static inline void APCALL(conv_fprop3)(HLS_COMMON_ARG  Layer1 * s4_pooling_layer1, Layer2 * s4_pooling_layer2, Layer1 * c5_conv_layer1, Layer2 * c5_conv_layer2, uint8_t pconnection[96]){
     //TRACE(s4_pooling_layer1, s4_pooling_layer2, c5_conv_layer1, c5_conv_layer2, pconnection);
 #if (riscv_conv_fprop3 == 1u)  // apcall
     APCALL_PROFILE_START();

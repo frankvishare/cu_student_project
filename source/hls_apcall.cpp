@@ -42,7 +42,7 @@ void /*__attribute__ ((interrupt ("supervisor")))*/ asim_hls_handler(){
         Layer2 * input_layer2 = &xmem->input_layer2; //xmem pointer
         Layer1 * c1_conv_layer1 = &xmem->c1_conv_layer1; //xmem pointer
         Layer2 * c1_conv_layer2 = &xmem->c1_conv_layer2; //xmem pointer
-        bool *pconnection = xmem->pconnection;  //xmem array
+        uint8_t *pconnection = xmem->pconnection;  //xmem array
         IMPL(conv_fprop1)(HLS_COMMON_ARG_CALL  input_layer1, input_layer2, c1_conv_layer1, c1_conv_layer2, pconnection);
         break;
     }
@@ -53,7 +53,7 @@ void /*__attribute__ ((interrupt ("supervisor")))*/ asim_hls_handler(){
         Layer2 * s2_pooling_layer2 = &xmem->s2_pooling_layer2; //xmem pointer
         Layer1 * c3_conv_layer1 = &xmem->c3_conv_layer1; //xmem pointer
         Layer2 * c3_conv_layer2 = &xmem->c3_conv_layer2; //xmem pointer
-        bool *pconnection = xmem->pconnection;  //xmem array
+        uint8_t *pconnection = xmem->pconnection;  //xmem array
         IMPL(conv_fprop2)(HLS_COMMON_ARG_CALL  s2_pooling_layer1, s2_pooling_layer2, c3_conv_layer1, c3_conv_layer2, pconnection);
         break;
     }
@@ -64,7 +64,7 @@ void /*__attribute__ ((interrupt ("supervisor")))*/ asim_hls_handler(){
         Layer2 * s4_pooling_layer2 = &xmem->s4_pooling_layer2; //xmem pointer
         Layer1 * c5_conv_layer1 = &xmem->c5_conv_layer1; //xmem pointer
         Layer2 * c5_conv_layer2 = &xmem->c5_conv_layer2; //xmem pointer
-        bool *pconnection = xmem->pconnection;  //xmem array
+        uint8_t *pconnection = xmem->pconnection;  //xmem array
         IMPL(conv_fprop3)(HLS_COMMON_ARG_CALL  s4_pooling_layer1, s4_pooling_layer2, c5_conv_layer1, c5_conv_layer2, pconnection);
         break;
     }

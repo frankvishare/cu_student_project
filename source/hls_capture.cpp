@@ -103,7 +103,7 @@ void decodeBin_log(int ctx, int bin)
 extern "C" {
 #endif
 
-void CAPTURE_(conv_fprop1)(Layer1 * input_layer1_ptr,Layer2 * input_layer2_ptr,Layer1 * c1_conv_layer1_ptr,Layer2 * c1_conv_layer2_ptr,bool pconnection[96]){
+void CAPTURE_(conv_fprop1)(Layer1 * input_layer1_ptr,Layer2 * input_layer2_ptr,Layer1 * c1_conv_layer1_ptr,Layer2 * c1_conv_layer2_ptr,uint8_t pconnection[96]){
 #if 1
 static CCapture capture_conv_fprop1;
 CCapture *capture = &capture_conv_fprop1;
@@ -136,7 +136,7 @@ pthread_t __tid = pthread_self();
 #endif
 }
 
-void CAPTURE_(conv_fprop2)(Layer1 * s2_pooling_layer1_ptr,Layer2 * s2_pooling_layer2_ptr,Layer1 * c3_conv_layer1_ptr,Layer2 * c3_conv_layer2_ptr,bool pconnection[96]){
+void CAPTURE_(conv_fprop2)(Layer1 * s2_pooling_layer1_ptr,Layer2 * s2_pooling_layer2_ptr,Layer1 * c3_conv_layer1_ptr,Layer2 * c3_conv_layer2_ptr,uint8_t pconnection[96]){
 #if 1
 static CCapture capture_conv_fprop2;
 CCapture *capture = &capture_conv_fprop2;
@@ -169,7 +169,7 @@ pthread_t __tid = pthread_self();
 #endif
 }
 
-void CAPTURE_(conv_fprop3)(Layer1 * s4_pooling_layer1_ptr,Layer2 * s4_pooling_layer2_ptr,Layer1 * c5_conv_layer1_ptr,Layer2 * c5_conv_layer2_ptr,bool pconnection[96]){
+void CAPTURE_(conv_fprop3)(Layer1 * s4_pooling_layer1_ptr,Layer2 * s4_pooling_layer2_ptr,Layer1 * c5_conv_layer1_ptr,Layer2 * c5_conv_layer2_ptr,uint8_t pconnection[96]){
 #if 1
 static CCapture capture_conv_fprop3;
 CCapture *capture = &capture_conv_fprop3;
