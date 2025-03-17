@@ -1,2 +1,0 @@
-array_xor_flow_control_loop_pipe
-array_xor

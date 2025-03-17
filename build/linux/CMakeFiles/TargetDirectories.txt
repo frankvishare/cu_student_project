@@ -1,3 +1,0 @@
-/home/duludulu/Documents/hls/build/linux/CMakeFiles/testlenet.dir
-/home/duludulu/Documents/hls/build/linux/CMakeFiles/edit_cache.dir
-/home/duludulu/Documents/hls/build/linux/CMakeFiles/rebuild_cache.dir

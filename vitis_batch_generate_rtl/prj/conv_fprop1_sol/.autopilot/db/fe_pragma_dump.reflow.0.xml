@@ -1,6 +1,0 @@
-<pragmas>
-<pragma file="../source/hls.cpp" line="86" pragmaType="disaggregate" parentfunction="conv_fprop1" variable="input_layer1"/>
-<pragma file="../source/hls.cpp" line="87" pragmaType="disaggregate" parentfunction="conv_fprop1" variable="input_layer2"/>
-<pragma file="../source/hls.cpp" line="88" pragmaType="disaggregate" parentfunction="conv_fprop1" variable="c1_conv_layer1"/>
-<pragma file="../source/hls.cpp" line="89" pragmaType="disaggregate" parentfunction="conv_fprop1" variable="c1_conv_layer2"/>
-</pragmas>

@@ -1,3 +1,0 @@
-/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/example.elf.dir
-/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/edit_cache.dir
-/home/duludulu/Documents/hls/build/riscv-sim/CMakeFiles/rebuild_cache.dir

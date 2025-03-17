@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<BindInfo>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="vec_d1_x" SOURCE="../tutorial_example/source/hls.cpp:39" VARIABLE="add_ln39" MODULE="vector_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="vec_d1_y" SOURCE="../tutorial_example/source/hls.cpp:40" VARIABLE="add_ln40" MODULE="vector_add" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
-</BindInfo>

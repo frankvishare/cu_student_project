@@ -1,7 +1,0 @@
-<pragmas>
-<pragma file="../tutorial_example/source/hls.cpp" line="78" pragmaType="unroll" parentfunction="hevc_loop_filter_chroma_8bit_hls" factor="1" skip_exit_check="0"/>
-<pragma file="../tutorial_example/source/hls.cpp" line="88" pragmaType="pipeline" parentfunction="hevc_loop_filter_chroma_8bit_hls" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="../tutorial_example/source/hls.cpp" line="66" pragmaType="array_partition" parentfunction="hevc_loop_filter_chroma_8bit_hls" dim="1" factor="0" mode="complete" dynamic="0" variable="tc_arr"/>
-<pragma file="../tutorial_example/source/hls.cpp" line="67" pragmaType="array_partition" parentfunction="hevc_loop_filter_chroma_8bit_hls" dim="1" factor="0" mode="complete" dynamic="0" variable="no_p_arr"/>
-<pragma file="../tutorial_example/source/hls.cpp" line="68" pragmaType="array_partition" parentfunction="hevc_loop_filter_chroma_8bit_hls" dim="1" factor="0" mode="complete" dynamic="0" variable="no_q_arr"/>
-</pragmas>

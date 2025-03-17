@@ -1,5 +1,0 @@
-<pragmas>
-<pragma file="../tutorial_example/source/hls.cpp" line="35" pragmaType="disaggregate" parentfunction="vector_add" variable="vec_s1"/>
-<pragma file="../tutorial_example/source/hls.cpp" line="36" pragmaType="disaggregate" parentfunction="vector_add" variable="vec_s2"/>
-<pragma file="../tutorial_example/source/hls.cpp" line="37" pragmaType="disaggregate" parentfunction="vector_add" variable="vec_d1"/>
-</pragmas>

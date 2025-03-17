@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<BindInfo>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln20_fu_117_p2" SOURCE="../tutorial_example/source/hls.cpp:20" VARIABLE="add_ln20" MODULE="assign_array_complete" LOOP="VITIS_LOOP_18_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="i_fu_128_p2" SOURCE="../tutorial_example/source/hls.cpp:18" VARIABLE="i" MODULE="assign_array_complete" LOOP="VITIS_LOOP_18_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op seteq" ID="" IMPL="auto" LATENCY="0" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln18_fu_134_p2" SOURCE="../tutorial_example/source/hls.cpp:18" VARIABLE="icmp_ln18" MODULE="assign_array_complete" LOOP="VITIS_LOOP_18_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0" USAGE="" STORAGESUBTYPE="" STORAGESIZE=""/>
-</BindInfo>
